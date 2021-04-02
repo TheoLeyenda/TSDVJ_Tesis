@@ -833,7 +833,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 8626920079011648921}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 468475401}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 250d2b4f7fb987c4d8557a9534ca72e5, type: 3}
@@ -4276,25 +4276,6 @@ Transform:
   m_Father: {fileID: 2123384785}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &468475401 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8626920078925406483, guid: f73fb2a90810042449774d6e8e5eb2da,
-    type: 3}
-  m_PrefabInstance: {fileID: 8626920079011648921}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &468475402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 468475401}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd17ed63f1bb86f47a8455ddab66bb8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UpdatesInGame: []
 --- !u!1 &469571924
 GameObject:
   m_ObjectHideFlags: 0
@@ -9787,7 +9768,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73a48376e7007a242ad477ac11cd9be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impulse: 200
+  impulse: 250
   rig: {fileID: 1037010134}
   useCheckAviableJump: 1
   rangeRayCheckIsFloor: 2
@@ -9902,7 +9883,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  stopPlayerWithNullInput: 1
+  stopPlayerWithNullInput: 0
 --- !u!1 &1038961689
 GameObject:
   m_ObjectHideFlags: 0

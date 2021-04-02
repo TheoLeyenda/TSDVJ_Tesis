@@ -41,6 +41,12 @@ public class JumpFunctions : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         aviableJump = true;
+        if (rig != null)
+        {
+            rig.velocity = Vector3.zero;
+            rig.angularVelocity = Vector3.zero;
+        }
+
     }
 
 }

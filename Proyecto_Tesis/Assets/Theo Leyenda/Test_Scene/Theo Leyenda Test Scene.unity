@@ -307,6 +307,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 30220771}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &86258827 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8626920078925406482, guid: f73fb2a90810042449774d6e8e5eb2da,
+    type: 3}
+  m_PrefabInstance: {fileID: 8626920079011648921}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 250d2b4f7fb987c4d8557a9534ca72e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &110749385
 GameObject:
   m_ObjectHideFlags: 0
@@ -1851,7 +1863,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  stopPlayerWithNullInput: 0
+  stopPlayerWithNullInput: 1
 --- !u!1 &1041573342
 GameObject:
   m_ObjectHideFlags: 0
@@ -2936,7 +2948,18 @@ MonoBehaviour:
   navMesh: {fileID: 1621830787}
   OnKillPlayer:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 86258827}
+        m_MethodName: GameOver
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: GameOver_TL
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1757650757
 GameObject:
   m_ObjectHideFlags: 0
@@ -3150,3 +3173,72 @@ Transform:
   m_Father: {fileID: 258577736}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &8626920079011648921
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8626920078925406483, guid: f73fb2a90810042449774d6e8e5eb2da,
+        type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626920078925406485, guid: f73fb2a90810042449774d6e8e5eb2da,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -21.740433
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626920078925406485, guid: f73fb2a90810042449774d6e8e5eb2da,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.4999981
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626920078925406485, guid: f73fb2a90810042449774d6e8e5eb2da,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10.1898155
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626920078925406485, guid: f73fb2a90810042449774d6e8e5eb2da,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626920078925406485, guid: f73fb2a90810042449774d6e8e5eb2da,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626920078925406485, guid: f73fb2a90810042449774d6e8e5eb2da,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626920078925406485, guid: f73fb2a90810042449774d6e8e5eb2da,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626920078925406485, guid: f73fb2a90810042449774d6e8e5eb2da,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626920078925406485, guid: f73fb2a90810042449774d6e8e5eb2da,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626920078925406485, guid: f73fb2a90810042449774d6e8e5eb2da,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626920078925406485, guid: f73fb2a90810042449774d6e8e5eb2da,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f73fb2a90810042449774d6e8e5eb2da, type: 3}

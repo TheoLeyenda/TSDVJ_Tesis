@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.AI;
 
-public class Monster : MonoBehaviour
+public class Monster : Updateable
 {
     public enum Monster_STATES
     {
@@ -82,9 +82,13 @@ public class Monster : MonoBehaviour
 
         fsmMonster.SetRelations((int)Monster_STATES.KillPlayer, (int)Monster_STATES.AssignedCurrentWaypoint, (int)Monster_EVENTS.PlayerDead);
     }
-
-    // Update is called once per frame
-    void Update()
+    protected override void Start()
+    {
+        base.Start();
+        MyUpdate.AddListener(UpdateMonster);
+        UM.UpdatesInGame.Add(MyUpdate);
+    }
+    public void UpdateMonster()
     {
         switch (fsmMonster.GetCurrentState())
         {

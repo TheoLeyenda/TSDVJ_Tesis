@@ -1,0 +1,16 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Events;
+
+public class Updateable : MonoBehaviour
+{
+    protected UnityEvent MyUpdate;
+    protected UpdateManager UM;
+
+    protected virtual void Start()
+    {
+        MyUpdate = new UnityEvent();
+        UM = UpdateManager.instanceUpdateManager;
+    }
+}

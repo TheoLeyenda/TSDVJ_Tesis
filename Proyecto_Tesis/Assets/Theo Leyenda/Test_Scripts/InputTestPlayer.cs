@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class InputTestPlayer : MonoBehaviour
+public class InputTestPlayer : Updateable
 {
     [System.Serializable]
     public class InputAndEvent
@@ -55,7 +55,14 @@ public class InputTestPlayer : MonoBehaviour
     [SerializeField] private UnityEvent FunctionForNotInput;
     [SerializeField] private bool stopPlayerWithNullInput = true;
     // Update is called once per frame
-    void Update()
+    protected override void Start()
+    {
+        base.Start();
+        MyUpdate.AddListener(UpdateInputTestPlayer);
+        UM.UpdatesInGame.Add(MyUpdate);
+    }
+
+    public void UpdateInputTestPlayer()
     {
         LeftMovement.CheckEvent();
         RightMovement.CheckEvent();

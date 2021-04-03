@@ -21,7 +21,8 @@ public class J_Movement : MonoBehaviour
         else
             xMov = -1 * speed * Time.deltaTime;
 
-        rb.velocity = new Vector3(xMov, rb.velocity.y, rb.velocity.z);
+        Vector3 vec = transform.right * xMov;
+        rb.velocity = vec;
     }
 
     public void ForwardMove(bool isPositve)
@@ -33,7 +34,8 @@ public class J_Movement : MonoBehaviour
         else
             zMov = -1 * speed * Time.deltaTime;
 
-        rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, zMov);
+        Vector3 vec = transform.forward * zMov;
+        rb.velocity = vec;
     }
 
     public void NoInput()

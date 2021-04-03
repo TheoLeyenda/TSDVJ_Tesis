@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class J_MouseInput : MonoBehaviour
 {
-    public Vector2 turn;
+    private Vector2 turn;
 
     public float sensitivity = 2f;
+    public Transform playerBody;
 
     private void Start()
     {
@@ -28,6 +29,7 @@ public class J_MouseInput : MonoBehaviour
             turn.y = -90;
         }
 
-        transform.localRotation = Quaternion.Euler(-turn.y, turn.x, 0);
+        transform.localRotation = Quaternion.Euler(-turn.y, 0, 0);
+        playerBody.localRotation = Quaternion.Euler(0, turn.x, 0);
     }
 }

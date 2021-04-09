@@ -15447,6 +15447,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9204f299e540e7840aedb87a6630df9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  typeFinderWaypoint: 0
+  countWaypointsNearPlayer: 3
+  countWaypointsDistancePlayer: 3
   speedPatrol: 10
   speedChasePlayer: 20
   delayWaitInPatrol: 1.5

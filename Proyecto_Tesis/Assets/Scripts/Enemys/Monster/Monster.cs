@@ -32,6 +32,19 @@ public class Monster : Updateable
         Count,
     }
     // Start is called before the first frame update
+
+    public enum TypeFinderWaypoint
+    {
+        NearPlayer,
+        DistantPlayer,
+        RandomPlayer
+    }
+    
+    private FinderWaypoints finderWaypoints;
+    [SerializeField] private TypeFinderWaypoint typeFinderWaypoint = TypeFinderWaypoint.RandomPlayer;
+    [SerializeField] private int countWaypointsNearPlayer = 3;
+    [SerializeField] private int countWaypointsDistancePlayer = 3;
+
     [SerializeField] private float speedPatrol;
     [SerializeField] private float speedChasePlayer;
     [SerializeField] private float delayWaitInPatrol;
@@ -48,6 +61,8 @@ public class Monster : Updateable
     [SerializeField] private Transform spawnRayCastCheckChasePlayer;
 
     [SerializeField] private List<Transform> waypoints;
+    private List<Transform> auxWaypoints;
+
     [SerializeField] private Transform currentWaypoit;
     [SerializeField] private Transform currentPlayer;
     [SerializeField] private NavMeshAgent navMesh;
@@ -62,6 +77,8 @@ public class Monster : Updateable
     {
         resetBehaviour = false;
         destroyEnemy = false;
+
+        finderWaypoints = new FinderWaypoints();
 
         fsmMonster = new FSM((int)Monster_STATES.Count, (int)Monster_EVENTS.Count, (int)Monster_STATES.Idle);
 
@@ -87,6 +104,8 @@ public class Monster : Updateable
     }
     protected override void Start()
     {
+        auxWaypoints = waypoints;
+
         base.Start();
         MyUpdate.AddListener(UpdateMonster);
         UM.UpdatesInGame.Add(MyUpdate);
@@ -131,24 +150,31 @@ public class Monster : Updateable
         navMesh.speed = 0;
         navMesh.acceleration = 1000;
 
-        Transform prevWaypoint = currentWaypoit;
-        currentWaypoit = null;
-        int index = Random.Range(0, waypoints.Count);
+        Transform newWaypoint = null;
 
-        if (prevWaypoint == waypoints[index])
+        waypoints = auxWaypoints;
+
+        switch (typeFinderWaypoint)
         {
-            if (index >= waypoints.Count - 1)
-                index = 0;
-            else
-                index++;
+            case TypeFinderWaypoint.RandomPlayer:
+                newWaypoint = finderWaypoints.GetNonRepeatedWaypoint(currentWaypoit, waypoints);
+                break;
+            case TypeFinderWaypoint.NearPlayer:
+                waypoints = finderWaypoints.GetListWaypointsNearTarget(auxWaypoints, currentPlayer, countWaypointsNearPlayer);
+                newWaypoint = finderWaypoints.GetNonRepeatedWaypoint(currentWaypoit, waypoints);
+                break;
+            case TypeFinderWaypoint.DistantPlayer:
+
+                break;
         }
 
-        currentWaypoit = waypoints[index];
+        currentWaypoit = newWaypoint;
 
         if (currentWaypoit != null)
         {
             fsmMonster.SendEvent((int)Monster_EVENTS.DoneAssignedCurrentWaypoint);
         }
+
         CheckInChasePlayer();
         CheckDead();
     }

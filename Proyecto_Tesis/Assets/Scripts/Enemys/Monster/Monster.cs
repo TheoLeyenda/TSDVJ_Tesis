@@ -164,7 +164,8 @@ public class Monster : Updateable
                 newWaypoint = finderWaypoints.GetNonRepeatedWaypoint(currentWaypoit, waypoints);
                 break;
             case TypeFinderWaypoint.DistantPlayer:
-
+                waypoints = finderWaypoints.GetListWaypointsDistantTarget(auxWaypoints, currentPlayer, countWaypointsNearPlayer);
+                newWaypoint = finderWaypoints.GetNonRepeatedWaypoint(currentWaypoit, waypoints);
                 break;
         }
 

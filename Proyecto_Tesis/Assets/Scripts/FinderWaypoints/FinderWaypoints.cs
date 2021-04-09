@@ -26,7 +26,7 @@ public class FinderWaypoints : MonoBehaviour
         resultListWaypoints.Clear();
 
         bool assignedDone = true;
-        float currentDistance = Vector3.Distance(target.position, waypoints[0].position);
+        float currentDistance = GetHigherDistanceToTarget(waypoints, target) + 100;
         int currentIndexWaypoints = 0;
 
         if (sizeArrayReturn >= waypoints.Count)
@@ -37,6 +37,7 @@ public class FinderWaypoints : MonoBehaviour
 
         for (int i = 0; i < sizeArrayReturn; i++)
         {
+            currentDistance = GetHigherDistanceToTarget(waypoints, target) + 100;
             for (int j = 0; j < waypoints.Count; j++)
             {
                 bool isWaypointDone = false;
@@ -66,6 +67,76 @@ public class FinderWaypoints : MonoBehaviour
             }
         }
         return resultListWaypoints;
+    }
+
+    public List<Transform> GetListWaypointsDistantTarget(List<Transform> waypoints, Transform target, int sizeArrayReturn)
+    {
+        if (waypoints.Count <= 0 || target == null)
+            return null;
+
+        resultListWaypoints.Clear();
+
+        bool assignedDone = true;
+        float currentDistance = 0;
+        int currentIndexWaypoints = 0;
+
+        if (sizeArrayReturn >= waypoints.Count)
+            return waypoints;
+
+        if (sizeArrayReturn <= 0)
+            return null;
+
+        for (int i = 0; i < sizeArrayReturn; i++)
+        {
+            currentDistance = 0;
+            for (int j = 0; j < waypoints.Count; j++)
+            {
+                bool isWaypointDone = false;
+                for (int k = 0; k < resultListWaypoints.Count; k++)
+                {
+                    if (waypoints[j] == null || waypoints[j] == resultListWaypoints[k])
+                    {
+                        isWaypointDone = true;
+                        k = resultListWaypoints.Count;
+                    }
+                }
+                if (!isWaypointDone)
+                {
+                    float auxDistance = Vector3.Distance(target.position, waypoints[j].position);
+                    if (auxDistance > currentDistance)
+                    {
+                        assignedDone = true;
+                        currentDistance = auxDistance;
+                        currentIndexWaypoints = j;
+                    }
+                }
+            }
+            if (assignedDone)
+            {
+                resultListWaypoints.Add(waypoints[currentIndexWaypoints]);
+                assignedDone = false;
+            }
+        }
+        return resultListWaypoints;
+    }
+
+
+    private float GetHigherDistanceToTarget(List<Transform> waypoints, Transform target)
+    {
+        float distance = 0;
+
+        float auxDistance = 0;
+        for (int i = 0; i < waypoints.Count; i++)
+        {
+            auxDistance = Vector3.Distance(target.position, waypoints[i].position);
+
+            if(auxDistance > distance)
+            {
+                distance = auxDistance;
+            }
+        }
+
+        return distance;
     }
 
     public Transform GetNonRepeatedWaypoint(Transform prevWaypoint, List<Transform> waypoints)

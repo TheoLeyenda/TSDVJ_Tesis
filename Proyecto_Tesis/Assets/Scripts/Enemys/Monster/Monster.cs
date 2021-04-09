@@ -40,9 +40,12 @@ public class Monster : Updateable
 
     [SerializeField] private float rangeMagnitudeWaypoint = 0.5f;
 
-    [SerializeField] private float rangeChasePlayer;
     [SerializeField] private float delayOutChase = 2.5f;
     [SerializeField] private float auxDelayOutChase = 2.5f;
+    [SerializeField] private float rangeChasePlayer = 10.0f;
+    [SerializeField] private float rangeRayCastCheckChasePlayer;
+    [SerializeField] private float distanceBeetwoenRayCastChasePlayer = 0.5f;
+    [SerializeField] private Transform spawnRayCastCheckChasePlayer;
 
     [SerializeField] private List<Transform> waypoints;
     [SerializeField] private Transform currentWaypoit;
@@ -233,13 +236,44 @@ public class Monster : Updateable
     {
         RaycastHit hit;
 
-        Vector3 direction =  currentPlayer.position - transform.position;
+        RaycastHit hit2;
 
+        RaycastHit hit3;
+
+        RaycastHit hit4;
+
+        Vector3 direction = currentPlayer.position - transform.position;
         //Debug.DrawLine(transform.position, direction, Color.red, 0.1f);
 
-        if (Physics.Raycast(transform.position, direction.normalized, out hit, rangeChasePlayer))
+        if (Physics.Raycast(spawnRayCastCheckChasePlayer.position, spawnRayCastCheckChasePlayer.forward, out hit, rangeRayCastCheckChasePlayer))
         {
             if (hit.transform.CompareTag("Player"))
+            {
+                fsmMonster.SendEvent((int)Monster_EVENTS.PlayerInRangeSight);
+            }
+        }
+
+        if (Physics.Raycast(spawnRayCastCheckChasePlayer.position + new Vector3(distanceBeetwoenRayCastChasePlayer, 0, 0)
+            , spawnRayCastCheckChasePlayer.forward, out hit2, rangeRayCastCheckChasePlayer))
+        {
+            if (hit2.transform.CompareTag("Player"))
+            {
+                fsmMonster.SendEvent((int)Monster_EVENTS.PlayerInRangeSight);
+            }
+        }
+
+        if (Physics.Raycast(spawnRayCastCheckChasePlayer.position - new Vector3(distanceBeetwoenRayCastChasePlayer, 0, 0)
+            , spawnRayCastCheckChasePlayer.forward, out hit3, rangeRayCastCheckChasePlayer))
+        {
+            if (hit3.transform.CompareTag("Player"))
+            {
+                fsmMonster.SendEvent((int)Monster_EVENTS.PlayerInRangeSight);
+            }
+        }
+
+        if (Physics.Raycast(spawnRayCastCheckChasePlayer.position, direction, out hit4, rangeChasePlayer))
+        {
+            if (hit4.transform.CompareTag("Player"))
             {
                 fsmMonster.SendEvent((int)Monster_EVENTS.PlayerInRangeSight);
             }
@@ -249,23 +283,48 @@ public class Monster : Updateable
     {
         RaycastHit hit;
 
+        RaycastHit hit2;
+
+        RaycastHit hit3;
+
+        RaycastHit hit4;
+
         Vector3 direction = currentPlayer.position - transform.position;
 
-        if (Physics.Raycast(transform.position, direction.normalized, out hit, rangeChasePlayer))
+        if (Physics.Raycast(spawnRayCastCheckChasePlayer.position, spawnRayCastCheckChasePlayer.forward, out hit, rangeRayCastCheckChasePlayer))
         {
-            if (!hit.transform.CompareTag("Player"))
-            {
-                CheckDelayOutChasePlayer();
-            }
-            else
+            if (hit.transform.CompareTag("Player"))
             {
                 delayOutChase = auxDelayOutChase;
             }
         }
-        else
+
+        if (Physics.Raycast(spawnRayCastCheckChasePlayer.position + new Vector3(distanceBeetwoenRayCastChasePlayer, 0, 0)
+            , spawnRayCastCheckChasePlayer.forward, out hit2, rangeRayCastCheckChasePlayer))
         {
-            CheckDelayOutChasePlayer();
+            if (hit2.transform.CompareTag("Player"))
+            {
+                delayOutChase = auxDelayOutChase;
+            }
         }
+
+        if (Physics.Raycast(spawnRayCastCheckChasePlayer.position - new Vector3(distanceBeetwoenRayCastChasePlayer, 0, 0)
+            , spawnRayCastCheckChasePlayer.forward, out hit3, rangeRayCastCheckChasePlayer))
+        {
+            if (hit3.transform.CompareTag("Player"))
+            {
+                delayOutChase = auxDelayOutChase;
+            }
+        }
+
+        if (Physics.Raycast(transform.position, direction.normalized, out hit4, rangeChasePlayer))
+        {
+            if (hit4.transform.CompareTag("Player"))
+            {
+                delayOutChase = auxDelayOutChase;
+            }
+        }
+        CheckDelayOutChasePlayer();
     }
 
     private void CheckDelayOutChasePlayer()
@@ -287,6 +346,11 @@ public class Monster : Updateable
         {
             fsmMonster.SendEvent((int)Monster_EVENTS.DestroyEnemy);
         }
+    }
+
+    public void SendEventPlayerInRangeSight()
+    {
+        fsmMonster.SendEvent((int)Monster_EVENTS.PlayerInRangeSight);
     }
 
     public void DestroyEnemy() { destroyEnemy = true; }

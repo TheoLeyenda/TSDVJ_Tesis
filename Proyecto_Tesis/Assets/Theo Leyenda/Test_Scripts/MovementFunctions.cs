@@ -5,14 +5,24 @@ using UnityEngine;
 public class MovementFunctions : MonoBehaviour
 {
     [SerializeField] private float speed;
+    private float auxSpeed;
     [SerializeField] private Rigidbody rig;
     private GetDirectionForEnum getDirectionForEnum;
 
     void Start()
     {
         getDirectionForEnum = new GetDirectionForEnum();
+        auxSpeed = speed;
     }
 
+    public void ChangeSpeed(float newSpeed)
+    {
+        speed = newSpeed;
+    }
+    public void ResetSpeed()
+    {
+        speed = auxSpeed;
+    }
     public void MovementForPosition(int directionUse)
     {
         Vector3 direction = getDirectionForEnum.GetVectorDirection((GetDirectionForEnum.Direction)directionUse);

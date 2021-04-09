@@ -348,6 +348,11 @@ public class Monster : Updateable
         }
     }
 
+    public void SendEventPlayerInRangeSight()
+    {
+        fsmMonster.SendEvent((int)Monster_EVENTS.PlayerInRangeSight);
+    }
+
     public void DestroyEnemy() { destroyEnemy = true; }
 
     public void SetResetBehaviour(bool value) => resetBehaviour = value;

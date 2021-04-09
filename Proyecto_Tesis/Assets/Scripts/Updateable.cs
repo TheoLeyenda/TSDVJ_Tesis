@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class Updateable : MonoBehaviour
 {
     protected UnityEvent MyUpdate;
+    protected UnityEvent MyFixedUpdate;
     protected UpdateManager UM;
 
     protected virtual void Start()

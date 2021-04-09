@@ -5,7 +5,7 @@ using UnityEngine.Events;
 public class UpdateManager : MonoBehaviour
 {
     [HideInInspector] public List<UnityEvent> UpdatesInGame;
-
+    [HideInInspector] public List<UnityEvent> FixedUpdatesInGame;
     public static UpdateManager instanceUpdateManager;
 
     void Awake()
@@ -25,7 +25,20 @@ public class UpdateManager : MonoBehaviour
     {
         CheckUpdatesUnityEventsInGame();
     }
-
+    void FixedUpdate()
+    {
+        CheckFixedUpdatesUnityEventsInGame();
+    }
+    private void CheckFixedUpdatesUnityEventsInGame()
+    {
+        for (int i = 0; i < FixedUpdatesInGame.Count; i++)
+        {
+            if (FixedUpdatesInGame[i] != null)
+                FixedUpdatesInGame[i].Invoke();
+            else
+                FixedUpdatesInGame.Remove(FixedUpdatesInGame[i]);
+        }
+    }
     private void CheckUpdatesUnityEventsInGame()
     {
         for (int i = 0; i < UpdatesInGame.Count; i++)

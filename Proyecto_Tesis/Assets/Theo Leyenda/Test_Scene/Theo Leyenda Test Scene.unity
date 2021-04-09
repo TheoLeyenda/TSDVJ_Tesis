@@ -4895,7 +4895,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 531645078}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SpawnRayCastChasePlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9675,6 +9675,7 @@ GameObject:
   - component: {fileID: 1037010141}
   - component: {fileID: 1037010140}
   - component: {fileID: 1037010139}
+  - component: {fileID: 1037010142}
   m_Layer: 0
   m_Name: Player_Test
   m_TagString: Player
@@ -9766,7 +9767,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1037010133}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.6, y: 2.5, z: 11.6}
+  m_LocalPosition: {x: -16.6, y: 2.5, z: 8.55}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
@@ -9814,8 +9815,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca9c4be21ad0c5c4c905179f9d563e3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LeftMovement:
-    InputName: LeftMovementTest
+  inputs:
+  - InputName: LeftMovementTest
     FunctionEvent:
       m_PersistentCalls:
         m_Calls:
@@ -9830,9 +9831,19 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1037010142}
+          m_MethodName: ShootEmmitingSound
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 5
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     typeCheck: 2
-  RightMovement:
-    InputName: RightMovementTest
+  - InputName: RightMovementTest
     FunctionEvent:
       m_PersistentCalls:
         m_Calls:
@@ -9847,9 +9858,19 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1037010142}
+          m_MethodName: ShootEmmitingSound
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 5
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     typeCheck: 2
-  ForwardMovement:
-    InputName: ForwardMovementTest
+  - InputName: ForwardMovementTest
     FunctionEvent:
       m_PersistentCalls:
         m_Calls:
@@ -9864,9 +9885,19 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1037010142}
+          m_MethodName: ShootEmmitingSound
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 5
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     typeCheck: 2
-  BackMovement:
-    InputName: BackMovementTest
+  - InputName: BackMovementTest
     FunctionEvent:
       m_PersistentCalls:
         m_Calls:
@@ -9881,9 +9912,19 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1037010142}
+          m_MethodName: ShootEmmitingSound
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 5
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     typeCheck: 2
-  Jump:
-    InputName: JumpMovementTest
+  - InputName: JumpMovementTest
     FunctionEvent:
       m_PersistentCalls:
         m_Calls:
@@ -9899,6 +9940,49 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
     typeCheck: 0
+  - InputName: RunTest
+    FunctionEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1037010139}
+          m_MethodName: ChangeSpeed
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 35
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1037010142}
+          m_MethodName: ShootEmmitingSound
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 15
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    typeCheck: 2
+  - InputName: RunTest
+    FunctionEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1037010139}
+          m_MethodName: ResetSpeed
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 5
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    typeCheck: 1
   FunctionForNotInput:
     m_PersistentCalls:
       m_Calls:
@@ -9914,6 +9998,20 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   stopPlayerWithNullInput: 0
+--- !u!114 &1037010142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037010133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c980d1abfd78844286fc7857c355c63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centerBoxOverlapCaster: {fileID: 1037010138}
+  heightEmmitingSound: 2
 --- !u!1 &1038961689
 GameObject:
   m_ObjectHideFlags: 0
@@ -15229,10 +15327,11 @@ GameObject:
   - component: {fileID: 1621830786}
   - component: {fileID: 1621830785}
   - component: {fileID: 1621830784}
-  - component: {fileID: 1621830783}
   - component: {fileID: 1621830788}
   - component: {fileID: 1621830787}
-  m_Layer: 0
+  - component: {fileID: 1621830783}
+  - component: {fileID: 1621830789}
+  m_Layer: 2
   m_Name: Monster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15247,8 +15346,8 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1621830782}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
+  m_IsTrigger: 1
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -15387,6 +15486,32 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: GameOver_TL
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1621830789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621830782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e31c211647f2543b4485a278c66b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnListeningSound:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1621830788}
+        m_MethodName: SendEventPlayerInRangeSight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &1631424282

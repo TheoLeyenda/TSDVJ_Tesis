@@ -46,12 +46,9 @@ public class InputTestPlayer : Updateable
         }
     }
 
-    // Start is called before the first frame update
-    [SerializeField] private InputAndEvent LeftMovement;
-    [SerializeField] private InputAndEvent RightMovement;
-    [SerializeField] private InputAndEvent ForwardMovement;
-    [SerializeField] private InputAndEvent BackMovement;
-    [SerializeField] private InputAndEvent Jump;
+
+    [SerializeField] private List<InputAndEvent> inputs;
+
     [SerializeField] private UnityEvent FunctionForNotInput;
     [SerializeField] private bool stopPlayerWithNullInput = true;
     // Update is called once per frame
@@ -64,11 +61,13 @@ public class InputTestPlayer : Updateable
 
     public void UpdateInputTestPlayer()
     {
-        LeftMovement.CheckEvent();
-        RightMovement.CheckEvent();
-        ForwardMovement.CheckEvent();
-        BackMovement.CheckEvent();
-        Jump.CheckEvent();
+        for (int i = 0; i < inputs.Count; i++)
+        {
+            if (inputs[i] != null)
+            {
+                inputs[i].CheckEvent();
+            }
+        }
 
         if (stopPlayerWithNullInput && !Input.anyKey && !Input.anyKeyDown)
         {

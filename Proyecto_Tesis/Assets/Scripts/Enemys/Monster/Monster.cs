@@ -379,7 +379,10 @@ public class Monster : Updateable
     {
         fsmMonster.SendEvent((int)Monster_EVENTS.PlayerInRangeSight);
     }
-
+    public void ResetDelayOutChasePlayer()
+    {
+        delayOutChase = auxDelayOutChase;
+    }
     public void DestroyEnemy() { destroyEnemy = true; }
 
     public void SetResetBehaviour(bool value) => resetBehaviour = value;

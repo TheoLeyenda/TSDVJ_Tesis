@@ -2,19 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class J_MouseInput : MonoBehaviour
+public class J_MouseInput : Updateable
 {
     private Vector2 turn;
 
     public float sensitivity = 2f;
     public Transform playerBody;
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
+        MyUpdate.AddListener(UpdateLookAround);
+        UM.UpdatesInGame.Add(MyUpdate);
+
         Cursor.lockState = CursorLockMode.Locked;
     }
 
-    void Update()
+    void UpdateLookAround()
     {
         turn.x += Input.GetAxis("Mouse X") * sensitivity;
         turn.y += Input.GetAxis("Mouse Y") * sensitivity;

@@ -2,44 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class J_Movement : MonoBehaviour
+public class J_Movement : Updateable
 {
     public float speed;
-    private Rigidbody rb;
 
-    private void Start()
+    private CharacterController cc;
+    private float xMov;
+    private float zMov;
+
+    protected override void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        base.Start();
+        MyUpdate.AddListener(UpdateMovement);
+        UM.UpdatesInGame.Add(MyUpdate);
+
+        cc = GetComponent<CharacterController>();
     }
 
-    public void HorizontalMove(bool isPositve)
+    public void UpdateMovement()
     {
-        float xMov;
+        xMov = Input.GetAxis("Horizontal");
+        zMov = Input.GetAxis("Vertical");
 
-        if (isPositve)
-            xMov = 1 * speed * Time.deltaTime;
-        else
-            xMov = -1 * speed * Time.deltaTime;
+        Vector3 move = transform.right * xMov + transform.forward * zMov;
 
-        Vector3 vec = transform.right * xMov;
-        rb.velocity = vec;
+        cc.Move(move * speed * Time.deltaTime);
     }
 
-    public void ForwardMove(bool isPositve)
-    {
-        float zMov;
 
-        if (isPositve)
-            zMov = 1 * speed * Time.deltaTime;
-        else
-            zMov = -1 * speed * Time.deltaTime;
-
-        Vector3 vec = transform.forward * zMov;
-        rb.velocity = vec;
-    }
-
-    public void NoInput()
-    {
-        rb.velocity = Vector3.zero;
-    }
 }

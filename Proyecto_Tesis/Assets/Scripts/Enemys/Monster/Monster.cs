@@ -1,17 +1,19 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 public class Monster : Updateable
 {
     public enum Monster_STATES
     {
+        Null,
         Idle,
         AssignedCurrentWaypoint,
         GoToWaypoint,
         Wait,
+        GoToLastPositionPlayerView,
+        RegisterZone,
         ChasePlayer,
         KillPlayer,
         Die,
@@ -20,10 +22,14 @@ public class Monster : Updateable
 
     public enum Monster_EVENTS
     {
+        Null,
         Start,
         DoneAssignedCurrentWaypoint,
         DoneGoToWaypoint,
         DoneDelayWait,
+        InSuspecting,
+        OutSuspecting,
+        DoneGoToLastPositionPlayerView,
         PlayerInRangeSight,
         PlayerOutRangeSight,
         PlayerInRangeDead,
@@ -32,22 +38,40 @@ public class Monster : Updateable
         Count,
     }
     // Start is called before the first frame update
+
+    public enum TypeFinderWaypoint
+    {
+        NearPlayer,
+        DistantPlayer,
+        RandomPlayer
+    }
+
+    private FinderWaypoints finderWaypoints;
+    [SerializeField] private TypeFinderWaypoint typeFinderWaypoint = TypeFinderWaypoint.RandomPlayer;
+    [SerializeField] private int countWaypointsNearPlayer = 3;
+    [SerializeField] private int countWaypointsDistancePlayer = 3;
+
     [SerializeField] private float speedPatrol;
     [SerializeField] private float speedChasePlayer;
     [SerializeField] private float delayWaitInPatrol;
-    [SerializeField] private float auxDelayWaitInPatrol;
+    private float auxDelayWaitInPatrol;
     [SerializeField] private float rangeKillPlayer;
 
     [SerializeField] private float rangeMagnitudeWaypoint = 0.5f;
 
+    [SerializeField] private float speedGoToLastedPositionPlayer;
+    [SerializeField] private float timeViewPlayerForSuspecting;
+
     [SerializeField] private float delayOutChase = 2.5f;
-    [SerializeField] private float auxDelayOutChase = 2.5f;
+    private float auxDelayOutChase = 2.5f;
     [SerializeField] private float rangeChasePlayer = 10.0f;
     [SerializeField] private float rangeRayCastCheckChasePlayer;
     [SerializeField] private float distanceBeetwoenRayCastChasePlayer = 0.5f;
     [SerializeField] private Transform spawnRayCastCheckChasePlayer;
 
     [SerializeField] private List<Transform> waypoints;
+    private List<Transform> auxWaypoints;
+
     [SerializeField] private Transform currentWaypoit;
     [SerializeField] private Transform currentPlayer;
     [SerializeField] private NavMeshAgent navMesh;
@@ -56,30 +80,52 @@ public class Monster : Updateable
 
     private bool resetBehaviour = false;
     private bool destroyEnemy = false;
+    private float timeViewPlayer = 0;
+    private Vector3 lastPositionViewPlayer;
     private FSM fsmMonster;
-    
+
+    [SerializeField] private RegisterZone registerZone;
+    [SerializeField] private float delayRegisterZone;
+    private float auxDelayRegisterZone;
+
     void Awake()
     {
         resetBehaviour = false;
         destroyEnemy = false;
 
+        finderWaypoints = new FinderWaypoints();
+
         fsmMonster = new FSM((int)Monster_STATES.Count, (int)Monster_EVENTS.Count, (int)Monster_STATES.Idle);
 
         fsmMonster.SetRelations((int)Monster_STATES.Idle, (int)Monster_STATES.AssignedCurrentWaypoint, (int)Monster_EVENTS.Start);
 
-        fsmMonster.SetRelations((int)Monster_STATES.AssignedCurrentWaypoint, (int)Monster_STATES.ChasePlayer, (int)Monster_EVENTS.PlayerInRangeSight);
         fsmMonster.SetRelations((int)Monster_STATES.AssignedCurrentWaypoint, (int)Monster_STATES.Die, (int)Monster_EVENTS.DestroyEnemy);
         fsmMonster.SetRelations((int)Monster_STATES.AssignedCurrentWaypoint, (int)Monster_STATES.GoToWaypoint, (int)Monster_EVENTS.DoneAssignedCurrentWaypoint);
+        fsmMonster.SetRelations((int)Monster_STATES.AssignedCurrentWaypoint, (int)Monster_STATES.GoToLastPositionPlayerView, (int)Monster_EVENTS.InSuspecting);
+        fsmMonster.SetRelations((int)Monster_STATES.AssignedCurrentWaypoint, (int)Monster_STATES.ChasePlayer, (int)Monster_EVENTS.PlayerInRangeSight);
 
-        fsmMonster.SetRelations((int)Monster_STATES.GoToWaypoint, (int)Monster_STATES.ChasePlayer, (int)Monster_EVENTS.PlayerInRangeSight);
         fsmMonster.SetRelations((int)Monster_STATES.GoToWaypoint, (int)Monster_STATES.Die, (int)Monster_EVENTS.DestroyEnemy);
         fsmMonster.SetRelations((int)Monster_STATES.GoToWaypoint, (int)Monster_STATES.Wait, (int)Monster_EVENTS.DoneGoToWaypoint);
+        fsmMonster.SetRelations((int)Monster_STATES.GoToWaypoint, (int)Monster_STATES.GoToLastPositionPlayerView, (int)Monster_EVENTS.InSuspecting);
+        fsmMonster.SetRelations((int)Monster_STATES.GoToWaypoint, (int)Monster_STATES.ChasePlayer, (int)Monster_EVENTS.PlayerInRangeSight);
 
-        fsmMonster.SetRelations((int)Monster_STATES.Wait, (int)Monster_STATES.ChasePlayer, (int)Monster_EVENTS.PlayerInRangeSight);
         fsmMonster.SetRelations((int)Monster_STATES.Wait, (int)Monster_STATES.Die, (int)Monster_EVENTS.DestroyEnemy);
         fsmMonster.SetRelations((int)Monster_STATES.Wait, (int)Monster_STATES.AssignedCurrentWaypoint, (int)Monster_EVENTS.DoneDelayWait);
+        fsmMonster.SetRelations((int)Monster_STATES.Wait, (int)Monster_STATES.GoToLastPositionPlayerView, (int)Monster_EVENTS.InSuspecting);
+        fsmMonster.SetRelations((int)Monster_STATES.Wait, (int)Monster_STATES.ChasePlayer, (int)Monster_EVENTS.PlayerInRangeSight);
 
-        fsmMonster.SetRelations((int)Monster_STATES.ChasePlayer, (int)Monster_STATES.AssignedCurrentWaypoint, (int)Monster_EVENTS.PlayerOutRangeSight);
+        fsmMonster.SetRelations((int)Monster_STATES.GoToLastPositionPlayerView, (int)Monster_STATES.RegisterZone, (int)Monster_EVENTS.DoneGoToLastPositionPlayerView);
+        fsmMonster.SetRelations((int)Monster_STATES.GoToLastPositionPlayerView, (int)Monster_STATES.ChasePlayer, (int)Monster_EVENTS.PlayerInRangeSight);
+        fsmMonster.SetRelations((int)Monster_STATES.GoToLastPositionPlayerView, (int)Monster_STATES.Die, (int)Monster_EVENTS.DestroyEnemy);
+        fsmMonster.SetRelations((int)Monster_STATES.GoToLastPositionPlayerView, (int)Monster_STATES.KillPlayer, (int)Monster_EVENTS.PlayerInRangeDead);
+
+        fsmMonster.SetRelations((int)Monster_STATES.RegisterZone, (int)Monster_STATES.ChasePlayer, (int)Monster_EVENTS.PlayerInRangeSight);
+        fsmMonster.SetRelations((int)Monster_STATES.RegisterZone, (int)Monster_STATES.AssignedCurrentWaypoint, (int)Monster_EVENTS.PlayerOutRangeSight);
+        fsmMonster.SetRelations((int)Monster_STATES.RegisterZone, (int)Monster_STATES.AssignedCurrentWaypoint, (int)Monster_EVENTS.OutSuspecting);
+        fsmMonster.SetRelations((int)Monster_STATES.RegisterZone, (int)Monster_STATES.Die, (int)Monster_EVENTS.DestroyEnemy);
+        fsmMonster.SetRelations((int)Monster_STATES.RegisterZone, (int)Monster_STATES.KillPlayer, (int)Monster_EVENTS.PlayerInRangeDead);
+
+        fsmMonster.SetRelations((int)Monster_STATES.ChasePlayer, (int)Monster_STATES.GoToLastPositionPlayerView, (int)Monster_EVENTS.PlayerOutRangeSight);
         fsmMonster.SetRelations((int)Monster_STATES.ChasePlayer, (int)Monster_STATES.Die, (int)Monster_EVENTS.DestroyEnemy);
         fsmMonster.SetRelations((int)Monster_STATES.ChasePlayer, (int)Monster_STATES.KillPlayer, (int)Monster_EVENTS.PlayerInRangeDead);
 
@@ -87,6 +133,12 @@ public class Monster : Updateable
     }
     protected override void Start()
     {
+        auxDelayWaitInPatrol = delayWaitInPatrol;
+        auxDelayOutChase = delayOutChase;
+        auxDelayRegisterZone = delayRegisterZone;
+
+        auxWaypoints = waypoints;
+
         base.Start();
         MyUpdate.AddListener(UpdateMonster);
         UM.UpdatesInGame.Add(MyUpdate);
@@ -106,6 +158,12 @@ public class Monster : Updateable
                 break;
             case (int)Monster_STATES.Wait:
                 Wait();
+                break;
+            case (int)Monster_STATES.GoToLastPositionPlayerView:
+                GoToLastPositionPlayerView();
+                break;
+            case (int)Monster_STATES.RegisterZone:
+                RegisterZone();
                 break;
             case (int)Monster_STATES.ChasePlayer:
                 ChasePlayer();
@@ -131,25 +189,35 @@ public class Monster : Updateable
         navMesh.speed = 0;
         navMesh.acceleration = 1000;
 
-        Transform prevWaypoint = currentWaypoit;
-        currentWaypoit = null;
-        int index = Random.Range(0, waypoints.Count);
+        Transform newWaypoint = null;
 
-        if (prevWaypoint == waypoints[index])
+        waypoints = auxWaypoints;
+
+        switch (typeFinderWaypoint)
         {
-            if (index >= waypoints.Count - 1)
-                index = 0;
-            else
-                index++;
+            case TypeFinderWaypoint.RandomPlayer:
+                newWaypoint = finderWaypoints.GetNonRepeatedWaypoint(currentWaypoit, waypoints);
+                break;
+            case TypeFinderWaypoint.NearPlayer:
+                waypoints = finderWaypoints.GetListWaypointsNearTarget(auxWaypoints, currentPlayer, countWaypointsNearPlayer);
+                newWaypoint = finderWaypoints.GetNonRepeatedWaypoint(currentWaypoit, waypoints);
+                break;
+            case TypeFinderWaypoint.DistantPlayer:
+                waypoints = finderWaypoints.GetListWaypointsDistantTarget(auxWaypoints, currentPlayer, countWaypointsNearPlayer);
+                newWaypoint = finderWaypoints.GetNonRepeatedWaypoint(currentWaypoit, waypoints);
+                break;
         }
 
-        currentWaypoit = waypoints[index];
+        currentWaypoit = newWaypoint;
 
         if (currentWaypoit != null)
         {
             fsmMonster.SendEvent((int)Monster_EVENTS.DoneAssignedCurrentWaypoint);
         }
-        CheckInChasePlayer();
+
+        CheckInSuspectingPlayer();
+        CheckChasePlayerForTimeViewPlayer();
+
         CheckDead();
     }
 
@@ -167,7 +235,10 @@ public class Monster : Updateable
         {
             fsmMonster.SendEvent((int)Monster_EVENTS.DoneGoToWaypoint);
         }
-        CheckInChasePlayer();
+
+        CheckInSuspectingPlayer();
+        CheckChasePlayerForTimeViewPlayer();
+
         CheckDead();
     }
 
@@ -187,10 +258,54 @@ public class Monster : Updateable
             fsmMonster.SendEvent((int)Monster_EVENTS.DoneDelayWait);
         }
 
-        CheckInChasePlayer();
+        CheckInSuspectingPlayer();
+        CheckChasePlayerForTimeViewPlayer();
+
         CheckDead();
     }
+    private void GoToLastPositionPlayerView()
+    {
+        navMesh.isStopped = false;
+        navMesh.speed = speedGoToLastedPositionPlayer;
+        navMesh.acceleration = speedGoToLastedPositionPlayer * 2;
+        navMesh.SetDestination(lastPositionViewPlayer);
 
+        float distanceForTarget = Vector3.Distance(lastPositionViewPlayer, transform.position);
+        float magnitude = 0.5f;
+
+        if (distanceForTarget <= magnitude)
+        {
+            fsmMonster.SendEvent((int)Monster_EVENTS.DoneGoToLastPositionPlayerView);
+        }
+        
+        CheckViewPlayer(Monster_EVENTS.PlayerInRangeSight, true);
+
+        CheckDead();
+
+    }
+    private void RegisterZone()
+    {
+        Debug.Log("REGISTER ZONE");
+
+        registerZone.MovementRegisterZone(navMesh);
+
+        if (delayRegisterZone > 0)
+        {
+            delayRegisterZone = delayRegisterZone - Time.deltaTime;
+        }
+        else
+        {
+            delayRegisterZone = auxDelayRegisterZone;
+            fsmMonster.SendEvent((int)Monster_EVENTS.OutSuspecting);
+        }
+
+        if (registerZone.GetFoundTarget())
+        {
+            fsmMonster.SendEvent((int)Monster_EVENTS.PlayerInRangeSight);
+            registerZone.ResetFoundTarget();
+        }
+
+    }
     private void ChasePlayer()
     {
         delayWaitInPatrol = auxDelayWaitInPatrol;
@@ -231,8 +346,35 @@ public class Monster : Updateable
         }
         /*A COMPLETAR.*/
     }
+    private void CheckInSuspectingPlayer()
+    {
+        //Si lo ve persigue al player
+        bool viewPlayer = CheckViewPlayer(Monster_EVENTS.Null, false);
 
-    private void CheckInChasePlayer()
+        if (!viewPlayer)
+        {
+            if (timeViewPlayer > 0 && timeViewPlayer <= timeViewPlayerForSuspecting)
+            {
+                //Debug.Log("ENTRE");
+                fsmMonster.SendEvent((int)Monster_EVENTS.InSuspecting);
+                timeViewPlayer = 0;
+            }
+        }
+    }
+
+    private void CheckChasePlayerForTimeViewPlayer()
+    {
+        CheckViewPlayer(Monster_EVENTS.Null, false);
+
+        if (timeViewPlayer > timeViewPlayerForSuspecting)
+        {
+            //Debug.Log("ENTRE");
+            CheckViewPlayer(Monster_EVENTS.PlayerInRangeSight, true);
+            timeViewPlayer = 0;
+        }
+    }
+
+    private bool CheckViewPlayer(Monster_EVENTS sendEvent, bool useSendEvent)
     {
         RaycastHit hit;
 
@@ -244,12 +386,17 @@ public class Monster : Updateable
 
         Vector3 direction = currentPlayer.position - transform.position;
         //Debug.DrawLine(transform.position, direction, Color.red, 0.1f);
-
+        bool playerView = false;
         if (Physics.Raycast(spawnRayCastCheckChasePlayer.position, spawnRayCastCheckChasePlayer.forward, out hit, rangeRayCastCheckChasePlayer))
         {
             if (hit.transform.CompareTag("Player"))
             {
-                fsmMonster.SendEvent((int)Monster_EVENTS.PlayerInRangeSight);
+                if (useSendEvent)
+                {
+                    fsmMonster.SendEvent((int)sendEvent);
+                }
+                lastPositionViewPlayer = currentPlayer.position;
+                playerView = true;
             }
         }
 
@@ -258,7 +405,12 @@ public class Monster : Updateable
         {
             if (hit2.transform.CompareTag("Player"))
             {
-                fsmMonster.SendEvent((int)Monster_EVENTS.PlayerInRangeSight);
+                if (useSendEvent)
+                {
+                    fsmMonster.SendEvent((int)sendEvent);
+                }
+                lastPositionViewPlayer = currentPlayer.position;
+                playerView = true;
             }
         }
 
@@ -267,7 +419,12 @@ public class Monster : Updateable
         {
             if (hit3.transform.CompareTag("Player"))
             {
-                fsmMonster.SendEvent((int)Monster_EVENTS.PlayerInRangeSight);
+                if (useSendEvent)
+                {
+                    fsmMonster.SendEvent((int)sendEvent);
+                }
+                lastPositionViewPlayer = currentPlayer.position;
+                playerView = true;
             }
         }
 
@@ -275,9 +432,20 @@ public class Monster : Updateable
         {
             if (hit4.transform.CompareTag("Player"))
             {
-                fsmMonster.SendEvent((int)Monster_EVENTS.PlayerInRangeSight);
+                if (useSendEvent)
+                {
+                    fsmMonster.SendEvent((int)sendEvent);
+                }
+                lastPositionViewPlayer = currentPlayer.position;
+                playerView = true;
             }
         }
+
+        if (playerView)
+            timeViewPlayer += Time.deltaTime;
+
+        return playerView;
+        
     }
     private void CheckOutChasePlayer()
     {
@@ -353,6 +521,16 @@ public class Monster : Updateable
         fsmMonster.SendEvent((int)Monster_EVENTS.PlayerInRangeSight);
     }
 
+    public void SendEventInSuspecting()
+    {
+        lastPositionViewPlayer = currentPlayer.position;
+        fsmMonster.SendEvent((int)Monster_EVENTS.InSuspecting);
+    }
+
+    public void ResetDelayOutChasePlayer()
+    {
+        delayOutChase = auxDelayOutChase;
+    }
     public void DestroyEnemy() { destroyEnemy = true; }
 
     public void SetResetBehaviour(bool value) => resetBehaviour = value;

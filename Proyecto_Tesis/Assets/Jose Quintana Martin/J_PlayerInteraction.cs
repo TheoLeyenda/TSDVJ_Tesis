@@ -8,6 +8,7 @@ public class J_PlayerInteraction : Updateable
     public float interactionDistance = 1f;
 
     private J_Interactable interactable;
+    private GameObject lastIntObject;
 
     RaycastHit hit;
 
@@ -32,11 +33,18 @@ public class J_PlayerInteraction : Updateable
         {
             interactable = hit.transform.gameObject.GetComponent<J_Interactable>();
             if (interactable != null)
+            {
+                lastIntObject = interactable.gameObject;
                 interactable.DoAction();
+            }
             else
                 Debug.Log("Not Ineractable");
         }
         else
             Debug.Log("No collider on range");
+    }
+
+    public GameObject GetLastIntObject() {
+        return lastIntObject;
     }
 }

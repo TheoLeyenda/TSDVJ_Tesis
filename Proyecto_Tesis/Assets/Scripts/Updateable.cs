@@ -14,4 +14,16 @@ public class Updateable : MonoBehaviour
         MyUpdate = new UnityEvent();
         UM = UpdateManager.instanceUpdateManager;
     }
+
+    protected void OnEnable()
+    {
+        if (MyUpdate != null)
+            UM.UpdatesInGame.Add(MyUpdate);
+    }
+
+    protected void OnDisable()
+    {
+        if (MyUpdate != null)
+            UM.UpdatesInGame.Remove(MyUpdate);
+    }
 }

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,13 +21,14 @@ public class J_Movement : Updateable
 
     public void UpdateMovement()
     {
+        Vector3 move = transform.right * xMov + transform.forward * zMov;
+
         xMov = Input.GetAxis("Horizontal");
         zMov = Input.GetAxis("Vertical");
 
-        Vector3 move = transform.right * xMov + transform.forward * zMov;
-
-        cc.Move(move * speed * Time.deltaTime);
+        if (xMov != 0 || zMov !=0)
+        {
+            cc.Move(move * speed * Time.deltaTime);
+        }
     }
-
-
 }

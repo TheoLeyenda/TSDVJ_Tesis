@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -34,6 +34,6 @@ public class J_MouseInput : Updateable
         }
 
         transform.localRotation = Quaternion.Euler(-turn.y, 0, 0);
-        playerBody.localRotation = Quaternion.Euler(0, turn.x, 0);
+        playerBody.localRotation = Quaternion.Euler(0, turn.x, 0); //<---------- YOUUUUUUU!!!!
     }
 }

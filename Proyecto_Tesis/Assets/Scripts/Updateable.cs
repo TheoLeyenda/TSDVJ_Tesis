@@ -12,6 +12,7 @@ public class Updateable : MonoBehaviour
     protected virtual void Start()
     {
         MyUpdate = new UnityEvent();
+        MyFixedUpdate = new UnityEvent();
         UM = UpdateManager.instanceUpdateManager;
     }
 }

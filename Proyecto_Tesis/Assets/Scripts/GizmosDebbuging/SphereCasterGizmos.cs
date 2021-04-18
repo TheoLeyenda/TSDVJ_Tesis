@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class SphereCasterGizmos : MonoBehaviour
 {
-    [SerializeField] private float maxDistance;
+    [SerializeField] private float maxDistance = 0;
 
-    [SerializeField] float radiusSphere;
+    [SerializeField] float radiusSphere = 0;
 
     void OnDrawGizmos()
     {

@@ -34,6 +34,7 @@ public class Monster : Updateable
         PlayerOutRangeSight,
         PlayerInRangeDead,
         DestroyEnemy,
+        OnLisentPlayer,
         PlayerDead,
         Count,
     }
@@ -51,32 +52,32 @@ public class Monster : Updateable
     [SerializeField] private int countWaypointsNearPlayer = 3;
     [SerializeField] private int countWaypointsDistancePlayer = 3;
 
-    [SerializeField] private float speedPatrol;
-    [SerializeField] private float speedChasePlayer;
-    [SerializeField] private float delayWaitInPatrol;
+    [SerializeField] private float speedPatrol = 0;
+    [SerializeField] private float speedChasePlayer = 0;
+    [SerializeField] private float delayWaitInPatrol = 0;
     private float auxDelayWaitInPatrol;
-    [SerializeField] private float rangeKillPlayer;
+    [SerializeField] private float rangeKillPlayer = 0;
 
     [SerializeField] private float rangeMagnitudeWaypoint = 0.5f;
 
-    [SerializeField] private float speedGoToLastedPositionPlayer;
-    [SerializeField] private float timeViewPlayerForSuspecting;
+    [SerializeField] private float speedGoToLastedPositionPlayer = 0;
+    [SerializeField] private float timeViewPlayerForSuspecting = 0;
 
     [SerializeField] private float delayOutChase = 2.5f;
     private float auxDelayOutChase = 2.5f;
     [SerializeField] private float rangeChasePlayer = 10.0f;
-    [SerializeField] private float rangeRayCastCheckChasePlayer;
+    [SerializeField] private float rangeRayCastCheckChasePlayer = 0;
     [SerializeField] private float distanceBeetwoenRayCastChasePlayer = 0.5f;
-    [SerializeField] private Transform spawnRayCastCheckChasePlayer;
+    [SerializeField] private Transform spawnRayCastCheckChasePlayer = null;
 
     [SerializeField] private List<Transform> waypoints;
     private List<Transform> auxWaypoints;
 
-    [SerializeField] private Transform currentWaypoit;
-    [SerializeField] private Transform currentPlayer;
-    [SerializeField] private NavMeshAgent navMesh;
+    [SerializeField] private Transform currentWaypoit = null;
+    [SerializeField] private Transform currentPlayer = null;
+    [SerializeField] private NavMeshAgent navMesh = null;
 
-    [SerializeField] private UnityEvent OnKillPlayer;
+    [SerializeField] private UnityEvent OnKillPlayer = null;
 
     private bool resetBehaviour = false;
     private bool destroyEnemy = false;
@@ -84,9 +85,9 @@ public class Monster : Updateable
     private Vector3 lastPositionViewPlayer;
     private FSM fsmMonster;
 
-    [SerializeField] private RegisterZone registerZone;
-    [SerializeField] private float delayRegisterZone;
-    private float auxDelayRegisterZone;
+    [SerializeField] private RegisterZone registerZone = null;
+    [SerializeField] private float delayRegisterZone = 0;
+    private float auxDelayRegisterZone = 0;
 
     void Awake()
     {
@@ -103,16 +104,19 @@ public class Monster : Updateable
         fsmMonster.SetRelations((int)Monster_STATES.AssignedCurrentWaypoint, (int)Monster_STATES.GoToWaypoint, (int)Monster_EVENTS.DoneAssignedCurrentWaypoint);
         fsmMonster.SetRelations((int)Monster_STATES.AssignedCurrentWaypoint, (int)Monster_STATES.GoToLastPositionPlayerView, (int)Monster_EVENTS.InSuspecting);
         fsmMonster.SetRelations((int)Monster_STATES.AssignedCurrentWaypoint, (int)Monster_STATES.ChasePlayer, (int)Monster_EVENTS.PlayerInRangeSight);
+        fsmMonster.SetRelations((int)Monster_STATES.AssignedCurrentWaypoint, (int)Monster_STATES.GoToLastPositionPlayerView, (int)Monster_EVENTS.OnLisentPlayer);
 
         fsmMonster.SetRelations((int)Monster_STATES.GoToWaypoint, (int)Monster_STATES.Die, (int)Monster_EVENTS.DestroyEnemy);
         fsmMonster.SetRelations((int)Monster_STATES.GoToWaypoint, (int)Monster_STATES.Wait, (int)Monster_EVENTS.DoneGoToWaypoint);
         fsmMonster.SetRelations((int)Monster_STATES.GoToWaypoint, (int)Monster_STATES.GoToLastPositionPlayerView, (int)Monster_EVENTS.InSuspecting);
         fsmMonster.SetRelations((int)Monster_STATES.GoToWaypoint, (int)Monster_STATES.ChasePlayer, (int)Monster_EVENTS.PlayerInRangeSight);
+        fsmMonster.SetRelations((int)Monster_STATES.GoToWaypoint, (int)Monster_STATES.GoToLastPositionPlayerView, (int)Monster_EVENTS.OnLisentPlayer);
 
         fsmMonster.SetRelations((int)Monster_STATES.Wait, (int)Monster_STATES.Die, (int)Monster_EVENTS.DestroyEnemy);
         fsmMonster.SetRelations((int)Monster_STATES.Wait, (int)Monster_STATES.AssignedCurrentWaypoint, (int)Monster_EVENTS.DoneDelayWait);
         fsmMonster.SetRelations((int)Monster_STATES.Wait, (int)Monster_STATES.GoToLastPositionPlayerView, (int)Monster_EVENTS.InSuspecting);
         fsmMonster.SetRelations((int)Monster_STATES.Wait, (int)Monster_STATES.ChasePlayer, (int)Monster_EVENTS.PlayerInRangeSight);
+        fsmMonster.SetRelations((int)Monster_STATES.Wait, (int)Monster_STATES.GoToLastPositionPlayerView, (int)Monster_EVENTS.OnLisentPlayer);
 
         fsmMonster.SetRelations((int)Monster_STATES.GoToLastPositionPlayerView, (int)Monster_STATES.RegisterZone, (int)Monster_EVENTS.DoneGoToLastPositionPlayerView);
         fsmMonster.SetRelations((int)Monster_STATES.GoToLastPositionPlayerView, (int)Monster_STATES.ChasePlayer, (int)Monster_EVENTS.PlayerInRangeSight);
@@ -120,6 +124,7 @@ public class Monster : Updateable
         fsmMonster.SetRelations((int)Monster_STATES.GoToLastPositionPlayerView, (int)Monster_STATES.KillPlayer, (int)Monster_EVENTS.PlayerInRangeDead);
 
         fsmMonster.SetRelations((int)Monster_STATES.RegisterZone, (int)Monster_STATES.ChasePlayer, (int)Monster_EVENTS.PlayerInRangeSight);
+        fsmMonster.SetRelations((int)Monster_STATES.RegisterZone, (int)Monster_STATES.ChasePlayer, (int)Monster_EVENTS.OnLisentPlayer);
         fsmMonster.SetRelations((int)Monster_STATES.RegisterZone, (int)Monster_STATES.AssignedCurrentWaypoint, (int)Monster_EVENTS.PlayerOutRangeSight);
         fsmMonster.SetRelations((int)Monster_STATES.RegisterZone, (int)Monster_STATES.AssignedCurrentWaypoint, (int)Monster_EVENTS.OutSuspecting);
         fsmMonster.SetRelations((int)Monster_STATES.RegisterZone, (int)Monster_STATES.Die, (int)Monster_EVENTS.DestroyEnemy);
@@ -139,12 +144,19 @@ public class Monster : Updateable
 
         auxWaypoints = waypoints;
 
+        registerZone.DisableRegisterObject();
+
         base.Start();
         MyUpdate.AddListener(UpdateMonster);
         UM.UpdatesInGame.Add(MyUpdate);
     }
     public void UpdateMonster()
     {
+        //if (Input.GetKey(KeyCode.Return))
+        //{
+            Debug.Log((Monster_STATES)fsmMonster.GetCurrentState());
+        //}
+
         switch (fsmMonster.GetCurrentState())
         {
             case (int)Monster_STATES.Idle:
@@ -184,6 +196,7 @@ public class Monster : Updateable
 
     private void AssignedCurrentWaypoint()
     {
+        delayRegisterZone = auxDelayRegisterZone;
         delayWaitInPatrol = auxDelayWaitInPatrol;
         navMesh.isStopped = true;
         navMesh.speed = 0;
@@ -203,7 +216,7 @@ public class Monster : Updateable
                 newWaypoint = finderWaypoints.GetNonRepeatedWaypoint(currentWaypoit, waypoints);
                 break;
             case TypeFinderWaypoint.DistantPlayer:
-                waypoints = finderWaypoints.GetListWaypointsDistantTarget(auxWaypoints, currentPlayer, countWaypointsNearPlayer);
+                waypoints = finderWaypoints.GetListWaypointsDistantTarget(auxWaypoints, currentPlayer, countWaypointsDistancePlayer);
                 newWaypoint = finderWaypoints.GetNonRepeatedWaypoint(currentWaypoit, waypoints);
                 break;
         }
@@ -223,6 +236,7 @@ public class Monster : Updateable
 
     private void GoToWaypoint()
     {
+        delayRegisterZone = auxDelayRegisterZone;
         delayWaitInPatrol = auxDelayWaitInPatrol;
         navMesh.isStopped = false;
         navMesh.speed = speedPatrol;
@@ -244,6 +258,7 @@ public class Monster : Updateable
 
     private void Wait()
     {
+        delayRegisterZone = auxDelayRegisterZone;
         navMesh.isStopped = true;
         navMesh.speed = 0;
         navMesh.acceleration = 1000;
@@ -265,6 +280,7 @@ public class Monster : Updateable
     }
     private void GoToLastPositionPlayerView()
     {
+        delayRegisterZone = auxDelayRegisterZone;
         navMesh.isStopped = false;
         navMesh.speed = speedGoToLastedPositionPlayer;
         navMesh.acceleration = speedGoToLastedPositionPlayer * 2;
@@ -286,8 +302,9 @@ public class Monster : Updateable
     private void RegisterZone()
     {
         Debug.Log("REGISTER ZONE");
-
-        registerZone.MovementRegisterZone(navMesh);
+        timeViewPlayer = 0;
+        registerZone.SetEnableRegisterZone(true);
+        registerZone.EnableRegisterObject();
 
         if (delayRegisterZone > 0)
         {
@@ -296,18 +313,27 @@ public class Monster : Updateable
         else
         {
             delayRegisterZone = auxDelayRegisterZone;
+            registerZone.SetEnableRegisterZone(false);
+            registerZone.DisableRegisterObject();
+            registerZone.ResetFoundTarget();
             fsmMonster.SendEvent((int)Monster_EVENTS.OutSuspecting);
         }
 
         if (registerZone.GetFoundTarget())
         {
-            fsmMonster.SendEvent((int)Monster_EVENTS.PlayerInRangeSight);
+            delayRegisterZone = auxDelayRegisterZone;
+            registerZone.SetEnableRegisterZone(false);
+            registerZone.DisableRegisterObject();
             registerZone.ResetFoundTarget();
+            fsmMonster.SendEvent((int)Monster_EVENTS.PlayerInRangeSight);
         }
+
+        registerZone.UpdateRegisterZone();
 
     }
     private void ChasePlayer()
     {
+        delayRegisterZone = auxDelayRegisterZone;
         delayWaitInPatrol = auxDelayWaitInPatrol;
         navMesh.isStopped = false;
         navMesh.speed = speedChasePlayer;
@@ -329,7 +355,7 @@ public class Monster : Updateable
     private void Die()
     {
         delayWaitInPatrol = auxDelayWaitInPatrol;
-
+        delayRegisterZone = auxDelayRegisterZone;
         //REEMPLAZAR ESTO POR LA ANIMACION DE MUERTE DEL ENEMIGO.
         Destroy(gameObject);
     }
@@ -337,7 +363,7 @@ public class Monster : Updateable
     private void KillPlayer()
     {
         delayWaitInPatrol = auxDelayWaitInPatrol;
-
+        delayRegisterZone = auxDelayRegisterZone;
         OnKillPlayer?.Invoke();
 
         if (resetBehaviour)
@@ -355,7 +381,7 @@ public class Monster : Updateable
         {
             if (timeViewPlayer > 0 && timeViewPlayer <= timeViewPlayerForSuspecting)
             {
-                //Debug.Log("ENTRE");
+                Debug.Log("ENTRE");
                 fsmMonster.SendEvent((int)Monster_EVENTS.InSuspecting);
                 timeViewPlayer = 0;
             }
@@ -519,6 +545,12 @@ public class Monster : Updateable
     public void SendEventPlayerInRangeSight()
     {
         fsmMonster.SendEvent((int)Monster_EVENTS.PlayerInRangeSight);
+    }
+
+    public void SendEventOnLisentPlayer()
+    {
+        lastPositionViewPlayer = currentPlayer.position;
+        fsmMonster.SendEvent((int)Monster_EVENTS.OnLisentPlayer);
     }
 
     public void SendEventInSuspecting()

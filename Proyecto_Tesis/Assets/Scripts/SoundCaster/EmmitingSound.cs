@@ -5,10 +5,10 @@ using UnityEngine;
 public class EmmitingSound : MonoBehaviour
 {
     // Update is called once per frame
-    [SerializeField] private Transform centerBoxOverlapCaster;
-    [SerializeField] private float heightEmmitingSound;
-    private Vector3 halfExtents;
-    private Collider[] colliders;
+    [SerializeField] private Transform centerBoxOverlapCaster = null;
+    [SerializeField] private float heightEmmitingSound = 0;
+    private Vector3 halfExtents = Vector3.zero;
+    private Collider[] colliders = null;
 
     public void ShootEmmitingSound(float valueSound)
     {

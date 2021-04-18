@@ -47,9 +47,9 @@ public class InputTestPlayer : Updateable
     }
 
 
-    [SerializeField] private List<InputAndEvent> inputs;
+    [SerializeField] private List<InputAndEvent> inputs = null;
 
-    [SerializeField] private UnityEvent FunctionForNotInput;
+    [SerializeField] private UnityEvent FunctionForNotInput = null;
     [SerializeField] private bool stopPlayerWithNullInput = true;
     // Update is called once per frame
     protected override void Start()

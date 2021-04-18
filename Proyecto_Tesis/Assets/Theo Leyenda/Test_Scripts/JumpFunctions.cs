@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class JumpFunctions : MonoBehaviour
 {
-    [SerializeField] private float impulse;
-    [SerializeField] private Rigidbody rig;
+    [SerializeField] private float impulse = 0;
+    [SerializeField] private Rigidbody rig = null;
     [SerializeField] private bool useCheckAviableJump = true;
-    [SerializeField] private float rangeRayCheckIsFloor;
-    private GetDirectionForEnum getDirectionForEnum;
+    [SerializeField] private float rangeRayCheckIsFloor = 0;
+    private GetDirectionForEnum getDirectionForEnum = null;
 
     bool aviableJump = true;
 

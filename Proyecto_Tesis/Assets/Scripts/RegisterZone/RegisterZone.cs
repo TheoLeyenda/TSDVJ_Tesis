@@ -5,7 +5,8 @@ using UnityEngine.AI;
 using UnityEngine.Events;
 public class RegisterZone : MonoBehaviour
 {
-    [SerializeField] private GameObject myPricipalObject;
+    [SerializeField] private GameObject myPrincipalObject;
+    [SerializeField] private GameObject GeneratorPerimeterRegisterObject;
 
     public GameObject registerObject;
     [SerializeField] private List<string> targetsTag = null;
@@ -181,22 +182,22 @@ public class RegisterZone : MonoBehaviour
         float distanceRight = DistanceRayCasterZone(Vector3.right);
         float distanceLeft = DistanceRayCasterZone(Vector3.left);
 
-        float minX = myPricipalObject.transform.position.x - distanceLeft;
-        float maxX = myPricipalObject.transform.position.x + distanceRight;
+        float minX = GeneratorPerimeterRegisterObject.transform.position.x - distanceLeft;
+        float maxX = GeneratorPerimeterRegisterObject.transform.position.x + distanceRight;
 
-        float minZ = myPricipalObject.transform.position.z - distanceBack;
-        float maxZ = myPricipalObject.transform.position.z + distanceForward;
+        float minZ = GeneratorPerimeterRegisterObject.transform.position.z - distanceBack;
+        float maxZ = GeneratorPerimeterRegisterObject.transform.position.z + distanceForward;
 
         float x = minX + maxX;
         float centerX = x / 2;
 
-        float y = myPricipalObject.transform.position.y;
+        float y = transform.position.y;
 
         float z = minZ + maxZ;
         float centerZ = z / 2;
 
         float scalX = Vector3.Distance(new Vector3(minX, 0, 0), new Vector3(maxX, 0, 0));
-        float scalY = myPricipalObject.transform.localScale.y;
+        float scalY = myPrincipalObject.transform.localScale.y;
         float scalZ = Vector3.Distance(new Vector3(0, 0, minZ), new Vector3(0, 0, maxZ));
 
         Vector3 center = new Vector3(centerX, y, centerZ);
@@ -249,7 +250,7 @@ public class RegisterZone : MonoBehaviour
         {
             int indexTarget = Random.Range(0, specificsTargetsPositions.Count);
 
-            currentTarget = new Vector3(specificsTargetsPositions[indexTarget].x, myPricipalObject.transform.position.y, specificsTargetsPositions[indexTarget].z);
+            currentTarget = new Vector3(specificsTargetsPositions[indexTarget].x, myPrincipalObject.transform.position.y, specificsTargetsPositions[indexTarget].z);
 
             sendCurrentEvent = RegisterZone_EVENTS.AssignedSpecificPosition;
 
@@ -302,7 +303,7 @@ public class RegisterZone : MonoBehaviour
 
     bool CheckArrivedTarget()
     {
-        float distanceToTarget = Vector3.Distance(myPricipalObject.transform.position, currentTarget);
+        float distanceToTarget = Vector3.Distance(myPrincipalObject.transform.position, currentTarget);
 
         if (distanceToTarget <= distanceOfCurrentTarget)
         {
@@ -316,14 +317,14 @@ public class RegisterZone : MonoBehaviour
     {
         RaycastHit hit;
 
-        bool isHit = Physics.Raycast(myPricipalObject.transform.position, direction, out hit, maxRangePerimeterRegister, layerWalls);
+        bool isHit = Physics.Raycast(GeneratorPerimeterRegisterObject.transform.position, direction, out hit, maxRangePerimeterRegister, layerWalls);
 
         float distance = maxRangePerimeterRegister;
 
         if (isHit)
         {
             //Debug.Log("Le di al hit uwu");
-            distance = Vector3.Distance(myPricipalObject.transform.position, hit.point);
+            distance = Vector3.Distance(GeneratorPerimeterRegisterObject.transform.position, hit.point);
         }
 
         return distance;
@@ -351,6 +352,8 @@ public class RegisterZone : MonoBehaviour
     public void ResetFoundTarget() => foundTarget = false;
 
     public bool GetFoundTarget() { return foundTarget; }
+
+    public void SetGeneraterPerimeterRegisterObject(GameObject _generatorPerimeterRegisterObject) => GeneratorPerimeterRegisterObject = _generatorPerimeterRegisterObject;
 
     void OnDrawGizmos()
     {

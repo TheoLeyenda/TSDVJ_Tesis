@@ -19,7 +19,11 @@ public class Monster : Updateable
         Die,
         Count,
     }
-
+    public enum TargetGeneratePerimeterRegisterZone
+    {
+        Player,
+        Monster,
+    }
     public enum Monster_EVENTS
     {
         Null,
@@ -89,6 +93,8 @@ public class Monster : Updateable
     [SerializeField] private float delayRegisterZone = 0;
     private float auxDelayRegisterZone = 0;
 
+    [SerializeField] private TargetGeneratePerimeterRegisterZone targetGeneratePerimeterRegisterZone;
+
     void Awake()
     {
         resetBehaviour = false;
@@ -149,6 +155,7 @@ public class Monster : Updateable
         base.Start();
         MyUpdate.AddListener(UpdateMonster);
         UM.UpdatesInGame.Add(MyUpdate);
+        lastPositionViewPlayer = Vector3.zero;
     }
     public void UpdateMonster()
     {
@@ -191,11 +198,13 @@ public class Monster : Updateable
 
     private void Idle()
     {
+        lastPositionViewPlayer = Vector3.zero;
         fsmMonster.SendEvent((int)Monster_EVENTS.Start);
     }
 
     private void AssignedCurrentWaypoint()
     {
+        lastPositionViewPlayer = Vector3.zero;
         delayRegisterZone = auxDelayRegisterZone;
         delayWaitInPatrol = auxDelayWaitInPatrol;
         navMesh.isStopped = true;
@@ -236,6 +245,7 @@ public class Monster : Updateable
 
     private void GoToWaypoint()
     {
+        lastPositionViewPlayer = Vector3.zero;
         delayRegisterZone = auxDelayRegisterZone;
         delayWaitInPatrol = auxDelayWaitInPatrol;
         navMesh.isStopped = false;
@@ -258,6 +268,7 @@ public class Monster : Updateable
 
     private void Wait()
     {
+        lastPositionViewPlayer = Vector3.zero;
         delayRegisterZone = auxDelayRegisterZone;
         navMesh.isStopped = true;
         navMesh.speed = 0;
@@ -284,6 +295,10 @@ public class Monster : Updateable
         navMesh.isStopped = false;
         navMesh.speed = speedGoToLastedPositionPlayer;
         navMesh.acceleration = speedGoToLastedPositionPlayer * 2;
+
+        if (lastPositionViewPlayer == Vector3.zero)
+            lastPositionViewPlayer = currentPlayer.position;
+
         navMesh.SetDestination(lastPositionViewPlayer);
 
         float distanceForTarget = Vector3.Distance(lastPositionViewPlayer, transform.position);
@@ -301,8 +316,18 @@ public class Monster : Updateable
     }
     private void RegisterZone()
     {
+        lastPositionViewPlayer = Vector3.zero;
         Debug.Log("REGISTER ZONE");
         timeViewPlayer = 0;
+        switch (targetGeneratePerimeterRegisterZone)
+        {
+            case TargetGeneratePerimeterRegisterZone.Monster:
+                registerZone.SetGeneraterPerimeterRegisterObject(gameObject);
+                break;
+            case TargetGeneratePerimeterRegisterZone.Player:
+                registerZone.SetGeneraterPerimeterRegisterObject(currentPlayer.gameObject);
+                break;
+        }
         registerZone.SetEnableRegisterZone(true);
         registerZone.EnableRegisterObject();
 
@@ -333,6 +358,7 @@ public class Monster : Updateable
     }
     private void ChasePlayer()
     {
+        lastPositionViewPlayer = Vector3.zero;
         delayRegisterZone = auxDelayRegisterZone;
         delayWaitInPatrol = auxDelayWaitInPatrol;
         navMesh.isStopped = false;
@@ -354,6 +380,7 @@ public class Monster : Updateable
 
     private void Die()
     {
+        lastPositionViewPlayer = Vector3.zero;
         delayWaitInPatrol = auxDelayWaitInPatrol;
         delayRegisterZone = auxDelayRegisterZone;
         //REEMPLAZAR ESTO POR LA ANIMACION DE MUERTE DEL ENEMIGO.
@@ -362,6 +389,7 @@ public class Monster : Updateable
 
     private void KillPlayer()
     {
+        lastPositionViewPlayer = Vector3.zero;
         delayWaitInPatrol = auxDelayWaitInPatrol;
         delayRegisterZone = auxDelayRegisterZone;
         OnKillPlayer?.Invoke();
@@ -381,7 +409,7 @@ public class Monster : Updateable
         {
             if (timeViewPlayer > 0 && timeViewPlayer <= timeViewPlayerForSuspecting)
             {
-                Debug.Log("ENTRE");
+                //Debug.Log("ENTRE");
                 fsmMonster.SendEvent((int)Monster_EVENTS.InSuspecting);
                 timeViewPlayer = 0;
             }
@@ -421,7 +449,6 @@ public class Monster : Updateable
                 {
                     fsmMonster.SendEvent((int)sendEvent);
                 }
-                lastPositionViewPlayer = currentPlayer.position;
                 playerView = true;
             }
         }
@@ -435,7 +462,6 @@ public class Monster : Updateable
                 {
                     fsmMonster.SendEvent((int)sendEvent);
                 }
-                lastPositionViewPlayer = currentPlayer.position;
                 playerView = true;
             }
         }
@@ -449,7 +475,6 @@ public class Monster : Updateable
                 {
                     fsmMonster.SendEvent((int)sendEvent);
                 }
-                lastPositionViewPlayer = currentPlayer.position;
                 playerView = true;
             }
         }
@@ -462,7 +487,6 @@ public class Monster : Updateable
                 {
                     fsmMonster.SendEvent((int)sendEvent);
                 }
-                lastPositionViewPlayer = currentPlayer.position;
                 playerView = true;
             }
         }
@@ -549,13 +573,11 @@ public class Monster : Updateable
 
     public void SendEventOnLisentPlayer()
     {
-        lastPositionViewPlayer = currentPlayer.position;
         fsmMonster.SendEvent((int)Monster_EVENTS.OnLisentPlayer);
     }
 
     public void SendEventInSuspecting()
     {
-        lastPositionViewPlayer = currentPlayer.position;
         fsmMonster.SendEvent((int)Monster_EVENTS.InSuspecting);
     }
 

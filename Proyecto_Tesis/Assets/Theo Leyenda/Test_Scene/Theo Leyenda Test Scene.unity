@@ -724,7 +724,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd3e4cec5517f874db013d0e390a6235, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myPricipalObject: {fileID: 1621830782}
+  myPrincipalObject: {fileID: 1621830782}
+  GeneratorPerimeterRegisterObject: {fileID: 0}
   registerObject: {fileID: 741443214}
   targetsTag:
   - Player
@@ -17042,6 +17043,7 @@ MonoBehaviour:
       m_Calls: []
   registerZone: {fileID: 35629902}
   delayRegisterZone: 20
+  targetGeneratePerimeterRegisterZone: 1
 --- !u!114 &1621830789
 MonoBehaviour:
   m_ObjectHideFlags: 0

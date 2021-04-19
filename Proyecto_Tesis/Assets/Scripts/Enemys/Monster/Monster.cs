@@ -297,7 +297,7 @@ public class Monster : Updateable
         navMesh.acceleration = speedGoToLastedPositionPlayer * 2;
 
         if (lastPositionViewPlayer == Vector3.zero)
-            lastPositionViewPlayer = currentPlayer.position;
+            lastPositionViewPlayer = new Vector3(currentPlayer.position.x, transform.position.y, currentPlayer.position.z);
 
         navMesh.SetDestination(lastPositionViewPlayer);
 

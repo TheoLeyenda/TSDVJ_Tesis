@@ -51,6 +51,8 @@ public class J_Movement : Updateable
         {
             cc.Move(move * speed * Time.deltaTime);
 
+            //Debug.Log("Emitiendo");
+
             sound.ShootEmmitingSound(walkingSoundIntensity);
         }
         else

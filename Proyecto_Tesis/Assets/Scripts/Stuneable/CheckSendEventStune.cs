@@ -48,7 +48,7 @@ public class CheckSendEventStune : Updateable
                 case TypeCheckUse.KeyCode:
                     if (Input.GetKeyDown(keyCodeCheck))
                     {
-                        Debug.Log("Mande el stune");
+                        //Debug.Log("Mande el stune");
                         if (OnSendEventStune != null)
                             OnSendEventStune(this);
 

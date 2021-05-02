@@ -25,6 +25,7 @@ public class RegisterZone : MonoBehaviour
     [SerializeField] private NavMeshAgent navMeshAgent;
 
     [SerializeField] private float delayWaitRegister = 2.5f;
+
     private float auxDelayWaitRegister;
 
     private Vector3 randomTargetPosition;
@@ -94,12 +95,12 @@ public class RegisterZone : MonoBehaviour
 
     void OnEnable()
     {
-        FildOfView.OnViewTargetWhitFildOfViewCheck += CheckFindTarget;
+        FildOfView.OnViewTargetWhitFildOfViewCheck += CheckFindTargetForTag;
     }
 
     void OnDisable()
     {
-        FildOfView.OnViewTargetWhitFildOfViewCheck -= CheckFindTarget;
+        FildOfView.OnViewTargetWhitFildOfViewCheck -= CheckFindTargetForTag;
     }
 
     public void DisableRegisterObject()
@@ -112,14 +113,14 @@ public class RegisterZone : MonoBehaviour
         registerObject.SetActive(true);
     }
 
-    public void CheckFindTarget(Transform _transform, FildOfView _fildOfView)
+    public void CheckFindTargetForTag(Transform targetFind, FildOfView _fildOfView)
     {
         if (_fildOfView != fildOfView)
             return;
 
         for (int i = 0; i < targetsTag.Count; i++)
         {
-            if (targetsTag[i] == _transform.tag)
+            if (targetsTag[i] == targetFind.tag)
             {
                 foundTarget = true;
                 i = targetsTag.Count;
@@ -129,11 +130,11 @@ public class RegisterZone : MonoBehaviour
 
     public void UpdateRegisterZone()
     {
-        if (Input.GetKey(KeyCode.Return))
-        {
-            Debug.Log((RegisterZone_STATES)fsmRegiserZone.GetCurrentState());
-            Debug.Log(currentTarget);
-        }
+        //if (Input.GetKey(KeyCode.Return))
+        //{
+        //    Debug.Log((RegisterZone_STATES)fsmRegiserZone.GetCurrentState());
+        //    Debug.Log(currentTarget);
+        //}
 
         fildOfView.FindVisibleTargets();
 
@@ -345,6 +346,10 @@ public class RegisterZone : MonoBehaviour
             fsmRegiserZone.SendEvent((int)RegisterZone_EVENTS.ResetBehaviour);
         }
     }
+    public void SetPorcentageRandomTarget(float value) => porcentageRandomTarget = value;
+
+    public void SetSpeedMovementRegister(float value) => speedMovementRegister = value;
+
     public void SetEnableRegisterZone(bool value) => enableRegisterZone = value;
 
     public bool GetEnableRegisterZone() { return enableRegisterZone; }
@@ -352,6 +357,8 @@ public class RegisterZone : MonoBehaviour
     public void ResetFoundTarget() => foundTarget = false;
 
     public bool GetFoundTarget() { return foundTarget; }
+
+    public FildOfView GetFildOfView() { return fildOfView; }
 
     public void SetGeneraterPerimeterRegisterObject(GameObject _generatorPerimeterRegisterObject) => GeneratorPerimeterRegisterObject = _generatorPerimeterRegisterObject;
 

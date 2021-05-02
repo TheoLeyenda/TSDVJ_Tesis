@@ -68,4 +68,11 @@ public class MovementFunctions : MonoBehaviour
         else
             Debug.Log("rig is null");
     }
+
+    public void SetSpeed(float value) => speed = value;
+
+    public ref float GetSpeed() { return ref speed; }
+
+    public float GetAuxSpeed() { return auxSpeed; }
+
 }

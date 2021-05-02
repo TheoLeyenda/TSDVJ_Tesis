@@ -23,7 +23,9 @@ public class EmmitingSound : MonoBehaviour
                 listening = colliders[i].GetComponent<ListeningSound>();
                 if(listening != null)
                 {
+                    listening.volumeSound = valueSound;
                     listening.OnListeningSound?.Invoke();
+                    listening.ListeningSoundAction();
                 }
             }
         }

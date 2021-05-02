@@ -23,6 +23,7 @@ public class FildOfView : MonoBehaviour
 
     public void FindVisibleTargets()
     {
+
         visibleTargets.Clear();
 
         Collider[] targetsInViewRadius = Physics.OverlapSphere(transform.position, viewRadius, targetMask);

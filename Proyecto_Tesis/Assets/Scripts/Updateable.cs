@@ -16,13 +16,13 @@ public class Updateable : MonoBehaviour
         UM = UpdateManager.instanceUpdateManager;
     }
 
-    protected void OnEnable()
+    protected virtual void OnEnable()
     {
         if (MyUpdate != null)
             UM.UpdatesInGame.Add(MyUpdate);
     }
 
-    protected void OnDisable()
+    protected virtual void OnDisable()
     {
         if (MyUpdate != null)
             UM.UpdatesInGame.Remove(MyUpdate);

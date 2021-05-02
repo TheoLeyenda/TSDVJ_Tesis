@@ -12,11 +12,9 @@ public class Flashlight : Updateable
         Off,
     }
     [SerializeField] private bool useFixedUpdateFlashlight = true;
-    [SerializeField] private GameObject lightObject;
-    [SerializeField] private LightState lightState;
-    [SerializeField] private LayerMask layerRayCastLight;
-    private ViewFlashlight viewFlashlight = null;
-    [SerializeField] private FildOfView fildOfView;
+    [SerializeField] private GameObject lightObject = null;
+    [SerializeField] private LightState lightState = LightState.Off;
+    [SerializeField] private FildOfView fildOfView = null;
 
 
     public void CheckOnViewFlash()

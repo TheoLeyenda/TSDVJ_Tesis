@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class MovementFunctions : MonoBehaviour
 {
-    [SerializeField] private float speed;
-    private float auxSpeed;
-    [SerializeField] private Rigidbody rig;
-    private GetDirectionForEnum getDirectionForEnum;
+    [SerializeField] private float speed = 0;
+    private float auxSpeed = 0;
+    [SerializeField] private Rigidbody rig = null;
+    private GetDirectionForEnum getDirectionForEnum = null;
 
     void Start()
     {
@@ -68,4 +68,11 @@ public class MovementFunctions : MonoBehaviour
         else
             Debug.Log("rig is null");
     }
+
+    public void SetSpeed(float value) => speed = value;
+
+    public ref float GetSpeed() { return ref speed; }
+
+    public float GetAuxSpeed() { return auxSpeed; }
+
 }

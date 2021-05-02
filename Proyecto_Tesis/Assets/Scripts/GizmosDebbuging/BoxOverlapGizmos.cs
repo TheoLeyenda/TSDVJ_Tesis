@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BoxOverlapGizmos : MonoBehaviour
 {
-    [SerializeField] private Vector3 halfExtencion;
+    [SerializeField] private Vector3 halfExtencion = Vector3.zero;
 
     void OnDrawGizmos()
     {

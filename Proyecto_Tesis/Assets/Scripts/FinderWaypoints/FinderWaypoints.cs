@@ -8,12 +8,14 @@ public class FinderWaypoints : MonoBehaviour
 
     void Start()
     {
-        resultListWaypoints = new List<Transform>();
+        if(resultListWaypoints == null)
+            resultListWaypoints = new List<Transform>();
     }
 
     public FinderWaypoints()
     {
-        resultListWaypoints = new List<Transform>();
+        if(resultListWaypoints == null)
+            resultListWaypoints = new List<Transform>();
     }
 
     //Retorna una lista de transform, la cantidad de transforms que returnara se pasa por el ultimo parametro.

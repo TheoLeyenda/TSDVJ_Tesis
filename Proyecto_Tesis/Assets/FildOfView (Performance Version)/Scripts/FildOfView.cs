@@ -11,27 +11,10 @@ public class FildOfView : MonoBehaviour
     public LayerMask targetMask;
     public LayerMask obstacleMask;
 
+    public static event Action<Transform, FildOfView> OnViewTargetWhitFildOfViewCheck;
     public static event Action<Transform> OnViewTarget;
+
     public List<Transform> visibleTargets = new List<Transform>();
-
-    [SerializeField] private bool useActumaticFindTargets = false;
-    [SerializeField] private float delayFindTargets = 0.2f;
-
-
-    void Start()
-    {
-        if(useActumaticFindTargets)
-            StartCoroutine("FindTargetWithDelay", delayFindTargets);
-    }
-
-    IEnumerator FindTargetWithDelay(float delay)
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(delay);
-            FindVisibleTargets();
-        }
-    }
 
     public void ClearVisibleTargets()
     {
@@ -40,6 +23,7 @@ public class FildOfView : MonoBehaviour
 
     public void FindVisibleTargets()
     {
+
         visibleTargets.Clear();
 
         Collider[] targetsInViewRadius = Physics.OverlapSphere(transform.position, viewRadius, targetMask);
@@ -58,6 +42,9 @@ public class FildOfView : MonoBehaviour
 
                     if (OnViewTarget != null)
                         OnViewTarget(target);
+
+                    if (OnViewTargetWhitFildOfViewCheck != null)
+                        OnViewTargetWhitFildOfViewCheck(target, this);
                 }
             }
         }

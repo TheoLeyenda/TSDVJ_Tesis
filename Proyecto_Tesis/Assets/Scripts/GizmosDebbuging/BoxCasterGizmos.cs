@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class BoxCasterGizmos : MonoBehaviour
 {
-    [SerializeField] private float maxDistance;
+    [SerializeField] private float maxDistance = 0;
 
-    private Vector3 halfExtencion;
-    [SerializeField] Vector3 addHalfExtencion;
-    [SerializeField] private bool useAddaHalfExtencion;
+    private Vector3 halfExtencion = Vector3.zero;
+    [SerializeField] Vector3 addHalfExtencion = Vector3.zero;
+    [SerializeField] private bool useAddaHalfExtencion = false;
 
     void OnDrawGizmos()
     {

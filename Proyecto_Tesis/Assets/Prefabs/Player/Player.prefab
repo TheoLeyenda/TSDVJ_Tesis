@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4113103769573411062}
   - component: {fileID: 4113103769573411056}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4113103769854458815}
   - component: {fileID: 4113103769854458808}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Flashlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 4113103770044345321}
   - component: {fileID: 4113103770044345316}
   - component: {fileID: 4113103770044345323}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,9 +191,9 @@ GameObject:
   - component: {fileID: 4113103770830251886}
   - component: {fileID: 4113103770830251880}
   - component: {fileID: 4113103770830251887}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -260,7 +260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  walkingSoundIntensity: 7
+  walkingSoundIntensity: 2
   sound: {fileID: 4113103770830251885}
   stuneable: {fileID: 4113103770830251880}
   myUserTransform: {fileID: 4113103770830251895}
@@ -349,7 +349,7 @@ MonoBehaviour:
   nameButtonCheck: 
   keyCodeCheck: 102
   myUserTransform: {fileID: 4113103770830251895}
-  delayUseStuneEnable: 0
+  delayUseStuneEnable: 800
 --- !u!1 &4113103770895109659
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,7 +361,7 @@ GameObject:
   - component: {fileID: 4113103770895109652}
   - component: {fileID: 4113103770895109654}
   - component: {fileID: 4113103770895109653}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -476,7 +476,7 @@ GameObject:
   - component: {fileID: 4113103771023233047}
   - component: {fileID: 4113103771023233046}
   - component: {fileID: 4113103771023233040}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: PlayerCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -48,4 +48,14 @@ public class J_Inventory : Updateable
             UpdateUI();
         }
     }
+
+    public bool PlayerHasItem(string itemName)
+    {
+        for (int i = 0; i < inventory.Count; i++)
+        {
+            if (inventory[i].itemName == itemName)
+                return true;
+        }
+        return false;
+    }
 }

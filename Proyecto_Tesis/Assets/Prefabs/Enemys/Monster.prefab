@@ -170,14 +170,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9204f299e540e7840aedb87a6630df9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedPatrol: 15
-  speedRegisterZone: 15
-  timeViewPlayerForSuspecting: 2.5
+  speedPatrol: 7
+  speedRegisterZone: 5
+  timeViewPlayerForSuspecting: 1
   minDelayRegisterZone: 10
   maxDelayRegisterZone: 20
   delayRegisterZone: 20
   PorcentageFindRandomWaypointsInStateAMARILLO: 80
-  speedChasePlayer: 30
+  speedChasePlayer: 3
   speedFindPlayer: 10
   rangeKillPlayer: 1.5
   delayFindPlayerInStateROJO: 9
@@ -200,7 +200,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e9a518319ce932c48a99efdd4e631da9, type: 3}
   - {fileID: 8300000, guid: ac11f1c905e18bd439fc28a4181bb3ae, type: 3}
   - {fileID: 8300000, guid: 7a187074f1a09f147a0a2f2caad0551d, type: 3}
-  speedFurioso: 40
+  speedFurioso: 2
   delayFindTargetInStateNEGRO: 15
   minDelayGrito: 1.5
   maxDelayGrito: 5

@@ -1,0 +1,2165 @@
+fileFormatVersion: 2
+guid: 2799b1f794032874b97aba472604b3d7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8325832672138841794
+    second: Roboto Mono_0
+  - first:
+      213: 7835588867241910415
+    second: Roboto Mono_1
+  - first:
+      213: -2089137054813876965
+    second: Roboto Mono_2
+  - first:
+      213: -839023455093469285
+    second: Roboto Mono_3
+  - first:
+      213: 5064382544307823464
+    second: Roboto Mono_4
+  - first:
+      213: 2045259064260394933
+    second: Roboto Mono_5
+  - first:
+      213: 746090832200670051
+    second: Roboto Mono_6
+  - first:
+      213: 4005307071193133137
+    second: Roboto Mono_7
+  - first:
+      213: -4586141947946061010
+    second: Roboto Mono_8
+  - first:
+      213: 6979534833566240962
+    second: Roboto Mono_9
+  - first:
+      213: 3044279137681730218
+    second: Roboto Mono_10
+  - first:
+      213: -6667741873964053669
+    second: Roboto Mono_11
+  - first:
+      213: 5198972943769783161
+    second: Roboto Mono_12
+  - first:
+      213: 7620092679143195047
+    second: Roboto Mono_13
+  - first:
+      213: -883703348094880584
+    second: Roboto Mono_14
+  - first:
+      213: -4841153401605089969
+    second: Roboto Mono_15
+  - first:
+      213: 895101553012926049
+    second: Roboto Mono_16
+  - first:
+      213: 3798566870812479361
+    second: Roboto Mono_17
+  - first:
+      213: 208866738757725069
+    second: Roboto Mono_18
+  - first:
+      213: -4672077658210530468
+    second: Roboto Mono_19
+  - first:
+      213: 3651453016046415363
+    second: Roboto Mono_20
+  - first:
+      213: 3716280906060620487
+    second: Roboto Mono_21
+  - first:
+      213: 7342320322374525533
+    second: Roboto Mono_22
+  - first:
+      213: 6690567521791464626
+    second: Roboto Mono_23
+  - first:
+      213: -8174049852571063328
+    second: Roboto Mono_24
+  - first:
+      213: 1940506368300075524
+    second: Roboto Mono_25
+  - first:
+      213: -2724730642107614678
+    second: Roboto Mono_26
+  - first:
+      213: 8631045643480228314
+    second: Roboto Mono_27
+  - first:
+      213: -8150860442495542824
+    second: Roboto Mono_28
+  - first:
+      213: 7846471739612414525
+    second: Roboto Mono_29
+  - first:
+      213: -5958533638057324565
+    second: Roboto Mono_30
+  - first:
+      213: 5114903735439138906
+    second: Roboto Mono_31
+  - first:
+      213: -3910123047076346215
+    second: Roboto Mono_32
+  - first:
+      213: 5553399095126235559
+    second: Roboto Mono_33
+  - first:
+      213: -6667139974514837963
+    second: Roboto Mono_34
+  - first:
+      213: 1651637183909033061
+    second: Roboto Mono_35
+  - first:
+      213: 4450405010395732266
+    second: Roboto Mono_36
+  - first:
+      213: 2528143052110593221
+    second: Roboto Mono_37
+  - first:
+      213: 976341865446048240
+    second: Roboto Mono_38
+  - first:
+      213: -9040283468846254738
+    second: Roboto Mono_39
+  - first:
+      213: 2179098137908316501
+    second: Roboto Mono_40
+  - first:
+      213: -415621020469016088
+    second: Roboto Mono_41
+  - first:
+      213: 4475570618215704885
+    second: Roboto Mono_42
+  - first:
+      213: 273112135596854677
+    second: Roboto Mono_43
+  - first:
+      213: 7125648908291983648
+    second: Roboto Mono_44
+  - first:
+      213: 6949266833653832313
+    second: Roboto Mono_45
+  - first:
+      213: -736901650313178614
+    second: Roboto Mono_46
+  - first:
+      213: 6464207279102156226
+    second: Roboto Mono_0
+  - first:
+      213: 8874154188782596963
+    second: Roboto Mono_1
+  - first:
+      213: -2397952828833461691
+    second: Roboto Mono_2
+  - first:
+      213: 6116115132697984323
+    second: Roboto Mono_3
+  - first:
+      213: 8158751796384407522
+    second: Roboto Mono_4
+  - first:
+      213: 7567145335716478940
+    second: Roboto Mono_5
+  - first:
+      213: -1162223528386362809
+    second: Roboto Mono_6
+  - first:
+      213: -186512111644847357
+    second: Roboto Mono_7
+  - first:
+      213: -6260257069149853324
+    second: Roboto Mono_8
+  - first:
+      213: 1381419644643050683
+    second: Roboto Mono_9
+  - first:
+      213: 5097851201691973618
+    second: Roboto Mono_10
+  - first:
+      213: 7836167505893961614
+    second: Roboto Mono_11
+  - first:
+      213: 4949764982178519086
+    second: Roboto Mono_12
+  - first:
+      213: 428578855711531714
+    second: Roboto Mono_13
+  - first:
+      213: -3637335009272619860
+    second: Roboto Mono_14
+  - first:
+      213: 4203524802651429808
+    second: Roboto Mono_15
+  - first:
+      213: -348921929091433378
+    second: Roboto Mono_16
+  - first:
+      213: -8549436488973136033
+    second: Roboto Mono_17
+  - first:
+      213: -6217902004893497638
+    second: Roboto Mono_18
+  - first:
+      213: -915375831845398192
+    second: Roboto Mono_19
+  - first:
+      213: 7531385408400503012
+    second: Roboto Mono_20
+  - first:
+      213: 7607785758628643586
+    second: Roboto Mono_21
+  - first:
+      213: -8829454984449669836
+    second: Roboto Mono_22
+  - first:
+      213: 1545760495189618925
+    second: Roboto Mono_23
+  - first:
+      213: 675220096732196742
+    second: Roboto Mono_24
+  - first:
+      213: 5953339028486004875
+    second: Roboto Mono_25
+  - first:
+      213: 1258823253917002785
+    second: Roboto Mono_26
+  - first:
+      213: -4903613251519282368
+    second: Roboto Mono_27
+  - first:
+      213: -2646737332344555210
+    second: Roboto Mono_28
+  - first:
+      213: -8607917753673963765
+    second: Roboto Mono_29
+  - first:
+      213: -7608995215004261022
+    second: Roboto Mono_30
+  - first:
+      213: 600997206770119626
+    second: Roboto Mono_31
+  - first:
+      213: 6616936840215967002
+    second: Roboto Mono_32
+  - first:
+      213: -2617687920787781145
+    second: Roboto Mono_33
+  - first:
+      213: 5633750871898514198
+    second: Roboto Mono_34
+  - first:
+      213: 7806959679944328099
+    second: Roboto Mono_35
+  - first:
+      213: 4335120636433882810
+    second: Roboto Mono_36
+  - first:
+      213: 8231160018655403642
+    second: Roboto Mono_37
+  - first:
+      213: -8971209702249096621
+    second: Roboto Mono_38
+  - first:
+      213: 994019730078314675
+    second: Roboto Mono_39
+  - first:
+      213: 4399529799482914331
+    second: Roboto Mono_40
+  - first:
+      213: -3946558831139621484
+    second: Roboto Mono_41
+  - first:
+      213: -4238048998942118570
+    second: Roboto Mono_42
+  - first:
+      213: -433102845393621168
+    second: Roboto Mono_43
+  - first:
+      213: 4387237667142443089
+    second: Roboto Mono_44
+  - first:
+      213: -8868320369708384618
+    second: Roboto Mono_45
+  - first:
+      213: -1256957955736008663
+    second: Roboto Mono_46
+  - first:
+      213: 6788947669393527538
+    second: Roboto Mono_47
+  - first:
+      213: 8412869349864643180
+    second: Roboto Mono_48
+  - first:
+      213: 7637662397876877607
+    second: Roboto Mono_49
+  - first:
+      213: -3075861812141666297
+    second: Roboto Mono_50
+  - first:
+      213: -7493627544301049294
+    second: Roboto Mono_51
+  - first:
+      213: -3976726284686133155
+    second: Roboto Mono_52
+  - first:
+      213: 6943679534867957215
+    second: Roboto Mono_53
+  - first:
+      213: 5436442158143278724
+    second: Roboto Mono_54
+  - first:
+      213: -6261377131106194106
+    second: Roboto Mono_55
+  - first:
+      213: -4937295869631009901
+    second: Roboto Mono_56
+  - first:
+      213: -4460528083964738815
+    second: Roboto Mono_57
+  - first:
+      213: 5066171124921432696
+    second: Roboto Mono_58
+  - first:
+      213: 3710837836382406609
+    second: Roboto Mono_59
+  - first:
+      213: 1318764647135363828
+    second: Roboto Mono_60
+  - first:
+      213: -7415888302581224595
+    second: Roboto Mono_61
+  - first:
+      213: -2183691916297087302
+    second: Roboto Mono_62
+  - first:
+      213: -7828849130571301450
+    second: Roboto Mono_63
+  - first:
+      213: -7951375877432021889
+    second: Roboto Mono_64
+  - first:
+      213: -8491290380836718550
+    second: Roboto Mono_65
+  - first:
+      213: -8974295829759995903
+    second: Roboto Mono_66
+  - first:
+      213: 3860500277916369522
+    second: Roboto Mono_67
+  - first:
+      213: -5077163962350408905
+    second: Roboto Mono_68
+  - first:
+      213: -888995235450491716
+    second: Roboto Mono_69
+  - first:
+      213: 5309480996941738075
+    second: Roboto Mono_70
+  - first:
+      213: 338509398858081889
+    second: Roboto Mono_71
+  - first:
+      213: -1938707740816226572
+    second: Roboto Mono_72
+  - first:
+      213: 5123102970530391232
+    second: Roboto Mono_73
+  - first:
+      213: 3781001913277796878
+    second: Roboto Mono_74
+  - first:
+      213: 6037619195167992480
+    second: Roboto Mono_75
+  - first:
+      213: 2690016543484879833
+    second: Roboto Mono_76
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Lumin
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Roboto Mono_0
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 725
+        width: 56
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cdd061854a75b950800000000000000
+      internalID: 6464207279102156226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_1
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 738
+        width: 58
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3637e68a734572b70800000000000000
+      internalID: 8874154188782596963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_2
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 738
+        width: 49
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54a0d396b92c8bed0800000000000000
+      internalID: -2397952828833461691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_3
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 738
+        width: 53
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34dbad10f4ec0e450800000000000000
+      internalID: 6116115132697984323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_4
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 738
+        width: 58
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ef921a2885b93170800000000000000
+      internalID: 8158751796384407522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_5
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 738
+        width: 59
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdf72232796e30960800000000000000
+      internalID: 7567145335716478940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_6
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 737
+        width: 48
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7420ee0dbd3fedfe0800000000000000
+      internalID: -1162223528386362809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_7
+      rect:
+        serializedVersion: 2
+        x: 957
+        y: 738
+        width: 42
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 303d91ff830696df0800000000000000
+      internalID: -186512111644847357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_8
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 737
+        width: 53
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 479e1b62d591f19a0800000000000000
+      internalID: -6260257069149853324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_9
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 738
+        width: 50
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb402b409d9cb2310800000000000000
+      internalID: 1381419644643050683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_10
+      rect:
+        serializedVersion: 2
+        x: 1309
+        y: 738
+        width: 59
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f7f5aa88a43fb640800000000000000
+      internalID: 5097851201691973618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_11
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 737
+        width: 53
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8fa44d24d8afbc60800000000000000
+      internalID: 7836167505893961614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_12
+      rect:
+        serializedVersion: 2
+        x: 1554
+        y: 738
+        width: 50
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e281b6cb60911b440800000000000000
+      internalID: 4949764982178519086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_13
+      rect:
+        serializedVersion: 2
+        x: 1675
+        y: 738
+        width: 49
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c2ede4d23e92f500800000000000000
+      internalID: 428578855711531714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_14
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 737
+        width: 52
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cac963b9417958dc0800000000000000
+      internalID: -3637335009272619860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_15
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 696
+        width: 36
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bb159a698be55a30800000000000000
+      internalID: 4203524802651429808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_16
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 618
+        width: 48
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5c392aaa51682bf0800000000000000
+      internalID: -348921929091433378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_17
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 617
+        width: 49
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5f4ef46fcc4a5980800000000000000
+      internalID: -8549436488973136033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_18
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 618
+        width: 56
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad64226021395b9a0800000000000000
+      internalID: -6217902004893497638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_19
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 618
+        width: 48
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05990e2e78eeb43f0800000000000000
+      internalID: -915375831845398192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_20
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 618
+        width: 48
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e0b54e302bd48860800000000000000
+      internalID: 7531385408400503012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_21
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 618
+        width: 53
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2030656f6d8449960800000000000000
+      internalID: 7607785758628643586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_22
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 618
+        width: 59
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 435439bd879777580800000000000000
+      internalID: -8829454984449669836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_23
+      rect:
+        serializedVersion: 2
+        x: 951
+        y: 617
+        width: 53
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de0fb970bf4a37510800000000000000
+      internalID: 1545760495189618925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_24
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 618
+        width: 58
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68f6deab91dde5900800000000000000
+      internalID: 675220096732196742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_25
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 618
+        width: 52
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b80a064ed428e9250800000000000000
+      internalID: 5953339028486004875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_26
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 618
+        width: 48
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12c69b4741d387110800000000000000
+      internalID: 1258823253917002785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_27
+      rect:
+        serializedVersion: 2
+        x: 1434
+        y: 618
+        width: 49
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0438b4b6abdd2fbb0800000000000000
+      internalID: -4903613251519282368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_28
+      rect:
+        serializedVersion: 2
+        x: 1571
+        y: 657
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63976d35b66e44bd0800000000000000
+      internalID: -2646737332344555210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_29
+      rect:
+        serializedVersion: 2
+        x: 1801
+        y: 644
+        width: 42
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b072c74e8688a8880800000000000000
+      internalID: -8607917753673963765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_30
+      rect:
+        serializedVersion: 2
+        x: 1569
+        y: 598
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26526088a2b676690800000000000000
+      internalID: -7608995215004261022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_31
+      rect:
+        serializedVersion: 2
+        x: 1688
+        y: 617
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac3f88c76cb275800800000000000000
+      internalID: 600997206770119626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_32
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 498
+        width: 33
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a15b4468ff414db50800000000000000
+      internalID: 6616936840215967002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_33
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 498
+        width: 51
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e90d9484ba1cabd0800000000000000
+      internalID: -2617687920787781145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_34
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 497
+        width: 50
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 613ee80b19a1f2e40800000000000000
+      internalID: 5633750871898514198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_35
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 498
+        width: 53
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a301e24774e75c60800000000000000
+      internalID: 7806959679944328099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_36
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 497
+        width: 49
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abe5b191041792c30800000000000000
+      internalID: 4335120636433882810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_37
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 497
+        width: 49
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7e5a592d64fa3270800000000000000
+      internalID: 8231160018655403642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_38
+      rect:
+        serializedVersion: 2
+        x: 951
+        y: 498
+        width: 51
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35a97ebae4cdf7380800000000000000
+      internalID: -8971209702249096621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_39
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 497
+        width: 48
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b03c0f8da77bcd00800000000000000
+      internalID: 994019730078314675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_40
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 497
+        width: 49
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b16bcecfa054e0d30800000000000000
+      internalID: 4399529799482914331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_41
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 497
+        width: 48
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 495fdb027a10b39c0800000000000000
+      internalID: -3946558831139621484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_42
+      rect:
+        serializedVersion: 2
+        x: 1435
+        y: 506
+        width: 51
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65dea5db3ec6f25c0800000000000000
+      internalID: -4238048998942118570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_43
+      rect:
+        serializedVersion: 2
+        x: 1552
+        y: 505
+        width: 50
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05f2a1db14f4df9f0800000000000000
+      internalID: -433102845393621168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_44
+      rect:
+        serializedVersion: 2
+        x: 1683
+        y: 480
+        width: 33
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1502d37e96992ec30800000000000000
+      internalID: 4387237667142443089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_45
+      rect:
+        serializedVersion: 2
+        x: 1804
+        y: 480
+        width: 33
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69ebb213c956de480800000000000000
+      internalID: -8868320369708384618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_46
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 487
+        width: 45
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92801ce16636e8ee0800000000000000
+      internalID: -1256957955736008663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_47
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 377
+        width: 48
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f2dae89fef273e50800000000000000
+      internalID: 6788947669393527538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_48
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 438
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6a1474b91480c470800000000000000
+      internalID: 8412869349864643180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_49
+      rect:
+        serializedVersion: 2
+        x: 1553
+        y: 377
+        width: 48
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7293fcb1c7d6ef960800000000000000
+      internalID: 7637662397876877607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_50
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 378
+        width: 51
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7005b1d7af75055d0800000000000000
+      internalID: -3075861812141666297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_51
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 358
+        width: 48
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23a6ade8379410890800000000000000
+      internalID: -7493627544301049294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_52
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 378
+        width: 57
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d58f2508384dfc8c0800000000000000
+      internalID: -3976726284686133155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_53
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 377
+        width: 51
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd544fd6fb7ec5060800000000000000
+      internalID: 6943679534867957215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_54
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 378
+        width: 41
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48e861ed65f127b40800000000000000
+      internalID: 5436442158143278724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_55
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 357
+        width: 58
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64d29a76cae1b19a0800000000000000
+      internalID: -6261377131106194106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_56
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 377
+        width: 47
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39be3a3c0933b7bb0800000000000000
+      internalID: -4937295869631009901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_57
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 378
+        width: 44
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 103c0ac27550912c0800000000000000
+      internalID: -4460528083964738815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_58
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 377
+        width: 50
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87a7840ebc7ae4640800000000000000
+      internalID: 5066171124921432696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_59
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 358
+        width: 48
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d707a0f95b8f7330800000000000000
+      internalID: 3710837836382406609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_60
+      rect:
+        serializedVersion: 2
+        x: 1313
+        y: 377
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f2c8de95713d4210800000000000000
+      internalID: 1318764647135363828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_61
+      rect:
+        serializedVersion: 2
+        x: 1434
+        y: 377
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6bebae31e8751990800000000000000
+      internalID: -7415888302581224595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_62
+      rect:
+        serializedVersion: 2
+        x: 1793
+        y: 358
+        width: 49
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab6583695c7f1b1e0800000000000000
+      internalID: -2183691916297087302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_63
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 258
+        width: 49
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bdfb2cd1375a5390800000000000000
+      internalID: -7828849130571301450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_64
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 318
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7ced0684c907a190800000000000000
+      internalID: -7951375877432021889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_65
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 258
+        width: 52
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a28398d2360e82a80800000000000000
+      internalID: -8491290380836718550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_66
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 258
+        width: 46
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 100d2ed9d75e47380800000000000000
+      internalID: -8974295829759995903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_67
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 320
+        width: 36
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27280888c80439530800000000000000
+      internalID: 3860500277916369522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_68
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 257
+        width: 48
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73b60b5b64a4a89b0800000000000000
+      internalID: -5077163962350408905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_69
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 237
+        width: 32
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbc65ff1b87a9a3f0800000000000000
+      internalID: -888995235450491716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_70
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 258
+        width: 48
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b50366cf5d01fa940800000000000000
+      internalID: 5309480996941738075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_71
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 258
+        width: 51
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16621183180a2b400800000000000000
+      internalID: 338509398858081889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_72
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 258
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f64959d4935815e0800000000000000
+      internalID: -1938707740816226572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_73
+      rect:
+        serializedVersion: 2
+        x: 953
+        y: 257
+        width: 48
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c46632220be81740800000000000000
+      internalID: 5123102970530391232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_74
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 258
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e02deff1531d87430800000000000000
+      internalID: 3781001913277796878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_75
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 258
+        width: 48
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aa61195baee9c350800000000000000
+      internalID: 6037619195167992480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roboto Mono_76
+      rect:
+        serializedVersion: 2
+        x: 1431
+        y: 258
+        width: 53
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d327524bcbd45520800000000000000
+      internalID: 2690016543484879833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -212,6 +212,7 @@ public class Monster : Updateable
     }
     public void UpdateMonster()
     {
+        
         switch (fsmMonster.GetCurrentState())
         {
             case (int)Monster_STATES.Idle:
@@ -254,6 +255,8 @@ public class Monster : Updateable
 
     private void VERDE()
     {
+        //Debug.Log("VERDE");
+        
         // FUNCIONA.
         stuneable.SetInStune(false);
         durationClipRugido = 0;
@@ -269,8 +272,8 @@ public class Monster : Updateable
         if(!patrolBehavior.GetStartBehaviour())
             patrolBehavior.StartBehaviour();
 
-        patrolBehavior.UpdatePatrolBehavior();
         rangeVision.UpdateRangeVision();
+        patrolBehavior.UpdatePatrolBehavior();
         //Debug.Log("Time view player: " + timeViewPlayer);
         if (CheckInSuspectingPlayer(Monster_EVENTS.ChangeStateAMARILLO) 
             || CheckChasePlayerForTimeViewPlayer(Monster_EVENTS.ChangeStateROJO) 
@@ -301,11 +304,12 @@ public class Monster : Updateable
             timeViewPlayer = 0;
             valueSound = 0;
         }
-        Debug.Log("VERDE");
     }
 
     private void AMARILLO()
     {
+        //Debug.Log("AMARILLO");
+        
         //FUNCIONA
         durationClipRugido = 0;
         outChaseTarget = false;
@@ -327,11 +331,12 @@ public class Monster : Updateable
                 Debug.Log(doneGoToLastPositionTarget);
         }
 
-        Debug.Log("AMARILLO");
     }
 
     private void ROJO()
     {
+        //Debug.Log("ROJO");
+
         sendStuneTargetEvent = false;
         navMeshAgent.SetDestination(currentTargetMonster.position);
         registerZone.SetPorcentageRandomTarget(PorcentageFindRandomWaypointsInStateROJO);
@@ -389,11 +394,11 @@ public class Monster : Updateable
 
         CheckSoundRugido();
         
-        Debug.Log("ROJO");
     }
 
     private void ATURDIDO()
     {
+        //Debug.Log("ATURDIDO");
         outChaseTarget = false;
         //Debug.Log(delayAturdido);
         if (delayAturdido > 0 
@@ -415,12 +420,11 @@ public class Monster : Updateable
             fsmMonster.SendEvent((int)Monster_EVENTS.ChangeStateNEGRO);
         }
        
-        Debug.Log("ATURDIDO");
     }
 
     private void NEGRO()
     {
-        Debug.Log("NEGRO");
+        //Debug.Log("NEGRO");
         int indexAudio = 0;
 
         if (!outChaseTarget)
@@ -466,7 +470,7 @@ public class Monster : Updateable
     //Devuelve true si encuentra al player.
     private bool RegisterZone(Monster_EVENTS outDelayRegisterZoneEvent, Monster_EVENTS targetFoundEvent)
     {
-        Debug.Log("REGISTER ZONE");
+        //Debug.Log("REGISTER ZONE");
 
         bool foundPlayer = false;
 
@@ -782,7 +786,7 @@ public class Monster : Updateable
     {
         //Debug.DrawLine(transform.position, direction, Color.red, 0.1f);
         bool playerView = false;
-
+        rangeVision.UpdateRangeVision();
         playerView = rangeVision.CheckViewTargetForTransform(currentTargetMonster);
 
         if (playerView)
@@ -804,7 +808,7 @@ public class Monster : Updateable
     private bool CheckDelayOutChasePlayer(Monster_EVENTS sendEvent, bool useSendEvent)
     {
         bool playerView = false;
-
+        rangeVision.UpdateRangeVision();
         playerView = rangeVision.CheckViewTargetForTransform(currentTargetMonster);
 
         if (playerView)

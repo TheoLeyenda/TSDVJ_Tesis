@@ -42,12 +42,14 @@ public class PatrolBehavior : MonoBehaviour
     private float auxDelayWaitInPatrol;
     [SerializeField] private float rangeMagnitudeWaypoint = 0.5f;
     [SerializeField] private List<Transform> waypoints;
-    private List<Transform> auxWaypoints;
+    [SerializeField] private List<Transform> auxWaypoints;
     [SerializeField] private Transform currentWaypoit = null;
     [SerializeField] private Transform currentTarget = null;
     private FSM fsmPatrolBehavior;
     [SerializeField] private bool startBehaviour = false;
     [SerializeField] private NavMeshAgent navMeshAgent;
+
+    private NavMeshPath path;
 
     void Awake()
     {
@@ -68,6 +70,7 @@ public class PatrolBehavior : MonoBehaviour
 
     void Start()
     {
+        path = new NavMeshPath();
         auxDelayWaitInPatrol = delayWaitInPatrol;
         auxWaypoints = waypoints;
     }
@@ -142,7 +145,33 @@ public class PatrolBehavior : MonoBehaviour
         navMeshAgent.isStopped = false;
         navMeshAgent.speed = speedPatrol;
         navMeshAgent.acceleration = speedPatrol * 2;
-        navMeshAgent.SetDestination(currentWaypoit.position);
+        CreatingNewPath(currentWaypoit);
+
+        if (navMeshAgent.pathStatus != NavMeshPathStatus.PathComplete)
+        {
+            //Debug.Log("No hay ruta");
+            navMeshAgent.isStopped = true;
+
+            List<Transform> localWaypoints = new List<Transform>();
+            localWaypoints.Clear();
+            for (int i = 0; i < auxWaypoints.Count; i++)
+            {
+                CreatingNewPath(auxWaypoints[i]);
+                if (navMeshAgent.hasPath)
+                {
+                    localWaypoints.Add(auxWaypoints[i]);
+                }
+            }
+
+            Debug.Log(localWaypoints.Count);
+            if (localWaypoints.Count > 0)
+            {
+                int index = 0;
+                index = Random.Range(0, localWaypoints.Count);
+
+                currentWaypoit = localWaypoints[index];
+            }
+        }
 
         float distance = Vector3.Distance(transform.position, currentWaypoit.position);
 
@@ -194,5 +223,11 @@ public class PatrolBehavior : MonoBehaviour
     public void ResetDelayWaitInPatrol()
     {
         delayWaitInPatrol = auxDelayWaitInPatrol;
+    }
+
+    public void CreatingNewPath(Transform destinationPath)
+    {
+        navMeshAgent.CalculatePath(destinationPath.position, path);
+        navMeshAgent.SetPath(path);
     }
 }

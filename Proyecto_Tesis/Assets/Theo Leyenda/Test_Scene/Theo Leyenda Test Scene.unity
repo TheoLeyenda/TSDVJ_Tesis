@@ -625,6 +625,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &134665598 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4113103770830251895, guid: ba24c508ac89d2f4f93f2a46472498fe,
+    type: 3}
+  m_PrefabInstance: {fileID: 349376455}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &190288038
 GameObject:
   m_ObjectHideFlags: 0
@@ -1137,6 +1143,11 @@ PrefabInstance:
       propertyPath: slotParent
       value: 
       objectReference: {fileID: 413667752}
+    - target: {fileID: 4113103770830251888, guid: ba24c508ac89d2f4f93f2a46472498fe,
+        type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4113103770830251894, guid: ba24c508ac89d2f4f93f2a46472498fe,
         type: 3}
       propertyPath: m_Name
@@ -1155,7 +1166,7 @@ PrefabInstance:
     - target: {fileID: 4113103770830251895, guid: ba24c508ac89d2f4f93f2a46472498fe,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.27
+      value: -143.9
       objectReference: {fileID: 0}
     - target: {fileID: 4113103770830251895, guid: ba24c508ac89d2f4f93f2a46472498fe,
         type: 3}
@@ -4945,11 +4956,26 @@ PrefabInstance:
         type: 3}
       propertyPath: currentTargetMonster
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 134665598}
     - target: {fileID: 1544112780479175240, guid: af16cbff0e10ce24d9ccedc2984e9191,
         type: 3}
       propertyPath: speedChasePlayer
-      value: 8
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1544112780479175240, guid: af16cbff0e10ce24d9ccedc2984e9191,
+        type: 3}
+      propertyPath: speedRegisterZone
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1544112780479175240, guid: af16cbff0e10ce24d9ccedc2984e9191,
+        type: 3}
+      propertyPath: speedFurioso
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1544112780479175240, guid: af16cbff0e10ce24d9ccedc2984e9191,
+        type: 3}
+      propertyPath: speedPatrol
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1544112780479175242, guid: af16cbff0e10ce24d9ccedc2984e9191,
         type: 3}
@@ -5010,7 +5036,7 @@ PrefabInstance:
         type: 3}
       propertyPath: currentTarget
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 134665598}
     - target: {fileID: 1544112780479175246, guid: af16cbff0e10ce24d9ccedc2984e9191,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5079,7 +5105,7 @@ PrefabInstance:
     - target: {fileID: 1544112780479175346, guid: af16cbff0e10ce24d9ccedc2984e9191,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af16cbff0e10ce24d9ccedc2984e9191, type: 3}

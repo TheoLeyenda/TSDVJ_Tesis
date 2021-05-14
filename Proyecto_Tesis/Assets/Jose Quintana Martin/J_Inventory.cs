@@ -72,4 +72,9 @@ public class J_Inventory : Updateable
     {
         return inventory.Count >= inventorySize;
     }
+
+    public List<J_Item> GetInventory()
+    {
+        return inventory;
+    }
 }

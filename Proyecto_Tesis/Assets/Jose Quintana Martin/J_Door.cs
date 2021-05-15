@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public enum DoorState
 {
@@ -15,6 +16,10 @@ public class J_Door : MonoBehaviour
     public J_Item myKey;
     public bool isPermalocked;
     public J_ItemChecker itemChecker;
+
+    [SerializeField] private UnityEvent openAction;
+    [SerializeField] private UnityEvent lockedAction;
+    [SerializeField] private UnityEvent permalockedAction;
 
     private DoorState doorState;
     private string keyItemName;
@@ -37,6 +42,7 @@ public class J_Door : MonoBehaviour
         {
             doorState = DoorState.Unlocked;
             Debug.Log("La tiene");
+            DoorInteraction();
             return true;
         }
         else
@@ -52,19 +58,23 @@ public class J_Door : MonoBehaviour
         switch (doorState)
         {
             case DoorState.Unlocked:
+                openAction.Invoke();
                 Debug.Log("OpenBehaviour");
                 break;
             case DoorState.Locked:
+                lockedAction.Invoke();
                 CheckPlayerHasMyKey();
                 break;
             case DoorState.PermaLocked:
-                Debug.Log("Permalocked :/");
+                permalockedAction.Invoke();
+                Debug.Log("Permalocked");
                 break;
             case DoorState.Hidden:
                 if (!isPermalocked)
                     CheckPlayerHasMyKey();
                 else
                     doorState = DoorState.PermaLocked;
+                DoorInteraction();
                 break;
             default:
                 break;

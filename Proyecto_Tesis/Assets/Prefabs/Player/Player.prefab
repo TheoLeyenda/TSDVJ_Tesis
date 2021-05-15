@@ -267,6 +267,7 @@ GameObject:
   - component: {fileID: 4113103770830251880}
   - component: {fileID: 4113103770830251887}
   - component: {fileID: 4081588244704988901}
+  - component: {fileID: 217833938114667057}
   m_Layer: 12
   m_Name: Player
   m_TagString: Player
@@ -341,6 +342,7 @@ MonoBehaviour:
   sound: {fileID: 4113103770830251885}
   stuneable: {fileID: 4113103770830251880}
   myUserTransform: {fileID: 4113103770830251895}
+  getObjectPositionY: {fileID: 217833938114667057}
 --- !u!114 &4113103770830251884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -440,6 +442,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapUI: {fileID: 0}
+--- !u!114 &217833938114667057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4113103770830251894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 016cedcd18c42854ca97d09923248245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heigthGenerateRayCast: 0
+  heightModifire: 0.8
+  rangeRayCast: 100
+  layerEnvarioment:
+    serializedVersion: 2
+    m_Bits: 65536
 --- !u!1 &4113103770895109659
 GameObject:
   m_ObjectHideFlags: 0

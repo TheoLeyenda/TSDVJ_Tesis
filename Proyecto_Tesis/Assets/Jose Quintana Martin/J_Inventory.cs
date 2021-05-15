@@ -58,4 +58,23 @@ public class J_Inventory : Updateable
         }
         return false;
     }
+
+    public void RemoveItem(J_Item item)
+    {
+        if (inventory.Count > 0)
+        {
+            inventory.Remove(item);
+            UpdateUI();
+        }
+    }
+
+    public bool GetInventoryFull()
+    {
+        return inventory.Count >= inventorySize;
+    }
+
+    public List<J_Item> GetInventory()
+    {
+        return inventory;
+    }
 }

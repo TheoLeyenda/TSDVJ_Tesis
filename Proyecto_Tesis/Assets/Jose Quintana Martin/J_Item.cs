@@ -4,5 +4,6 @@
 public class J_Item : ScriptableObject
 {
     public string itemName = "New Item";
+    public string description = "Description";
     public Sprite icon = null;
 }

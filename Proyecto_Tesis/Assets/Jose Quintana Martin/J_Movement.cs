@@ -10,6 +10,7 @@ public class J_Movement : Updateable
 
     [SerializeField] private Stuneable stuneable;
     [SerializeField] private Transform myUserTransform;
+    [SerializeField] private GetObjectPositionY getObjectPositionY;
 
     private CharacterController cc;
     private float xMov;
@@ -51,8 +52,6 @@ public class J_Movement : Updateable
         {
             cc.Move(move * speed * Time.deltaTime);
 
-            //Debug.Log("Emitiendo");
-
             sound.ShootEmmitingSound(walkingSoundIntensity);
         }
         else
@@ -66,6 +65,7 @@ public class J_Movement : Updateable
             stuneable.SetDelayStune(stuneable.GetDelayStune() - Time.deltaTime);
         }
 
+        transform.position = new Vector3(transform.position.x, getObjectPositionY.GetPositionY(), transform.position.z);
     }
 
     private void CheckInStuneMovmement(Transform _transform, float delayStune)

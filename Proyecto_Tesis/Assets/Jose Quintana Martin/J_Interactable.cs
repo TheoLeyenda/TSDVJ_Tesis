@@ -9,6 +9,7 @@ public class J_Interactable : MonoBehaviour
 
     public void DoAction()
     {
-        action.Invoke();
+        if(enabled)
+            action.Invoke();
     }
 }

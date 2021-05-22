@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 310075722608376546}
   - component: {fileID: 1461379806216656773}
   - component: {fileID: 5094356722077487087}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: PASILLO1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 2203798010808188513}
   - component: {fileID: 7778133786665504574}
   - component: {fileID: 9161460452736850055}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: musica
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 3760493925980306334}
   - component: {fileID: 6817063005222484802}
   - component: {fileID: 602015492898217528}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: biblioteca
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 3320987617262550686}
   - component: {fileID: 1485743529468938243}
   - component: {fileID: 3308659888635390184}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: conserje
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -325,7 +325,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8923773963559650317}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Blocking V1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

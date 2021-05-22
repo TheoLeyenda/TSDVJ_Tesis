@@ -6,6 +6,7 @@ public class J_PlayerInteraction : Updateable
 {
     public GameObject playerCamera;
     public float interactionDistance = 1f;
+    public LayerMask interactionMask;
 
     private J_Interactable interactable;
     private GameObject lastIntObject;
@@ -21,6 +22,20 @@ public class J_PlayerInteraction : Updateable
 
     public void UpdateInteraction()
     {
+        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, interactionDistance, interactionMask))
+        {
+            if (interactable == null)
+            {
+                Debug.Log("changos");
+                interactable = hit.transform.gameObject.GetComponent<J_Interactable>();
+                lastIntObject = interactable.gameObject;
+            }
+        }
+        else
+        {
+            interactable = null;
+        }
+
         if (Input.GetButtonDown("InteractTest"))
         {
             Interact();
@@ -29,22 +44,12 @@ public class J_PlayerInteraction : Updateable
 
     public void Interact()
     {
-        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, interactionDistance))
-        {
-            interactable = hit.transform.gameObject.GetComponent<J_Interactable>();
-            if (interactable != null)
-            {
-                lastIntObject = interactable.gameObject;
-                interactable.DoAction();
-            }
-            else
-                Debug.Log("Not Ineractable");
-        }
-        else
-            Debug.Log("No collider on range");
+        if (interactable != null)
+            interactable.DoAction();
     }
 
-    public GameObject GetLastIntObject() {
+    public GameObject GetLastIntObject()
+    {
         return lastIntObject;
     }
 }

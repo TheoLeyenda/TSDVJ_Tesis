@@ -1645,7 +1645,7 @@ GameObject:
   - component: {fileID: 184927174}
   - component: {fileID: 184927176}
   - component: {fileID: 184927175}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2908,7 +2908,7 @@ GameObject:
   - component: {fileID: 314822868}
   - component: {fileID: 314822870}
   - component: {fileID: 314822869}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: LockerTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2945,7 +2945,7 @@ MonoBehaviour:
   action:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2093818413}
         m_MethodName: Hide
         m_Mode: 1
         m_Arguments:
@@ -3684,7 +3684,7 @@ GameObject:
   - component: {fileID: 387661928}
   - component: {fileID: 387661927}
   - component: {fileID: 387661926}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: ItemTest (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7952,6 +7952,43 @@ Transform:
   m_Father: {fileID: 912800302}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &835231970 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4113103771023233044, guid: ba24c508ac89d2f4f93f2a46472498fe,
+    type: 3}
+  m_PrefabInstance: {fileID: 2121157621}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &835231972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835231970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &840189592
 GameObject:
   m_ObjectHideFlags: 0
@@ -8861,7 +8898,7 @@ GameObject:
   - component: {fileID: 925926779}
   - component: {fileID: 925926782}
   - component: {fileID: 925926781}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11880,7 +11917,7 @@ GameObject:
   - component: {fileID: 1204542354}
   - component: {fileID: 1204542358}
   - component: {fileID: 1204542359}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Locked Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12503,7 +12540,7 @@ GameObject:
   - component: {fileID: 1272082784}
   - component: {fileID: 1272082783}
   - component: {fileID: 1272082786}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: ItemTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13178,7 +13215,7 @@ GameObject:
   - component: {fileID: 1324616251}
   - component: {fileID: 1324616253}
   - component: {fileID: 1324616252}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13387,7 +13424,7 @@ GameObject:
   - component: {fileID: 1356929462}
   - component: {fileID: 1356929464}
   - component: {fileID: 1356929463}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14847,7 +14884,7 @@ GameObject:
   - component: {fileID: 1545225270}
   - component: {fileID: 1545225269}
   - component: {fileID: 1545225268}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: ItemTest (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19147,7 +19184,7 @@ GameObject:
   - component: {fileID: 1944577882}
   - component: {fileID: 1944577886}
   - component: {fileID: 1944577887}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Permantly locked door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20160,6 +20197,18 @@ Transform:
   m_Father: {fileID: 1915516412}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2093818413 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4113103770830251889, guid: ba24c508ac89d2f4f93f2a46472498fe,
+    type: 3}
+  m_PrefabInstance: {fileID: 2121157621}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f157d5402b303e042b5fa60114f35f5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2101321030
 GameObject:
   m_ObjectHideFlags: 0
@@ -20382,6 +20431,11 @@ PrefabInstance:
       propertyPath: inventoryUI
       value: 
       objectReference: {fileID: 1819940616}
+    - target: {fileID: 4113103770830251884, guid: ba24c508ac89d2f4f93f2a46472498fe,
+        type: 3}
+      propertyPath: interactionMask.m_Bits
+      value: 131072
+      objectReference: {fileID: 0}
     - target: {fileID: 4113103770830251894, guid: ba24c508ac89d2f4f93f2a46472498fe,
         type: 3}
       propertyPath: m_Name

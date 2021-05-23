@@ -13,5 +13,9 @@ MonoBehaviour:
   m_Name: Nota_1
   m_EditorClassIdentifier: 
   itemName: Nota 1
-  description: 'Nota: Puto el que lee.'
+  description: "\u201CHoy unos chicos se quisieron hacer los graciosos y escondieron
+    la llave del aula de arte que estaba en mi llavero en uno de los instrumentos
+    de musica, por suerte hoy no hay arte ni musica, pero con todo este trabajo que
+    tengo deber\xE9 ir de noche cuando no haya nadie a recuperarla, pero para que
+    no vuelva a pasar deje mi llavero en la caja fuerte del director\u201D"
   icon: {fileID: 21300000, guid: 1691cf5b36aa7a744a91afbf81c7b05b, type: 3}

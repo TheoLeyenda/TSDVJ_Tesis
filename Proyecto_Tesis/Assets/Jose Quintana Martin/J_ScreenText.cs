@@ -93,4 +93,13 @@ public class J_ScreenText : Updateable
             ToggleText();
         }
     }
+
+    public void SetLifeTimeText(float _time) => lifeTime = _time;
+
+    public void DisableText()
+    {
+        timer = lifeTime;
+        HideText();
+    }
+
 }

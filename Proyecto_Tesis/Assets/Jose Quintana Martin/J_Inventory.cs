@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class J_Inventory : Updateable
 {
@@ -10,6 +11,9 @@ public class J_Inventory : Updateable
 
     List<J_Item> inventory;
     J_InventorySlot[] slots;
+
+    [SerializeField] private UnityEvent EventInventoryOn;
+    [SerializeField] private UnityEvent EventInventoryOff;
 
     protected override void Start()
     {
@@ -26,6 +30,11 @@ public class J_Inventory : Updateable
         if (Input.GetButtonDown("OpenInventory"))
         {
             inventoryUI.gameObject.SetActive(!inventoryUI.activeSelf);
+            if (inventoryUI.activeSelf)
+                EventInventoryOn?.Invoke();
+            else
+                EventInventoryOff?.Invoke();
+
         }
     }
 

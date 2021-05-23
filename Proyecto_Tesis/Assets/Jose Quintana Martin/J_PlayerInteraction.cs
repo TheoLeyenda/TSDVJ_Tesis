@@ -7,6 +7,7 @@ public class J_PlayerInteraction : Updateable
     public GameObject playerCamera;
     public float interactionDistance = 1f;
     public LayerMask interactionMask;
+    public J_ScreenText screenText;
 
     private J_Interactable interactable;
     private GameObject lastIntObject;
@@ -29,11 +30,18 @@ public class J_PlayerInteraction : Updateable
                 Debug.Log("changos");
                 interactable = hit.transform.gameObject.GetComponent<J_Interactable>();
                 lastIntObject = interactable.gameObject;
+
+                if (screenText != null)
+                {
+                    screenText.ToggleText();
+                    screenText.SetText("Press E to interact");
+                }
             }
         }
         else
         {
             interactable = null;
+            screenText.HideText();
         }
 
         if (Input.GetButtonDown("InteractTest"))

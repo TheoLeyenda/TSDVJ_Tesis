@@ -47,17 +47,41 @@ public class J_ScreenText : Updateable
 
         if (text != null)
         {
-            text.SetText(newText);
+            SetText(newText);
 
             if (!isTimerRunning)
+            {
                 ToggleText();
+                isTimerRunning = gameObject.activeSelf;
+            }
         }
+    }
+
+    public void UpdateText(string newText)
+    {
+
+        text = gameObject.GetComponent<TextMeshProUGUI>();
+
+        if (text != null)
+        {
+            SetText(newText);
+
+            if (!isTimerRunning)
+            {
+                isTimerRunning = gameObject.activeSelf;
+            }
+        }
+    }
+
+    public void SetText(string newText)
+    {
+        if (text != null)
+            text.SetText(newText);
     }
 
     public void ToggleText()
     {
         gameObject.SetActive(!gameObject.activeSelf);
-        isTimerRunning = gameObject.activeSelf;
     }
 
     public void HideText()
@@ -65,34 +89,39 @@ public class J_ScreenText : Updateable
         if (text != null)
             text.gameObject.SetActive(false);
     }
-
-    public void OpenText()
+    public void ShowText()
     {
         if (text != null)
-        {
-            text.SetText(openDoorText);
-            ToggleText();
-        }
+            text.gameObject.SetActive(true);
     }
 
-    public void LockedText()
-    {
-        if (text != null)
-        {
-            text.SetText(lockedDoorText);
-            ToggleText();
-        }
-    }
+    /* public void OpenText()
+     {
+         if (text != null)
+         {
+             text.SetText(openDoorText);
+             ToggleText();
+         }
+     }
 
-    public void PermaLockedText()
-    {
-        if (text != null)
-        {
-            Debug.Log("Ah");
-            text.SetText(permalockedDoorText);
-            ToggleText();
-        }
-    }
+     public void LockedText()
+     {
+         if (text != null)
+         {
+             text.SetText(lockedDoorText);
+             ToggleText();
+         }
+     }
+
+     public void PermaLockedText()
+     {
+         if (text != null)
+         {
+             Debug.Log("Ah");
+             text.SetText(permalockedDoorText);
+             ToggleText();
+         }
+     }*/
 
     public void SetLifeTimeText(float _time) => lifeTime = _time;
 

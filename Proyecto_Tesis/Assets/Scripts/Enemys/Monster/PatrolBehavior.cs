@@ -163,7 +163,7 @@ public class PatrolBehavior : MonoBehaviour
                 }
             }
 
-            Debug.Log(localWaypoints.Count);
+            //Debug.Log(localWaypoints.Count);
             if (localWaypoints.Count > 0)
             {
                 int index = 0;

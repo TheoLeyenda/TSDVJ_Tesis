@@ -120,7 +120,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 3d08506a559b2fd458ada1ad25319357, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 3cf8ebcfd5f5e514180d344d274bd1d2, type: 2}
 --- !u!114 &18100573 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7228340594001468975, guid: 9b3ae6fef52bb6846bba438d3c8f65c8,
@@ -517,12 +517,12 @@ GameObject:
   - component: {fileID: 33892309}
   - component: {fileID: 33892308}
   - component: {fileID: 33892311}
-  m_Layer: 10
+  m_Layer: 2
   m_Name: Silla
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &33892307
 Transform:
@@ -974,7 +974,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &110749386
 Transform:
@@ -2126,12 +2126,12 @@ GameObject:
   - component: {fileID: 311529217}
   - component: {fileID: 311529216}
   - component: {fileID: 311529219}
-  m_Layer: 10
+  m_Layer: 2
   m_Name: Silla
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &311529215
 Transform:
@@ -3505,12 +3505,12 @@ GameObject:
   - component: {fileID: 565426846}
   - component: {fileID: 565426845}
   - component: {fileID: 565426844}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Locker
   m_TagString: Locker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &565426843
 Transform:
@@ -3995,12 +3995,12 @@ GameObject:
   - component: {fileID: 619978257}
   - component: {fileID: 619978256}
   - component: {fileID: 619978259}
-  m_Layer: 10
+  m_Layer: 2
   m_Name: Silla
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &619978255
 Transform:
@@ -4106,7 +4106,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &647735901
 Transform:
@@ -7682,12 +7682,12 @@ GameObject:
   - component: {fileID: 1287514783}
   - component: {fileID: 1287514782}
   - component: {fileID: 1287514781}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Locker (2)
   m_TagString: Locker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1287514780
 Transform:
@@ -8537,12 +8537,12 @@ GameObject:
   - component: {fileID: 1397122975}
   - component: {fileID: 1397122974}
   - component: {fileID: 1397122973}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Locker (3)
   m_TagString: Locker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1397122972
 Transform:
@@ -8725,12 +8725,12 @@ GameObject:
   - component: {fileID: 1413401724}
   - component: {fileID: 1413401723}
   - component: {fileID: 1413401726}
-  m_Layer: 10
+  m_Layer: 2
   m_Name: Silla
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1413401722
 Transform:
@@ -9054,7 +9054,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1497365135
 Transform:
@@ -9477,12 +9477,12 @@ GameObject:
   - component: {fileID: 1544635260}
   - component: {fileID: 1544635259}
   - component: {fileID: 1544635262}
-  m_Layer: 10
+  m_Layer: 2
   m_Name: Silla
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1544635258
 Transform:
@@ -10169,12 +10169,12 @@ GameObject:
   - component: {fileID: 1602019410}
   - component: {fileID: 1602019409}
   - component: {fileID: 1602019408}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Locker (1)
   m_TagString: Locker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1602019407
 Transform:
@@ -13273,7 +13273,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2086243851
 Transform:
@@ -14070,7 +14070,7 @@ PrefabInstance:
     - target: {fileID: 1544112780479175246, guid: af16cbff0e10ce24d9ccedc2984e9191,
         type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1544112780479175246, guid: af16cbff0e10ce24d9ccedc2984e9191,
         type: 3}
@@ -24301,7 +24301,7 @@ PrefabInstance:
     - target: {fileID: 1557291288298894731, guid: c626732a858c9c848994ba456129a95b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1557291288298894731, guid: c626732a858c9c848994ba456129a95b,
         type: 3}
@@ -26105,7 +26105,7 @@ PrefabInstance:
     - target: {fileID: 6446742442846471462, guid: 6b87ad0ed9a83b548b55273388614566,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6446742442846471462, guid: 6b87ad0ed9a83b548b55273388614566,
         type: 3}

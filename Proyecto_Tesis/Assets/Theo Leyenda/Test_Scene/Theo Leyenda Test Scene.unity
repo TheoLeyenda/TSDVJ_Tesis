@@ -862,7 +862,7 @@ GameObject:
   - component: {fileID: 97141745}
   - component: {fileID: 97141744}
   - component: {fileID: 97141747}
-  m_Layer: 16
+  m_Layer: 10
   m_Name: Door Conserje
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1006,7 +1006,7 @@ GameObject:
   - component: {fileID: 116398485}
   - component: {fileID: 116398484}
   - component: {fileID: 116398483}
-  m_Layer: 16
+  m_Layer: 10
   m_Name: Cartelazo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1455,7 +1455,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &193392296
 Transform:
   m_ObjectHideFlags: 0
@@ -2329,7 +2329,7 @@ GameObject:
   - component: {fileID: 356792386}
   - component: {fileID: 356792385}
   - component: {fileID: 356792388}
-  m_Layer: 16
+  m_Layer: 10
   m_Name: Door Direccion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4428,7 +4428,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &699666694
 Transform:
   m_ObjectHideFlags: 0
@@ -4726,7 +4726,7 @@ GameObject:
   - component: {fileID: 717319522}
   - component: {fileID: 717319521}
   - component: {fileID: 717319524}
-  m_Layer: 16
+  m_Layer: 10
   m_Name: Door Arte
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5214,7 +5214,7 @@ GameObject:
   - component: {fileID: 833174111}
   - component: {fileID: 833174110}
   - component: {fileID: 833174109}
-  m_Layer: 16
+  m_Layer: 10
   m_Name: Cartelazo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7307,7 +7307,7 @@ GameObject:
   - component: {fileID: 1232341946}
   - component: {fileID: 1232341945}
   - component: {fileID: 1232341944}
-  m_Layer: 16
+  m_Layer: 10
   m_Name: Cartelazo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7776,7 +7776,7 @@ GameObject:
   - component: {fileID: 1288053248}
   - component: {fileID: 1288053247}
   - component: {fileID: 1288053250}
-  m_Layer: 16
+  m_Layer: 10
   m_Name: Door Contaduria
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8093,7 +8093,7 @@ GameObject:
   - component: {fileID: 1315943427}
   - component: {fileID: 1315943426}
   - component: {fileID: 1315943429}
-  m_Layer: 16
+  m_Layer: 10
   m_Name: Door Cafeteria
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8840,7 +8840,7 @@ GameObject:
   - component: {fileID: 1443163045}
   - component: {fileID: 1443163044}
   - component: {fileID: 1443163043}
-  m_Layer: 16
+  m_Layer: 10
   m_Name: Cartelazo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9102,7 +9102,7 @@ GameObject:
   - component: {fileID: 1504367638}
   - component: {fileID: 1504367637}
   - component: {fileID: 1504367640}
-  m_Layer: 16
+  m_Layer: 10
   m_Name: "Door Ba\xF1os"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9312,7 +9312,7 @@ GameObject:
   - component: {fileID: 1511012807}
   - component: {fileID: 1511012812}
   - component: {fileID: 1511012811}
-  m_Layer: 16
+  m_Layer: 10
   m_Name: Door Cocina
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9769,7 +9769,7 @@ GameObject:
   - component: {fileID: 1565010974}
   - component: {fileID: 1565010973}
   - component: {fileID: 1565010972}
-  m_Layer: 16
+  m_Layer: 10
   m_Name: Cartelazo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10680,7 +10680,7 @@ GameObject:
   - component: {fileID: 1679995970}
   - component: {fileID: 1679995973}
   - component: {fileID: 1679995974}
-  m_Layer: 16
+  m_Layer: 10
   m_Name: Door Biblioteca
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11086,7 +11086,7 @@ GameObject:
   - component: {fileID: 1707308619}
   - component: {fileID: 1707308618}
   - component: {fileID: 1707308617}
-  m_Layer: 16
+  m_Layer: 10
   m_Name: Cartelazo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11322,7 +11322,7 @@ GameObject:
   - component: {fileID: 1759517609}
   - component: {fileID: 1759517608}
   - component: {fileID: 1759517607}
-  m_Layer: 16
+  m_Layer: 10
   m_Name: Cartelazo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11638,7 +11638,7 @@ GameObject:
   - component: {fileID: 1804453260}
   - component: {fileID: 1804453259}
   - component: {fileID: 1804453258}
-  m_Layer: 16
+  m_Layer: 10
   m_Name: Cartelazo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12357,7 +12357,7 @@ GameObject:
   - component: {fileID: 1937469118}
   - component: {fileID: 1937469117}
   - component: {fileID: 1937469120}
-  m_Layer: 16
+  m_Layer: 10
   m_Name: Door Musica
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12743,7 +12743,7 @@ GameObject:
   - component: {fileID: 1983765019}
   - component: {fileID: 1983765018}
   - component: {fileID: 1983765017}
-  m_Layer: 16
+  m_Layer: 10
   m_Name: Cartelazo
   m_TagString: Untagged
   m_Icon: {fileID: 0}

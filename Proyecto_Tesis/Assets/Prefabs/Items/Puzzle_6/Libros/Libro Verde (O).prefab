@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1938940117121799721}
   - component: {fileID: 6494616370424703566}
-  m_Layer: 17
+  m_Layer: 0
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2497874798335218511}
   - component: {fileID: 6922020827796565386}
-  m_Layer: 17
+  m_Layer: 0
   m_Name: Libro Verde (O)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5501006749433188391}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.39409924, y: 0.09906301, z: 0.29027885}
@@ -138,12 +138,12 @@ PrefabInstance:
     - target: {fileID: 1147905460864795068, guid: fcd7802f0d8000943abcbb85cf6fcb5f,
         type: 3}
       propertyPath: m_Layer
-      value: 17
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3713512749618764097, guid: fcd7802f0d8000943abcbb85cf6fcb5f,
         type: 3}
       propertyPath: m_Layer
-      value: 17
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3732169560722883528, guid: fcd7802f0d8000943abcbb85cf6fcb5f,
         type: 3}
@@ -223,7 +223,7 @@ PrefabInstance:
     - target: {fileID: 4071400150396410226, guid: fcd7802f0d8000943abcbb85cf6fcb5f,
         type: 3}
       propertyPath: m_Layer
-      value: 17
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7787229525468173718, guid: fcd7802f0d8000943abcbb85cf6fcb5f,
         type: 3}

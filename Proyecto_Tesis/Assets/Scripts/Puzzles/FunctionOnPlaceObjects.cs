@@ -127,6 +127,10 @@ public class FunctionOnPlaceObjects : MonoBehaviour
             {
                 if (itemsPlayer[i].id == spawnersItems[indexSpawnItems].spawnedItem.id)
                 {
+                    for (int j = 0; j < itemsPlayer.Length; j++)
+                    {
+                        itemsPlayer[j].go.SetActive(false);
+                    }
                     spawnersItems[indexSpawnItems].DestroyObject(itemsPlayer[i].id, itemsPlayer[i].go);
                     i = itemsPlayer.Length;
                 }
@@ -143,7 +147,9 @@ public class FunctionOnPlaceObjects : MonoBehaviour
                 if (!spawnersItems[indexSpawnItems].items[i].itemSpawned)
                 {
                     spawnersItems[indexSpawnItems].SpawnObject(itemsPlayer[indexItemPlayer].id, itemsPlayer[indexItemPlayer].go);
+                    i = spawnersItems[indexSpawnItems].items.Length;
                 }
+               
             }
         }
 

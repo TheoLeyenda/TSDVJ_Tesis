@@ -285,7 +285,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8848723874143351935}
         m_MethodName: SetEnableMouseInputs
         m_Mode: 6
         m_Arguments:
@@ -343,7 +343,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8848723874143351935}
         m_MethodName: SetEnableMouseInputs
         m_Mode: 6
         m_Arguments:
@@ -607,7 +607,7 @@ MonoBehaviour:
   sound: {fileID: 4113103770830251885}
   stuneable: {fileID: 4113103770830251880}
   myUserTransform: {fileID: 4113103770830251895}
-  getObjectPositionY: {fileID: 0}
+  getObjectPositionY: {fileID: 217833938114667057}
 --- !u!114 &4113103770830251884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -625,6 +625,7 @@ MonoBehaviour:
   interactionMask:
     serializedVersion: 2
     m_Bits: 0
+  screenText: {fileID: 1904393482}
 --- !u!114 &4113103770830251889
 MonoBehaviour:
   m_ObjectHideFlags: 0

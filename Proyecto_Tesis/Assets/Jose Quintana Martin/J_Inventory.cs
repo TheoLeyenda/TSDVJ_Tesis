@@ -7,7 +7,7 @@ public class J_Inventory : Updateable
 {
     public GameObject slotParent;
     public GameObject inventoryUI;
-    public int inventorySize = 24;
+    public int inventorySize = 16;
 
     List<J_Item> inventory;
     J_InventorySlot[] slots;

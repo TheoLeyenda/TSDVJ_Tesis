@@ -6,11 +6,11 @@ public class J_PlayerInteraction : Updateable
 {
     public GameObject playerCamera;
     public float interactionDistance = 1f;
+    public LayerMask interactionMask;
     public J_ScreenText screenText;
 
     private J_Interactable interactable;
-    private GameObject currIntObject;
-    private GameObject prevIntObject;
+    private GameObject lastIntObject;
 
     RaycastHit hit;
 
@@ -23,22 +23,25 @@ public class J_PlayerInteraction : Updateable
 
     public void UpdateInteraction()
     {
-        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, interactionDistance))
+        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, interactionDistance, interactionMask))
         {
-            currIntObject = hit.transform.gameObject;
-            if (currIntObject != prevIntObject)
+            if (interactable == null)
             {
-                interactable = currIntObject.GetComponent<J_Interactable>();
-                prevIntObject = currIntObject;
+                Debug.Log("changos");
+                interactable = hit.transform.gameObject.GetComponent<J_Interactable>();
+                lastIntObject = interactable.gameObject;
+
+                if (screenText != null)
+                {
+                    screenText.ToggleText();
+                    screenText.SetText("Press E to interact");
+                }
             }
         }
         else
         {
-            if (currIntObject != null)
-            {
-                prevIntObject = currIntObject;
-                currIntObject = null;
-            }
+            interactable = null;
+            screenText.HideText();
         }
 
         if (Input.GetButtonDown("InteractTest"))
@@ -53,8 +56,8 @@ public class J_PlayerInteraction : Updateable
             interactable.DoAction();
     }
 
-    public GameObject GetcurrIntObject()
+    public GameObject GetLastIntObject()
     {
-        return currIntObject;
+        return lastIntObject;
     }
 }

@@ -6,11 +6,11 @@ public class J_PlayerInteraction : Updateable
 {
     public GameObject playerCamera;
     public float interactionDistance = 1f;
-    public LayerMask interactionMask;
     public J_ScreenText screenText;
 
     private J_Interactable interactable;
-    private GameObject lastIntObject;
+    private GameObject currIntObject;
+    private GameObject prevIntObject;
 
     RaycastHit hit;
 
@@ -23,25 +23,22 @@ public class J_PlayerInteraction : Updateable
 
     public void UpdateInteraction()
     {
-        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, interactionDistance, interactionMask))
+        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, interactionDistance))
         {
-            if (interactable == null)
+            currIntObject = hit.transform.gameObject;
+            if (currIntObject != prevIntObject)
             {
-                Debug.Log("changos");
-                interactable = hit.transform.gameObject.GetComponent<J_Interactable>();
-                lastIntObject = interactable.gameObject;
-
-                if (screenText != null)
-                {
-                    screenText.ToggleText();
-                    screenText.SetText("Press E to interact");
-                }
+                interactable = currIntObject.GetComponent<J_Interactable>();
+                prevIntObject = currIntObject;
             }
         }
         else
         {
-            interactable = null;
-            screenText.HideText();
+            if (currIntObject != null)
+            {
+                prevIntObject = currIntObject;
+                currIntObject = null;
+            }
         }
 
         if (Input.GetButtonDown("InteractTest"))
@@ -56,8 +53,8 @@ public class J_PlayerInteraction : Updateable
             interactable.DoAction();
     }
 
-    public GameObject GetLastIntObject()
+    public GameObject GetcurrIntObject()
     {
-        return lastIntObject;
+        return currIntObject;
     }
 }

@@ -6,7 +6,7 @@ public class J_PlayerInteraction : Updateable
 {
     public GameObject playerCamera;
     public float interactionDistance = 1f;
-    public J_ScreenText screenText;
+    public J_ToggleableImage interactImage;
 
     private J_Interactable interactable;
     private GameObject currIntObject;
@@ -44,13 +44,11 @@ public class J_PlayerInteraction : Updateable
         //Text
         if (interactable != null)
         {
-            
-            screenText.SetText("Presiona E para interactuar");
-            screenText.ShowText();
+            interactImage.ShowImage();
         }
         else
         {
-            screenText.HideText();
+            interactImage.HideImage();
         }
 
         //Input

@@ -52,7 +52,7 @@ public class J_PlayerHide : Updateable
 
         oldPos = transform.position;
 
-        GameObject obj = playerInteraction.GetLastIntObject();
+        GameObject obj = playerInteraction.GetcurrIntObject();
         Vector3 newRot = obj.transform.eulerAngles;
 
         transform.position = obj.transform.position;

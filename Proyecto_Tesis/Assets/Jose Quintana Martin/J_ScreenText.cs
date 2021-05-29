@@ -69,6 +69,7 @@ public class J_ScreenText : Updateable
             if (!isTimerRunning)
             {
                 isTimerRunning = gameObject.activeSelf;
+                timer = 0;
             }
         }
     }

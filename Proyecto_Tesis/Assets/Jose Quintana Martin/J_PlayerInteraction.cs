@@ -6,11 +6,11 @@ public class J_PlayerInteraction : Updateable
 {
     public GameObject playerCamera;
     public float interactionDistance = 1f;
-    public LayerMask interactionMask;
     public J_ScreenText screenText;
 
     private J_Interactable interactable;
-    private GameObject lastIntObject;
+    private GameObject currIntObject;
+    private GameObject prevIntObject;
 
     RaycastHit hit;
 
@@ -23,27 +23,37 @@ public class J_PlayerInteraction : Updateable
 
     public void UpdateInteraction()
     {
-        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, interactionDistance, interactionMask))
+        //Raycast
+        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, interactionDistance))
         {
-            if (interactable == null)
-            {
-                Debug.Log("changos");
-                interactable = hit.transform.gameObject.GetComponent<J_Interactable>();
-                lastIntObject = interactable.gameObject;
+            currIntObject = hit.transform.gameObject;
 
-                if (screenText != null)
-                {
-                    screenText.ToggleText();
-                    screenText.SetText("Press E to interact");
-                }
+            if (currIntObject != prevIntObject)
+            {
+                interactable = currIntObject.GetComponent<J_Interactable>();
+                prevIntObject = currIntObject;
             }
         }
         else
         {
+            currIntObject = null;
+            prevIntObject = null;
             interactable = null;
+        }
+
+        //Text
+        if (interactable != null)
+        {
+            
+            screenText.SetText("Presiona E para interactuar");
+            screenText.ShowText();
+        }
+        else
+        {
             screenText.HideText();
         }
 
+        //Input
         if (Input.GetButtonDown("InteractTest"))
         {
             Interact();
@@ -56,8 +66,8 @@ public class J_PlayerInteraction : Updateable
             interactable.DoAction();
     }
 
-    public GameObject GetLastIntObject()
+    public GameObject GetcurrIntObject()
     {
-        return lastIntObject;
+        return currIntObject;
     }
 }

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class ColorLightRayEmitter : MonoBehaviour
+public class ColorLightRayEmitter : Updateable
 {
     private int currentColorEmitterIndex = -1;
     private Color currentColor;
@@ -16,8 +16,12 @@ public class ColorLightRayEmitter : MonoBehaviour
     [SerializeField] private Transform spawnRay;
     [SerializeField] private float rangeRay;
     [SerializeField] private LayerMask mask = -1;
-    void OnEnable()
+
+    //private ListenerColorLightRay listenerColorRay;
+
+    protected override void OnEnable()
     {
+        base.OnEnable();
         if (enableUse)
         {
             //Debug.Log("Rayo lanzado desde: " + spawnRay.transform.position);
@@ -25,28 +29,35 @@ public class ColorLightRayEmitter : MonoBehaviour
         }
     }
 
-    void OnDisable()
+    protected override void OnDisable()
     {
+        base.OnDisable();
         if (!enableUse)
         {
             ChangeColorLight(Color.white);
         }
     }
 
-    void Start(){}
+    protected override void Start()
+    {
+        base.Start();
+        MyUpdate.AddListener(UpdateColorLightRayEmitter);
+        UM.UpdatesInGame.Add(MyUpdate);
+    }
 
     //Esto hay que pasarlo al inputManager
-    void Update()
+    void UpdateColorLightRayEmitter()
     {
-        if (Input.GetKeyDown(changeNextColorButton))
+        if (enableUse)
         {
-            ChangeNextColor();
-            ThrowRayCheck();
-        }
-
-        if (Input.GetKeyDown(changePrevColorButton))
-        {
-            ChangePrevColor();
+            if (Input.GetKeyDown(changeNextColorButton))
+            {
+                ChangeNextColor();
+            }
+            if (Input.GetKeyDown(changePrevColorButton))
+            {
+                ChangePrevColor();
+            }
             ThrowRayCheck();
         }
     }
@@ -95,7 +106,6 @@ public class ColorLightRayEmitter : MonoBehaviour
             // Does the ray intersect any objects excluding the player layer
             if (Physics.Raycast(spawnRay.position, spawnRay.transform.forward, out hit, rangeRay, mask))
             {
-                //Debug.Log(hit.transform.name);
                 ListenerColorLightRay listenerColorRay = hit.collider.GetComponent<ListenerColorLightRay>();
                 if (listenerColorRay != null)
                 {

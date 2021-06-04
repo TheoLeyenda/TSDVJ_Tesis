@@ -8,10 +8,10 @@ public class ChangeColorSprite : MonoBehaviour
     [SerializeField] private SpriteRenderer spriteRenderer;
     public void ChangeColor(int indexColor)
     {
-        Debug.Log("Cambie color");
+        //Debug.Log("Cambie color");
         if (indexColor < colors.Length && indexColor >= 0)
         {
-            Debug.Log("Si padre");
+            //Debug.Log("Si padre");
             spriteRenderer.color = colors[indexColor];
         }
     }

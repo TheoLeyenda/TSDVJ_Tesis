@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class ListenerColorLightRay : MonoBehaviour
 {
     bool isCorrectColor = false;
-    [SerializeField] private bool lockWindowsToCorrectAnswer = false;
+    [SerializeField] private bool lockWindowsToCorrectAnswer = true;
 
     private ManagerListenerColorLightRay myManagerListenerColorLightRay;
 
@@ -15,9 +15,17 @@ public class ListenerColorLightRay : MonoBehaviour
 
     [SerializeField] private Color answerColor;
 
+    [SerializeField] private int indexWindow;
+
     public bool IsCorrectColor(){return isCorrectColor; }
 
     public void SetIsCorrectColor(bool value) => isCorrectColor = value;
+
+    public void ResetWindows()
+    {
+        OnIncorrectAnswer?.Invoke();
+        isCorrectColor = false;
+    }
 
     public void CheckIsCorrectColor(Color color)
     {
@@ -40,7 +48,7 @@ public class ListenerColorLightRay : MonoBehaviour
             OnIncorrectAnswer?.Invoke();
             isCorrectColor = false;
         }
-        myManagerListenerColorLightRay.CheckCorrectAnswersListeners();
+        myManagerListenerColorLightRay.CheckCorrectAnswersListeners(indexWindow);
     }
 
     public void SetMyManagerListenerColorLightRay(ManagerListenerColorLightRay managerListenerColorLightRay) => myManagerListenerColorLightRay = managerListenerColorLightRay;

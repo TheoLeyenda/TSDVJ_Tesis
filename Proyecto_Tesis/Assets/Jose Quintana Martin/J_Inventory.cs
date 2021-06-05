@@ -11,12 +11,15 @@ public class J_Inventory : Updateable
 
     List<J_Item> inventory;
     J_InventorySlot[] slots;
+    private GameManager gameManagerRef;
 
     [SerializeField] private UnityEvent EventInventoryOn;
     [SerializeField] private UnityEvent EventInventoryOff;
 
     protected override void Start()
     {
+        gameManagerRef = FindObjectOfType<GameManager>();
+
         base.Start();
         MyUpdate.AddListener(UpdateInventoryKey);
         UM.UpdatesInGame.Add(MyUpdate);

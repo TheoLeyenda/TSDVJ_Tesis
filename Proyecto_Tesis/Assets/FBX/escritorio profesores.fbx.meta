@@ -1,0 +1,184 @@
+fileFormatVersion: 2
+guid: cdc8dfd5945f9fc42ac30375a1a6f5ab
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: escritorio_profesores:pCube13
+    100004: escritorio_profesores:pCube14
+    100006: escritorio_profesores:pCube15
+    100008: escritorio_profesores:pCube16
+    100010: escritorio_profesores:pCube17
+    100012: escritorio_profesores:pCube18
+    100014: escritorio_profesores:pCube19
+    100016: escritorio_profesores:pCube20
+    100018: escritorio_profesores:pCube21
+    100020: escritorio_profesores:pCube22
+    100022: escritorio_profesores:pCylinder1
+    100024: escritorio_profesores:pCylinder2
+    100026: escritorio_profesores:pCylinder3
+    100028: escritorio_profesores:pCylinder4
+    100030: escritorio_profesores:pTorus3
+    100032: escritorio_profesores:pTorus4
+    100034: escritorio_profesores:pTorus5
+    100036: escritorio_profesores:pTorus6
+    400000: //RootNode
+    400002: escritorio_profesores:pCube13
+    400004: escritorio_profesores:pCube14
+    400006: escritorio_profesores:pCube15
+    400008: escritorio_profesores:pCube16
+    400010: escritorio_profesores:pCube17
+    400012: escritorio_profesores:pCube18
+    400014: escritorio_profesores:pCube19
+    400016: escritorio_profesores:pCube20
+    400018: escritorio_profesores:pCube21
+    400020: escritorio_profesores:pCube22
+    400022: escritorio_profesores:pCylinder1
+    400024: escritorio_profesores:pCylinder2
+    400026: escritorio_profesores:pCylinder3
+    400028: escritorio_profesores:pCylinder4
+    400030: escritorio_profesores:pTorus3
+    400032: escritorio_profesores:pTorus4
+    400034: escritorio_profesores:pTorus5
+    400036: escritorio_profesores:pTorus6
+    2100000: instrumentos_y_escritorio
+    2300000: escritorio_profesores:pCube13
+    2300002: escritorio_profesores:pCube14
+    2300004: escritorio_profesores:pCube15
+    2300006: escritorio_profesores:pCube16
+    2300008: escritorio_profesores:pCube17
+    2300010: escritorio_profesores:pCube18
+    2300012: escritorio_profesores:pCube19
+    2300014: escritorio_profesores:pCube20
+    2300016: escritorio_profesores:pCube21
+    2300018: escritorio_profesores:pCube22
+    2300020: escritorio_profesores:pCylinder1
+    2300022: escritorio_profesores:pCylinder2
+    2300024: escritorio_profesores:pCylinder3
+    2300026: escritorio_profesores:pCylinder4
+    2300028: escritorio_profesores:pTorus3
+    2300030: escritorio_profesores:pTorus4
+    2300032: escritorio_profesores:pTorus5
+    2300034: escritorio_profesores:pTorus6
+    3300000: escritorio_profesores:pCube13
+    3300002: escritorio_profesores:pCube14
+    3300004: escritorio_profesores:pCube15
+    3300006: escritorio_profesores:pCube16
+    3300008: escritorio_profesores:pCube17
+    3300010: escritorio_profesores:pCube18
+    3300012: escritorio_profesores:pCube19
+    3300014: escritorio_profesores:pCube20
+    3300016: escritorio_profesores:pCube21
+    3300018: escritorio_profesores:pCube22
+    3300020: escritorio_profesores:pCylinder1
+    3300022: escritorio_profesores:pCylinder2
+    3300024: escritorio_profesores:pCylinder3
+    3300026: escritorio_profesores:pCylinder4
+    3300028: escritorio_profesores:pTorus3
+    3300030: escritorio_profesores:pTorus4
+    3300032: escritorio_profesores:pTorus5
+    3300034: escritorio_profesores:pTorus6
+    4300000: escritorio_profesores:pCube19
+    4300002: escritorio_profesores:pCube18
+    4300004: escritorio_profesores:pCube21
+    4300006: escritorio_profesores:pCube20
+    4300008: escritorio_profesores:pCylinder3
+    4300010: escritorio_profesores:pCylinder4
+    4300012: escritorio_profesores:pCylinder1
+    4300014: escritorio_profesores:pCube13
+    4300016: escritorio_profesores:pCube22
+    4300018: escritorio_profesores:pCube17
+    4300020: escritorio_profesores:pCube16
+    4300022: escritorio_profesores:pCube15
+    4300024: escritorio_profesores:pCube14
+    4300026: escritorio_profesores:pTorus5
+    4300028: escritorio_profesores:pTorus4
+    4300030: escritorio_profesores:pTorus3
+    4300032: escritorio_profesores:pCylinder2
+    4300034: escritorio_profesores:pTorus6
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

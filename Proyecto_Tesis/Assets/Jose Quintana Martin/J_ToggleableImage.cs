@@ -6,16 +6,20 @@ using UnityEngine.UI;
 public class J_ToggleableImage : MonoBehaviour
 {
     public Image image;
-
+    private bool enableUse = true;
     public void ToggleImage() {
-        image.gameObject.SetActive(!image.gameObject.activeSelf);
+	if(enableUse)
+        	image.gameObject.SetActive(!image.gameObject.activeSelf);
     }
 
     public void ShowImage() {
-        image.gameObject.SetActive(true);
+	if(enableUse)
+        	image.gameObject.SetActive(true);
     }
 
     public void HideImage() {
-        image.gameObject.SetActive(false);
+	if(enableUse)
+        	image.gameObject.SetActive(false);
     }
+    public void SetEnableUse(bool value) => enableUse = value;
 }

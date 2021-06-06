@@ -1,49 +1,125 @@
 fileFormatVersion: 2
 guid: bfbc774224c4f9a42b3e212175335ab8
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: //RootNode
-    100002: trompeta:polySurface1
-    100004: trompeta:polySurface2
-    100006: trompeta:polySurface3
-    100008: trompeta:polySurface4
-    100010: trompeta:polySurface5
-    100012: trompeta:polySurface6
-    100014: trompeta:polySurface7
-    400000: //RootNode
-    400002: trompeta:polySurface1
-    400004: trompeta:polySurface2
-    400006: trompeta:polySurface3
-    400008: trompeta:polySurface4
-    400010: trompeta:polySurface5
-    400012: trompeta:polySurface6
-    400014: trompeta:polySurface7
-    2100000: instrumentos_y_escritorio
-    2300000: trompeta:polySurface1
-    2300002: trompeta:polySurface2
-    2300004: trompeta:polySurface3
-    2300006: trompeta:polySurface4
-    2300008: trompeta:polySurface5
-    2300010: trompeta:polySurface6
-    2300012: trompeta:polySurface7
-    3300000: trompeta:polySurface1
-    3300002: trompeta:polySurface2
-    3300004: trompeta:polySurface3
-    3300006: trompeta:polySurface4
-    3300008: trompeta:polySurface5
-    3300010: trompeta:polySurface6
-    3300012: trompeta:polySurface7
-    4300000: trompeta:polySurface2
-    4300002: trompeta:polySurface1
-    4300004: trompeta:polySurface6
-    4300006: trompeta:polySurface7
-    4300008: trompeta:polySurface3
-    4300010: trompeta:polySurface5
-    4300012: trompeta:polySurface4
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: trompeta:polySurface1
+  - first:
+      1: 100004
+    second: trompeta:polySurface2
+  - first:
+      1: 100006
+    second: trompeta:polySurface3
+  - first:
+      1: 100008
+    second: trompeta:polySurface4
+  - first:
+      1: 100010
+    second: trompeta:polySurface5
+  - first:
+      1: 100012
+    second: trompeta:polySurface6
+  - first:
+      1: 100014
+    second: trompeta:polySurface7
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: trompeta:polySurface1
+  - first:
+      4: 400004
+    second: trompeta:polySurface2
+  - first:
+      4: 400006
+    second: trompeta:polySurface3
+  - first:
+      4: 400008
+    second: trompeta:polySurface4
+  - first:
+      4: 400010
+    second: trompeta:polySurface5
+  - first:
+      4: 400012
+    second: trompeta:polySurface6
+  - first:
+      4: 400014
+    second: trompeta:polySurface7
+  - first:
+      21: 2100000
+    second: instrumentos_y_escritorio
+  - first:
+      23: 2300000
+    second: trompeta:polySurface1
+  - first:
+      23: 2300002
+    second: trompeta:polySurface2
+  - first:
+      23: 2300004
+    second: trompeta:polySurface3
+  - first:
+      23: 2300006
+    second: trompeta:polySurface4
+  - first:
+      23: 2300008
+    second: trompeta:polySurface5
+  - first:
+      23: 2300010
+    second: trompeta:polySurface6
+  - first:
+      23: 2300012
+    second: trompeta:polySurface7
+  - first:
+      33: 3300000
+    second: trompeta:polySurface1
+  - first:
+      33: 3300002
+    second: trompeta:polySurface2
+  - first:
+      33: 3300004
+    second: trompeta:polySurface3
+  - first:
+      33: 3300006
+    second: trompeta:polySurface4
+  - first:
+      33: 3300008
+    second: trompeta:polySurface5
+  - first:
+      33: 3300010
+    second: trompeta:polySurface6
+  - first:
+      33: 3300012
+    second: trompeta:polySurface7
+  - first:
+      43: 4300000
+    second: trompeta:polySurface2
+  - first:
+      43: 4300002
+    second: trompeta:polySurface1
+  - first:
+      43: 4300004
+    second: trompeta:polySurface6
+  - first:
+      43: 4300006
+    second: trompeta:polySurface7
+  - first:
+      43: 4300008
+    second: trompeta:polySurface3
+  - first:
+      43: 4300010
+    second: trompeta:polySurface5
+  - first:
+      43: 4300012
+    second: trompeta:polySurface4
   externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -76,25 +152,28 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 1
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -103,10 +182,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -116,13 +195,16 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
   humanoidOversampling: 1
+  avatarSetup: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

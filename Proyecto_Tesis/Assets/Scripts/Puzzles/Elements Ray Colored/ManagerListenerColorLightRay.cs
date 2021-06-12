@@ -3,26 +3,45 @@ using UnityEngine.Events;
 using System.Collections.Generic;
 public class ManagerListenerColorLightRay : MonoBehaviour
 {
-    [SerializeField] private ListenerColorLightRay[] listenersColorRay;
+    public ListenerColorLightRay[] listenersColorRay;
 
     [SerializeField] private UnityEvent AllListenersCorrectAnswerFunction;
 
     [SerializeField] private bool iluminatyInOrderWindows = true;
 
-    [SerializeField] private List<int> listenersInputsIndex;
+    [SerializeField] private List<int> listenersInputsIndex = null;
 
-    private int currentWindowIluminaty = 0;
+    private int currentIndexListenersInputIndex = 0;
+
+    private bool enableAddCurrentIndexListenersInputIndex = false;
+
+    void OnEnable()
+    {
+
+    }
+
+    void OnDisable()
+    {
+
+    }
 
     void Start()
     {
-        listenersInputsIndex = new List<int>();
-        for(int i = 0; i < listenersColorRay.Length; i++)
+        InitManagerListenerColorLightRay();
+    }
+    public void InitManagerListenerColorLightRay()
+    {
+        if(listenersInputsIndex == null)
+            listenersInputsIndex = new List<int>();
+
+        listenersInputsIndex.Clear();
+        for (int i = 0; i < listenersColorRay.Length; i++)
         {
+            listenersInputsIndex.Add(listenersColorRay[i].GetIndexListenerColorLightRay());
             listenersColorRay[i].SetMyManagerListenerColorLightRay(this);
         }
     }
-
-    public void DisbaleAllWindows()
+    public void DisbaleAllListenersColorRay()
     {
         for (int i = 0; i < listenersColorRay.Length; i++)
         {
@@ -31,41 +50,32 @@ public class ManagerListenerColorLightRay : MonoBehaviour
         }
     }
 
-    public void CheckCorrectAnswersListeners(int currentWindowIndex)
+    private void CheckAddCurrentIndexListenersInputIndex(ColorLightRayEmitter colorLightRayEmitter)
     {
-        if (currentWindowIndex > listenersColorRay.Length - 1 && currentWindowIndex < 0)
+
+    }
+
+    public void CheckCorrectAnswersListeners(ListenerColorLightRay _listenerColorLightRay)
+    {
+        if (_listenerColorLightRay.GetIndexListenerColorLightRay() > listenersColorRay.Length - 1 && _listenerColorLightRay.GetIndexListenerColorLightRay() < 0)
             return;
 
         bool doneAnswers = true;
         if (iluminatyInOrderWindows)
         {
-            bool enableExaminate = true;
-
-            for (int i = 0; i < listenersInputsIndex.Count; i++)
+            if (listenersInputsIndex[currentIndexListenersInputIndex] != _listenerColorLightRay.GetIndexListenerColorLightRay()
+                && !listenersColorRay[currentIndexListenersInputIndex].IsCorrectColor())
             {
-                if (listenersInputsIndex[i] == currentWindowIndex && listenersColorRay[i].IsCorrectColor())
+                //INCORRECTO
+                for (int i = 0; i < listenersColorRay.Length; i++)
                 {
-                    enableExaminate = false;
+                    listenersColorRay[i].ResetListenerColorRay();
                 }
+                currentIndexListenersInputIndex = 0;
             }
-
-            if (enableExaminate)
+            else
             {
-                if (currentWindowIluminaty == currentWindowIndex && listenersColorRay[currentWindowIluminaty].IsCorrectColor())
-                {
-                    listenersInputsIndex.Add(currentWindowIndex);
-                    currentWindowIluminaty++;
-                }
-                else
-                {
-                    listenersInputsIndex.Clear();
-                    currentWindowIluminaty = 0;
-                    for (int i = 0; i < listenersColorRay.Length; i++)
-                    {
-                        listenersColorRay[i].ResetWindows();
-                    }
-                    doneAnswers = false;
-                }
+                enableAddCurrentIndexListenersInputIndex = true;
             }
         }
 

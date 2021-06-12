@@ -17,6 +17,9 @@ public class ColorLightRayEmitter : Updateable
     [SerializeField] private float rangeRay;
     [SerializeField] private LayerMask mask = -1;
 
+    public static System.Action<GameObject> OnFaildHitRayEmmiter;
+
+    private RaycastHit hit;
     //private ListenerColorLightRay listenerColorRay;
 
     protected override void OnEnable()
@@ -35,6 +38,14 @@ public class ColorLightRayEmitter : Updateable
         if (!enableUse)
         {
             ChangeColorLight(Color.white);
+        }
+        else
+        {
+            if (OnFaildHitRayEmmiter != null)
+            {
+                if(hit.collider != null)
+                    OnFaildHitRayEmmiter(hit.collider.gameObject);
+            }
         }
     }
 
@@ -102,15 +113,25 @@ public class ColorLightRayEmitter : Updateable
     {
         if (enableUse)
         {
-            RaycastHit hit;
             // Does the ray intersect any objects excluding the player layer
             if (Physics.Raycast(spawnRay.position, spawnRay.transform.forward, out hit, rangeRay, mask))
             {
                 ListenerColorLightRay listenerColorRay = hit.collider.GetComponent<ListenerColorLightRay>();
                 if (listenerColorRay != null)
                 {
+                    //Debug.Log("ENTRE");
                     listenerColorRay.CheckIsCorrectColor(currentColor);
                 }
+                else
+                {
+                    if (OnFaildHitRayEmmiter != null)
+                        OnFaildHitRayEmmiter(hit.collider.gameObject);
+                }
+            }
+            else
+            {
+                if (OnFaildHitRayEmmiter != null)
+                    OnFaildHitRayEmmiter(hit.collider.gameObject);
             }
             //Debug.DrawRay(spawnRay.position, spawnRay.transform.forward, Color.red, 1000);
         }

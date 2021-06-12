@@ -17,10 +17,9 @@ public class ColorLightRayEmitter : Updateable
     [SerializeField] private float rangeRay;
     [SerializeField] private LayerMask mask = -1;
 
-    public static System.Action<GameObject> OnFaildHitRayEmmiter;
+    public static event System.Action<ManagerListenerColorLightRay> OnFailHit;
 
-    private RaycastHit hit;
-    //private ListenerColorLightRay listenerColorRay;
+    private ListenerColorLightRay listenerColorRay;
 
     protected override void OnEnable()
     {
@@ -41,10 +40,10 @@ public class ColorLightRayEmitter : Updateable
         }
         else
         {
-            if (OnFaildHitRayEmmiter != null)
+            if (OnFailHit != null && listenerColorRay != null)
             {
-                if(hit.collider != null)
-                    OnFaildHitRayEmmiter(hit.collider.gameObject);
+                OnFailHit(listenerColorRay.GetManagerListenerColorLightRay());
+                listenerColorRay = null;
             }
         }
     }
@@ -113,10 +112,11 @@ public class ColorLightRayEmitter : Updateable
     {
         if (enableUse)
         {
+            RaycastHit hit;
             // Does the ray intersect any objects excluding the player layer
             if (Physics.Raycast(spawnRay.position, spawnRay.transform.forward, out hit, rangeRay, mask))
             {
-                ListenerColorLightRay listenerColorRay = hit.collider.GetComponent<ListenerColorLightRay>();
+                listenerColorRay = hit.collider.GetComponent<ListenerColorLightRay>();
                 if (listenerColorRay != null)
                 {
                     //Debug.Log("ENTRE");
@@ -124,14 +124,21 @@ public class ColorLightRayEmitter : Updateable
                 }
                 else
                 {
-                    if (OnFaildHitRayEmmiter != null)
-                        OnFaildHitRayEmmiter(hit.collider.gameObject);
+                    if (OnFailHit != null && listenerColorRay != null)
+                    {
+                        OnFailHit(listenerColorRay.GetManagerListenerColorLightRay());
+                        listenerColorRay = null;
+                    }
                 }
+
             }
             else
             {
-                if (OnFaildHitRayEmmiter != null)
-                    OnFaildHitRayEmmiter(hit.collider.gameObject);
+                if (OnFailHit != null && listenerColorRay != null)
+                {
+                    OnFailHit(listenerColorRay.GetManagerListenerColorLightRay());
+                    listenerColorRay = null;
+                }
             }
             //Debug.DrawRay(spawnRay.position, spawnRay.transform.forward, Color.red, 1000);
         }

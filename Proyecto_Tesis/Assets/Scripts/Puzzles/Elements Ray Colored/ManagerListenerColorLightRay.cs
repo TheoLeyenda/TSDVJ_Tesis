@@ -7,7 +7,7 @@ public class ManagerListenerColorLightRay : MonoBehaviour
 
     [SerializeField] private UnityEvent AllListenersCorrectAnswerFunction;
 
-    [SerializeField] private bool iluminatyInOrderWindows = true;
+    [SerializeField] private bool iluminatyInOrderListeners = true;
 
     [SerializeField] private List<int> listenersInputsIndex = null;
 
@@ -15,14 +15,17 @@ public class ManagerListenerColorLightRay : MonoBehaviour
 
     private bool enableAddCurrentIndexListenersInputIndex = false;
 
+    private bool enableCheck = true;
+
+
     void OnEnable()
     {
-
+        ColorLightRayEmitter.OnFailHit += EnableCheck;
     }
 
     void OnDisable()
     {
-
+        ColorLightRayEmitter.OnFailHit -= EnableCheck;
     }
 
     void Start()
@@ -50,32 +53,53 @@ public class ManagerListenerColorLightRay : MonoBehaviour
         }
     }
 
-    private void CheckAddCurrentIndexListenersInputIndex(ColorLightRayEmitter colorLightRayEmitter)
+    public void EnableCheck(ManagerListenerColorLightRay managerListenerColorLightRay)
     {
-
+        if (managerListenerColorLightRay == this)
+            enableCheck = true;
     }
 
     public void CheckCorrectAnswersListeners(ListenerColorLightRay _listenerColorLightRay)
     {
-        if (_listenerColorLightRay.GetIndexListenerColorLightRay() > listenersColorRay.Length - 1 && _listenerColorLightRay.GetIndexListenerColorLightRay() < 0)
-            return;
-
         bool doneAnswers = true;
-        if (iluminatyInOrderWindows)
+        Debug.Log(enableCheck);
+        if (iluminatyInOrderListeners && enableCheck)
         {
-            if (listenersInputsIndex[currentIndexListenersInputIndex] != _listenerColorLightRay.GetIndexListenerColorLightRay()
-                && !listenersColorRay[currentIndexListenersInputIndex].IsCorrectColor())
+            //Debug.Log("currentIndexListenersInputIndex:" +currentIndexListenersInputIndex);
+            if (listenersColorRay[listenersInputsIndex[0]] == _listenerColorLightRay
+                && _listenerColorLightRay.IsCorrectColor())
             {
-                //INCORRECTO
+                //CORRECTO;
+                Debug.Log("ENTRE 1");
+                if (currentIndexListenersInputIndex == 0)
+                {
+                    enableAddCurrentIndexListenersInputIndex = true;
+                }
+                else
+                {
+                    enableAddCurrentIndexListenersInputIndex = false;
+                    for (int i = 1; i < listenersInputsIndex.Count; i++)
+                    {
+                        listenersColorRay[listenersInputsIndex[i]].ResetListenerColorRay();
+                    }
+                    //currentIndexListenersInputIndex = 0;
+                }
+            }
+            else if (listenersColorRay[listenersInputsIndex[currentIndexListenersInputIndex]] == _listenerColorLightRay
+               && _listenerColorLightRay.IsCorrectColor())
+            {
+                Debug.Log("ENTRE 2");
+                enableAddCurrentIndexListenersInputIndex = true;
+            }
+            else
+            {
+                Debug.Log("ENTRE 3");
+                enableAddCurrentIndexListenersInputIndex = false;
                 for (int i = 0; i < listenersColorRay.Length; i++)
                 {
                     listenersColorRay[i].ResetListenerColorRay();
                 }
                 currentIndexListenersInputIndex = 0;
-            }
-            else
-            {
-                enableAddCurrentIndexListenersInputIndex = true;
             }
         }
 
@@ -93,5 +117,11 @@ public class ManagerListenerColorLightRay : MonoBehaviour
             AllListenersCorrectAnswerFunction?.Invoke();
         }
 
+        if (enableAddCurrentIndexListenersInputIndex)
+        {
+            currentIndexListenersInputIndex++;
+            enableAddCurrentIndexListenersInputIndex = false;
+            enableCheck = false;
+        }
     }
 }

@@ -23,7 +23,7 @@ public class ListenerColorLightRay : MonoBehaviour
 
     public void SetAnswerColor(Color color) => answerColor = color;
 
-    public bool IsCorrectColor(){return isCorrectColor; }
+    public bool IsCorrectColor() { return isCorrectColor; }
 
     public void SetIsCorrectColor(bool value) => isCorrectColor = value;
 
@@ -48,7 +48,7 @@ public class ListenerColorLightRay : MonoBehaviour
             OnCorrectAnswer?.Invoke();
             isCorrectColor = true;
         }
-        else if(!lockWindowsToCorrectAnswer)
+        else if (!lockWindowsToCorrectAnswer)
         {
             //Debug.Log("Incorrect Answer");
             OnIncorrectAnswer?.Invoke();
@@ -58,4 +58,6 @@ public class ListenerColorLightRay : MonoBehaviour
     }
 
     public void SetMyManagerListenerColorLightRay(ManagerListenerColorLightRay managerListenerColorLightRay) => myManagerListenerColorLightRay = managerListenerColorLightRay;
+
+    public ManagerListenerColorLightRay GetManagerListenerColorLightRay() { return myManagerListenerColorLightRay; }
 }

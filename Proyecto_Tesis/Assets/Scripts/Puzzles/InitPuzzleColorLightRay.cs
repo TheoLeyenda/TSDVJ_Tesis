@@ -7,7 +7,7 @@ public class InitPuzzleColorLightRay : MonoBehaviour
     [SerializeField] private List<ColorsToAssign> colors;
     [SerializeField] private List<SpritesToAssign> DrawSprite;
     [SerializeField] private List<Sprite> NumberSprite;
-    [SerializeField] private bool enableRepeatColors;
+    private bool enableRepeatColors;
     [SerializeField] private string baseItemName = "Papel Con Dibujo";
     //[SerializeField] private bool useRandomIndexListenerColorLightRay = true;
 
@@ -50,6 +50,13 @@ public class InitPuzzleColorLightRay : MonoBehaviour
 
     void Start()
     {
+        int porcentageEnableRepeatColors = Random.Range(0, 100);
+
+        if (porcentageEnableRepeatColors > 50)
+            enableRepeatColors = true;
+        else
+            enableRepeatColors = false;
+
         indexsToListenerColorLihtRay = new List<int>();
 
         for (int i = 0; i < dataToInit.Count; i++)

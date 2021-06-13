@@ -14,6 +14,13 @@ public class J_ItemDisplay : MonoBehaviour
     public GameObject parent;
     public Image imageGo;
     private List<GameObject> gameObjects;
+    private List<Image> images;
+    void Start()
+    {
+        gameObjects = new List<GameObject>();
+        images = new List<Image>();
+    }
+
     public void UpdateName(string newName)
     {
         itemName.text = newName;
@@ -37,7 +44,7 @@ public class J_ItemDisplay : MonoBehaviour
             gameObjects[gameObjects.Count - 1].transform.eulerAngles = icons[i].eulerRotation;
             gameObjects[gameObjects.Count - 1].transform.localScale = icons[i].scale;
             Image image = gameObjects[gameObjects.Count - 1].GetComponent<Image>();
-
+            images.Add(image);
             if (image != null)
             {
                 image.sprite = icons[i].iconSprite;
@@ -52,6 +59,14 @@ public class J_ItemDisplay : MonoBehaviour
         {
             Destroy(gameObjects[i]);
         }
+        for (int i = images.Count - 1; i >= 0; i--)
+        {
+            images[i].sprite = null;
+            images[i].color = Color.white;
+            Destroy(images[i]);
+
+        }
+        images.Clear();
         gameObjects.Clear();
     }
 }

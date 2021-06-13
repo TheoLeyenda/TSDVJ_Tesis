@@ -38,6 +38,7 @@ public class InitPuzzleColorLightRay : MonoBehaviour
         public SpriteRenderer spriteRendererColorCrayon; //color del machon de crayon que esta en el papel
         public SpriteRenderer spriteRendererDibujo; //Dibujo que esta en el papel
         public SpriteRenderer spriteRendererNumber;
+        public Color colorCorrectAnswer;
     }
     [SerializeField] private List<Data> dataToInit;
 
@@ -82,7 +83,8 @@ public class InitPuzzleColorLightRay : MonoBehaviour
                         currentSprite = Random.Range(0, DrawSprite.Count);
                         if (enableRepeatColors)
                         {
-                            dataToInit[i].item.iconsCompound[j].iconColor = colors[currentColor].color;
+                            dataToInit[i].colorCorrectAnswer = colors[currentColor].color;
+                            dataToInit[i].item.iconsCompound[2].iconColor = colors[currentColor].color;
                             dataToInit[i].listenerColorLightRay.SetAnswerColor(colors[currentColor].color);
                             dataToInit[i].spriteRendererColorCrayon.color = colors[currentColor].color;
                             colors[currentColor].assignedColor = true;
@@ -100,7 +102,8 @@ public class InitPuzzleColorLightRay : MonoBehaviour
                                     }
                                 }
                             }
-                            dataToInit[i].item.iconsCompound[j].iconColor = colors[currentColor].color;
+                            dataToInit[i].colorCorrectAnswer = colors[currentColor].color;
+                            dataToInit[i].item.iconsCompound[2].iconColor = colors[currentColor].color;
                             dataToInit[i].listenerColorLightRay.SetAnswerColor(colors[currentColor].color);
                             dataToInit[i].spriteRendererColorCrayon.color = colors[currentColor].color;
                             colors[currentColor].assignedColor = true;
@@ -118,7 +121,8 @@ public class InitPuzzleColorLightRay : MonoBehaviour
                             }
                         }
 
-                        dataToInit[i].changeColorSprite.SetColorInArray(1, dataToInit[i].item.iconsCompound[j].iconColor);
+                        dataToInit[i].changeColorSprite.SetColorInArray(1, dataToInit[i].colorCorrectAnswer);
+
                         if (!DrawSprite[currentSprite].assignedSprite)
                         {
                             //Debug.Log(currentSprite);
@@ -145,6 +149,7 @@ public class InitPuzzleColorLightRay : MonoBehaviour
                 if (managerListenerColorLightRay.listenersInputsIndex[j] == i)
                 {
                     dataToInit[i].spriteRendererNumber.sprite = NumberSprite[numberSpriteIndex];
+                    dataToInit[i].item.iconsCompound[1].iconSprite = NumberSprite[numberSpriteIndex];
                     numberSpriteIndex++;
                     i = dataToInit.Count;
                 }

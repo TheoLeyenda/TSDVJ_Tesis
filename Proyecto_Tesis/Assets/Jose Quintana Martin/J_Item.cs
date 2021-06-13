@@ -7,6 +7,23 @@ public class J_Item : ScriptableObject
     public Sprite icon = null;
     private FunctionItem functionItem;
 
+    public bool useIconCompound = false;
+
+    public IconCompound[] iconsCompound;
+
+    [System.Serializable]
+    public class IconCompound
+    {
+        public string name;
+        public Vector3 position;
+        public Vector3 eulerRotation;
+        public Vector3 scale;
+        public Color iconColor;
+        public Sprite iconSprite;
+    }
+
+    public void SetDescription(string value) => description = value;
+
     public void SetFunctionItem(FunctionItem _functionItem)
     {
         functionItem = _functionItem;
@@ -21,5 +38,20 @@ public class J_Item : ScriptableObject
     {
         if(functionItem != null)
             functionItem.functionItem?.Invoke();
+    }
+
+    public void SetIconColor(string name, Color color)
+    {
+        for (int i = 0; i < iconsCompound.Length; i++)
+        {
+            iconsCompound[i].iconColor = color;
+        }
+    }
+    public void SetIconSprite(string name, Sprite sprite)
+    {
+        for (int i = 0; i < iconsCompound.Length; i++)
+        {
+            iconsCompound[i].iconSprite = sprite;
+        }
     }
 }

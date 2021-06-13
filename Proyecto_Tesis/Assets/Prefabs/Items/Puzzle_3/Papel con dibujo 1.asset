@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35f50c4e7cc1823488e0b2ac4725e45a, type: 3}
+  m_Name: Papel con dibujo 1
+  m_EditorClassIdentifier: 
+  itemName: Papel Con Dibujo 1
+  description: "Un peque\xF1o papel dibujado, se puede percibir un numero y una mancha
+    de crayon en el."
+  icon: {fileID: 21300000, guid: b213eb76aa2c5e3489f53f27246845e1, type: 3}
+  useIconCompound: 1
+  iconsCompound:
+  - name: Dibujo
+    position: {x: 510, y: 715, z: 0}
+    eulerRotation: {x: 0, y: 0, z: 0}
+    scale: {x: 3, y: 3, z: 3}
+    iconColor: {r: 0, g: 0, b: 0, a: 1}
+    iconSprite: {fileID: 21300000, guid: c89999c0cf6678a46a4550cc63af9c6a, type: 3}
+  - name: Numero
+    position: {x: 315, y: 540, z: 0}
+    eulerRotation: {x: 0, y: 0, z: 0}
+    scale: {x: 1, y: 1, z: 1}
+    iconColor: {r: 0, g: 0, b: 0, a: 1}
+    iconSprite: {fileID: -3910123047076346215, guid: 2799b1f794032874b97aba472604b3d7,
+      type: 3}
+  - name: Color Crayon
+    position: {x: 350, y: 900, z: 0}
+    eulerRotation: {x: 0, y: 0, z: 0}
+    scale: {x: 1, y: 1, z: 1}
+    iconColor: {r: 0, g: 1, b: 0, a: 1}
+    iconSprite: {fileID: 21300000, guid: 90f2acdab0a7eb64b9e6ecb34a9ef592, type: 3}
+  - name: Background
+    position: {x: 507, y: 733, z: 0}
+    eulerRotation: {x: 0, y: 0, z: 0}
+    scale: {x: 5, y: 5, z: 5}
+    iconColor: {r: 1, g: 1, b: 1, a: 1}
+    iconSprite: {fileID: 21300000, guid: 2399921256bb4fe44aa95324292b6641, type: 3}

@@ -12,6 +12,11 @@ public class J_InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExit
     J_Item item;
     J_ItemDisplay display;
 
+    void OnDisable()
+    {
+        DestroyUI();
+    }
+
     private void Start()
     {
         display = FindObjectOfType<J_ItemDisplay>();
@@ -52,15 +57,28 @@ public class J_InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExit
         if (item != null)
         {
             display.UpdateDescription(item.description);
-            display.UpdateImage(item.icon);
             display.UpdateName(item.itemName);
+            if (item.useIconCompound)
+                display.UpdateImage(item.iconsCompound);
+            else
+                display.UpdateImage(item.icon);
         }
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
+        DestroyUI();
+    }
+    public void DestroyUI()
+    {
+        Sprite s = null;
         display.UpdateDescription(null);
-        display.UpdateImage(null);
         display.UpdateName(null);
+        display.UpdateImage(s);
+        if (item != null)
+        {
+            if (item.useIconCompound)
+                display.DestroyImagesIcons();
+        }
     }
 }

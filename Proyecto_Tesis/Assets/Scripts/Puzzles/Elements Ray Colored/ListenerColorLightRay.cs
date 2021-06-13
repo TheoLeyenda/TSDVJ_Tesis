@@ -15,13 +15,19 @@ public class ListenerColorLightRay : MonoBehaviour
 
     [SerializeField] private Color answerColor;
 
-    [SerializeField] private int indexWindow;
+    [SerializeField] private int indexListenerColorLightRay;
 
-    public bool IsCorrectColor(){return isCorrectColor; }
+    public void SetIndexListenerColorLightRay(int value) => indexListenerColorLightRay = value;
+
+    public int GetIndexListenerColorLightRay() { return indexListenerColorLightRay; }
+
+    public void SetAnswerColor(Color color) => answerColor = color;
+
+    public bool IsCorrectColor() { return isCorrectColor; }
 
     public void SetIsCorrectColor(bool value) => isCorrectColor = value;
 
-    public void ResetWindows()
+    public void ResetListenerColorRay()
     {
         OnIncorrectAnswer?.Invoke();
         isCorrectColor = false;
@@ -42,14 +48,16 @@ public class ListenerColorLightRay : MonoBehaviour
             OnCorrectAnswer?.Invoke();
             isCorrectColor = true;
         }
-        else if(!lockWindowsToCorrectAnswer)
+        else if (!lockWindowsToCorrectAnswer)
         {
             //Debug.Log("Incorrect Answer");
             OnIncorrectAnswer?.Invoke();
             isCorrectColor = false;
         }
-        myManagerListenerColorLightRay.CheckCorrectAnswersListeners(indexWindow);
+        myManagerListenerColorLightRay.CheckCorrectAnswersListeners(this);
     }
 
     public void SetMyManagerListenerColorLightRay(ManagerListenerColorLightRay managerListenerColorLightRay) => myManagerListenerColorLightRay = managerListenerColorLightRay;
+
+    public ManagerListenerColorLightRay GetManagerListenerColorLightRay() { return myManagerListenerColorLightRay; }
 }

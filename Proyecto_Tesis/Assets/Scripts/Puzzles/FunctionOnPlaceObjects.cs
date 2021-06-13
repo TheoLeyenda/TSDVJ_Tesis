@@ -4,153 +4,149 @@ using UnityEngine.Events;
 
 public class FunctionOnPlaceObjects : MonoBehaviour
 {
-    [SerializeField] private J_Inventory inventory;
-    [SerializeField] private bool useCheckInPlaceObject;
-    [System.Serializable]
-    public class SpawnerItem
-    { 
-        [System.Serializable]
-        public class Item
-        {
-            public GameObject itemObject;
-            public J_Item item;
-            public GameObject transparentObject;
-            public int id_item;
-            public bool itemSpawned = false;
-        }
-
-        public bool itemPlace;
-        public SpawnedItem spawnedItem;
-
-        public class SpawnedItem
-        {
-            public GameObject objectItem;
-            public int id;
-        }
-
-
-        private int currentIdItem;
-        public int compareIdItem;
-        
-        public Item[] items;
-
-        private J_Inventory inventoryPlayer;
-
-        public void SetInventoryPlayer(J_Inventory value) => inventoryPlayer = value;
-
-        public Transform transformSpawnItem;
-
-        public void SpawnObject(int id, GameObject itemPlayer)
-        {
-            for(int i = 0; i < items.Length; i++)
-            {
-                if (id == items[i].id_item)
-                {
-                    items[i].transparentObject.SetActive(false);
-                    spawnedItem.objectItem = Instantiate(items[i].itemObject, transformSpawnItem.position, transformSpawnItem.rotation, transformSpawnItem);
-                    spawnedItem.objectItem.transform.localScale = new Vector3(1, 1, 1);
-                    spawnedItem.id = id;
-                    itemPlayer.SetActive(false);
-
-                    inventoryPlayer.RemoveItem(items[i].item);
-
-                    items[i].itemSpawned = true;
-                    currentIdItem = items[i].id_item;
-                    itemPlace = true;
-                    i = items.Length;
-                }
-            }
-        }
-
-        public void DestroyObject(int id, GameObject itemPlayer)
-        {
-            if (spawnedItem != null)
-            {
-                for (int i = 0; i < items.Length; i++)
-                {
-                    if (id == items[i].id_item)
-                    {
-                        items[i].transparentObject.SetActive(true);
-
-                        itemPlayer.SetActive(true);
-                        inventoryPlayer.AddItem(items[i].item);
-
-                        items[i].itemSpawned = false;
-                        itemPlace = false;
-                        i = items.Length;
-                    }
-                }
-                Destroy(spawnedItem.objectItem);
-            }
-        }
-    }
 
     [System.Serializable]
-    public class ItemPlayer
+    class PlaceObject
     {
-        public GameObject go;
-        public int id;
+        public GameObject transparentObject;
+        [HideInInspector] public ItemAndObject[] originObjects;
+        [HideInInspector] public ItemAndObject instanciatedObject = null;
+        public int id = -1;
+        public bool placeObject = false;
+        public Transform transformSpawn;
+    }
+    [System.Serializable]
+    class ItemAndObject
+    {
+        public GameObject originObject;
+        [HideInInspector] public GameObject cloneObject;
+        public J_Item itemObject;
+        public int id_object;
+
+        public ItemAndObject()
+        {
+            originObject = null;
+            itemObject = null;
+            id_object = -1;
+        }
+
+        public ItemAndObject(GameObject _originObject, J_Item _itemObject, int _id_object)
+        {
+            originObject = _originObject;
+            itemObject = _itemObject;
+            id_object = _id_object;
+        }
     }
 
-    public SpawnerItem[] spawnersItems;
-    public ItemPlayer[] itemsPlayer;
-
+    [SerializeField] private J_Inventory inventory;
+    [SerializeField] private InstanciateObjectsInHand instanciateObjectsInHand;
+    [SerializeField] private bool useCheckInPlaceObject = true;
+    [SerializeField] private ItemAndObject[] initOriginObjects;
+    [SerializeField] private PlaceObject[] PlacesForObjects;
     [SerializeField] private int[] answerPuzzleIds;
-
     [SerializeField] private UnityEvent eventOnCorrectPlaceObjects;
 
-    private void Start()
+    void Start()
     {
-        for (int i = 0; i < spawnersItems.Length; i++)
+        for (int i = 0; i < PlacesForObjects.Length; i++)
         {
-            spawnersItems[i].SetInventoryPlayer(inventory);
-            spawnersItems[i].spawnedItem = new SpawnerItem.SpawnedItem();
+            PlacesForObjects[i].originObjects = new ItemAndObject[initOriginObjects.Length];
+            PlacesForObjects[i].instanciatedObject = new ItemAndObject();
+            for (int j = 0; j < PlacesForObjects[i].originObjects.Length; j++)
+            {
+                PlacesForObjects[i].originObjects[j] = new ItemAndObject(
+                    initOriginObjects[j].originObject
+                    , initOriginObjects[j].itemObject
+                    , initOriginObjects[j].id_object);
+            }
         }
     }
 
-    public void AddOrRemoveObject(int indexSpawnItems)
+    public void AddOrRemoveObject(int indexPlaceObject)
     {
-        int indexItemPlayer = -1;
-
-        for (int i = 0; i < itemsPlayer.Length; i++)
-        {
-            if (itemsPlayer[i].go.activeSelf)
-            {
-                indexItemPlayer = i;
-                i = itemsPlayer.Length;
-            }
-        }
-
-        if(spawnersItems[indexSpawnItems].itemPlace)
-        {
-            for (int i = 0; i < itemsPlayer.Length; i++)
-            {
-                if (itemsPlayer[i].id == spawnersItems[indexSpawnItems].spawnedItem.id)
-                {
-                    for (int j = 0; j < itemsPlayer.Length; j++)
-                    {
-                        itemsPlayer[j].go.SetActive(false);
-                    }
-                    spawnersItems[indexSpawnItems].DestroyObject(itemsPlayer[i].id, itemsPlayer[i].go);
-                    i = itemsPlayer.Length;
-                }
-            }
-        }
-
-        if (indexItemPlayer == -1)
+        if (indexPlaceObject > PlacesForObjects.Length - 1 || indexPlaceObject < 0)
             return;
 
-        for (int i = 0; i < spawnersItems[indexSpawnItems].items.Length; i++)
+        GameObject transparentObject = PlacesForObjects[indexPlaceObject].transparentObject;
+        int indexObjectSpawn = -1;
+
+        for (int i = 0; i < PlacesForObjects[indexPlaceObject].originObjects.Length; i++)
         {
-            if (itemsPlayer[indexItemPlayer].id == spawnersItems[indexSpawnItems].items[i].id_item)
+            if (PlacesForObjects[indexPlaceObject].originObjects[i].originObject == instanciateObjectsInHand.GetCurrentOriginObject())
             {
-                if (!spawnersItems[indexSpawnItems].items[i].itemSpawned)
-                {
-                    spawnersItems[indexSpawnItems].SpawnObject(itemsPlayer[indexItemPlayer].id, itemsPlayer[indexItemPlayer].go);
-                    i = spawnersItems[indexSpawnItems].items.Length;
-                }
-               
+                indexObjectSpawn = i;
+                i = PlacesForObjects[indexPlaceObject].originObjects.Length;
             }
+        }
+
+        if (PlacesForObjects[indexPlaceObject].instanciatedObject.originObject == null)
+        {
+            if (indexObjectSpawn == -1)
+                return;
+
+            GameObject objectSpawn = PlacesForObjects[indexPlaceObject].originObjects[indexObjectSpawn].originObject;
+            J_Item item = PlacesForObjects[indexPlaceObject].originObjects[indexObjectSpawn].itemObject;
+            int id = PlacesForObjects[indexPlaceObject].originObjects[indexObjectSpawn].id_object;
+
+            transparentObject.SetActive(false);
+            instanciateObjectsInHand.DestroyCurrentInstanciateObject();
+            inventory.RemoveItem(item);
+            PlacesForObjects[indexPlaceObject].instanciatedObject.originObject = objectSpawn;
+            PlacesForObjects[indexPlaceObject].instanciatedObject.cloneObject = Instantiate(objectSpawn, PlacesForObjects[indexPlaceObject].transformSpawn);
+            PlacesForObjects[indexPlaceObject].instanciatedObject.originObject.transform.localScale = new Vector3(1, 1, 1);
+            PlacesForObjects[indexPlaceObject].instanciatedObject.originObject.transform.localPosition = Vector3.zero;
+            PlacesForObjects[indexPlaceObject].instanciatedObject.itemObject = item;
+            PlacesForObjects[indexPlaceObject].placeObject = true;
+            PlacesForObjects[indexPlaceObject].id = id;
+
+            Debug.Log("ENTRE ACA OP 1");
+        }
+        else if (instanciateObjectsInHand.GetCurrentInstanciateObject() == null)
+        {
+            transparentObject.SetActive(true);
+            instanciateObjectsInHand.InstanciatedObjectInHand(PlacesForObjects[indexPlaceObject].instanciatedObject.originObject);
+            inventory.AddItem(PlacesForObjects[indexPlaceObject].instanciatedObject.itemObject);
+
+            if (PlacesForObjects[indexPlaceObject].instanciatedObject.cloneObject != null)
+                Destroy(PlacesForObjects[indexPlaceObject].instanciatedObject.cloneObject);
+
+            PlacesForObjects[indexPlaceObject].instanciatedObject.originObject = null;
+            PlacesForObjects[indexPlaceObject].placeObject = false;
+            PlacesForObjects[indexPlaceObject].id = -1;
+
+            Debug.Log("ENTRE ACA OP 2");
+        }
+        else if(PlacesForObjects[indexPlaceObject].instanciatedObject != null && instanciateObjectsInHand.GetCurrentInstanciateObject() != null)
+        {
+            instanciateObjectsInHand.InstanciatedObjectInHand(PlacesForObjects[indexPlaceObject].instanciatedObject.originObject);
+            inventory.AddItem(PlacesForObjects[indexPlaceObject].instanciatedObject.itemObject);
+
+            if (PlacesForObjects[indexPlaceObject].instanciatedObject.cloneObject != null)
+                Destroy(PlacesForObjects[indexPlaceObject].instanciatedObject.cloneObject);
+
+            PlacesForObjects[indexPlaceObject].instanciatedObject.originObject = null;
+            if (indexObjectSpawn == -1)
+            {
+                transparentObject.SetActive(true);
+                PlacesForObjects[indexPlaceObject].placeObject = false;
+                return;
+            }
+
+            GameObject objectSpawn = PlacesForObjects[indexPlaceObject].originObjects[indexObjectSpawn].originObject;
+            J_Item item = PlacesForObjects[indexPlaceObject].originObjects[indexObjectSpawn].itemObject;
+            int id = PlacesForObjects[indexPlaceObject].originObjects[indexObjectSpawn].id_object;
+
+            transparentObject.SetActive(false);
+            inventory.RemoveItem(item);
+            PlacesForObjects[indexPlaceObject].instanciatedObject.originObject = objectSpawn;
+            PlacesForObjects[indexPlaceObject].instanciatedObject.cloneObject = Instantiate(objectSpawn, PlacesForObjects[indexPlaceObject].transformSpawn);
+            PlacesForObjects[indexPlaceObject].instanciatedObject.originObject.transform.localScale = new Vector3(1, 1, 1);
+            PlacesForObjects[indexPlaceObject].instanciatedObject.originObject.transform.localPosition = Vector3.zero;
+            PlacesForObjects[indexPlaceObject].instanciatedObject.itemObject = item;
+            PlacesForObjects[indexPlaceObject].placeObject = true;
+            PlacesForObjects[indexPlaceObject].id = id;
+
+            Debug.Log("ENTRE ACA OP 3");
         }
 
         if (useCheckInPlaceObject)
@@ -162,23 +158,26 @@ public class FunctionOnPlaceObjects : MonoBehaviour
 
     public void CheckEventOnPlaceObject()
     {
-        bool enableEvent = true;
+        if (answerPuzzleIds.Length != PlacesForObjects.Length)
+        {
+            Debug.Log("la cantidad \"answerPuzzleIds.Length\" debe ser igual a  \"PlacesForObjects.Length\" ");
+            return;
+        }
+
+        bool correctAnswer = true;
+
         for (int i = 0; i < answerPuzzleIds.Length; i++)
         {
-            if (answerPuzzleIds[i] != spawnersItems[i].spawnedItem.id)
+            if (!PlacesForObjects[i].placeObject || PlacesForObjects[i].id != answerPuzzleIds[i])
             {
-                enableEvent = false;
+                correctAnswer = false;
                 i = answerPuzzleIds.Length;
             }
         }
 
-        if (enableEvent)
+        if (correctAnswer)
         {
-            Debug.Log("Llegue al final del puzzle solo falta incorporar una funcion perri");
             eventOnCorrectPlaceObjects?.Invoke();
-            enabled = false;
         }
-
     }
-
 }

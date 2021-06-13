@@ -17,7 +17,9 @@ public class ColorLightRayEmitter : Updateable
     [SerializeField] private float rangeRay;
     [SerializeField] private LayerMask mask = -1;
 
-    //private ListenerColorLightRay listenerColorRay;
+    public static event System.Action<ManagerListenerColorLightRay> OnFailHit;
+
+    private ListenerColorLightRay listenerColorRay;
 
     protected override void OnEnable()
     {
@@ -35,6 +37,14 @@ public class ColorLightRayEmitter : Updateable
         if (!enableUse)
         {
             ChangeColorLight(Color.white);
+        }
+        else
+        {
+            if (OnFailHit != null && listenerColorRay != null)
+            {
+                OnFailHit(listenerColorRay.GetManagerListenerColorLightRay());
+                listenerColorRay = null;
+            }
         }
     }
 
@@ -106,10 +116,28 @@ public class ColorLightRayEmitter : Updateable
             // Does the ray intersect any objects excluding the player layer
             if (Physics.Raycast(spawnRay.position, spawnRay.transform.forward, out hit, rangeRay, mask))
             {
-                ListenerColorLightRay listenerColorRay = hit.collider.GetComponent<ListenerColorLightRay>();
+                listenerColorRay = hit.collider.GetComponent<ListenerColorLightRay>();
                 if (listenerColorRay != null)
                 {
+                    //Debug.Log("ENTRE");
                     listenerColorRay.CheckIsCorrectColor(currentColor);
+                }
+                else
+                {
+                    if (OnFailHit != null && listenerColorRay != null)
+                    {
+                        OnFailHit(listenerColorRay.GetManagerListenerColorLightRay());
+                        listenerColorRay = null;
+                    }
+                }
+
+            }
+            else
+            {
+                if (OnFailHit != null && listenerColorRay != null)
+                {
+                    OnFailHit(listenerColorRay.GetManagerListenerColorLightRay());
+                    listenerColorRay = null;
                 }
             }
             //Debug.DrawRay(spawnRay.position, spawnRay.transform.forward, Color.red, 1000);

@@ -15,4 +15,12 @@ public class ChangeColorSprite : MonoBehaviour
             spriteRenderer.color = colors[indexColor];
         }
     }
+
+    public void SetColorInArray(int index, Color color)
+    {
+        if (index < colors.Length && index >= 0)
+        {
+            colors[index] = color;
+        }
+    }
 }

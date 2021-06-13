@@ -8,9 +8,10 @@ public class InitPuzzleColorLightRay : MonoBehaviour
     [SerializeField] private List<SpritesToAssign> DrawSprite;
     [SerializeField] private List<Sprite> NumberSprite;
     [SerializeField] private bool enableRepeatColors;
+    [SerializeField] private string baseItemName = "Papel Con Dibujo";
     //[SerializeField] private bool useRandomIndexListenerColorLightRay = true;
 
-    [SerializeField] private string nameItemAssignedSprites;
+    [SerializeField] private string nameItemAssignedSprites = "Dibujo";
 
     [SerializeField] private ManagerListenerColorLightRay managerListenerColorLightRay;
 
@@ -77,7 +78,7 @@ public class InitPuzzleColorLightRay : MonoBehaviour
             {
                 for (int j = 0; j < dataToInit[i].item.iconsCompound.Length; j++)
                 {
-                    if (dataToInit[i].item.iconsCompound[j].name == "Dibujo")
+                    if (dataToInit[i].item.iconsCompound[j].name == nameItemAssignedSprites)
                     {
                         currentColor = Random.Range(0, colors.Count);
                         currentSprite = Random.Range(0, DrawSprite.Count);
@@ -150,6 +151,7 @@ public class InitPuzzleColorLightRay : MonoBehaviour
                 {
                     dataToInit[i].spriteRendererNumber.sprite = NumberSprite[numberSpriteIndex];
                     dataToInit[i].item.iconsCompound[1].iconSprite = NumberSprite[numberSpriteIndex];
+                    dataToInit[i].item.itemName = baseItemName + " " + (numberSpriteIndex + 1);
                     numberSpriteIndex++;
                     i = dataToInit.Count;
                 }

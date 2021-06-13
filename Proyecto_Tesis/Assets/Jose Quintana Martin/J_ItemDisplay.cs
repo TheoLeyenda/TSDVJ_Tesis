@@ -38,7 +38,7 @@ public class J_ItemDisplay : MonoBehaviour
 
     public void UpdateImage(J_Item.IconCompound[] icons)
     {
-        for (int i = 0; i < icons.Length; i++)
+        for (int i = icons.Length-1; i >= 0; i--)
         {
             gameObjects.Add(Instantiate(imageGo.gameObject, icons[i].position, Quaternion.identity, parent.transform));
             gameObjects[gameObjects.Count - 1].transform.eulerAngles = icons[i].eulerRotation;

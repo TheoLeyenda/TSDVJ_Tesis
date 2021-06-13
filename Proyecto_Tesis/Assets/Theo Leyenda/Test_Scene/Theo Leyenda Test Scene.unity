@@ -12964,7 +12964,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  iluminatyInOrderWindows: 1
+  iluminatyInOrderListeners: 1
   listenersInputsIndex: 
 --- !u!1 &871180341
 GameObject:
@@ -24987,7 +24987,7 @@ MonoBehaviour:
     assignedColor: 0
   - color: {r: 1, g: 1, b: 0, a: 1}
     assignedColor: 0
-  sprites:
+  DrawSprite:
   - sprite: {fileID: 21300000, guid: 91564451d7c1fc841bf5ed80e5486eb8, type: 3}
     assignedSprite: 0
   - sprite: {fileID: 21300000, guid: b423df790c95fba4fb5d280f87d558cf, type: 3}
@@ -24998,8 +24998,13 @@ MonoBehaviour:
     assignedSprite: 0
   - sprite: {fileID: 21300000, guid: 9854687218ae0e8408736b608b6af1ed, type: 3}
     assignedSprite: 0
-  enableRepeatColors: 1
-  useRandomIndexListenerColorLightRay: 1
+  NumberSprite:
+  - {fileID: -3910123047076346215, guid: 2799b1f794032874b97aba472604b3d7, type: 3}
+  - {fileID: 5553399095126235559, guid: 2799b1f794032874b97aba472604b3d7, type: 3}
+  - {fileID: -6667139974514837963, guid: 2799b1f794032874b97aba472604b3d7, type: 3}
+  - {fileID: 1651637183909033061, guid: 2799b1f794032874b97aba472604b3d7, type: 3}
+  - {fileID: 4450405010395732266, guid: 2799b1f794032874b97aba472604b3d7, type: 3}
+  enableRepeatColors: 0
   nameItemAssignedSprites: Dibujo
   managerListenerColorLightRay: {fileID: 1668489962}
   dataToInit:
@@ -25009,30 +25014,35 @@ MonoBehaviour:
     spriteRendererDibujoObjetivo: {fileID: 1621578690}
     spriteRendererColorCrayon: {fileID: 986020069}
     spriteRendererDibujo: {fileID: 1041261222}
+    spriteRendererNumber: {fileID: 226597398}
   - item: {fileID: 11400000, guid: d3d1187e4026c714682db1a6cf5aaddd, type: 2}
     changeColorSprite: {fileID: 1614487215}
     listenerColorLightRay: {fileID: 1614487214}
     spriteRendererDibujoObjetivo: {fileID: 1614487211}
     spriteRendererColorCrayon: {fileID: 1070885445}
     spriteRendererDibujo: {fileID: 1172489578}
+    spriteRendererNumber: {fileID: 1994667263}
   - item: {fileID: 11400000, guid: c63a5b4548166c64195723a528b33708, type: 2}
     changeColorSprite: {fileID: 726818257}
     listenerColorLightRay: {fileID: 726818256}
     spriteRendererDibujoObjetivo: {fileID: 726818253}
     spriteRendererColorCrayon: {fileID: 1801133824}
     spriteRendererDibujo: {fileID: 570120716}
+    spriteRendererNumber: {fileID: 794489837}
   - item: {fileID: 11400000, guid: 51b022b80a234124c94d801d3a8d49b3, type: 2}
     changeColorSprite: {fileID: 2097452309}
     listenerColorLightRay: {fileID: 2097452308}
     spriteRendererDibujoObjetivo: {fileID: 2097452305}
     spriteRendererColorCrayon: {fileID: 301309688}
     spriteRendererDibujo: {fileID: 1373508674}
+    spriteRendererNumber: {fileID: 350445577}
   - item: {fileID: 11400000, guid: 72b26b26fb186e944819d48113360e1b, type: 2}
     changeColorSprite: {fileID: 35416616}
     listenerColorLightRay: {fileID: 35416615}
     spriteRendererDibujoObjetivo: {fileID: 35416612}
     spriteRendererColorCrayon: {fileID: 552584526}
     spriteRendererDibujo: {fileID: 1994201884}
+    spriteRendererNumber: {fileID: 1482969325}
 --- !u!4 &1668489961
 Transform:
   m_ObjectHideFlags: 0
@@ -25079,7 +25089,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1668489962}
-        m_MethodName: DisbaleAllWindows
+        m_MethodName: DisbaleAllListenersColorRay
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -25100,7 +25110,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  iluminatyInOrderWindows: 1
+  iluminatyInOrderListeners: 1
   listenersInputsIndex: 
 --- !u!23 &1669590922
 MeshRenderer:
@@ -30829,6 +30839,66 @@ PrefabInstance:
     - target: {fileID: 37239757317025149, guid: 1959c0cd1e44aeb4a88c58ec7e43ab38,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1252682146525781522, guid: 1959c0cd1e44aeb4a88c58ec7e43ab38,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377772636818354326, guid: 1959c0cd1e44aeb4a88c58ec7e43ab38,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2813593190242892922, guid: 1959c0cd1e44aeb4a88c58ec7e43ab38,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2914984952394651688, guid: 1959c0cd1e44aeb4a88c58ec7e43ab38,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3379706944355298203, guid: 1959c0cd1e44aeb4a88c58ec7e43ab38,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4251263831142853639, guid: 1959c0cd1e44aeb4a88c58ec7e43ab38,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5503142796143273219, guid: 1959c0cd1e44aeb4a88c58ec7e43ab38,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5856301717467653932, guid: 1959c0cd1e44aeb4a88c58ec7e43ab38,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6946711603235737837, guid: 1959c0cd1e44aeb4a88c58ec7e43ab38,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7512192502537107289, guid: 1959c0cd1e44aeb4a88c58ec7e43ab38,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7922816336855816470, guid: 1959c0cd1e44aeb4a88c58ec7e43ab38,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8644789644476061494, guid: 1959c0cd1e44aeb4a88c58ec7e43ab38,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

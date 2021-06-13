@@ -5,9 +5,10 @@ using UnityEngine;
 public class InitPuzzleColorLightRay : MonoBehaviour
 {
     [SerializeField] private List<ColorsToAssign> colors;
-    [SerializeField] private List<SpritesToAssign> sprites;
+    [SerializeField] private List<SpritesToAssign> DrawSprite;
+    [SerializeField] private List<Sprite> NumberSprite;
     [SerializeField] private bool enableRepeatColors;
-    [SerializeField] private bool useRandomIndexListenerColorLightRay = true;
+    //[SerializeField] private bool useRandomIndexListenerColorLightRay = true;
 
     [SerializeField] private string nameItemAssignedSprites;
 
@@ -36,6 +37,7 @@ public class InitPuzzleColorLightRay : MonoBehaviour
         public SpriteRenderer spriteRendererDibujoObjetivo; //Dibujo que esta en el pizzarron
         public SpriteRenderer spriteRendererColorCrayon; //color del machon de crayon que esta en el papel
         public SpriteRenderer spriteRendererDibujo; //Dibujo que esta en el papel
+        public SpriteRenderer spriteRendererNumber;
     }
     [SerializeField] private List<Data> dataToInit;
 
@@ -55,19 +57,20 @@ public class InitPuzzleColorLightRay : MonoBehaviour
 
         for (int i = 0; i < dataToInit.Count; i++)
         {
-            if (useRandomIndexListenerColorLightRay)
-            {
+            //if (useRandomIndexListenerColorLightRay)
+            //{
 
                 int currentIndex = Random.Range(0, indexsToListenerColorLihtRay.Count);
 
                 int index = indexsToListenerColorLihtRay[currentIndex];
 
                 dataToInit[i].listenerColorLightRay.SetIndexListenerColorLightRay(index);
-
                 //managerListenerColorLightRay.listenersColorRay[i] = dataToInit[index].listenerColorLightRay;
 
                 indexsToListenerColorLihtRay.Remove(indexsToListenerColorLihtRay[currentIndex]);
-            }
+            //}
+
+
 
             if (dataToInit[i].item.useIconCompound)
             {
@@ -76,7 +79,7 @@ public class InitPuzzleColorLightRay : MonoBehaviour
                     if (dataToInit[i].item.iconsCompound[j].name == "Dibujo")
                     {
                         currentColor = Random.Range(0, colors.Count);
-                        currentSprite = Random.Range(0, sprites.Count);
+                        currentSprite = Random.Range(0, DrawSprite.Count);
                         if (enableRepeatColors)
                         {
                             dataToInit[i].item.iconsCompound[j].iconColor = colors[currentColor].color;
@@ -103,11 +106,11 @@ public class InitPuzzleColorLightRay : MonoBehaviour
                             colors[currentColor].assignedColor = true;
                         }
 
-                        if (sprites[currentSprite].assignedSprite)
+                        if (DrawSprite[currentSprite].assignedSprite)
                         {
-                            for (int k = 0; k < sprites.Count; k++)
+                            for (int k = 0; k < DrawSprite.Count; k++)
                             {
-                                if (!sprites[k].assignedSprite)
+                                if (!DrawSprite[k].assignedSprite)
                                 {
                                     currentSprite = k;
                                     k = colors.Count;
@@ -116,20 +119,36 @@ public class InitPuzzleColorLightRay : MonoBehaviour
                         }
 
                         dataToInit[i].changeColorSprite.SetColorInArray(1, dataToInit[i].item.iconsCompound[j].iconColor);
-                        if (!sprites[currentSprite].assignedSprite)
+                        if (!DrawSprite[currentSprite].assignedSprite)
                         {
                             //Debug.Log(currentSprite);
                             //Debug.Log(sprites[currentSprite].sprite);
 
-                            dataToInit[i].item.iconsCompound[j].iconSprite = sprites[currentSprite].sprite;
-                            dataToInit[i].spriteRendererDibujo.sprite = sprites[currentSprite].sprite;
-                            dataToInit[i].spriteRendererDibujoObjetivo.sprite = sprites[currentSprite].sprite;
-                            sprites[currentSprite].assignedSprite = true;
+                            dataToInit[i].item.iconsCompound[j].iconSprite = DrawSprite[currentSprite].sprite;
+                            dataToInit[i].spriteRendererDibujo.sprite = DrawSprite[currentSprite].sprite;
+                            dataToInit[i].spriteRendererDibujoObjetivo.sprite = DrawSprite[currentSprite].sprite;
+                            DrawSprite[currentSprite].assignedSprite = true;
                         }
                     }
                 }
             }
         }
+
         managerListenerColorLightRay.InitManagerListenerColorLightRay();
+
+        int numberSpriteIndex = 0;
+        
+        for (int j = 0; j < managerListenerColorLightRay.listenersInputsIndex.Count; j++)
+        {
+            for (int i = 0; i < dataToInit.Count; i++)
+            {
+                if (managerListenerColorLightRay.listenersInputsIndex[j] == i)
+                {
+                    dataToInit[i].spriteRendererNumber.sprite = NumberSprite[numberSpriteIndex];
+                    numberSpriteIndex++;
+                    i = dataToInit.Count;
+                }
+            }
+        }
     }
 }

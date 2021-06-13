@@ -9,7 +9,7 @@ public class ManagerListenerColorLightRay : MonoBehaviour
 
     [SerializeField] private bool iluminatyInOrderListeners = true;
 
-    [SerializeField] private List<int> listenersInputsIndex = null;
+    public List<int> listenersInputsIndex = null;
 
     private int currentIndexListenersInputIndex = 0;
 
@@ -70,7 +70,7 @@ public class ManagerListenerColorLightRay : MonoBehaviour
                 && _listenerColorLightRay.IsCorrectColor())
             {
                 //CORRECTO;
-                Debug.Log("ENTRE 1");
+                //Debug.Log("ENTRE 1");
                 if (currentIndexListenersInputIndex == 0)
                 {
                     enableAddCurrentIndexListenersInputIndex = true;
@@ -88,12 +88,12 @@ public class ManagerListenerColorLightRay : MonoBehaviour
             else if (listenersColorRay[listenersInputsIndex[currentIndexListenersInputIndex]] == _listenerColorLightRay
                && _listenerColorLightRay.IsCorrectColor())
             {
-                Debug.Log("ENTRE 2");
+                //Debug.Log("ENTRE 2");
                 enableAddCurrentIndexListenersInputIndex = true;
             }
             else
             {
-                Debug.Log("ENTRE 3");
+                //Debug.Log("ENTRE 3");
                 enableAddCurrentIndexListenersInputIndex = false;
                 for (int i = 0; i < listenersColorRay.Length; i++)
                 {

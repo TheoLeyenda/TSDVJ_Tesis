@@ -231,8 +231,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4116392740711014347}
+  - component: {fileID: 5764163987909791906}
   m_Layer: 10
-  m_Name: puerta (1)
+  m_Name: Puerta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -254,6 +255,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: -180, z: 0}
+--- !u!95 &5764163987909791906
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3633153447834142065}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 113578e98138d8a49bbd0e0a88d790c2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5528353579912078954
 GameObject:
   m_ObjectHideFlags: 0
@@ -263,7 +283,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7317613251306017370}
-  - component: {fileID: 5942992133353577980}
   m_Layer: 0
   m_Name: pivot
   m_TagString: Untagged
@@ -287,25 +306,6 @@ Transform:
   m_Father: {fileID: 4116392740711014347}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90.00001, y: 0, z: -182.05199}
---- !u!95 &5942992133353577980
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5528353579912078954}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 113578e98138d8a49bbd0e0a88d790c2, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7365433637400162083
 GameObject:
   m_ObjectHideFlags: 0

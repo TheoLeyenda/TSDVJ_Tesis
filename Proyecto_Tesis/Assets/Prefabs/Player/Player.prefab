@@ -172,7 +172,7 @@ GameObject:
   - component: {fileID: 373235056}
   - component: {fileID: 373235059}
   - component: {fileID: 373235058}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Brazo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,7 +189,8 @@ Transform:
   m_LocalRotation: {x: -0.043669987, y: -0.09236136, z: -0.011724932, w: 0.9946984}
   m_LocalPosition: {x: 0.047, y: -0.1, z: -0.114}
   m_LocalScale: {x: 0.1898064, y: 0.119295776, z: 0.77143085}
-  m_Children: []
+  m_Children:
+  - {fileID: 1286238384}
   m_Father: {fileID: 1358199907}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -5.109, y: -10.571, z: -0.878}
@@ -271,6 +272,36 @@ Transform:
   m_Father: {fileID: 3961630829001956596}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 11.136001, z: 0}
+--- !u!1 &1286238383
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1286238384}
+  m_Layer: 0
+  m_Name: SpawnObjectTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1286238384
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286238383}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0.0010245185, y: 0.29228675, z: 0.48444903}
+  m_LocalScale: {x: 5.267913, y: 5.6035953, z: 1.2911737}
+  m_Children: []
+  m_Father: {fileID: 373235056}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1288459715
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,6 +390,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1358199907}
+  - component: {fileID: 290256059}
   m_Layer: 12
   m_Name: RightHand
   m_TagString: Untagged
@@ -381,6 +413,20 @@ Transform:
   m_Father: {fileID: 3961630829001956596}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &290256059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358199906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4df8c6e048cdd40499da2c794c068d75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpawnTransform: {fileID: 1286238384}
+  parent: {fileID: 1286238384}
 --- !u!1 &1904393478
 GameObject:
   m_ObjectHideFlags: 0
@@ -1200,6 +1246,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 290256058}
+        m_MethodName: SetEnableUse
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 0}
         m_MethodName: SetActive
         m_Mode: 6
@@ -1269,6 +1326,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 290256058}
+        m_MethodName: SetEnableUse
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &4113103769854458814
 GameObject:
   m_ObjectHideFlags: 0
@@ -1328,7 +1396,7 @@ GameObject:
   - component: {fileID: 4113103770044345321}
   - component: {fileID: 4113103770044345316}
   - component: {fileID: 4113103770044345323}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}

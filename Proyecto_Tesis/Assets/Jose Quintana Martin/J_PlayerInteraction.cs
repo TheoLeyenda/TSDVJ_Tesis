@@ -54,7 +54,7 @@ public class J_PlayerInteraction : Updateable
         }
 
         //Input
-        if (Input.GetButtonDown("InteractTest") && interactable.enabled)
+        if (Input.GetButtonDown("InteractTest"))
         {
             Interact();
         }
@@ -62,7 +62,7 @@ public class J_PlayerInteraction : Updateable
 
     public void Interact()
     {
-        if (interactable != null)
+        if (interactable != null && interactable.enabled)
             interactable.DoAction();
     }
 

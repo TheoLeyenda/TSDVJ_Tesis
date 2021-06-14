@@ -972,7 +972,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 4.3332744, y: 3.9073598, z: 0.2}
-  m_Center: {x: -0.03250465, y: -3.6125677, z: 0}
+  m_Center: {x: -0.35, y: -5, z: 0}
 --- !u!4 &35416614
 Transform:
   m_ObjectHideFlags: 0
@@ -5130,7 +5130,7 @@ PrefabInstance:
     - target: {fileID: 4113103770830251895, guid: ba24c508ac89d2f4f93f2a46472498fe,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 55.4
+      value: 46.912
       objectReference: {fileID: 0}
     - target: {fileID: 4113103770830251895, guid: ba24c508ac89d2f4f93f2a46472498fe,
         type: 3}
@@ -5140,7 +5140,7 @@ PrefabInstance:
     - target: {fileID: 4113103770830251895, guid: ba24c508ac89d2f4f93f2a46472498fe,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.23
+      value: 0.325
       objectReference: {fileID: 0}
     - target: {fileID: 4113103770830251895, guid: ba24c508ac89d2f4f93f2a46472498fe,
         type: 3}
@@ -11293,7 +11293,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 4.3332744, y: 3.9073598, z: 0.2}
-  m_Center: {x: -0.03250465, y: -3.6125677, z: 0}
+  m_Center: {x: -0.35, y: -5, z: 0}
 --- !u!4 &726818255
 Transform:
   m_ObjectHideFlags: 0
@@ -24726,7 +24726,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 4.3332744, y: 3.9073598, z: 0.2}
-  m_Center: {x: -0.03250465, y: -3.6125677, z: 0}
+  m_Center: {x: -0.35, y: -5, z: 0}
 --- !u!4 &1614487213
 Transform:
   m_ObjectHideFlags: 0
@@ -24975,7 +24975,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 4.3332744, y: 3.9073598, z: 0.2}
-  m_Center: {x: -0.03250465, y: -3.6125677, z: 0}
+  m_Center: {x: -0.35, y: -5.5, z: 0}
 --- !u!4 &1621578692
 Transform:
   m_ObjectHideFlags: 0
@@ -27702,17 +27702,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1780448909}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!65 &1780448910
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27802,6 +27791,20 @@ MonoBehaviour:
   objectRequire: {fileID: 11400000, guid: 33862b6514d713546b5c3e80356304d9, type: 2}
   objectContent: {fileID: 11400000, guid: 7fa074b386a66ef4c8ce920581fcbc28, type: 2}
   inventoryPlayer: {fileID: 4113103769291635784}
+  OnGiveObject:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1780448909}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1782547962
 GameObject:
   m_ObjectHideFlags: 0
@@ -32937,7 +32940,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 4.3332744, y: 3.9073598, z: 0.2}
-  m_Center: {x: -0.03250465, y: -3.6125677, z: 0}
+  m_Center: {x: -0.35, y: -5, z: 0}
 --- !u!4 &2097452307
 Transform:
   m_ObjectHideFlags: 0

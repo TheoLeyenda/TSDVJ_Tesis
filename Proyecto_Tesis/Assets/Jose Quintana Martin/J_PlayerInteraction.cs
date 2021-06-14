@@ -27,7 +27,7 @@ public class J_PlayerInteraction : Updateable
         if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, interactionDistance))
         {
             currIntObject = hit.transform.gameObject;
-
+            //Debug.Log(hit.collider.name);
             if (currIntObject != prevIntObject)
             {
                 interactable = currIntObject.GetComponent<J_Interactable>();

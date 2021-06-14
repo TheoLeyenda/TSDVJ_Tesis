@@ -6,18 +6,18 @@ public class ConditionForOpenTheDoor : MonoBehaviour
     [SerializeField] private J_Item objectRequire;
     [SerializeField] private J_Inventory inventoryPlayer;
     [SerializeField] private UnityEvent openDoorEvent;
-
-    private bool openDoor = false;
+    [SerializeField] private bool openDoorInGame = false;
+    //private bool openDoor = false;
     public void CheckOpenDoor()
     {
-        if (!openDoor)
-        {
-            if (inventoryPlayer.PlayerHasItem(objectRequire.itemName))
+        //if (!openDoor)
+        //{
+            if (inventoryPlayer.PlayerHasItem(objectRequire.itemName) || openDoorInGame)
             {
                 inventoryPlayer.RemoveItem(objectRequire);
                 openDoorEvent?.Invoke();
-                openDoor = true;
+                //openDoor = true;
             }
-        }
+        //}
     }
 }

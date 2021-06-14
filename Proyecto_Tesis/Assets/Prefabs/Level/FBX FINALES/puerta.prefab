@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 548202512201698073}
   - component: {fileID: 4515672394507941924}
   - component: {fileID: 1972632869361791337}
+  - component: {fileID: 2893759234262389266}
+  - component: {fileID: 1890614219123207761}
   m_Layer: 10
   m_Name: puerta 1
   m_TagString: Untagged
@@ -111,6 +113,60 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: -3.5130002, y: 104.309006, z: -77.389}
   m_TimeToStationary: 0.5
+--- !u!114 &2893759234262389266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663980004055066916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbe29dd7ce1b324478d438537943d1e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectRequire: {fileID: 11400000, guid: 3ad889f2eb8c64b4da6255e6ae22db4a, type: 2}
+  inventoryPlayer: {fileID: 0}
+  openDoorEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3633153447834142065}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1890614219123207761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663980004055066916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10c2ee2d02fb5af4d9069ee82b243e36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2893759234262389266}
+        m_MethodName: CheckOpenDoor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3059461435539028109
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,7 +289,7 @@ GameObject:
   - component: {fileID: 4116392740711014347}
   - component: {fileID: 5764163987909791906}
   m_Layer: 10
-  m_Name: Puerta
+  m_Name: puerta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

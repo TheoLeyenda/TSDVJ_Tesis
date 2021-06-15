@@ -304,46 +304,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: NavMesh (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 6446742442846471480, guid: 6b87ad0ed9a83b548b55273388614566,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6446742442846471481, guid: 6b87ad0ed9a83b548b55273388614566,
-        type: 3}
-      propertyPath: m_OverrideVoxelSize
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6446742442846471481, guid: 6b87ad0ed9a83b548b55273388614566,
-        type: 3}
-      propertyPath: m_NavMeshData
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6446742442846471481, guid: 6b87ad0ed9a83b548b55273388614566,
-        type: 3}
-      propertyPath: m_OverrideTileSize
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6446742442846471481, guid: 6b87ad0ed9a83b548b55273388614566,
-        type: 3}
-      propertyPath: m_VoxelSize
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6446742442846471481, guid: 6b87ad0ed9a83b548b55273388614566,
-        type: 3}
-      propertyPath: m_UseGeometry
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6446742442846471481, guid: 6b87ad0ed9a83b548b55273388614566,
-        type: 3}
-      propertyPath: m_AgentTypeID
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6446742442846471481, guid: 6b87ad0ed9a83b548b55273388614566,
-        type: 3}
-      propertyPath: m_LayerMask.m_Bits
-      value: 76851
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b87ad0ed9a83b548b55273388614566, type: 3}
 --- !u!1001 &6830151236845231568

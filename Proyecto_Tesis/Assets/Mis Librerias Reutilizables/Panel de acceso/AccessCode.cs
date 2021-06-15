@@ -17,8 +17,13 @@ public class AccessCode : MonoBehaviour
     [SerializeField] private UnityEvent OnCodeDone;
     [SerializeField] private UnityEvent OnCodeFail;
     [SerializeField] private List<SpriteRenderer> OutputPanelSpriteRenderer;
+    [SerializeField] private Color colorOutputPanel;
     [SerializeField] private List<SpritesOutputPanel> spritesOutputPanel;
     [SerializeField] private Sprite defaultSpriteButtonsPanel;
+
+    [SerializeField] private bool useCheckOnFinishEnterCode = false;
+    private int currentCountCharactersInCode = 0;
+    private int countCharactersInCode;
 
     private int currentIndexPanel = 0;
 
@@ -34,7 +39,10 @@ public class AccessCode : MonoBehaviour
         for(int i = 0; i < OutputPanelSpriteRenderer.Count; i++)
         {
             OutputPanelSpriteRenderer[i].sprite = defaultSpriteButtonsPanel;
+            OutputPanelSpriteRenderer[i].color = colorOutputPanel;
         }
+        currentCountCharactersInCode = 0;
+        countCharactersInCode = OutputPanelSpriteRenderer.Count;
     }
     public void AddCaracterCode(string caracter)
     {
@@ -43,6 +51,13 @@ public class AccessCode : MonoBehaviour
             code = code + caracter;
             OutputPanelSpriteRenderer[currentIndexPanel].sprite = GetSpriteOutputPanel(caracter);
             currentIndexPanel++;
+        }
+
+        if (useCheckOnFinishEnterCode)
+        {
+            currentCountCharactersInCode++;
+            if (currentCountCharactersInCode >= countCharactersInCode)
+                CheckCodeDone();
         }
     }
 

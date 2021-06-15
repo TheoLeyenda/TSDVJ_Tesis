@@ -7,6 +7,8 @@ public class J_Interactable : MonoBehaviour
 {
     [SerializeField] private UnityEvent action;
 
+    void Start() { }
+
     public void DoAction()
     {
         if(enabled)

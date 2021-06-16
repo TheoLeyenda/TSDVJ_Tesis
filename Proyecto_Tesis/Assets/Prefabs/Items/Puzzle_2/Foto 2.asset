@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Foto 2
   m_EditorClassIdentifier: 
   itemName: Foto 2
-  description: Edad del director joven.
+  description: Foto del director a sus
   icon: {fileID: 21300000, guid: f3bec2778ecd4644eae8bb656cd05ab7, type: 3}
+  useIconCompound: 0
+  iconsCompound: []

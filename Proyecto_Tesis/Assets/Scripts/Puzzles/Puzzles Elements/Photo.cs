@@ -4,63 +4,36 @@ using UnityEngine.UI;
 
 public class Photo : MonoBehaviour
 {
-    public enum TypePhoto
+    private Sprite NewIcon;
+    [SerializeField] private string NewDescriptionPhoto;
+    [SerializeField] private int numberPhoto;
+    public J_Item ItemPhoto;
+
+    void OnEnable()
     {
-        Horizontal,
-        Vertical,
+        AccessCode.OnGenerateCode += AddNumberToText;
     }
-    [SerializeField] private TypePhoto typePhoto;
-    [SerializeField] private GameObject verticalImage;
-    [SerializeField] private GameObject horizontalImage;
-    [SerializeField] private Image imageVerticalPhoto;
-    [SerializeField] private Image imageHorizontalPhoto;
-    [SerializeField] private Sprite spriteVerticalPhoto;
-    [SerializeField] private Sprite spriteHorizontalPhoto;
-    [SerializeField] private TextMeshProUGUI titleTextHorizontal;
-    [SerializeField] private TextMeshProUGUI descriptionTextHorizontal;
-    [SerializeField] private TextMeshProUGUI titleTextVertical;
-    [SerializeField] private TextMeshProUGUI descriptionTextVertical;
-    [SerializeField] private J_Item item;
-    [SerializeField] private bool useNameItem;
-    [SerializeField] private bool useDescription;
+
+    void OnDisable()
+    {
+        AccessCode.OnGenerateCode -= AddNumberToText;
+    }
+
+    public void AddNumberToText(int _numberPhoto, int number)
+    {
+        if (numberPhoto == _numberPhoto)
+        {
+            AddNewDescriptionPhoto(" " + number);
+        }
+    }
+
+    public void SetNewDescriptionPhoto(string value) => NewDescriptionPhoto = value;
+
+    public void AddNewDescriptionPhoto(string value) => NewDescriptionPhoto += value;
 
     public void SettingDataPhoto()
     {
-        switch (typePhoto)
-        {
-            case TypePhoto.Horizontal:
-                verticalImage.SetActive(false);
-                horizontalImage.SetActive(true);
-                break;
-            case TypePhoto.Vertical:
-                verticalImage.SetActive(true);
-                horizontalImage.SetActive(false);
-                break;
-        }
-
-        imageVerticalPhoto.sprite = spriteVerticalPhoto;
-        imageHorizontalPhoto.sprite = spriteHorizontalPhoto;
-
-        if (useNameItem)
-        {
-            titleTextHorizontal.text = item.itemName;
-            titleTextVertical.text = item.itemName;
-        }
-        else
-        {
-            titleTextHorizontal.text = "";
-            titleTextVertical.text = "";
-        }
-
-        if (useDescription)
-        {
-            descriptionTextHorizontal.text = item.description;
-            descriptionTextVertical.text = item.description;
-        }
-        else
-        {
-            descriptionTextHorizontal.text = "";
-            descriptionTextVertical.text = "";
-        }
+        ItemPhoto.description = NewDescriptionPhoto;
+        ItemPhoto.icon = NewIcon;
     }
 }

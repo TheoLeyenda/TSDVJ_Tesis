@@ -5,6 +5,8 @@ using UnityEngine.Events;
 
 public class HaveItemsInInventoryEvent : MonoBehaviour
 {
+    void Start() {}
+
     [System.Serializable]
     public class ItemChecker
     {

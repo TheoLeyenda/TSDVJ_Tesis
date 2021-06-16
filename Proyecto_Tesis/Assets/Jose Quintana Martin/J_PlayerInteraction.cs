@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class J_PlayerInteraction : Updateable
 {
-    public GameObject playerCamera;
+    public Camera playerCamera;
     public float interactionDistance = 1f;
     public J_ToggleableImage interactImage;
 
@@ -24,10 +24,12 @@ public class J_PlayerInteraction : Updateable
     public void UpdateInteraction()
     {
         //Raycast
-        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, interactionDistance))
+        RaycastHit hit;
+        Ray ray = playerCamera.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out hit, interactionDistance))
         {
             currIntObject = hit.transform.gameObject;
-
+            //Debug.Log(hit.collider.name);
             if (currIntObject != prevIntObject)
             {
                 interactable = currIntObject.GetComponent<J_Interactable>();
@@ -42,7 +44,7 @@ public class J_PlayerInteraction : Updateable
         }
 
         //Text
-        if (interactable != null)
+        if (interactable != null && interactable.enabled)
         {
             interactImage.ShowImage();
         }
@@ -60,7 +62,7 @@ public class J_PlayerInteraction : Updateable
 
     public void Interact()
     {
-        if (interactable != null)
+        if (interactable != null && interactable.enabled)
             interactable.DoAction();
     }
 

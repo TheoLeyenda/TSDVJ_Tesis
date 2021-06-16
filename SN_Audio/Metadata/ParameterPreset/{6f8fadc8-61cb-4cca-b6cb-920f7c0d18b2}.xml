@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{6f8fadc8-61cb-4cca-b6cb-920f7c0d18b2}">
+		<property name="name">
+			<value>luces titilando</value>
+		</property>
+		<relationship name="folder">
+			<destination>{20cce545-61a3-45b4-a5ad-511980fa56fb}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{838ba0af-ea00-44a2-9ccc-9dec2d9c3392}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{838ba0af-ea00-44a2-9ccc-9dec2d9c3392}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

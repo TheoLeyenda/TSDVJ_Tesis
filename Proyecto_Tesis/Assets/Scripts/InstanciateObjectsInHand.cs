@@ -1,8 +1,11 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class InstanciateObjectsInHand : MonoBehaviour
 {
-    [SerializeField] private Transform SpawnTransform = null;
+    [SerializeField] private List<Transform> SpawnTransform = null;
+    private int indexTransformUse = 0;
     [SerializeField] private Transform parent;
     private GameObject CurrentInstanciateObject = null;
     private GameObject CurrentOriginObject = null;
@@ -22,6 +25,8 @@ public class InstanciateObjectsInHand : MonoBehaviour
     //    CurrentInstanciateObject = Instantiate(objectsForInstanciate[indexObject], SpawnTransform.position, SpawnTransform.rotation, parent);
     //}
 
+    public void SetIndexTransformUse(int value) => indexTransformUse = value;
+
     public void InstanciatedObjectInHand(GameObject objectInstance)
     {
 
@@ -38,7 +43,7 @@ public class InstanciateObjectsInHand : MonoBehaviour
             //Debug.Log(objectInstance);
             DestroyCurrentInstanciateObject();
             CurrentOriginObject = objectInstance;
-            CurrentInstanciateObject = Instantiate(objectInstance, SpawnTransform.position, SpawnTransform.rotation, parent);
+            CurrentInstanciateObject = Instantiate(objectInstance, SpawnTransform[indexTransformUse].position, SpawnTransform[indexTransformUse].rotation, parent);
         }
     }
 

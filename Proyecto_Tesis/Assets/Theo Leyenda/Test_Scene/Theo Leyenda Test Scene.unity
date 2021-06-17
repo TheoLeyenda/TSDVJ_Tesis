@@ -35406,7 +35406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInventory: {fileID: 4113103769291635784}
   item: {fileID: 11400000, guid: 74fbeaff1a5aad94489073e898e4e7fe, type: 2}
-  pickUpEvent: 
+  pickUpEvent: event:/Fxs/Objects/Agarrar ficha
 --- !u!114 &2050841149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38081,7 +38081,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInventory: {fileID: 4113103769291635784}
   item: {fileID: 11400000, guid: 270ffd49fae419a47ba66fced031fb56, type: 2}
-  pickUpEvent: 
+  pickUpEvent: event:/Fxs/Objects/Agarrar ficha
 --- !u!4 &1716162805184841131 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3069553657085225358, guid: 72cab9d0306509745b5acd115a6e8af7,
@@ -43459,7 +43459,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInventory: {fileID: 4113103769291635784}
   item: {fileID: 11400000, guid: 12e6d2657d185db448fd4b8489136694, type: 2}
-  pickUpEvent: 
+  pickUpEvent: event:/Fxs/Objects/Agarrar ficha
 --- !u!1 &7501430945115761571
 GameObject:
   m_ObjectHideFlags: 0

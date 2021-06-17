@@ -24,7 +24,7 @@ public class J_ItemPickUp : MonoBehaviour
             J_SoundManager _SoundManager = FindObjectOfType<J_SoundManager>();
 
             if (_SoundManager != null)
-                _SoundManager.PlayEvent(pickUpEvent);
+                _SoundManager.PlayEvent(pickUpEvent, gameObject);
         }
 
         Destroy(gameObject);

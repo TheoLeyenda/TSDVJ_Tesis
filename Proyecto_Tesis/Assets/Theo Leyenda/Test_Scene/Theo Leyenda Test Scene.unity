@@ -4366,6 +4366,7 @@ MonoBehaviour:
   playerInventory: {fileID: 4113103769291635784}
   item: {fileID: 11400000, guid: fdae17133e2a46e45a8f53e7381e8ec5, type: 2}
   pickUpEvent: 
+  paramRef: 
 --- !u!114 &202580514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7754,6 +7755,7 @@ MonoBehaviour:
   playerInventory: {fileID: 4113103769291635784}
   item: {fileID: 11400000, guid: 1ca68a7a75dae084b9c63536caa92997, type: 2}
   pickUpEvent: 
+  paramRef: 
 --- !u!65 &447714536
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11271,6 +11273,7 @@ MonoBehaviour:
   playerInventory: {fileID: 4113103769291635784}
   item: {fileID: 11400000, guid: 2f2ca8308735af64e8e0e50fe6ef8597, type: 2}
   pickUpEvent: event:/Fxs/Objects/libro agarrar
+  paramRef: 
 --- !u!1 &674679624
 GameObject:
   m_ObjectHideFlags: 0
@@ -12785,6 +12788,7 @@ MonoBehaviour:
   playerInventory: {fileID: 4113103769291635784}
   item: {fileID: 11400000, guid: 24824bde2ecbf844ea261de4a34e9c3a, type: 2}
   pickUpEvent: event:/Fxs/Objects/libro agarrar
+  paramRef: 
 --- !u!1 &749195586 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4071400150396410226, guid: fcd7802f0d8000943abcbb85cf6fcb5f,
@@ -12938,6 +12942,7 @@ MonoBehaviour:
   playerInventory: {fileID: 4113103769291635784}
   item: {fileID: 11400000, guid: 9530021aa885a0548866eeca46690645, type: 2}
   pickUpEvent: 
+  paramRef: 
 --- !u!1001 &757036647
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13157,6 +13162,7 @@ MonoBehaviour:
   playerInventory: {fileID: 4113103769291635784}
   item: {fileID: 11400000, guid: 18afcb0a3683a1641bf39cb2df7d1abe, type: 2}
   pickUpEvent: 
+  paramRef: 
 --- !u!114 &795176735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13554,6 +13560,7 @@ MonoBehaviour:
   playerInventory: {fileID: 4113103769291635784}
   item: {fileID: 11400000, guid: c63a5b4548166c64195723a528b33708, type: 2}
   pickUpEvent: 
+  paramRef: 
 --- !u!114 &804254305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14148,6 +14155,7 @@ MonoBehaviour:
   playerInventory: {fileID: 4113103769291635784}
   item: {fileID: 11400000, guid: bd0ee6fdaab95194691b1a5c8ac5d512, type: 2}
   pickUpEvent: event:/Fxs/Objects/libro agarrar
+  paramRef: 
 --- !u!114 &838752859 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7228340594791429417, guid: 9b3ae6fef52bb6846bba438d3c8f65c8,
@@ -15391,7 +15399,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInventory: {fileID: 4113103769291635784}
   item: {fileID: 11400000, guid: 4568e613393d677498213c3ac5d619ac, type: 2}
-  pickUpEvent: 
+  pickUpEvent: event:/Fxs/Objects/llave
+  paramRef: Llaves
 --- !u!65 &903090952
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16902,7 +16911,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInventory: {fileID: 4113103769291635784}
   item: {fileID: 11400000, guid: a96ca29065a434c449caef87bd58323a, type: 2}
-  pickUpEvent: 
+  pickUpEvent: event:/Fxs/Objects/llave
+  paramRef: Llaves
 --- !u!65 &1070810287
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21065,6 +21075,7 @@ MonoBehaviour:
   playerInventory: {fileID: 4113103769291635784}
   item: {fileID: 11400000, guid: 30395436927aeda438fd0ee77656db6c, type: 2}
   pickUpEvent: 
+  paramRef: 
 --- !u!114 &1309347345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22692,7 +22703,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInventory: {fileID: 4113103769291635784}
   item: {fileID: 11400000, guid: ddfccd6c936009a4795b5cb2a6090243, type: 2}
-  pickUpEvent: 
+  pickUpEvent: event:/Fxs/Objects/llave
+  paramRef: Llaves
 --- !u!65 &1373771312
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22802,6 +22814,7 @@ MonoBehaviour:
   playerInventory: {fileID: 4113103769291635784}
   item: {fileID: 11400000, guid: 0dd2bccfb77155a4fa49485bf2ac772a, type: 2}
   pickUpEvent: 
+  paramRef: 
 --- !u!65 &1378304251
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26661,6 +26674,7 @@ MonoBehaviour:
   playerInventory: {fileID: 4113103769291635784}
   item: {fileID: 11400000, guid: d3d1187e4026c714682db1a6cf5aaddd, type: 2}
   pickUpEvent: 
+  paramRef: 
 --- !u!114 &1556240701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28105,6 +28119,7 @@ MonoBehaviour:
   playerInventory: {fileID: 4113103769291635784}
   item: {fileID: 11400000, guid: 0d213253dd48c1a4b8f21a255f13aeea, type: 2}
   pickUpEvent: 
+  paramRef: 
 --- !u!114 &1623306453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29466,6 +29481,7 @@ MonoBehaviour:
   playerInventory: {fileID: 4113103769291635784}
   item: {fileID: 11400000, guid: 51b022b80a234124c94d801d3a8d49b3, type: 2}
   pickUpEvent: 
+  paramRef: 
 --- !u!114 &1692805425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29631,6 +29647,7 @@ MonoBehaviour:
   playerInventory: {fileID: 4113103769291635784}
   item: {fileID: 11400000, guid: d8e0e87c060c1ac4cb51569a9e980ce8, type: 2}
   pickUpEvent: 
+  paramRef: 
 --- !u!114 &1705647615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29889,6 +29906,7 @@ MonoBehaviour:
   playerInventory: {fileID: 4113103769291635784}
   item: {fileID: 11400000, guid: 72b26b26fb186e944819d48113360e1b, type: 2}
   pickUpEvent: 
+  paramRef: 
 --- !u!114 &1711256387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32495,6 +32513,7 @@ MonoBehaviour:
   playerInventory: {fileID: 4113103769291635784}
   item: {fileID: 11400000, guid: bfd61f1234173a74fa1f774d5bfa9cbe, type: 2}
   pickUpEvent: event:/Fxs/Objects/libro agarrar
+  paramRef: 
 --- !u!1 &1832981274
 GameObject:
   m_ObjectHideFlags: 0
@@ -33610,7 +33629,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInventory: {fileID: 4113103769291635784}
   item: {fileID: 11400000, guid: 854da9730b25abc4fb238553b17e03e3, type: 2}
-  pickUpEvent: 
+  pickUpEvent: event:/Fxs/Objects/llave
+  paramRef: Llaves
 --- !u!65 &1935538255
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34180,6 +34200,7 @@ MonoBehaviour:
   playerInventory: {fileID: 4113103769291635784}
   item: {fileID: 11400000, guid: 33862b6514d713546b5c3e80356304d9, type: 2}
   pickUpEvent: 
+  paramRef: 
 --- !u!114 &1959441692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35407,6 +35428,7 @@ MonoBehaviour:
   playerInventory: {fileID: 4113103769291635784}
   item: {fileID: 11400000, guid: 74fbeaff1a5aad94489073e898e4e7fe, type: 2}
   pickUpEvent: event:/Fxs/Objects/Agarrar ficha
+  paramRef: 
 --- !u!114 &2050841149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36573,6 +36595,7 @@ MonoBehaviour:
   playerInventory: {fileID: 4113103769291635784}
   item: {fileID: 11400000, guid: 06da40ed4e8ce42449ecd9e8ee1f6232, type: 2}
   pickUpEvent: 
+  paramRef: 
 --- !u!136 &2128972710
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -38082,6 +38105,7 @@ MonoBehaviour:
   playerInventory: {fileID: 4113103769291635784}
   item: {fileID: 11400000, guid: 270ffd49fae419a47ba66fced031fb56, type: 2}
   pickUpEvent: event:/Fxs/Objects/Agarrar ficha
+  paramRef: 
 --- !u!4 &1716162805184841131 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3069553657085225358, guid: 72cab9d0306509745b5acd115a6e8af7,
@@ -43460,6 +43484,7 @@ MonoBehaviour:
   playerInventory: {fileID: 4113103769291635784}
   item: {fileID: 11400000, guid: 12e6d2657d185db448fd4b8489136694, type: 2}
   pickUpEvent: event:/Fxs/Objects/Agarrar ficha
+  paramRef: 
 --- !u!1 &7501430945115761571
 GameObject:
   m_ObjectHideFlags: 0

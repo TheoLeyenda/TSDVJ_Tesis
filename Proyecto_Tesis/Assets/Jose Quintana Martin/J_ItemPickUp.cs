@@ -10,6 +10,9 @@ public class J_ItemPickUp : MonoBehaviour
     [FMODUnity.EventRef]
     public string pickUpEvent;
 
+    [FMODUnity.ParamRef]
+    public string paramRef;
+
     private void Start()
     {
         playerInventory = FindObjectOfType<J_Inventory>();
@@ -24,7 +27,7 @@ public class J_ItemPickUp : MonoBehaviour
             J_SoundManager _SoundManager = FindObjectOfType<J_SoundManager>();
 
             if (_SoundManager != null)
-                _SoundManager.PlayEvent(pickUpEvent, gameObject);
+                _SoundManager.PlayEvent(pickUpEvent, gameObject, paramRef);
         }
 
         Destroy(gameObject);

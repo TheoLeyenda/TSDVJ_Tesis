@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{1239cb75-8f5a-4d9b-8de5-7e9695dc73af}">
+		<property name="name">
+			<value>Caminar</value>
+		</property>
+		<relationship name="folder">
+			<destination>{20cce545-61a3-45b4-a5ad-511980fa56fb}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{e03f3a26-97a3-4ff7-b6b2-43085cd62bf7}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{e03f3a26-97a3-4ff7-b6b2-43085cd62bf7}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

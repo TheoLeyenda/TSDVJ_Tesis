@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{25e99a28-b2a7-4396-90ce-f6aefe7e5abd}">
+		<property name="assetPath">
+			<value>destornillador posta.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>20.170666666666666</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{99311439-d228-47a8-9d81-1c4b14548a94}</destination>
+		</relationship>
+	</object>
+</objects>

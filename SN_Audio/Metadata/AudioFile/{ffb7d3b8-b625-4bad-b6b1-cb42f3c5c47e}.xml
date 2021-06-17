@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{ffb7d3b8-b625-4bad-b6b1-cb42f3c5c47e}">
+		<property name="assetPath">
+			<value>locker.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>17.325020833333333</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{99311439-d228-47a8-9d81-1c4b14548a94}</destination>
+		</relationship>
+	</object>
+</objects>

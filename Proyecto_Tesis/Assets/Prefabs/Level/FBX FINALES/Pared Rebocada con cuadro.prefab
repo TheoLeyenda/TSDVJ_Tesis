@@ -1,0 +1,199 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4560000310398946109
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4560000310398946108}
+  m_Layer: 0
+  m_Name: Pared Rebocada con cuadro
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4560000310398946108
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4560000310398946109}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 33.480225, y: -25.0497, z: 86.3561}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4090070427681701394}
+  - {fileID: 4090070427305354202}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &4560000309961775609
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4560000310398946108}
+    m_Modifications:
+    - target: {fileID: -9107993608005439863, guid: c4a3a2a7e7b76ba4c9ec5d21fbf1a8d8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f030e6da8f862c841b3b5878c2484185, type: 2}
+    - target: {fileID: -8679921383154817045, guid: c4a3a2a7e7b76ba4c9ec5d21fbf1a8d8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.928776
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c4a3a2a7e7b76ba4c9ec5d21fbf1a8d8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 30.4457
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c4a3a2a7e7b76ba4c9ec5d21fbf1a8d8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -78.4501
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c4a3a2a7e7b76ba4c9ec5d21fbf1a8d8,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c4a3a2a7e7b76ba4c9ec5d21fbf1a8d8,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c4a3a2a7e7b76ba4c9ec5d21fbf1a8d8,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c4a3a2a7e7b76ba4c9ec5d21fbf1a8d8,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c4a3a2a7e7b76ba4c9ec5d21fbf1a8d8,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c4a3a2a7e7b76ba4c9ec5d21fbf1a8d8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c4a3a2a7e7b76ba4c9ec5d21fbf1a8d8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c4a3a2a7e7b76ba4c9ec5d21fbf1a8d8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c4a3a2a7e7b76ba4c9ec5d21fbf1a8d8,
+        type: 3}
+      propertyPath: m_Name
+      value: cuadro juana de arco
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c4a3a2a7e7b76ba4c9ec5d21fbf1a8d8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c4a3a2a7e7b76ba4c9ec5d21fbf1a8d8, type: 3}
+--- !u!4 &4090070427681701394 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c4a3a2a7e7b76ba4c9ec5d21fbf1a8d8,
+    type: 3}
+  m_PrefabInstance: {fileID: 4560000309961775609}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4560000310371730481
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4560000310398946108}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 7148bf2980562204fa4bbe133c87b8b1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.749775
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7148bf2980562204fa4bbe133c87b8b1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 28.957216
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7148bf2980562204fa4bbe133c87b8b1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -73.6101
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7148bf2980562204fa4bbe133c87b8b1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7148bf2980562204fa4bbe133c87b8b1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7148bf2980562204fa4bbe133c87b8b1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7148bf2980562204fa4bbe133c87b8b1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7148bf2980562204fa4bbe133c87b8b1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7148bf2980562204fa4bbe133c87b8b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7148bf2980562204fa4bbe133c87b8b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7148bf2980562204fa4bbe133c87b8b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7148bf2980562204fa4bbe133c87b8b1,
+        type: 3}
+      propertyPath: m_Name
+      value: pared cuadro juana de arco
+      objectReference: {fileID: 0}
+    - target: {fileID: 1828837251175329528, guid: 7148bf2980562204fa4bbe133c87b8b1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0fd28741a8eaad143a42d79441ab19da, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7148bf2980562204fa4bbe133c87b8b1, type: 3}
+--- !u!4 &4090070427305354202 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7148bf2980562204fa4bbe133c87b8b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 4560000310371730481}
+  m_PrefabAsset: {fileID: 0}

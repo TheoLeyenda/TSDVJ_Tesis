@@ -2,8 +2,7 @@
 using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
-
-    public void GameOver(string nameGameOver)
+    public void LoadScene(string nameGameOver)
     {
         SceneManager.LoadScene(nameGameOver);
     }

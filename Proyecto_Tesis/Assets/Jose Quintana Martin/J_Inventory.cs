@@ -54,7 +54,7 @@ public class J_Inventory : Updateable
 
     public void AddItem(J_Item item)
     {
-        if (inventory.Count < inventorySize)
+        if (!GetInventoryFull())
         {
             inventory.Add(item);
             UpdateUI();

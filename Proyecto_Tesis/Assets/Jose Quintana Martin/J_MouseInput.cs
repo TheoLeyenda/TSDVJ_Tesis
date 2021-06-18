@@ -15,9 +15,6 @@ public class J_MouseInput : Updateable
         base.Start();
         MyUpdate.AddListener(UpdateLookAround);
         UM.UpdatesInGame.Add(MyUpdate);
-
-        Cursor.lockState = CursorLockMode.Locked;
-
     }
 
     void UpdateLookAround()

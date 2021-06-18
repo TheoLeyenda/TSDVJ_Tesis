@@ -12,7 +12,7 @@ public class ConditionForOpenTheDoor : MonoBehaviour
     {
         //if (!openDoor)
         //{
-            if (inventoryPlayer.PlayerHasItem(objectRequire.itemName) || openDoorInGame)
+            if (inventoryPlayer.PlayerHasItem(objectRequire) || openDoorInGame)
             {
                 inventoryPlayer.RemoveItem(objectRequire);
                 openDoorEvent?.Invoke();

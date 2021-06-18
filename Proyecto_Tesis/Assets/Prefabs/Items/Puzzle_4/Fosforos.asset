@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35f50c4e7cc1823488e0b2ac4725e45a, type: 3}
   m_Name: Fosforos
   m_EditorClassIdentifier: 
-  itemName: Fosforos
-  description: Dos patitos
+  itemName: Fosforos.
+  description: Fosforos del director, recuerdo que el los usa para prender sus cigarros.
   icon: {fileID: 21300000, guid: e77d9b95828d748458fb09bba7c6369d, type: 3}
+  useIconCompound: 0
+  iconsCompound: []

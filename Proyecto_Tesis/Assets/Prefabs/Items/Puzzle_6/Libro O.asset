@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35f50c4e7cc1823488e0b2ac4725e45a, type: 3}
   m_Name: Libro O
   m_EditorClassIdentifier: 
-  itemName: Libro O
-  description: Description
+  itemName: Libro.
+  description: Libro de la biblioteca con una O grabada en su dorso.
   icon: {fileID: 21300000, guid: c58ea0c7d74229d468c0477aa212f631, type: 3}
+  useIconCompound: 0
+  iconsCompound: []

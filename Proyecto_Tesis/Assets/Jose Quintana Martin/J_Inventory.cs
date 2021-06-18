@@ -71,6 +71,16 @@ public class J_Inventory : Updateable
         return false;
     }
 
+    public bool PlayerHasItem(J_Item item)
+    {
+        for (int i = 0; i < inventory.Count; i++)
+        {
+            if (inventory[i] == item)
+                return true;
+        }
+        return false;
+    }
+
     public void RemoveItem(J_Item item)
     {
         if (inventory.Count > 0)

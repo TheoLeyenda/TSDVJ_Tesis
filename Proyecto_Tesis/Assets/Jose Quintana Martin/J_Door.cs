@@ -15,7 +15,7 @@ public class J_Door : MonoBehaviour
 {
     public J_Item myKey;
     public bool isPermalocked;
-    public J_ItemChecker itemChecker;
+    public J_Inventory playerInventoryRef;
 
     [SerializeField] private UnityEvent openAction;
     [SerializeField] private UnityEvent lockedAction;
@@ -26,6 +26,8 @@ public class J_Door : MonoBehaviour
 
     private void Start()
     {
+        playerInventoryRef = FindObjectOfType<J_Inventory>();
+
         doorState = DoorState.Hidden;
         if (myKey != null)
             keyItemName = myKey.itemName;
@@ -38,7 +40,7 @@ public class J_Door : MonoBehaviour
 
     public bool CheckPlayerHasMyKey()
     {
-        if (itemChecker.checkPlayerHasItem(keyItemName))
+        if (playerInventoryRef.PlayerHasItem(keyItemName))
         {
             doorState = DoorState.Unlocked;
             Debug.Log("La tiene");
@@ -62,8 +64,8 @@ public class J_Door : MonoBehaviour
                 Debug.Log("OpenBehaviour");
                 break;
             case DoorState.Locked:
-                lockedAction.Invoke();
                 CheckPlayerHasMyKey();
+                lockedAction.Invoke();
                 break;
             case DoorState.PermaLocked:
                 permalockedAction.Invoke();

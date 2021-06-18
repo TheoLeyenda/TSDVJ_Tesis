@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 548202512201698073}
   - component: {fileID: 4515672394507941924}
   - component: {fileID: 1972632869361791337}
-  - component: {fileID: 2893759234262389266}
   - component: {fileID: 1890614219123207761}
+  - component: {fileID: 6235777888124605165}
+  - component: {fileID: 8407498124019331056}
   m_Layer: 10
   m_Name: puerta 1
   m_TagString: Untagged
@@ -113,34 +114,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: -3.5130002, y: 104.309006, z: -77.389}
   m_TimeToStationary: 0.5
---- !u!114 &2893759234262389266
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 663980004055066916}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbe29dd7ce1b324478d438537943d1e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectRequire: {fileID: 11400000, guid: 3ad889f2eb8c64b4da6255e6ae22db4a, type: 2}
-  inventoryPlayer: {fileID: 0}
-  openDoorEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3633153447834142065}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1890614219123207761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,8 +129,8 @@ MonoBehaviour:
   action:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2893759234262389266}
-        m_MethodName: CheckOpenDoor
+      - m_Target: {fileID: 6235777888124605165}
+        m_MethodName: DoorInteraction
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -167,6 +140,54 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6235777888124605165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663980004055066916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90d466c33b130614f99de9c82bbe2889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myKey: {fileID: 0}
+  isPermalocked: 0
+  itemChecker: {fileID: 0}
+  openAction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8407498124019331056}
+        m_MethodName: ToggleBulean
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Open
+          m_BoolArgument: 1
+        m_CallState: 2
+  lockedAction:
+    m_PersistentCalls:
+      m_Calls: []
+  permalockedAction:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &8407498124019331056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663980004055066916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0e405ff5b7d60c4baf0a6aed20281d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 5764163987909791906}
 --- !u!1 &3059461435539028109
 GameObject:
   m_ObjectHideFlags: 0

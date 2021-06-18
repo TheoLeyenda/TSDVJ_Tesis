@@ -20,4 +20,14 @@ public class AnimationController : MonoBehaviour
     {
         animator.SetBool(name, false);
     }
+
+    public void ToggleBulean(string name)
+    {
+        bool _state = animator.GetBool(name);
+
+        if (_state)
+            animator.SetBool(name, false);
+        else
+            animator.SetBool(name, true);
+    }
 }

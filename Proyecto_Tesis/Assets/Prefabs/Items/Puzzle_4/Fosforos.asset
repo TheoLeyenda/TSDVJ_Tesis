@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Fosforos.
   description: Fosforos del director, recuerdo que el los usa para prender sus cigarros.
-  icon: {fileID: 21300000, guid: e77d9b95828d748458fb09bba7c6369d, type: 3}
+  icon: {fileID: 21300000, guid: 552bd3b022bacae44b8adc7ebf459d67, type: 3}
   useIconCompound: 0
   iconsCompound: []

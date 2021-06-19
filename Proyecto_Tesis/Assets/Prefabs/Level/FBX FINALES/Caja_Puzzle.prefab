@@ -169,6 +169,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3814483956141813225}
   - component: {fileID: 2642056930990287952}
+  - component: {fileID: 3150439392554334244}
+  - component: {fileID: 5535030014191414639}
   m_Layer: 0
   m_Name: Caja_Puzzle
   m_TagString: Untagged
@@ -209,6 +211,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1902852072381329378}
+  typeInitAnimation: 0
+  useInitAnimation: 0
+  nameInitAnimation: 
+  valueBoolInitAnimation: 0
+  valueFloatInitAnimation: 0
+  valueIntInitAnimation: 0
+--- !u!114 &3150439392554334244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4585812715300337491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09c3a378cc6c71f42b2bf3e9e622ed5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  functionOnStart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5535030014191414639}
+        m_MethodName: ChangeMat
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5535030014191414639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4585812715300337491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa00aad804d2084e93ceee7017a83af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materials:
+  - {fileID: 2100000, guid: e9cde9d31fcb48741bf637a446bd5549, type: 2}
+  - {fileID: 2100000, guid: 794ecafc87cd6784583ee610546afb40, type: 2}
+  - {fileID: 2100000, guid: e5bce5172056d37408bd0710598f225b, type: 2}
+  meshRenderer: {fileID: 9052032840315568776}
 --- !u!1 &4783932985566698756
 GameObject:
   m_ObjectHideFlags: 0

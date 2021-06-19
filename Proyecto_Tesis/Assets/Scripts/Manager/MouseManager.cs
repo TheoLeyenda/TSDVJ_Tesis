@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class MouseManager : MonoBehaviour
 {
+    [SerializeField] private bool lockMouseInStart = true;
     private void Start()
     {
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        SetCursorLockState(lockMouseInStart);
     }
 
     public void SetCursorLockState(bool activate)

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Llave_salida
   m_EditorClassIdentifier: 
   itemName: Llave.
-  description: Llave de la puerta principal de la escuala.
+  description: Llave de la puerta principal de la escuela.
   icon: {fileID: 21300000, guid: befe2226c7cf6a444a9416227a3c9723, type: 3}
   useIconCompound: 0
   iconsCompound: []

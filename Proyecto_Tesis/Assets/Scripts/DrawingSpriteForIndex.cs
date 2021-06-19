@@ -58,7 +58,7 @@ public class DrawingSpriteForIndex : MonoBehaviour
                 break;
         }
 
-        Debug.Log(direction);
+        //Debug.Log(direction);
 
         if (useParentTransform)
         {

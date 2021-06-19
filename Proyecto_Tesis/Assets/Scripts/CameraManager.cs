@@ -5,16 +5,19 @@ using UnityEngine;
 public class CameraManager : MonoBehaviour
 {
     [SerializeField] private List<Camera> camerasInGame;
-
+    public void DisableAllCameras()
+    {
+        for (int i = 0; i < camerasInGame.Count; i++)
+        {
+            camerasInGame[i].gameObject.SetActive(false);
+        }
+    }
     public void SwitchCamera(int index)
     {
         if (index < 0 || index >= camerasInGame.Count)
             return;
 
-        for (int i = 0; i < camerasInGame.Count; i++)
-        {
-            camerasInGame[i].gameObject.SetActive(false);
-        }
+        DisableAllCameras();
 
         camerasInGame[index].gameObject.SetActive(true);
 

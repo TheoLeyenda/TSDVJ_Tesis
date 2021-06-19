@@ -60,7 +60,7 @@ public class AnimationController : MonoBehaviour
     {
         bool _state = animator.GetBool(name);
 
-        Debug.Log(_state);
+        //Debug.Log(_state);
         if (_state)
             animator.SetBool(name, false);
         else

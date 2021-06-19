@@ -44,6 +44,14 @@ public class InstanciateObjectsInHand : MonoBehaviour
             DestroyCurrentInstanciateObject();
             CurrentOriginObject = objectInstance;
             CurrentInstanciateObject = Instantiate(objectInstance, SpawnTransform[indexTransformUse].position, SpawnTransform[indexTransformUse].rotation, parent);
+
+            CurrentInstanciateObject.layer = 19; //Esto es para no tener que poner una referencia en esta clase, por favor no te enojes Theito-Kun U//n//U
+
+            Transform[] children = CurrentInstanciateObject.GetComponentsInChildren<Transform>();
+            foreach (var child in children)
+            {
+                child.gameObject.layer = 19;
+            }
         }
     }
 

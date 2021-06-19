@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35f50c4e7cc1823488e0b2ac4725e45a, type: 3}
   m_Name: Ficha_Foca
   m_EditorClassIdentifier: 
-  itemName: Ficha Foca
-  description: "Una peque\xF1a ficha con la sirueta de una foca en ella."
-  icon: {fileID: 21300000, guid: 10c0f27c92385114f85574256a0d9e18, type: 3}
+  itemName: Ficha Foca.
+  description: "Una peque\xF1a ficha con la silueta de una foca en ella."
+  icon: {fileID: 21300000, guid: 830c9965b111f6241bc85de9d9d0086d, type: 3}
+  useIconCompound: 0
+  iconsCompound: []

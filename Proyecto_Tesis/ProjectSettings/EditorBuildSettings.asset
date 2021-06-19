@@ -12,9 +12,12 @@ EditorBuildSettings:
     path: Assets/Theo Leyenda/Test_Scene/GameOver_TL.unity
     guid: 6313ccf61a0ce524d92107cc1a97b54d
   - enabled: 1
+    path: Assets/Theo Leyenda/Test_Scene/Win_TL.unity
+    guid: feeae2df75e7a944e81d20f60c294c3a
+  - enabled: 0
     path: Assets/Jose Quintana Martin/J_MovementTest.unity
     guid: 3cc495112c1d25f43a147af49f896233
-  - enabled: 1
+  - enabled: 0
     path: Assets/Jose Quintana Martin/J_Menu.unity
     guid: f0592c210c1e9e84c8af5d891dea2611
   m_configObjects: {}

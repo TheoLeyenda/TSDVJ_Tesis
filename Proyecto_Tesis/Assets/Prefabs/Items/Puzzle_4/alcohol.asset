@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35f50c4e7cc1823488e0b2ac4725e45a, type: 3}
   m_Name: alcohol
   m_EditorClassIdentifier: 
-  itemName: alcohol
-  description: Description
-  icon: {fileID: 21300000, guid: 2c94551ea22755947891b8f763400476, type: 3}
+  itemName: Alcohol.
+  description: Alcohol etilico, la etiqueta indica "Precauscion inflamable".
+  icon: {fileID: 21300000, guid: fdb91fdf58011284b86f11dc930daa77, type: 3}
+  useIconCompound: 0
+  iconsCompound: []

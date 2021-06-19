@@ -13,7 +13,7 @@ public class ConditionForTakeContentByGameObject : MonoBehaviour
     {
         if (!giveMyObject)
         {
-            if (inventoryPlayer.PlayerHasItem(objectRequire.itemName) && !inventoryPlayer.GetInventoryFull())
+            if (inventoryPlayer.PlayerHasItem(objectRequire) && !inventoryPlayer.GetInventoryFull())
             {
                 inventoryPlayer.RemoveItem(objectRequire);
                 inventoryPlayer.AddItem(objectContent);

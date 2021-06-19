@@ -19,6 +19,9 @@ public class J_ItemPickUp : MonoBehaviour
     }
 
     public void AddItemToInventory() {
+        if (playerInventory.GetInventoryFull())
+            return;
+
         playerInventory.AddItem(item);
         Debug.Log("Added " + item.itemName + " to inventory");
 

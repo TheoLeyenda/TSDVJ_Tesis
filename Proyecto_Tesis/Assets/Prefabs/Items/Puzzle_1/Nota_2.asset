@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35f50c4e7cc1823488e0b2ac4725e45a, type: 3}
   m_Name: Nota_2
   m_EditorClassIdentifier: 
-  itemName: Nota 2
-  description: "\u201CHoy el director me mando a limpiar uno de los inodoros del
+  itemName: Nota del conserje 2.
+  description: "\u201CHoy el director me mand\xF3 a limpiar uno de los inodoros del
     ba\xF1o de los chicos, cuando llegue el lugar estaba en condiciones deplorables,
     decid\xED atreverme a limpiarlo, pero en el trayecto se me estropeo el cepillo
-    y perd\xED uno de mis destornilladores, jurar\xEDa haberlo dejado al lado del
-    inodoro, pero cuando me fije ya no estaba m\xE1s\u201D "
+    y perd\xED uno de mis destornilladores.\u201D"
   icon: {fileID: 21300000, guid: 1691cf5b36aa7a744a91afbf81c7b05b, type: 3}
+  useIconCompound: 0
+  iconsCompound: []

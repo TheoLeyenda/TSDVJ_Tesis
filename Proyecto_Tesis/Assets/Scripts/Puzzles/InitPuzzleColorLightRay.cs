@@ -8,7 +8,7 @@ public class InitPuzzleColorLightRay : MonoBehaviour
     [SerializeField] private List<SpritesToAssign> DrawSprite;
     [SerializeField] private List<Sprite> NumberSprite;
     private bool enableRepeatColors;
-    [SerializeField] private string baseItemName = "Papel Con Dibujo";
+    [SerializeField] private string baseItemName = "Papel con dibujo";
     //[SerializeField] private bool useRandomIndexListenerColorLightRay = true;
 
     [SerializeField] private string nameItemAssignedSprites = "Dibujo";

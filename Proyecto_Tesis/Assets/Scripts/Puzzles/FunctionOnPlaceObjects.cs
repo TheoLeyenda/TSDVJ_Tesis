@@ -99,7 +99,7 @@ public class FunctionOnPlaceObjects : MonoBehaviour
             PlacesForObjects[indexPlaceObject].placeObject = true;
             PlacesForObjects[indexPlaceObject].id = id;
 
-            Debug.Log("ENTRE ACA OP 1");
+            //Debug.Log("ENTRE ACA OP 1");
         }
         else if (instanciateObjectsInHand.GetCurrentInstanciateObject() == null)
         {
@@ -114,7 +114,7 @@ public class FunctionOnPlaceObjects : MonoBehaviour
             PlacesForObjects[indexPlaceObject].placeObject = false;
             PlacesForObjects[indexPlaceObject].id = -1;
 
-            Debug.Log("ENTRE ACA OP 2");
+            //Debug.Log("ENTRE ACA OP 2");
         }
         else if(PlacesForObjects[indexPlaceObject].instanciatedObject != null && instanciateObjectsInHand.GetCurrentInstanciateObject() != null)
         {
@@ -146,7 +146,7 @@ public class FunctionOnPlaceObjects : MonoBehaviour
             PlacesForObjects[indexPlaceObject].placeObject = true;
             PlacesForObjects[indexPlaceObject].id = id;
 
-            Debug.Log("ENTRE ACA OP 3");
+            //Debug.Log("ENTRE ACA OP 3");
         }
 
         if (useCheckInPlaceObject)

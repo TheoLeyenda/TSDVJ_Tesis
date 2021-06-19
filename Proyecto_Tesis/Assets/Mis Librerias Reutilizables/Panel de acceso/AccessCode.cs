@@ -31,7 +31,7 @@ public class AccessCode : MonoBehaviour
                 string aux = ""+code.ToCharArray()[i];
                 int index = int.Parse(aux);
                 drawingSpriteForIndex.Draw(index);
-                Debug.Log(index);
+                //Debug.Log(index);
             }
 
             return code;

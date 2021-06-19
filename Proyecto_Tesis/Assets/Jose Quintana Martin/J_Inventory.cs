@@ -54,7 +54,7 @@ public class J_Inventory : Updateable
 
     public void AddItem(J_Item item)
     {
-        if (inventory.Count < inventorySize)
+        if (!GetInventoryFull())
         {
             inventory.Add(item);
             UpdateUI();
@@ -66,6 +66,16 @@ public class J_Inventory : Updateable
         for (int i = 0; i < inventory.Count; i++)
         {
             if (inventory[i].itemName == itemName)
+                return true;
+        }
+        return false;
+    }
+
+    public bool PlayerHasItem(J_Item item)
+    {
+        for (int i = 0; i < inventory.Count; i++)
+        {
+            if (inventory[i] == item)
                 return true;
         }
         return false;

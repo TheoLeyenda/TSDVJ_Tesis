@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35f50c4e7cc1823488e0b2ac4725e45a, type: 3}
   m_Name: Destornillador_Trompeta
   m_EditorClassIdentifier: 
-  itemName: Destornillador_Trompeta
-  description: "Es un destornillador algo da\xF1ado pero util para desarmar objetos."
-  icon: {fileID: 21300000, guid: 79cadb3730206884196a5990c1e2a727, type: 3}
+  itemName: Destornillador.
+  description: Destornillador de punta larga algo sucio pero funcional.
+  icon: {fileID: 21300000, guid: 2bd338dff4ec01644b1f1891c431b461, type: 3}
+  useIconCompound: 0
+  iconsCompound: []

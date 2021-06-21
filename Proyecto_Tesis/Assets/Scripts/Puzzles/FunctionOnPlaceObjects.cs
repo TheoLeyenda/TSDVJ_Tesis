@@ -103,28 +103,27 @@ public class FunctionOnPlaceObjects : MonoBehaviour
         }
         else if (instanciateObjectsInHand.GetCurrentInstanciateObject() == null)
         {
-            transparentObject.SetActive(true);
-            instanciateObjectsInHand.InstanciatedObjectInHand(PlacesForObjects[indexPlaceObject].instanciatedObject.originObject);
-            inventory.AddItem(PlacesForObjects[indexPlaceObject].instanciatedObject.itemObject);
+            if (!inventory.GetInventoryFull())
+            {
+                transparentObject.SetActive(true);
+                instanciateObjectsInHand.InstanciatedObjectInHand(PlacesForObjects[indexPlaceObject].instanciatedObject.originObject);
+                inventory.AddItem(PlacesForObjects[indexPlaceObject].instanciatedObject.itemObject);
 
-            if (PlacesForObjects[indexPlaceObject].instanciatedObject.cloneObject != null)
-                Destroy(PlacesForObjects[indexPlaceObject].instanciatedObject.cloneObject);
+                if (PlacesForObjects[indexPlaceObject].instanciatedObject.cloneObject != null)
+                    Destroy(PlacesForObjects[indexPlaceObject].instanciatedObject.cloneObject);
 
-            PlacesForObjects[indexPlaceObject].instanciatedObject.originObject = null;
-            PlacesForObjects[indexPlaceObject].placeObject = false;
-            PlacesForObjects[indexPlaceObject].id = -1;
+                PlacesForObjects[indexPlaceObject].instanciatedObject.originObject = null;
+                PlacesForObjects[indexPlaceObject].placeObject = false;
+                PlacesForObjects[indexPlaceObject].id = -1;
+            }
 
             //Debug.Log("ENTRE ACA OP 2");
         }
         else if(PlacesForObjects[indexPlaceObject].instanciatedObject != null && instanciateObjectsInHand.GetCurrentInstanciateObject() != null)
         {
-            instanciateObjectsInHand.InstanciatedObjectInHand(PlacesForObjects[indexPlaceObject].instanciatedObject.originObject);
-            inventory.AddItem(PlacesForObjects[indexPlaceObject].instanciatedObject.itemObject);
+            if (indexPlaceObject < 0 || indexPlaceObject >= PlacesForObjects.Length)
+                return;
 
-            if (PlacesForObjects[indexPlaceObject].instanciatedObject.cloneObject != null)
-                Destroy(PlacesForObjects[indexPlaceObject].instanciatedObject.cloneObject);
-
-            PlacesForObjects[indexPlaceObject].instanciatedObject.originObject = null;
             if (indexObjectSpawn == -1)
             {
                 transparentObject.SetActive(true);
@@ -138,6 +137,16 @@ public class FunctionOnPlaceObjects : MonoBehaviour
 
             transparentObject.SetActive(false);
             inventory.RemoveItem(item);
+
+            instanciateObjectsInHand.InstanciatedObjectInHand(PlacesForObjects[indexPlaceObject].instanciatedObject.originObject, false);
+            inventory.AddItem(PlacesForObjects[indexPlaceObject].instanciatedObject.itemObject);
+
+            if (PlacesForObjects[indexPlaceObject].instanciatedObject.cloneObject != null)
+                Destroy(PlacesForObjects[indexPlaceObject].instanciatedObject.cloneObject);
+
+            PlacesForObjects[indexPlaceObject].instanciatedObject.originObject = null;
+
+            
             PlacesForObjects[indexPlaceObject].instanciatedObject.originObject = objectSpawn;
             PlacesForObjects[indexPlaceObject].instanciatedObject.cloneObject = Instantiate(objectSpawn, PlacesForObjects[indexPlaceObject].transformSpawn);
             PlacesForObjects[indexPlaceObject].instanciatedObject.originObject.transform.localScale = new Vector3(1, 1, 1);

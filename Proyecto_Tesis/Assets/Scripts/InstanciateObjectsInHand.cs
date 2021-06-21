@@ -36,6 +36,35 @@ public class InstanciateObjectsInHand : MonoBehaviour
 
         if (objectInstance == CurrentOriginObject && CurrentOriginObject != null)
         {
+            Debug.Log("PUTA");
+            DestroyCurrentInstanciateObject();
+        }
+        else
+        {
+            //Debug.Log(objectInstance);
+            DestroyCurrentInstanciateObject();
+            CurrentOriginObject = objectInstance;
+            CurrentInstanciateObject = Instantiate(objectInstance, SpawnTransform[indexTransformUse].position, SpawnTransform[indexTransformUse].rotation, parent);
+
+            CurrentInstanciateObject.layer = 19; //Esto es para no tener que poner una referencia en esta clase, por favor no te enojes Theito-Kun U//n//U
+
+            Transform[] children = CurrentInstanciateObject.GetComponentsInChildren<Transform>();
+            foreach (var child in children)
+            {
+                child.gameObject.layer = 19;
+            }
+        }
+    }
+
+    public void InstanciatedObjectInHand(GameObject objectInstance, bool enableDestroyInstanciatedObject)
+    {
+
+        if (SpawnTransform == null)
+            return;
+
+        if (objectInstance == CurrentOriginObject && CurrentOriginObject != null && enableDestroyInstanciatedObject)
+        {
+            Debug.Log("PUTA");
             DestroyCurrentInstanciateObject();
         }
         else

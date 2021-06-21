@@ -52,13 +52,15 @@ public class J_Inventory : Updateable
         }
     }
 
-    public void AddItem(J_Item item)
+    public bool AddItem(J_Item item)
     {
         if (!GetInventoryFull())
         {
             inventory.Add(item);
             UpdateUI();
+            return true;
         }
+        return false;
     }
 
     public bool PlayerHasItem(string itemName)

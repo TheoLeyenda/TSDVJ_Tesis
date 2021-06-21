@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class J_PlayerInteraction : Updateable
 {
@@ -23,6 +24,14 @@ public class J_PlayerInteraction : Updateable
 
     public void UpdateInteraction()
     {
+        //Temporal, esto despues se mueve a otro script//
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            SceneManager.LoadScene("J_Menu");
+        }
+
         //Raycast
         RaycastHit hit;
         Ray ray = playerCamera.ScreenPointToRay(Input.mousePosition);

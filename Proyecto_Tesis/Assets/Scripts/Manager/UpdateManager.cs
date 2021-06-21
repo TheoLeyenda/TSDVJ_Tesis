@@ -44,7 +44,7 @@ public class UpdateManager : MonoBehaviour
         for (int i = 0; i < UpdatesInGame.Count; i++)
         {
             if (UpdatesInGame[i] != null)
-                UpdatesInGame[i].Invoke();
+                UpdatesInGame[i]?.Invoke();
             else
                 UpdatesInGame.Remove(UpdatesInGame[i]);
         }

@@ -14,10 +14,10 @@ public class AddItemsToInventory : MonoBehaviour
         {
             for (int i = 0; i < j_items.Count; i++)
             {
-                bool doneAddItem = inventory.AddItem(j_items[i]);
-
+                bool doneAddItem = !inventory.GetInventoryFull();
                 if (doneAddItem)
                 {
+                    inventory.AddItem(j_items[i]);
                     j_items.Remove(j_items[i]);
                     i--;
                 }

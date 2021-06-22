@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class J_MenuBehaviours : MonoBehaviour
 {
+
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
@@ -17,10 +18,10 @@ public class J_MenuBehaviours : MonoBehaviour
 
     public void ExitGame()
     {
-        #if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPlaying = false;
-        #else
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
             Application.Quit();
-        #endif
+#endif
     }
 }

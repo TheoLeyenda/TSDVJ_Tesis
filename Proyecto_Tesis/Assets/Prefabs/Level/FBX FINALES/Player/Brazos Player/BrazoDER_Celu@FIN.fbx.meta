@@ -1,0 +1,835 @@
+fileFormatVersion: 2
+guid: f2f0222e7b7d3b74ebbc502a911139a8
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      74: 1827226128182048838
+    second: FIN
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: FIN
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 60
+      lastFrame: 89
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: BrazosAMBOS(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Brazos_Low
+      parentName: BrazosAMBOS(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pecho
+      parentName: BrazosAMBOS(Clone)
+      position: {x: -0, y: 0.31342, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Clavicula_L
+      parentName: Pecho
+      position: {x: -0.017556768, y: -0.0012787998, z: -0.008205886}
+      rotation: {x: -0.008230282, y: -0.08731368, z: 0.09348349, w: 0.9917507}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hombro_L
+      parentName: Clavicula_L
+      position: {x: -0.03578931, y: 0, z: 7.771561e-18}
+      rotation: {x: 0.0022106466, y: 0.005315944, z: 0.5206026, w: 0.85377973}
+      scale: {x: 0.9999999, y: 1, z: 1}
+    - name: Codo_L
+      parentName: Hombro_L
+      position: {x: -0.12615, y: -3.5527136e-17, z: -1.110223e-18}
+      rotation: {x: 0.20841195, y: 0.10500606, z: 0.048059817, w: 0.9711996}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000001}
+    - name: Muneca_L
+      parentName: Codo_L
+      position: {x: -0.11065377, y: 0, z: 2.6645352e-17}
+      rotation: {x: 0.060903825, y: -0.035979334, z: -0.09837981, w: 0.9926317}
+      scale: {x: 1, y: 0.9999999, z: 0.9999999}
+    - name: GRP_Pulgar_1_L_offset
+      parentName: Muneca_L
+      position: {x: -0.0046586953, y: -0.005849134, z: 0.005992792}
+      rotation: {x: 0.6304652, y: 0.53393984, z: -0.15863247, w: 0.5406087}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Pulgar_1_L
+      parentName: GRP_Pulgar_1_L_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CTRL_Pulgar_1_L
+      parentName: GRP_Pulgar_1_L
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Pulgar_2_L_offset
+      parentName: CTRL_Pulgar_1_L
+      position: {x: -0.015780477, y: 1.4539137e-10, z: -0.000000002004367}
+      rotation: {x: -0.08393392, y: -0.087406404, z: 0.18010212, w: 0.976155}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Pulgar_2_L
+      parentName: GRP_Pulgar_2_L_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CTRL_Pulgar_2_L
+      parentName: GRP_Pulgar_2_L
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Pulgar_3_L_offset
+      parentName: CTRL_Pulgar_2_L
+      position: {x: -0.01929112, y: -2.4034452e-10, z: 0.000000005384624}
+      rotation: {x: 0.026482163, y: 0.012272556, z: 0.18804066, w: 0.9817275}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Pulgar_3_L
+      parentName: GRP_Pulgar_3_L_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CTRL_Pulgar_3_L
+      parentName: GRP_Pulgar_3_L
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Indice_1_L_offset
+      parentName: Muneca_L
+      position: {x: -0.043851998, y: -0.0020522703, z: 0.014059635}
+      rotation: {x: 0.6139911, y: 0.18656324, z: 0.07631143, w: 0.763142}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Indice_1_L
+      parentName: GRP_Indice_1_L_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CTRL_Indice_1_L
+      parentName: GRP_Indice_1_L
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Indice_2_L_offset
+      parentName: CTRL_Indice_1_L
+      position: {x: -0.018050436, y: 4.3290566e-11, z: -0.000000002496234}
+      rotation: {x: 0.07238058, y: 0.10671218, z: 0.0023123182, w: 0.99164927}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Indice_2_L
+      parentName: GRP_Indice_2_L_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CTRL_Indice_2_L
+      parentName: GRP_Indice_2_L
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Indice_3_L_offset
+      parentName: CTRL_Indice_2_L
+      position: {x: -0.014606455, y: 0.000000002894564, z: 0.000000012762819}
+      rotation: {x: -0.018279502, y: 0.12902015, z: -0.011316732, w: 0.99140894}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Indice_3_L
+      parentName: GRP_Indice_3_L_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CTRL_Indice_3_L
+      parentName: GRP_Indice_3_L
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Medio_1_L_offset
+      parentName: Muneca_L
+      position: {x: -0.045771472, y: -0.00446786, z: 0.0024262662}
+      rotation: {x: 0.6062748, y: 0.14805873, z: 0.08435508, w: 0.77678424}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Medio_1_L
+      parentName: GRP_Medio_1_L_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CTRL_Medio_1_L
+      parentName: GRP_Medio_1_L
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Medio_2_L_offset
+      parentName: CTRL_Medio_1_L
+      position: {x: -0.018720012, y: -5.5956625e-11, z: -0.0000000014627898}
+      rotation: {x: -0.030197103, y: 0.14851801, z: 0.004643699, w: 0.98843765}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Medio_2_L
+      parentName: GRP_Medio_2_L_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CTRL_Medio_2_L
+      parentName: GRP_Medio_2_L
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Medio_3_L_offset
+      parentName: CTRL_Medio_2_L
+      position: {x: -0.017886097, y: -1.9554029e-10, z: -0.000000006343907}
+      rotation: {x: -0.024375578, y: 0.14947721, z: -0.0076970104, w: 0.98843473}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Medio_3_L
+      parentName: GRP_Medio_3_L_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CTRL_Medio_3_L
+      parentName: GRP_Medio_3_L
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Anular_1_L_offset
+      parentName: Muneca_L
+      position: {x: -0.046091236, y: -0.0074990415, z: -0.008826266}
+      rotation: {x: 0.4829147, y: 0.13979363, z: 0.17434043, w: 0.84667385}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Anular_1_L
+      parentName: GRP_Anular_1_L_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CTRL_Anular_1_L
+      parentName: GRP_Anular_1_L
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Anular_2_L_offset
+      parentName: CTRL_Anular_1_L
+      position: {x: -0.017370956, y: 9.313931e-11, z: -1.8630704e-10}
+      rotation: {x: 0.016259657, y: 0.13506833, z: -0.008116522, w: 0.9906696}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Anular_2_L
+      parentName: GRP_Anular_2_L_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CTRL_Anular_2_L
+      parentName: GRP_Anular_2_L
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Anular_3_L_offset
+      parentName: CTRL_Anular_2_L
+      position: {x: -0.014968259, y: -0.0000000011324086, z: 0.0000000034795744}
+      rotation: {x: -0.018003974, y: 0.1165325, z: -0.023378078, w: 0.9927485}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Anular_3_L
+      parentName: GRP_Anular_3_L_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CTRL_Anular_3_L
+      parentName: GRP_Anular_3_L
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Menique_1_L_offset
+      parentName: Muneca_L
+      position: {x: -0.04307321, y: -0.013157931, z: -0.019142127}
+      rotation: {x: 0.38328463, y: 0.09703077, z: 0.18806392, w: 0.8990606}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Menique_1_L
+      parentName: GRP_Menique_1_L_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CTRL_Menique_1_L
+      parentName: GRP_Menique_1_L
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Menique_2_L_offset
+      parentName: CTRL_Menique_1_L
+      position: {x: -0.014359249, y: 8.0952345e-10, z: -0.000000005260501}
+      rotation: {x: 0.025313959, y: 0.13802543, z: 0.0056203743, w: 0.9900892}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Menique_2_L
+      parentName: GRP_Menique_2_L_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CTRL_Menique_2_L
+      parentName: GRP_Menique_2_L
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Menique_3_L_offset
+      parentName: CTRL_Menique_2_L
+      position: {x: -0.012361777, y: -0.0000000035581504, z: 0.000000010618985}
+      rotation: {x: -0.038830485, y: 0.10986249, z: -0.016597323, w: 0.9930493}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Menique_3_L
+      parentName: GRP_Menique_3_L_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CTRL_Menique_3_L
+      parentName: GRP_Menique_3_L
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pulgar_1_L
+      parentName: Muneca_L
+      position: {x: -0.0046586953, y: -0.005849134, z: 0.005992792}
+      rotation: {x: 0.6304651, y: 0.53393984, z: -0.15863243, w: 0.5406087}
+      scale: {x: 1.000001, y: 1.0000002, z: 1.000001}
+    - name: Pulgar_2_L
+      parentName: Pulgar_1_L
+      position: {x: -0.015780479, y: 2.5535128e-17, z: 2.3314683e-17}
+      rotation: {x: -0.08393384, y: -0.087406315, z: 0.1801021, w: 0.9761549}
+      scale: {x: 1, y: 1.0000002, z: 1.0000002}
+    - name: Pulgar_3_L
+      parentName: Pulgar_2_L
+      position: {x: -0.019291116, y: 1.8873792e-17, z: -7.771561e-18}
+      rotation: {x: 0.02648196, y: 0.01227246, z: 0.1880407, w: 0.9817274}
+      scale: {x: 1.0000005, y: 1.0000001, z: 1.0000005}
+    - name: Pulgar_punta_L
+      parentName: Pulgar_3_L
+      position: {x: -0.017588666, y: -1.6375789e-17, z: -3.1086245e-17}
+      rotation: {x: 0.52842295, y: 0.676608, z: 0.31564075, w: -0.40415552}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Indice_1_L
+      parentName: Muneca_L
+      position: {x: -0.043851998, y: -0.0020522757, z: 0.014059638}
+      rotation: {x: 0.6139911, y: 0.1865633, z: 0.07631146, w: 0.763142}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000001}
+    - name: Indice_2_L
+      parentName: Indice_1_L
+      position: {x: -0.018050436, y: -5.551115e-19, z: 2.189221e-17}
+      rotation: {x: 0.07238053, y: 0.106712185, z: 0.0023123766, w: 0.9916492}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000001}
+    - name: Indice_3_L
+      parentName: Indice_2_L
+      position: {x: -0.014606452, y: -1.9428903e-18, z: 4.440892e-18}
+      rotation: {x: -0.018279504, y: 0.12901999, z: -0.0113166105, w: 0.99140894}
+      scale: {x: 1.0000006, y: 1.0000002, z: 1.0000006}
+    - name: Indice_punta_L
+      parentName: Indice_3_L
+      position: {x: -0.0144665325, y: 2.220446e-18, z: 1.3877787e-18}
+      rotation: {x: 0.5069796, y: 0.8568717, z: 0.047612067, w: -0.08047155}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Medio_1_L
+      parentName: Muneca_L
+      position: {x: -0.045771472, y: -0.0044678543, z: 0.0024262646}
+      rotation: {x: 0.6062748, y: 0.14805874, z: 0.084355116, w: 0.77678424}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000001}
+    - name: Medio_2_L
+      parentName: Medio_1_L
+      position: {x: -0.018720012, y: 4.214415e-18, z: -3.5334e-17}
+      rotation: {x: -0.030197103, y: 0.14851806, z: 0.0046437066, w: 0.9884376}
+      scale: {x: 1.0000005, y: 1.0000001, z: 1.0000001}
+    - name: Medio_3_L
+      parentName: Medio_2_L
+      position: {x: -0.017886098, y: 1.2212453e-17, z: 2.7755574e-18}
+      rotation: {x: -0.024375636, y: 0.14947718, z: -0.0076969936, w: 0.9884347}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1.0000001}
+    - name: Medio_punta_L
+      parentName: Medio_3_L
+      position: {x: -0.0167199, y: 2.4424906e-17, z: -3.025358e-17}
+      rotation: {x: 0.48894492, y: 0.863499, z: 0.060952015, w: -0.10764404}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Anular_1_L
+      parentName: Muneca_L
+      position: {x: -0.046091236, y: -0.007499039, z: -0.008826268}
+      rotation: {x: 0.4829147, y: 0.13979366, z: 0.17434053, w: 0.84667385}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1.0000002}
+    - name: Anular_2_L
+      parentName: Anular_1_L
+      position: {x: -0.017370954, y: 1.5959456e-17, z: 5.9674484e-18}
+      rotation: {x: 0.016259726, y: 0.13506837, z: -0.008116586, w: 0.9906696}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1}
+    - name: Anular_3_L
+      parentName: Anular_2_L
+      position: {x: -0.014968259, y: 1.2767564e-17, z: -1.30451205e-17}
+      rotation: {x: -0.018004086, y: 0.116532475, z: -0.023378046, w: 0.9927485}
+      scale: {x: 1, y: 0.99999994, z: 1.0000001}
+    - name: Anular_punta_L
+      parentName: Anular_3_L
+      position: {x: -0.015290201, y: -1.9984014e-17, z: -1.4432899e-17}
+      rotation: {x: 0.45770827, y: 0.8619549, z: 0.102253914, w: -0.19256428}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Menique_1_L
+      parentName: Muneca_L
+      position: {x: -0.043073203, y: -0.013157935, z: -0.019142127}
+      rotation: {x: 0.38328454, y: 0.09703075, z: 0.18806402, w: 0.8990606}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1.0000002}
+    - name: Menique_2_L
+      parentName: Menique_1_L
+      position: {x: -0.014359249, y: 1.26287864e-17, z: 7.736867e-18}
+      rotation: {x: 0.025314057, y: 0.13802546, z: 0.0056203813, w: 0.99008924}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Menique_3_L
+      parentName: Menique_2_L
+      position: {x: -0.012361774, y: 1.2767564e-17, z: 1.8318679e-17}
+      rotation: {x: -0.03883036, y: 0.109862566, z: -0.016597379, w: 0.9930494}
+      scale: {x: 1.0000001, y: 1, z: 0.99999994}
+    - name: Menique_punta_L
+      parentName: Menique_3_L
+      position: {x: -0.013411025, y: 1.4432899e-17, z: -5.551115e-19}
+      rotation: {x: 0.4653375, y: 0.8564662, z: 0.106673375, w: -0.1963352}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Clavicula_R
+      parentName: Pecho
+      position: {x: 0.017556768, y: -0.0012787998, z: -0.008205886}
+      rotation: {x: 0.09348349, y: 0.9917507, z: -0.008230281, w: -0.087313674}
+      scale: {x: 1.0000002, y: 1, z: 1.0000004}
+    - name: Hombro_R
+      parentName: Clavicula_R
+      position: {x: -0.03578931, y: 3.5527136e-17, z: -1.2212453e-17}
+      rotation: {x: -0.0022106415, y: -0.0053159217, z: 0.52060264, w: 0.85377973}
+      scale: {x: 1.0000001, y: 1, z: 1.0000002}
+    - name: Codo_R
+      parentName: Hombro_R
+      position: {x: -0.12615, y: -3.5527136e-17, z: -1.7763568e-17}
+      rotation: {x: -0.20841196, y: -0.10500607, z: 0.048059903, w: 0.9711995}
+      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000004}
+    - name: Muneca_R
+      parentName: Codo_R
+      position: {x: -0.11065377, y: -1.0658141e-16, z: -2.6645352e-17}
+      rotation: {x: -0.06663481, y: 0.03408881, z: -0.09802955, w: 0.9923649}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000005}
+    - name: GRP_Pulgar_1_R_offset
+      parentName: Muneca_R
+      position: {x: -0.0046586953, y: -0.005849134, z: -0.005992792}
+      rotation: {x: -0.6304652, y: -0.53393984, z: -0.15863247, w: 0.5406087}
+      scale: {x: 1, y: 1, z: -1}
+    - name: GRP_Pulgar_1_R
+      parentName: GRP_Pulgar_1_R_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CTRR_Pulgar_1_L
+      parentName: GRP_Pulgar_1_R
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.026251266, y: -0.148116, z: -0.17590219, w: 0.9728468}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Pulgar_2_R_offset
+      parentName: CTRR_Pulgar_1_L
+      position: {x: -0.015780477, y: 1.4539137e-10, z: -0.000000002004367}
+      rotation: {x: -0.08393392, y: -0.087406404, z: 0.18010212, w: 0.976155}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Pulgar_2_R
+      parentName: GRP_Pulgar_2_R_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CTRR_Pulgar_2_L
+      parentName: GRP_Pulgar_2_R
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.037611328, y: -0.027550403, z: -0.20917453, w: 0.97676635}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Pulgar_3_R_offset
+      parentName: CTRR_Pulgar_2_L
+      position: {x: -0.01929112, y: -2.4034452e-10, z: 0.000000005384624}
+      rotation: {x: 0.026482163, y: 0.012272556, z: 0.18804066, w: 0.9817275}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Pulgar_3_R
+      parentName: GRP_Pulgar_3_R_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CTRR_Pulgar_3_L
+      parentName: GRP_Pulgar_3_R
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0.024634458, w: 0.99969655}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Indice_1_R_offset
+      parentName: Muneca_R
+      position: {x: -0.043851998, y: -0.0020522703, z: -0.014059635}
+      rotation: {x: -0.6139911, y: -0.18656324, z: 0.07631143, w: 0.763142}
+      scale: {x: 1, y: 1, z: -1}
+    - name: GRP_Indice_1_R
+      parentName: GRP_Indice_1_R_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CTRR_Indice_1_L
+      parentName: GRP_Indice_1_R
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.09615112, y: 0.054837435, z: -0.20712855, w: 0.97203165}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Indice_2_R_offset
+      parentName: CTRR_Indice_1_L
+      position: {x: -0.018050436, y: 4.3290566e-11, z: -0.000000002496234}
+      rotation: {x: 0.07238058, y: 0.10671218, z: 0.0023123182, w: 0.99164927}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Indice_2_R
+      parentName: GRP_Indice_2_R_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CTRR_Indice_2_L
+      parentName: GRP_Indice_2_R
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: 0.12786636, z: -0, w: 0.9917914}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Indice_3_R_offset
+      parentName: CTRR_Indice_2_L
+      position: {x: -0.014606455, y: 0.000000002894564, z: 0.000000012762819}
+      rotation: {x: -0.018279502, y: 0.12902015, z: -0.011316732, w: 0.99140894}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Indice_3_R
+      parentName: GRP_Indice_3_R_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CTRR_Indice_3_L
+      parentName: GRP_Indice_3_R
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: 0.24126354, z: -0, w: 0.97045964}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Medio_1_R_offset
+      parentName: Muneca_R
+      position: {x: -0.045771472, y: -0.00446786, z: -0.0024262662}
+      rotation: {x: -0.6062748, y: -0.14805873, z: 0.08435508, w: 0.77678424}
+      scale: {x: 1, y: 1, z: -1}
+    - name: GRP_Medio_1_R
+      parentName: GRP_Medio_1_R_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CTRR_Medio_1_L
+      parentName: GRP_Medio_1_R
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.0049578063, y: 0.08657442, z: -0.12894846, w: 0.9878525}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Medio_2_R_offset
+      parentName: CTRR_Medio_1_L
+      position: {x: -0.018720012, y: -5.5956625e-11, z: -0.0000000014627898}
+      rotation: {x: -0.030197103, y: 0.14851801, z: 0.004643699, w: 0.98843765}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Medio_2_R
+      parentName: GRP_Medio_2_R_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CTRR_Medio_2_L
+      parentName: GRP_Medio_2_R
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: 0.31257313, z: -0, w: 0.9498937}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Medio_3_R_offset
+      parentName: CTRR_Medio_2_L
+      position: {x: -0.017886097, y: -1.9554029e-10, z: -0.000000006343907}
+      rotation: {x: -0.024375578, y: 0.14947721, z: -0.0076970104, w: 0.98843473}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Medio_3_R
+      parentName: GRP_Medio_3_R_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CTRR_Medio_3_L
+      parentName: GRP_Medio_3_R
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0.012971995, z: -0, w: 0.9999159}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Anular_1_R_offset
+      parentName: Muneca_R
+      position: {x: -0.046091236, y: -0.0074990415, z: 0.008826266}
+      rotation: {x: -0.4829147, y: -0.13979363, z: 0.17434043, w: 0.84667385}
+      scale: {x: 1, y: 1, z: -1}
+    - name: GRP_Anular_1_R
+      parentName: GRP_Anular_1_R_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CTRR_Anular_1_L
+      parentName: GRP_Anular_1_R
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.09319519, y: 0.05185061, z: -0.042704493, w: 0.99337935}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Anular_2_R_offset
+      parentName: CTRR_Anular_1_L
+      position: {x: -0.017370956, y: 9.313931e-11, z: -1.8630704e-10}
+      rotation: {x: 0.016259657, y: 0.13506833, z: -0.008116522, w: 0.9906696}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Anular_2_R
+      parentName: GRP_Anular_2_R_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CTRR_Anular_2_L
+      parentName: GRP_Anular_2_R
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: 0.47121847, z: -0, w: 0.88201654}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Anular_3_R_offset
+      parentName: CTRR_Anular_2_L
+      position: {x: -0.014968259, y: -0.0000000011324086, z: 0.0000000034795744}
+      rotation: {x: -0.018003974, y: 0.1165325, z: -0.023378078, w: 0.9927485}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Anular_3_R
+      parentName: GRP_Anular_3_R_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CTRR_Anular_3_L
+      parentName: GRP_Anular_3_R
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: 0.53176636, z: -0, w: 0.84689116}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Menique_1_R_offset
+      parentName: Muneca_R
+      position: {x: -0.04307321, y: -0.013157931, z: 0.019142127}
+      rotation: {x: -0.38328463, y: -0.09703077, z: 0.18806392, w: 0.8990606}
+      scale: {x: 1, y: 1, z: -1}
+    - name: GRP_Menique_1_R
+      parentName: GRP_Menique_1_R_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CTRR_Menique_1_L
+      parentName: GRP_Menique_1_R
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.06859305, y: 0.28961316, z: 0.16130263, w: 0.94095737}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Menique_2_R_offset
+      parentName: CTRR_Menique_1_L
+      position: {x: -0.014359249, y: 8.0952345e-10, z: -0.000000005260501}
+      rotation: {x: 0.025313959, y: 0.13802543, z: 0.0056203743, w: 0.9900892}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Menique_2_R
+      parentName: GRP_Menique_2_R_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CTRR_Menique_2_L
+      parentName: GRP_Menique_2_R
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: 0.21561852, z: -0, w: 0.9764777}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Menique_3_R_offset
+      parentName: CTRR_Menique_2_L
+      position: {x: -0.012361777, y: -0.0000000035581504, z: 0.000000010618985}
+      rotation: {x: -0.038830485, y: 0.10986249, z: -0.016597323, w: 0.9930493}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GRP_Menique_3_R
+      parentName: GRP_Menique_3_R_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CTRR_Menique_3_L
+      parentName: GRP_Menique_3_R
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pulgar_1_R
+      parentName: Muneca_R
+      position: {x: -0.0046586953, y: -0.005849134, z: -0.005992792}
+      rotation: {x: -0.6304651, y: -0.5339399, z: -0.15863244, w: 0.54060864}
+      scale: {x: 1.0000006, y: 1, z: 1}
+    - name: Pulgar_2_R
+      parentName: Pulgar_1_R
+      position: {x: -0.015780479, y: -1.6098233e-17, z: -1.110223e-18}
+      rotation: {x: 0.08393388, y: 0.08740651, z: 0.18010226, w: 0.9761549}
+      scale: {x: 1.0000002, y: 0.9999998, z: 1.0000004}
+    - name: Pulgar_3_R
+      parentName: Pulgar_2_R
+      position: {x: -0.019291116, y: 1.4432899e-17, z: 1.8318679e-17}
+      rotation: {x: -0.026482163, y: -0.012272616, z: 0.18804066, w: 0.9817274}
+      scale: {x: 1.0000007, y: 0.9999997, z: 1.0000004}
+    - name: Pulgar_punta_R
+      parentName: Pulgar_3_R
+      position: {x: -0.017588666, y: -1.0824674e-17, z: 1.8318679e-17}
+      rotation: {x: -0.31564075, y: -0.40415552, z: -0.52842295, w: 0.676608}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Indice_1_R
+      parentName: Muneca_R
+      position: {x: -0.043851998, y: -0.0020522757, z: -0.014059638}
+      rotation: {x: -0.6306071, y: -0.18153879, z: 0.05556057, w: 0.7525233}
+      scale: {x: 1.0000005, y: 1, z: 1.0000004}
+    - name: Indice_2_R
+      parentName: Indice_1_R
+      position: {x: -0.018050436, y: 5.551115e-19, z: -2.925611e-17}
+      rotation: {x: 0.0037728841, y: -0.14767878, z: 0.023766812, w: 0.9887426}
+      scale: {x: 1.0000002, y: 0.9999997, z: 1}
+    - name: Indice_3_R
+      parentName: Indice_2_R
+      position: {x: -0.014606452, y: -3.0531134e-17, z: 1.9428903e-17}
+      rotation: {x: -0.03713666, y: -0.09959258, z: -0.019498948, w: 0.9941439}
+      scale: {x: 1.0000001, y: 1.0000004, z: 0.9999998}
+    - name: Indice_punta_R
+      parentName: Indice_3_R
+      position: {x: -0.0144665325, y: 2.220446e-18, z: 1.6653345e-18}
+      rotation: {x: -0.047612067, y: -0.08047155, z: -0.5069796, w: 0.8568717}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Medio_1_R
+      parentName: Muneca_R
+      position: {x: -0.045771472, y: -0.0044678543, z: -0.0024262646}
+      rotation: {x: -0.5765891, y: -0.1402876, z: 0.09612878, w: 0.7991393}
+      scale: {x: 1.0000005, y: 1.0000002, z: 1.0000002}
+    - name: Medio_2_R
+      parentName: Medio_1_R
+      position: {x: -0.018720012, y: -6.661338e-18, z: -1.5543122e-17}
+      rotation: {x: 0.0081964135, y: -0.16358542, z: -0.011074811, w: 0.986433}
+      scale: {x: 1, y: 1.0000002, z: 1.0000001}
+    - name: Medio_3_R
+      parentName: Medio_2_R
+      position: {x: -0.017886098, y: -3.1086245e-17, z: -3.330669e-18}
+      rotation: {x: -0.045012597, y: -0.12185188, z: 0.006632228, w: 0.9915049}
+      scale: {x: 1.0000004, y: 0.9999998, z: 1.0000001}
+    - name: Medio_punta_R
+      parentName: Medio_3_R
+      position: {x: -0.0167199, y: -2.6645352e-17, z: -1.9706458e-17}
+      rotation: {x: -0.060952015, y: -0.10764404, z: -0.48894492, w: 0.863499}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Anular_1_R
+      parentName: Muneca_R
+      position: {x: -0.046091236, y: -0.007499039, z: 0.008826268}
+      rotation: {x: -0.464815, y: -0.13417414, z: 0.170349, w: 0.8584437}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000002}
+    - name: Anular_2_R
+      parentName: Anular_1_R
+      position: {x: -0.017370954, y: 1.6792122e-17, z: -1.4571677e-17}
+      rotation: {x: -0.012222467, y: -0.13588826, z: 0.0051442827, w: 0.99063545}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000001}
+    - name: Anular_3_R
+      parentName: Anular_2_R
+      position: {x: -0.014968259, y: -1.9428903e-17, z: -2.2482016e-17}
+      rotation: {x: -0.00412565, y: -0.12441526, z: -0.017478652, w: 0.99206775}
+      scale: {x: 1.0000002, y: 0.9999998, z: 0.9999998}
+    - name: Anular_punta_R
+      parentName: Anular_3_R
+      position: {x: -0.015290201, y: 1.5543122e-17, z: 1.4432899e-17}
+      rotation: {x: -0.102253914, y: -0.19256428, z: -0.45770827, w: 0.8619549}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Menique_1_R
+      parentName: Muneca_R
+      position: {x: -0.043073203, y: -0.013157935, z: 0.019142127}
+      rotation: {x: -0.41314587, y: -0.1063893, z: 0.18993425, w: 0.88426065}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: Menique_2_R
+      parentName: Menique_1_R
+      position: {x: -0.014359249, y: 2.7269852e-17, z: -7.806256e-18}
+      rotation: {x: 0.02712434, y: -0.11190482, z: 0.00019124146, w: 0.99334866}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000004}
+    - name: Menique_3_R
+      parentName: Menique_2_R
+      position: {x: -0.012361774, y: 4.9960034e-18, z: 8.049117e-18}
+      rotation: {x: -0.08079653, y: -0.13625197, z: -0.00814534, w: 0.98734033}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: Menique_punta_R
+      parentName: Menique_3_R
+      position: {x: -0.013411025, y: 1.498801e-17, z: -4.9960034e-18}
+      rotation: {x: -0.106673375, y: -0.1963352, z: -0.4653375, w: 0.8564662}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 5b4b91c94ab384047b0c3e2b997d6d44,
+    type: 3}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

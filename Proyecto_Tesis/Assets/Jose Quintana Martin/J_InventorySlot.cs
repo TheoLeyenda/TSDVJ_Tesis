@@ -71,7 +71,7 @@ public class J_InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExit
     }
     public void DestroyUI()
     {
-        Sprite s = null;
+        Sprite s = display.defaultSprite;
         display.UpdateDescription(null);
         display.UpdateName(null);
         display.UpdateImage(s);

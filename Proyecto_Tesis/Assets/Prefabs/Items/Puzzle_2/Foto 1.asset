@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Foto 1
   m_EditorClassIdentifier: 
   itemName: Foto 1
-  description: Foto del director a sus
-  icon: {fileID: 21300000, guid: 1ae25ce4904cb9549b1aa02adc9c95d5, type: 3}
+  description: "Foto del director a sus 35 a\xF1os."
+  icon: {fileID: 21300000, guid: d71d45fc50a70ef4290df7d514459f7b, type: 3}
   useIconCompound: 0
   iconsCompound: []

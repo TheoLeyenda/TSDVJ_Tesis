@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Lentes de colores.
   description: "Lentes dise\xF1ados para pigmentar la luz que los ilumina."
-  icon: {fileID: 21300000, guid: 6dc126a168760d2418508d1b4d34fe1f, type: 3}
+  icon: {fileID: 21300000, guid: 21ac44e1175a66e469b2c75a89b1c552, type: 3}
   useIconCompound: 0
   iconsCompound: []

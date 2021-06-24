@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Libro.
   description: Libro de la biblioteca con una N grabada en su dorso.
-  icon: {fileID: 21300000, guid: 1601b52b62260ab438805efc2af2ad4a, type: 3}
+  icon: {fileID: 21300000, guid: 92dedba2be18311468041ea090fc1621, type: 3}
   useIconCompound: 0
   iconsCompound: []

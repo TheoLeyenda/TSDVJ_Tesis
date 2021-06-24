@@ -9,6 +9,7 @@ public class J_ItemDisplay : MonoBehaviour
     public TextMeshProUGUI itemName;
     public TextMeshProUGUI itemDescription;
     public Image itemImage;
+    public Sprite defaultSprite;
 
     [Header("----------------------")]
     public GameObject parent;
@@ -61,7 +62,7 @@ public class J_ItemDisplay : MonoBehaviour
         }
         for (int i = images.Count - 1; i >= 0; i--)
         {
-            images[i].sprite = null;
+            images[i].sprite = defaultSprite;
             images[i].color = Color.white;
             Destroy(images[i]);
 

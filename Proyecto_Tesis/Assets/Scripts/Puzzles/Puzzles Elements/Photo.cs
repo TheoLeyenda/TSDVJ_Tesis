@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class Photo : MonoBehaviour
 {
-    private Sprite NewIcon;
+    [SerializeField] private Sprite NewIcon;
     [SerializeField] private string NewDescriptionPhoto;
     [SerializeField] private int numberPhoto;
     public J_Item ItemPhoto;

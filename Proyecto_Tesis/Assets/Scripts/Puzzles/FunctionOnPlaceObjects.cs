@@ -126,8 +126,8 @@ public class FunctionOnPlaceObjects : MonoBehaviour
 
             if (indexObjectSpawn == -1)
             {
-                transparentObject.SetActive(true);
-                PlacesForObjects[indexPlaceObject].placeObject = false;
+                //transparentObject.SetActive(true);
+                //PlacesForObjects[indexPlaceObject].placeObject = false;
                 return;
             }
 

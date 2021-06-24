@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Jose Quintana Martin/J_Menu.unity
     guid: f0592c210c1e9e84c8af5d891dea2611
   - enabled: 1

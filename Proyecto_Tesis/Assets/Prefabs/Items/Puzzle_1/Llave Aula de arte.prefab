@@ -73,6 +73,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  interactionEvent: 
+  paramRef: 
 --- !u!114 &3003062101440720557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,8 +89,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInventory: {fileID: 0}
   item: {fileID: 11400000, guid: 7fa074b386a66ef4c8ce920581fcbc28, type: 2}
-  pickUpEvent: 
-  paramRef: 
+  pickUpEvent: event:/Fxs/Objects/llave
+  paramRef: Llaves
 --- !u!1001 &8073017196370496473
 PrefabInstance:
   m_ObjectHideFlags: 0

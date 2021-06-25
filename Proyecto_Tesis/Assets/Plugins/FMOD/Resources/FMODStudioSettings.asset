@@ -15,8 +15,8 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: ../SN_Audio/School Nightmares.fspro
-  sourceBankPath: ..\SN_Audio\Build
+  sourceProjectPath: ../SA_Audio/School Nightmares.fspro
+  sourceBankPath: ..\SA_Audio\Build
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
   BankLoadType: 0

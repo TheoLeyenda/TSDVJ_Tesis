@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class J_Inventory : Updateable
+public class J_Inventory : MonoBehaviour
 {
+    [SerializeField] private InputManager inputManager;
+    [SerializeField] private string nameInputOpenAndCloseInventory;
+
     public GameObject slotParent;
     public GameObject inventoryUI;
     public int inventorySize = 16;
@@ -16,29 +19,23 @@ public class J_Inventory : Updateable
     [SerializeField] private UnityEvent EventInventoryOn;
     [SerializeField] private UnityEvent EventInventoryOff;
 
-    protected override void Start()
+    protected void Start()
     {
         gameManagerRef = FindObjectOfType<GameManager>();
 
-        base.Start();
-        MyUpdate.AddListener(UpdateInventoryKey);
-        UM.UpdatesInGame.Add(MyUpdate);
+        inputManager.GetInputFunction(nameInputOpenAndCloseInventory).myFunction = OpenAndCloseInventory;
 
         inventory = new List<J_Item>();
         slots = slotParent.GetComponentsInChildren<J_InventorySlot>();
     }
 
-    private void UpdateInventoryKey()
+    public void OpenAndCloseInventory()
     {
-        if (Input.GetButtonDown("OpenInventory"))
-        {
-            inventoryUI.gameObject.SetActive(!inventoryUI.activeSelf);
-            if (inventoryUI.activeSelf)
-                EventInventoryOn?.Invoke();
-            else
-                EventInventoryOff?.Invoke();
-
-        }
+        inventoryUI.gameObject.SetActive(!inventoryUI.activeSelf);
+        if (inventoryUI.activeSelf)
+            EventInventoryOn?.Invoke();
+        else
+            EventInventoryOff?.Invoke();
     }
 
     public void UpdateUI()

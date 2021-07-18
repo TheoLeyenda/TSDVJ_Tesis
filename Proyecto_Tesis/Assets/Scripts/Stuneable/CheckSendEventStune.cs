@@ -7,15 +7,8 @@ public class CheckSendEventStune : Updateable
 {
     // Start is called before the first frame update
 
-    public enum TypeCheckUse
-    {
-        Button,
-        KeyCode,
-    }
-
-    [SerializeField] private TypeCheckUse typeCheckUse;
-    [SerializeField] private string nameButtonCheck;
-    [SerializeField] private KeyCode keyCodeCheck;
+    [SerializeField] private InputManager inputManager;
+    [SerializeField] private string nameInputSendEventStune;
     [SerializeField] private Transform myUserTransform;
     [SerializeField] private float delayUseStuneEnable;
     private float auxDelayUseStuneEnable;
@@ -28,35 +21,14 @@ public class CheckSendEventStune : Updateable
         MyUpdate.AddListener(UpdateCheckEventStune);
         UM.UpdatesInGame.Add(MyUpdate);
         enableUse = true;
+
+        inputManager.GetInputFunction(nameInputSendEventStune).myFunction = SendStune;
     }
 
     // Update is called once per frame
     public void UpdateCheckEventStune()
     {
-        if (enableUse)
-        {
-            switch (typeCheckUse)
-            {
-                case TypeCheckUse.Button:
-                    if (Input.GetButtonDown(nameButtonCheck))
-                    {
-                        if (OnSendEventStune != null)
-                            OnSendEventStune(this);
-
-                    }
-                    break;
-                case TypeCheckUse.KeyCode:
-                    if (Input.GetKeyDown(keyCodeCheck))
-                    {
-                        //Debug.Log("Mande el stune");
-                        if (OnSendEventStune != null)
-                            OnSendEventStune(this);
-
-                    }
-                    break;
-            }
-        }
-        else
+        if(!enableUse)
         {
             if (delayUseStuneEnable > 0)
             {
@@ -67,6 +39,15 @@ public class CheckSendEventStune : Updateable
                 enableUse = true;
                 delayUseStuneEnable = auxDelayUseStuneEnable;
             }
+        }
+    }
+
+    public void SendStune()
+    {
+        if (enableUse)
+        {
+            if (OnSendEventStune != null)
+                OnSendEventStune(this);
         }
     }
 

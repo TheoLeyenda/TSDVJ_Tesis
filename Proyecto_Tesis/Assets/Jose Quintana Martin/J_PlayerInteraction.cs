@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class J_PlayerInteraction : Updateable
 {
+    [SerializeField] private InputManager inputManager;
+    [SerializeField] private string nameInputInteraction;
+
     public Camera playerCamera;
     public float interactionDistance = 1f;
     public J_ToggleableImage interactImage;
@@ -20,6 +23,8 @@ public class J_PlayerInteraction : Updateable
         base.Start();
         MyUpdate.AddListener(UpdateInteraction);
         UM.UpdatesInGame.Add(MyUpdate);
+
+        inputManager.GetInputFunction(nameInputInteraction).myFunction = Interact;
     }
 
     public void UpdateInteraction()
@@ -63,10 +68,10 @@ public class J_PlayerInteraction : Updateable
         }
 
         //Input
-        if (Input.GetButtonDown("InteractTest"))
-        {
-            Interact();
-        }
+        //if (Input.GetButtonDown("InteractTest"))
+        //{
+        //    Interact();
+        //}
     }
 
     public void Interact()

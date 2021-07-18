@@ -2,20 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class J_MapInteraction : Updateable
+public class J_MapInteraction : MonoBehaviour
 {
+    [SerializeField] private InputManager inputManager;
+    [SerializeField] private string nameInputOpenAndCloseMapUI;
+
     public GameObject mapUI;
 
-    protected override void Start()
+    protected void Start()
     {
-        base.Start();
-        MyUpdate.AddListener(UpdateMapButton);
-        UM.UpdatesInGame.Add(MyUpdate);
+        inputManager.GetInputFunction(nameInputOpenAndCloseMapUI).myFunction = InputMapButton;
     }
 
-    private void UpdateMapButton()
+    private void InputMapButton()
     {
-        if (Input.GetButtonDown("OpenMap"))
-            mapUI.SetActive(!mapUI.activeSelf);
+        mapUI.SetActive(!mapUI.activeSelf);
     }
 }

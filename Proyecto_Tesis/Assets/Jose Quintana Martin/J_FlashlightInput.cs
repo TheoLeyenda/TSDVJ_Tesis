@@ -2,34 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class J_FlashlightInput : Updateable
+public class J_FlashlightInput : MonoBehaviour
 {
+    [SerializeField] private InputManager inputManager;
+    [SerializeField] private string nameInputOnAndOffFlashlight = "On And Off Flashlight";
+
     public Flashlight flashlight;
 
     private bool enableUseFlashlight = true;
 
     private bool isFlashligthOn = false;
 
-    protected override void Start()
+    protected void Start()
     {
-        base.Start();
-        MyUpdate.AddListener(UpdateFlashlightInput);
-        UM.UpdatesInGame.Add(MyUpdate);
+        inputManager.GetInputFunction(nameInputOnAndOffFlashlight).myFunction = InputOnAndOffFlashlight;
     }
 
-    public void UpdateFlashlightInput()
+    public void InputOnAndOffFlashlight()
     {
         if (enableUseFlashlight)
         {
-            if (Input.GetButtonDown("Fire1"))
-            {
-                if (!isFlashligthOn)
-                    flashlight.OnLight();
-                else
-                    flashlight.OffLight();
+            if (!isFlashligthOn)
+                flashlight.OnLight();
+            else
+                flashlight.OffLight();
 
-                isFlashligthOn = !isFlashligthOn;
-            }
+            isFlashligthOn = !isFlashligthOn;
         }
     }
 

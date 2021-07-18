@@ -6,6 +6,14 @@ using UnityEngine.Events;
 public class Flashlight : Updateable
 {
     // Start is called before the first frame update
+
+    [SerializeField] private InputManager inputManager;
+    [SerializeField] private string nameInputOnAndOffFlashlight = "On And Off Flashlight";
+
+    private bool enableUseFlashlight = true;
+
+    private bool isFlashligthOn = false;
+
     public enum LightState
     {
         On,
@@ -30,6 +38,8 @@ public class Flashlight : Updateable
             MyFixedUpdate.AddListener(FixedUpdateFlashlight);
             UM.FixedUpdatesInGame.Add(MyFixedUpdate);
         }
+
+        inputManager.GetInputFunction(nameInputOnAndOffFlashlight).myFunction = InputOnAndOffFlashlight;
 
     }
 
@@ -74,4 +84,21 @@ public class Flashlight : Updateable
     {
         lightState = LightState.Off;
     }
+
+    public void InputOnAndOffFlashlight()
+    {
+        if (enableUseFlashlight)
+        {
+            if (!isFlashligthOn)
+                OnLight();
+            else
+                OffLight();
+
+            isFlashligthOn = !isFlashligthOn;
+        }
+    }
+
+    public void SetEnableUseFlashlight(bool value) => enableUseFlashlight = value;
+
+    public bool GetEnableUseFlashlight() { return enableUseFlashlight; }
 }

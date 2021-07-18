@@ -1043,7 +1043,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 4113103770830251886}
+      - m_Target: {fileID: 4113103769854458808}
         m_MethodName: SetEnableUseFlashlight
         m_Mode: 6
         m_Arguments:
@@ -1123,7 +1123,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 4113103770830251886}
+      - m_Target: {fileID: 4113103769854458808}
         m_MethodName: SetEnableUseFlashlight
         m_Mode: 6
         m_Arguments:
@@ -1200,6 +1200,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47ff849d16876fb4ab8be41b66a737c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputManager: {fileID: 0}
+  nameInputOnAndOffFlashlight: On And Off Flashlight
   useFixedUpdateFlashlight: 1
   lightObject: {fileID: 4113103770895109659}
   lightState: 1
@@ -1297,7 +1299,6 @@ GameObject:
   - component: {fileID: 4113103770830251884}
   - component: {fileID: 4113103770830251889}
   - component: {fileID: 4113103770830251885}
-  - component: {fileID: 4113103770830251886}
   - component: {fileID: 4113103770830251880}
   - component: {fileID: 4113103770830251887}
   - component: {fileID: 4081588244704988901}
@@ -1414,21 +1415,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   centerBoxOverlapCaster: {fileID: 4113103770830251895}
   heightEmmitingSound: 2
---- !u!114 &4113103770830251886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4113103770830251894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b7b1ddbd56d4754eba9a8c392936d8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inputManager: {fileID: 0}
-  nameInputOnAndOffFlashlight: On And Off Flashlight
-  flashlight: {fileID: 4113103769854458808}
 --- !u!114 &4113103770830251880
 MonoBehaviour:
   m_ObjectHideFlags: 0

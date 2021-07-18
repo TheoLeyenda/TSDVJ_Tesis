@@ -7661,6 +7661,11 @@ PrefabInstance:
       propertyPath: inputManager
       value: 
       objectReference: {fileID: 1838935753}
+    - target: {fileID: 4113103769854458808, guid: ba24c508ac89d2f4f93f2a46472498fe,
+        type: 3}
+      propertyPath: inputManager
+      value: 
+      objectReference: {fileID: 1838935753}
     - target: {fileID: 4113103770830251884, guid: ba24c508ac89d2f4f93f2a46472498fe,
         type: 3}
       propertyPath: playerCamera

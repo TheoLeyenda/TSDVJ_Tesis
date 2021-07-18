@@ -28,17 +28,20 @@ public class InputManager : Updateable
     [SerializeField] private List<InputFunction> Inputs;
     private Dictionary<string, InputFunction> dictionaryInputFunctions;
 
-    protected override void Start()
+    void Awake()
     {
-        base.Start();
-        MyUpdate.AddListener(UpdateInputManager);
-        UM.UpdatesInGame.Add(MyUpdate);
-
         dictionaryInputFunctions = new Dictionary<string, InputFunction>();
         for (int i = 0; i < Inputs.Count; i++)
         {
             dictionaryInputFunctions.Add(Inputs[i].GetName(), Inputs[i]);
         }
+    }
+
+    protected override void Start()
+    {
+        base.Start();
+        MyUpdate.AddListener(UpdateInputManager);
+        UM.UpdatesInGame.Add(MyUpdate);
     }
 
     [System.Serializable]

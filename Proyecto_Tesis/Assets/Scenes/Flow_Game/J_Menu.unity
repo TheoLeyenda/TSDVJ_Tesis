@@ -303,6 +303,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1656240968, guid: f73fb2a90810042449774d6e8e5eb2da, type: 3}
+      propertyPath: lockMouseInStart
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8626920078925406482, guid: f73fb2a90810042449774d6e8e5eb2da,
         type: 3}
       propertyPath: inputManager

@@ -24,8 +24,9 @@ public class InputManager : Updateable
         ButtonDown,
         ButtonUp,
     }
-
-    [SerializeField] private List<InputFunction> Inputs;
+    private GameManager gm;
+    [SerializeField] private List<InputFunction> Inputs; // Son afectados por la pausa.
+    [SerializeField] private List<InputFunction> specialInputs; // No son afectados por la pausa.
     private Dictionary<string, InputFunction> dictionaryInputFunctions;
 
     void Awake()
@@ -35,13 +36,18 @@ public class InputManager : Updateable
         {
             dictionaryInputFunctions.Add(Inputs[i].GetName(), Inputs[i]);
         }
+        for (int i = 0; i < specialInputs.Count; i++)
+        {
+            dictionaryInputFunctions.Add(specialInputs[i].GetName(), specialInputs[i]);
+        }
     }
 
     protected override void Start()
     {
+        gm = GameManager.instanceGameManager;
         base.Start();
         MyUpdate.AddListener(UpdateInputManager);
-        UM.UpdatesInGame.Add(MyUpdate);
+        UM.SpecialUpdatesInGame.Add(MyUpdate);
     }
 
     [System.Serializable]
@@ -52,6 +58,8 @@ public class InputManager : Updateable
         public TypeInputPress typeInputPress;
         public delegate void Function();
         public Function myFunction;
+
+        private bool specialInput = false;
 
         public string GetName() { return name; }
 
@@ -85,21 +93,39 @@ public class InputManager : Updateable
 
         public void GetAxisValue(ref float axis)
         {
-            axis = Input.GetAxis(name);
+            if(specialInput || !GameManager.instanceGameManager.GetIsPauseGame())
+                axis = Input.GetAxis(name);
         }
 
         public void GetAxisValueRaw(ref float axis)
         {
-            axis = Input.GetAxisRaw(name);
+            if (specialInput || !GameManager.instanceGameManager.GetIsPauseGame())
+                axis = Input.GetAxisRaw(name);
         }
+
+        public void SetSpecialInput(bool value) => specialInput = value;
+
+        public bool GetIsSpecialInput() { return specialInput; }
     }
     public InputFunction GetInputFunction(string name)
     {
-        return dictionaryInputFunctions[name];
+        if (dictionaryInputFunctions.ContainsKey(name))
+            return dictionaryInputFunctions[name];
+        else
+            return null;
     }
 
     public void UpdateInputManager()
     {
+
+        for (int i = 0; i < specialInputs.Count; i++)
+        {
+            specialInputs[i].CheckInputFunction();
+        }
+
+        if (gm.GetIsPauseGame())
+            return;
+
         for (int i = 0; i < Inputs.Count; i++)
         {
             Inputs[i].CheckInputFunction();

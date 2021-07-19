@@ -48,6 +48,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 250d2b4f7fb987c4d8557a9534ca72e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputManager: {fileID: 7249932635614913274}
+  nameInputPause: Pause Game
+  CamvasPause_GO: {fileID: 0}
+  mouseManager: {fileID: 1656240968}
 --- !u!114 &468475402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,6 +66,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UpdatesInGame: []
   FixedUpdatesInGame: []
+  SpecialUpdatesInGame: []
+  SpecialFixedUpdateInGame: []
 --- !u!114 &-5062335543945226354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,5 +150,9 @@ MonoBehaviour:
     typeInput: 0
     typeInputPress: 0
   - name: Send Stune
+    typeInput: 1
+    typeInputPress: 2
+  specialInputs:
+  - name: Pause Game
     typeInput: 1
     typeInputPress: 2

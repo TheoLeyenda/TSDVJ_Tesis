@@ -52,7 +52,7 @@ public class J_InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExit
         icon.enabled = false;
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
+    public void DisplayInfoItem()
     {
         if (item != null)
         {
@@ -63,6 +63,11 @@ public class J_InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExit
             else
                 display.UpdateImage(item.icon);
         }
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        DisplayInfoItem();
     }
 
     public void OnPointerExit(PointerEventData eventData)

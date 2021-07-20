@@ -16,14 +16,14 @@ public class MouseManager : MonoBehaviour
     {
         if (activate)
         {
-            Debug.Log("DESPAUSA D:");
+            //Debug.Log("DESPAUSA D:");
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             lockCursor = true;
         }
         else
         {
-            Debug.Log("PAUSA :D");
+            //Debug.Log("PAUSA :D");
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             lockCursor = false;

@@ -33,7 +33,7 @@ public class UpdateManager : MonoBehaviour
     {
         CheckUpdates(SpecialUpdatesInGame);
 
-        Debug.Log(Cursor.visible);
+        //Debug.Log(Cursor.visible);
 
         if (gm.GetIsPauseGame())
             return;

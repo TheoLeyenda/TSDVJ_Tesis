@@ -23,7 +23,7 @@ public class J_ItemPickUp : MonoBehaviour
             return;
 
         playerInventory.AddItem(item);
-        Debug.Log("Added " + item.itemName + " to inventory");
+        //Debug.Log("Added " + item.itemName + " to inventory");
 
         if (pickUpEvent != "")
         {

@@ -98,4 +98,8 @@ public class J_Inventory : MonoBehaviour
     {
         return inventory;
     }
+    public J_InventorySlot[] GetSlotsInventory()
+    {
+        return slots;
+    }
 }

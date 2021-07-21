@@ -11,8 +11,14 @@ public enum DoorState
     Hidden
 }
 
-public class J_Door : MonoBehaviour
+public class J_Door : J_Interactable
 {
+    [FMODUnity.EventRef]
+    public string doorOpenEvent;
+
+    [FMODUnity.EventRef]
+    public string doorClosedEvent;
+
     public J_Item myKey;
     public bool isPermalocked;
     public J_Inventory playerInventoryRef;
@@ -56,15 +62,16 @@ public class J_Door : MonoBehaviour
         {
             case DoorState.Unlocked:
                 openAction.Invoke();
-                //Debug.Log("OpenBehaviour");
+                PlaySound(doorOpenEvent);
                 break;
             case DoorState.Locked:
                 CheckPlayerHasMyKey();
                 lockedAction.Invoke();
+                PlaySound(doorClosedEvent);
                 break;
             case DoorState.PermaLocked:
                 permalockedAction.Invoke();
-                //Debug.Log("Permalocked");
+                PlaySound(doorClosedEvent);
                 break;
             case DoorState.Hidden:
                 if (!isPermalocked)
@@ -76,5 +83,12 @@ public class J_Door : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    public override void Interact()
+    {
+        base.Interact();
+
+        DoorInteraction();
     }
 }

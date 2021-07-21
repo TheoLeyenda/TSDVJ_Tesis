@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8556408526289376340}
   - component: {fileID: 6734220390605053885}
-  - component: {fileID: 634472754550965346}
   - component: {fileID: 3003062101440720557}
   m_Layer: 0
   m_Name: Llave Aula de arte
@@ -47,34 +46,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.05873871, y: 0.18549721, z: 0.034897316}
   m_Center: {x: -0.003353119, y: -0.008473396, z: -0.0023518447}
---- !u!114 &634472754550965346
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8346451856687007042}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10c2ee2d02fb5af4d9069ee82b243e36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  action:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3003062101440720557}
-        m_MethodName: AddItemToInventory
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  interactionEvent: 
-  paramRef: 
 --- !u!114 &3003062101440720557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,10 +58,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7538c58fb2c82a439061ac8c0f21802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactionEvent: event:/Fxs/Objects/llave
+  paramRef: Llaves
   playerInventory: {fileID: 0}
   item: {fileID: 11400000, guid: 7fa074b386a66ef4c8ce920581fcbc28, type: 2}
-  pickUpEvent: event:/Fxs/Objects/llave
-  paramRef: Llaves
 --- !u!1001 &8073017196370496473
 PrefabInstance:
   m_ObjectHideFlags: 0

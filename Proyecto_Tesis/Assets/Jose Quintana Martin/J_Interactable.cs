@@ -3,24 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class J_Interactable : MonoBehaviour
+public abstract class J_Interactable : MonoBehaviour
 {
-    [SerializeField] private UnityEvent action;
-
     [FMODUnity.EventRef]
     public string interactionEvent;
 
     [FMODUnity.ParamRef]
     public string paramRef;
 
-    void Start() { }
-
-    public void DoAction()
+    public virtual void Interact()
     {
-        if(enabled)
-            action.Invoke();
+        PlaySound();
+    }
 
-        //audio
+    public void PlaySound()
+    {
         if (interactionEvent != "")
         {
             J_SoundManager _SoundManager = FindObjectOfType<J_SoundManager>();
@@ -28,6 +25,15 @@ public class J_Interactable : MonoBehaviour
             if (_SoundManager != null)
                 _SoundManager.PlayEvent(interactionEvent, gameObject, paramRef);
         }
-        //audio
+    }
+    public void PlaySound(string eventName)
+    {
+        if (eventName != "")
+        {
+            J_SoundManager _SoundManager = FindObjectOfType<J_SoundManager>();
+
+            if (_SoundManager != null)
+                _SoundManager.PlayEvent(eventName, gameObject, paramRef);
+        }
     }
 }

@@ -12,7 +12,7 @@ public class ConditionForSpawnObjectInPosition : MonoBehaviour
     [SerializeField] private bool useParent;
     [SerializeField] private UnityEvent OnGiveObject;
 
-    public void CheckGiveMyObject()
+    public bool CheckGiveMyObject()
     {
         if (inventoryPlayer.PlayerHasItem(objectRequire))
         {
@@ -24,6 +24,12 @@ public class ConditionForSpawnObjectInPosition : MonoBehaviour
                 Instantiate(objectSpawn, spawn.position, spawn.rotation, spawn);
 
             OnGiveObject?.Invoke();
+
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 }

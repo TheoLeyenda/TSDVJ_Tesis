@@ -8,15 +8,14 @@ public class ConditionForSpawnObjectInPosition : MonoBehaviour
     [SerializeField] private J_Item objectRequire;
     [SerializeField] private GameObject objectSpawn;
     [SerializeField] private Transform spawn;
-    [SerializeField] private J_Inventory inventoryPlayer;
     [SerializeField] private bool useParent;
     [SerializeField] private UnityEvent OnGiveObject;
 
     public bool CheckGiveMyObject()
     {
-        if (inventoryPlayer.PlayerHasItem(objectRequire))
+        if (J_inventoryManager.instance.HasItem(objectRequire))
         {
-            inventoryPlayer.RemoveItem(objectRequire);
+            J_inventoryManager.instance.RemoveItem(objectRequire);
 
             if (!useParent)
                 Instantiate(objectSpawn, spawn.position, spawn.rotation);

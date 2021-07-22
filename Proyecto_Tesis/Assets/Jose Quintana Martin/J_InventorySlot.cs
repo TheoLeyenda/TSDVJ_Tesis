@@ -32,10 +32,10 @@ public class J_InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
     public void UseItem()
     {
-        if(item != null)
+        if (item != null) {
             item.InvokeFunctionItem();
-
-        Debug.Log("Me han realizado la clickeacion: " + item.itemName);
+            Debug.Log("He realizado la funcion: " + item.itemName);
+        }
     }
 
     public void AddItem(J_Item newItem)

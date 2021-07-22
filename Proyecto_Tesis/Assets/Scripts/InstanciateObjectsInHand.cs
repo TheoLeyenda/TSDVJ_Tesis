@@ -29,6 +29,7 @@ public class InstanciateObjectsInHand : MonoBehaviour
 
     public void InstanciatedObjectInHand(GameObject objectInstance)
     {
+        Debug.Log("Me instancie vieja: " + objectInstance.name);
 
         if (SpawnTransform == null)
             return;

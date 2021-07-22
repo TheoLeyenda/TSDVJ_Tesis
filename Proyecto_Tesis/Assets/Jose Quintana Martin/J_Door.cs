@@ -21,18 +21,11 @@ public class J_Door : J_Interactable
 
     public J_Item myKey;
     public bool isPermalocked;
-    public J_Inventory playerInventoryRef;
 
     [SerializeField] private DoorState doorState = DoorState.Hidden;
     [SerializeField] private UnityEvent openAction;
     [SerializeField] private UnityEvent lockedAction;
     [SerializeField] private UnityEvent permalockedAction;
-
-
-    private void Start()
-    {
-        playerInventoryRef = FindObjectOfType<J_Inventory>();
-    }
 
     public DoorState GetDoorState()
     {
@@ -41,7 +34,7 @@ public class J_Door : J_Interactable
 
     public bool CheckPlayerHasMyKey()
     {
-        if (playerInventoryRef.PlayerHasItem(myKey) || myKey == null)
+        if (J_inventoryManager.instance.HasItem(myKey) || myKey == null)
         {
             doorState = DoorState.Unlocked;
             Debug.Log("La tiene");

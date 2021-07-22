@@ -4,19 +4,13 @@ using UnityEngine;
 
 public class J_ItemPickUp : J_Interactable
 {
-    public J_Inventory playerInventory;
     public J_Item item;
 
-    private void Start()
-    {
-        playerInventory = FindObjectOfType<J_Inventory>();
-    }
-
     public void AddItemToInventory() {
-        if (playerInventory.GetInventoryFull())
+        if (J_inventoryManager.instance.IsInventoryFull())
             return;
 
-        playerInventory.AddItem(item);
+        J_inventoryManager.instance.AddItem(item);
 
         Destroy(gameObject);
     }

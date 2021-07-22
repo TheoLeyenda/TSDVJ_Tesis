@@ -38,7 +38,6 @@ public class FunctionOnPlaceObjects : MonoBehaviour
         }
     }
 
-    [SerializeField] private J_Inventory inventory;
     [SerializeField] private InstanciateObjectsInHand instanciateObjectsInHand;
     [SerializeField] private bool useCheckInPlaceObject = true;
     [SerializeField] private ItemAndObject[] initOriginObjects;
@@ -90,7 +89,7 @@ public class FunctionOnPlaceObjects : MonoBehaviour
 
             transparentObject.SetActive(false);
             instanciateObjectsInHand.DestroyCurrentInstanciateObject();
-            inventory.RemoveItem(item);
+            J_inventoryManager.instance.RemoveItem(item);
             PlacesForObjects[indexPlaceObject].instanciatedObject.originObject = objectSpawn;
             PlacesForObjects[indexPlaceObject].instanciatedObject.cloneObject = Instantiate(objectSpawn, PlacesForObjects[indexPlaceObject].transformSpawn);
             PlacesForObjects[indexPlaceObject].instanciatedObject.originObject.transform.localScale = new Vector3(1, 1, 1);
@@ -103,11 +102,11 @@ public class FunctionOnPlaceObjects : MonoBehaviour
         }
         else if (instanciateObjectsInHand.GetCurrentInstanciateObject() == null)
         {
-            if (!inventory.GetInventoryFull())
+            if (!J_inventoryManager.instance.IsInventoryFull())
             {
                 transparentObject.SetActive(true);
                 instanciateObjectsInHand.InstanciatedObjectInHand(PlacesForObjects[indexPlaceObject].instanciatedObject.originObject);
-                inventory.AddItem(PlacesForObjects[indexPlaceObject].instanciatedObject.itemObject);
+                J_inventoryManager.instance.AddItem(PlacesForObjects[indexPlaceObject].instanciatedObject.itemObject);
 
                 if (PlacesForObjects[indexPlaceObject].instanciatedObject.cloneObject != null)
                     Destroy(PlacesForObjects[indexPlaceObject].instanciatedObject.cloneObject);
@@ -136,10 +135,10 @@ public class FunctionOnPlaceObjects : MonoBehaviour
             int id = PlacesForObjects[indexPlaceObject].originObjects[indexObjectSpawn].id_object;
 
             transparentObject.SetActive(false);
-            inventory.RemoveItem(item);
+            J_inventoryManager.instance.RemoveItem(item);
 
             instanciateObjectsInHand.InstanciatedObjectInHand(PlacesForObjects[indexPlaceObject].instanciatedObject.originObject, false);
-            inventory.AddItem(PlacesForObjects[indexPlaceObject].instanciatedObject.itemObject);
+            J_inventoryManager.instance.AddItem(PlacesForObjects[indexPlaceObject].instanciatedObject.itemObject);
 
             if (PlacesForObjects[indexPlaceObject].instanciatedObject.cloneObject != null)
                 Destroy(PlacesForObjects[indexPlaceObject].instanciatedObject.cloneObject);

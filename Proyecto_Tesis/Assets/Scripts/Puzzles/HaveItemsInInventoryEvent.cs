@@ -20,6 +20,7 @@ public class HaveItemsInInventoryEvent : MonoBehaviour
     }
 
     [SerializeField] private List<ItemChecker> itemsRequest;
+    [SerializeField] private List<J_Item> items;
     [SerializeField] private bool removeItemsRequestToInventory = true;
     [SerializeField] private J_Inventory inventory;
     [SerializeField] private UnityEvent eventHaveItemsInInventory;
@@ -27,6 +28,21 @@ public class HaveItemsInInventoryEvent : MonoBehaviour
 
     public void CheckHaveItemInInventoryEvent()
     {
+        bool hasItems = true;
+        for (int i = 0; i < items.Count; i++)
+        {
+            hasItems = J_inventoryManager.instance.HasItem(items[i]);
+
+            if (!hasItems)
+            {
+                eventNotHaveItemsInInventory.Invoke();
+                return;
+            }
+        }
+
+        eventHaveItemsInInventory.Invoke();
+
+        /*
         bool allItemCheck = true;
         for (int i = 0; i < itemsRequest.Count; i++)
         {
@@ -68,6 +84,6 @@ public class HaveItemsInInventoryEvent : MonoBehaviour
         else
         {
             eventNotHaveItemsInInventory?.Invoke();
-        }
+        }*/
     }
 }

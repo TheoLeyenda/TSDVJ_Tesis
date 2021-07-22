@@ -21,6 +21,4 @@ public class J_ObjectPlacer : J_Interactable
 
         fopo.AddOrRemoveObject(myIndex);
     }
-
-
 }

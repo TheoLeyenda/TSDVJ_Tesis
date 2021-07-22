@@ -4,7 +4,6 @@ using UnityEngine.Events;
 public class ConditionForOpenTheDoor : MonoBehaviour
 {
     [SerializeField] private J_Item objectRequire;
-    [SerializeField] private J_Inventory inventoryPlayer;
     [SerializeField] private UnityEvent openDoorEvent;
     [SerializeField] private bool openDoorInGame = false;
     //private bool openDoor = false;
@@ -12,9 +11,9 @@ public class ConditionForOpenTheDoor : MonoBehaviour
     {
         //if (!openDoor)
         //{
-            if (inventoryPlayer.PlayerHasItem(objectRequire) || openDoorInGame)
+            if (J_inventoryManager.instance.HasItem(objectRequire) || openDoorInGame)
             {
-                inventoryPlayer.RemoveItem(objectRequire);
+                J_inventoryManager.instance.RemoveItem(objectRequire);
                 openDoorEvent?.Invoke();
                 //openDoor = true;
             }

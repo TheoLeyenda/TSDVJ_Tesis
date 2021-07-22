@@ -1822,53 +1822,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 61.633667, y: 168.5373, z: 44.527588}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &71741085
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 71741088}
-  - component: {fileID: 71741087}
-  m_Layer: 0
-  m_Name: FunctionsFoto1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &71741087
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 71741085}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3db14fd010a2fa244b075d11467be768, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NewIcon: {fileID: 21300000, guid: d71d45fc50a70ef4290df7d514459f7b, type: 3}
-  NewDescriptionPhoto: Foto del director a sus
-  numberPhoto: 2
-  ItemPhoto: {fileID: 11400000, guid: 30395436927aeda438fd0ee77656db6c, type: 2}
---- !u!4 &71741088
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 71741085}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1127163907}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &71822054
 GameObject:
   m_ObjectHideFlags: 0
@@ -7308,6 +7261,11 @@ PrefabInstance:
       propertyPath: image
       value: 
       objectReference: {fileID: 7228340595198773594}
+    - target: {fileID: 290256062, guid: ba24c508ac89d2f4f93f2a46472498fe, type: 3}
+      propertyPath: itemRequiered
+      value: 
+      objectReference: {fileID: 11400000, guid: 9530021aa885a0548866eeca46690645,
+        type: 2}
     - target: {fileID: 4081588244704988901, guid: ba24c508ac89d2f4f93f2a46472498fe,
         type: 3}
       propertyPath: mapUI
@@ -16630,12 +16588,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 795176732}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7538c58fb2c82a439061ac8c0f21802, type: 3}
+  m_Script: {fileID: 11500000, guid: 3db14fd010a2fa244b075d11467be768, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionEvent: event:/Fxs/Objects/libro
+  interactionEvent: event:/Fxs/Objects/libro agarrar
   paramRef: 
   item: {fileID: 11400000, guid: 18afcb0a3683a1641bf39cb2df7d1abe, type: 2}
+  NewIcon: {fileID: 21300000, guid: 603e57d386ec1c640aa98dde1d131d59, type: 3}
+  NewDescriptionPhoto: Foto del director a sus
+  numberPhoto: 3
+  ItemPhoto: {fileID: 11400000, guid: 18afcb0a3683a1641bf39cb2df7d1abe, type: 2}
 --- !u!65 &795176736
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18518,7 +18480,7 @@ MonoBehaviour:
   instanciateObjectsInHand: {fileID: 290256059}
   useCheckInPlaceObject: 1
   initOriginObjects:
-  - originObject: {fileID: 3049581998651089028, guid: 2ed0d23b68e319f4da24a9025d84ff20,
+  - originObject: {fileID: 3049581998651089028, guid: 23fb78a606916374095dc2c4e5cd4f82,
       type: 3}
     cloneObject: {fileID: 0}
     itemObject: {fileID: 11400000, guid: 270ffd49fae419a47ba66fced031fb56, type: 2}
@@ -18528,7 +18490,7 @@ MonoBehaviour:
     cloneObject: {fileID: 0}
     itemObject: {fileID: 11400000, guid: 12e6d2657d185db448fd4b8489136694, type: 2}
     id_object: 2
-  - originObject: {fileID: 1047634899018163860, guid: 23fb78a606916374095dc2c4e5cd4f82,
+  - originObject: {fileID: 1047634899018163860, guid: 2ed0d23b68e319f4da24a9025d84ff20,
       type: 3}
     cloneObject: {fileID: 0}
     itemObject: {fileID: 11400000, guid: 74fbeaff1a5aad94489073e898e4e7fe, type: 2}
@@ -23265,9 +23227,6 @@ Transform:
   m_Children:
   - {fileID: 538038329}
   - {fileID: 558155965}
-  - {fileID: 71741088}
-  - {fileID: 2014526274}
-  - {fileID: 1504505786}
   m_Father: {fileID: 1584339623}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -26960,12 +26919,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1309347342}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7538c58fb2c82a439061ac8c0f21802, type: 3}
+  m_Script: {fileID: 11500000, guid: 3db14fd010a2fa244b075d11467be768, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   interactionEvent: event:/Fxs/Objects/libro agarrar
   paramRef: 
   item: {fileID: 11400000, guid: 30395436927aeda438fd0ee77656db6c, type: 2}
+  NewIcon: {fileID: 21300000, guid: d71d45fc50a70ef4290df7d514459f7b, type: 3}
+  NewDescriptionPhoto: Foto del director a sus
+  numberPhoto: 2
+  ItemPhoto: {fileID: 11400000, guid: 30395436927aeda438fd0ee77656db6c, type: 2}
 --- !u!65 &1309347346
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31319,53 +31282,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
---- !u!1 &1504505783
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1504505786}
-  - component: {fileID: 1504505785}
-  m_Layer: 0
-  m_Name: FunctionsFoto3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1504505785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1504505783}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3db14fd010a2fa244b075d11467be768, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NewIcon: {fileID: 21300000, guid: 603e57d386ec1c640aa98dde1d131d59, type: 3}
-  NewDescriptionPhoto: Foto del director a sus
-  numberPhoto: 3
-  ItemPhoto: {fileID: 11400000, guid: 18afcb0a3683a1641bf39cb2df7d1abe, type: 2}
---- !u!4 &1504505786
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1504505783}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1127163907}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1504985698
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37074,12 +36990,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1705647612}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7538c58fb2c82a439061ac8c0f21802, type: 3}
+  m_Script: {fileID: 11500000, guid: 3db14fd010a2fa244b075d11467be768, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   interactionEvent: event:/Fxs/Objects/libro agarrar
   paramRef: 
   item: {fileID: 11400000, guid: d8e0e87c060c1ac4cb51569a9e980ce8, type: 2}
+  NewIcon: {fileID: 21300000, guid: 392a689569ce01841b378d0c1697a48e, type: 3}
+  NewDescriptionPhoto: Foto del director a sus
+  numberPhoto: 1
+  ItemPhoto: {fileID: 11400000, guid: d8e0e87c060c1ac4cb51569a9e980ce8, type: 2}
 --- !u!65 &1705647616
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44419,53 +44339,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2011771586}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2014526273
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2014526274}
-  - component: {fileID: 2014526276}
-  m_Layer: 0
-  m_Name: FunctionsFoto2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2014526274
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2014526273}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1127163907}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2014526276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2014526273}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3db14fd010a2fa244b075d11467be768, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NewIcon: {fileID: 21300000, guid: 392a689569ce01841b378d0c1697a48e, type: 3}
-  NewDescriptionPhoto: Foto del director a sus
-  numberPhoto: 1
-  ItemPhoto: {fileID: 11400000, guid: d8e0e87c060c1ac4cb51569a9e980ce8, type: 2}
 --- !u!1001 &2027090350
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52282,9 +52155,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7656833868981556909, guid: 1959c0cd1e44aeb4a88c58ec7e43ab38,
         type: 3}
+      propertyPath: openAction.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7656833868981556909, guid: 1959c0cd1e44aeb4a88c58ec7e43ab38,
+        type: 3}
       propertyPath: playerInventoryRef
       value: 
       objectReference: {fileID: 4113103769291635784}
+    - target: {fileID: 7656833868981556909, guid: 1959c0cd1e44aeb4a88c58ec7e43ab38,
+        type: 3}
+      propertyPath: openAction.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7656833868981556909, guid: 1959c0cd1e44aeb4a88c58ec7e43ab38,
+        type: 3}
+      propertyPath: openAction.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7656833868981556909, guid: 1959c0cd1e44aeb4a88c58ec7e43ab38,
+        type: 3}
+      propertyPath: openAction.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7656833869157495659, guid: 1959c0cd1e44aeb4a88c58ec7e43ab38,
         type: 3}
       propertyPath: playerInventoryRef

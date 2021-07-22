@@ -2,7 +2,7 @@
 using TMPro;
 using UnityEngine.UI;
 
-public class Photo : MonoBehaviour
+public class Photo : J_ItemPickUp
 {
     [SerializeField] private Sprite NewIcon;
     [SerializeField] private string NewDescriptionPhoto;
@@ -23,7 +23,7 @@ public class Photo : MonoBehaviour
     {
         if (numberPhoto == _numberPhoto)
         {
-            AddNewDescriptionPhoto(" " + number);
+            SetNewDescriptionPhoto("Foto del director a sus " + number + " años.");
         }
     }
 
@@ -35,5 +35,12 @@ public class Photo : MonoBehaviour
     {
         ItemPhoto.description = NewDescriptionPhoto;
         ItemPhoto.icon = NewIcon;
+    }
+
+    public override void Interact()
+    {
+        base.Interact();
+
+        SettingDataPhoto();
     }
 }

@@ -39,6 +39,7 @@ public class J_Door : J_Interactable
             doorState = DoorState.Unlocked;
             Debug.Log("La tiene");
             DoorInteraction();
+            J_inventoryManager.instance.RemoveItem(myKey);
             return true;
         }
         else

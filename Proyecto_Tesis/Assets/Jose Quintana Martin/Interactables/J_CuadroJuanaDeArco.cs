@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class J_CuadroJuanaDeArco : J_Interactable
 {
+    [HideInInspector]
     public HaveItemsInInventoryEvent e;
 
     private void Start()

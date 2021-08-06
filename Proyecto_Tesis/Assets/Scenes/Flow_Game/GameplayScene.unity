@@ -100,7 +100,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: ef0c5e38fe4ce2c4482da8c8be95c314,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -29271,16 +29271,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 271e49dbac570b747a7eeec7f1ecaf91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemsRequest:
-  - item: {fileID: 11400000, guid: 06da40ed4e8ce42449ecd9e8ee1f6232, type: 2}
-    itemCheck: 0
-  - item: {fileID: 11400000, guid: fdae17133e2a46e45a8f53e7381e8ec5, type: 2}
-    itemCheck: 0
-  items:
-  - {fileID: 11400000, guid: 06da40ed4e8ce42449ecd9e8ee1f6232, type: 2}
+  requestedItems:
   - {fileID: 11400000, guid: fdae17133e2a46e45a8f53e7381e8ec5, type: 2}
-  removeItemsRequestToInventory: 1
-  inventory: {fileID: 4113103769291635784}
+  - {fileID: 11400000, guid: 06da40ed4e8ce42449ecd9e8ee1f6232, type: 2}
+  removeRequestedItems: 1
   eventHaveItemsInInventory:
     m_PersistentCalls:
       m_Calls:
@@ -32147,10 +32141,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 271e49dbac570b747a7eeec7f1ecaf91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemsRequest: []
-  items: []
-  removeItemsRequestToInventory: 0
-  inventory: {fileID: 4113103769291635784}
+  requestedItems: []
+  removeRequestedItems: 1
   eventHaveItemsInInventory:
     m_PersistentCalls:
       m_Calls:

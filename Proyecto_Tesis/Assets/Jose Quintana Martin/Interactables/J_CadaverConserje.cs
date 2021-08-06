@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent (typeof (AddItemsToInventory))]
 public class J_CadaverConserje : J_Interactable
 {
+    [HideInInspector]
     public AddItemsToInventory itemadd;
     bool interacted;
 

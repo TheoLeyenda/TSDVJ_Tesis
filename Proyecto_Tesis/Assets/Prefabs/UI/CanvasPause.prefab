@@ -120,8 +120,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_MethodName: SetIsPauseGame
-        m_Mode: 6
+        m_MethodName: Pause
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -569,6 +569,8 @@ GameObject:
   - component: {fileID: 6289642966303720058}
   - component: {fileID: 6289642966303720053}
   - component: {fileID: 6289642966303720052}
+  - component: {fileID: 777799926}
+  - component: {fileID: 777799927}
   m_Layer: 5
   m_Name: CanvasPause
   m_TagString: Untagged
@@ -657,6 +659,69 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &777799926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6289642966303720055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cbc64e58e04a0e4d831f13dc56545fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  functionOnDisable:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &777799927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6289642966303720055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 931793b45b5f9384aa1a6e250449eb25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  functionOnEnable:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4970097979252139482}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &6289642966572702025
 GameObject:
   m_ObjectHideFlags: 0
@@ -1046,6 +1111,12 @@ PrefabInstance:
       objectReference: {fileID: 6289642965488571232}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e14127f7b52ab834abdb4822869e67bd, type: 3}
+--- !u!1 &4970097979252139482 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5384737101905335866, guid: e14127f7b52ab834abdb4822869e67bd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1027726828046578656}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4970097979252139483 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5384737101905335867, guid: e14127f7b52ab834abdb4822869e67bd,

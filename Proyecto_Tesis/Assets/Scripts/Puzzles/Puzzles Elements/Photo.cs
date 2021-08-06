@@ -21,8 +21,10 @@ public class Photo : MonoBehaviour
 
     public void AddNumberToText(int _numberPhoto, int number)
     {
+        Debug.Log("OwO");
         if (numberPhoto == _numberPhoto)
         {
+            Debug.Log("UwU");
             AddNewDescriptionPhoto(" " + number);
         }
     }

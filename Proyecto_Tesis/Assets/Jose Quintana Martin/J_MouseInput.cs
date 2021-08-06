@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class J_MouseInput : Updateable
 {
+    [SerializeField] private InputManager inputManager;
+    [SerializeField] private string nameInputAxisMouseX = "Mouse X";
+    [SerializeField] private string nameInputAxisMouseY = "Mouse Y";
+
     private bool enableMouseInput = true;
 
     private Vector2 turn;
@@ -21,8 +25,14 @@ public class J_MouseInput : Updateable
     {
         if (enableMouseInput)
         {
-            turn.x += Input.GetAxis("Mouse X") * sensitivity;
-            turn.y += Input.GetAxis("Mouse Y") * sensitivity;
+            float AxisX = 0;
+            float AxisY = 0;
+
+            inputManager.GetInputFunction(nameInputAxisMouseX).GetAxisValue(ref AxisX);
+            inputManager.GetInputFunction(nameInputAxisMouseY).GetAxisValue(ref AxisY);
+
+            turn.x += AxisX * sensitivity;
+            turn.y += AxisY * sensitivity;
 
             if (turn.y > 90)
             {

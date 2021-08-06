@@ -1002,6 +1002,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9873f379ab1aee747acaf104169a9844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputManager: {fileID: 0}
+  nameInputOpenAndCloseInventory: Open And Close Inventory
   slotParent: {fileID: 0}
   inventoryUI: {fileID: 0}
   inventorySize: 16
@@ -1041,7 +1043,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 4113103770830251886}
+      - m_Target: {fileID: 4113103769854458808}
         m_MethodName: SetEnableUseFlashlight
         m_Mode: 6
         m_Arguments:
@@ -1121,7 +1123,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 4113103770830251886}
+      - m_Target: {fileID: 4113103769854458808}
         m_MethodName: SetEnableUseFlashlight
         m_Mode: 6
         m_Arguments:
@@ -1198,6 +1200,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47ff849d16876fb4ab8be41b66a737c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputManager: {fileID: 0}
+  nameInputOnAndOffFlashlight: On And Off Flashlight
   useFixedUpdateFlashlight: 1
   lightObject: {fileID: 4113103770895109659}
   lightState: 1
@@ -1295,7 +1299,6 @@ GameObject:
   - component: {fileID: 4113103770830251884}
   - component: {fileID: 4113103770830251889}
   - component: {fileID: 4113103770830251885}
-  - component: {fileID: 4113103770830251886}
   - component: {fileID: 4113103770830251880}
   - component: {fileID: 4113103770830251887}
   - component: {fileID: 4081588244704988901}
@@ -1357,6 +1360,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4657e08249abc0144854882264ff81b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputManager: {fileID: 0}
+  nameInputAxisHorizontal: Movement Horizontal
+  nameInputAxisVertical: Movement Vertical
   speed: 10
   walkingSoundIntensity: 2
   sound: {fileID: 4113103770830251885}
@@ -1375,6 +1381,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9c38005f48995f4ba60038b9e30ea46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputManager: {fileID: 0}
+  nameInputInteraction: Interaction
   playerCamera: {fileID: 6857788472482480578}
   interactionDistance: 2
   interactImage: {fileID: 290256058}
@@ -1407,19 +1415,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   centerBoxOverlapCaster: {fileID: 4113103770830251895}
   heightEmmitingSound: 2
---- !u!114 &4113103770830251886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4113103770830251894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b7b1ddbd56d4754eba9a8c392936d8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flashlight: {fileID: 4113103769854458808}
 --- !u!114 &4113103770830251880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1445,9 +1440,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4611e39985dba734eb56232137962ceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typeCheckUse: 1
-  nameButtonCheck: 
-  keyCodeCheck: 102
+  inputManager: {fileID: 0}
+  nameInputSendEventStune: Send Stune
   myUserTransform: {fileID: 4113103770830251895}
   delayUseStuneEnable: 800
 --- !u!114 &4081588244704988901
@@ -1462,6 +1456,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17ea2f6fdfe45584782b47ebe5c04ffd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputManager: {fileID: 0}
+  nameInputOpenAndCloseMapUI: Open And Close Map
   mapUI: {fileID: 0}
 --- !u!114 &217833938114667057
 MonoBehaviour:
@@ -1635,9 +1631,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f30930f52e19e94392bff88342c7406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputManager: {fileID: 0}
+  nameInputChangeNextColor: NextColorFlashlight
+  nameInputChangePrevColor: None
   enableUse: 0
-  changeNextColorButton: 113
-  changePrevColorButton: 0
   myLightModifireColor: {fileID: 4113103770895109654}
   colorsEmitter:
   - {r: 0, g: 0, b: 1, a: 1}
@@ -1857,5 +1854,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d49288efe3db85848ae7ebcf5e633b9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputManager: {fileID: 0}
+  nameInputAxisMouseX: Mouse X
+  nameInputAxisMouseY: Mouse Y
   sensitivity: 2
   playerBody: {fileID: 4113103770830251895}

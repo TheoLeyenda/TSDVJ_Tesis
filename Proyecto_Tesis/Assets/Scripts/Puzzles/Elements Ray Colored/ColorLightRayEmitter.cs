@@ -2,14 +2,15 @@
 
 public class ColorLightRayEmitter : Updateable
 {
+    [SerializeField] private InputManager inputManager;
+    [SerializeField] private string nameInputChangeNextColor = "NextColorFlashlight";
+    [SerializeField] private string nameInputChangePrevColor = "PrevColorFlashlight";
+
     private int currentColorEmitterIndex = -1;
     private Color currentColor;
     [SerializeField] private bool enableUse = false;
     [SerializeField] private J_Item itemRequiered;
 
-
-    [SerializeField] private KeyCode changeNextColorButton = KeyCode.RightArrow;
-    [SerializeField] private KeyCode changePrevColorButton = KeyCode.LeftArrow;
 
     [SerializeField] private Light myLightModifireColor;
 
@@ -55,6 +56,9 @@ public class ColorLightRayEmitter : Updateable
         base.Start();
         MyUpdate.AddListener(UpdateColorLightRayEmitter);
         UM.UpdatesInGame.Add(MyUpdate);
+
+        inputManager.GetInputFunction(nameInputChangeNextColor).myFunction = ChangeNextColor;
+        inputManager.GetInputFunction(nameInputChangePrevColor).myFunction = ChangePrevColor;
     }
 
     //Esto hay que pasarlo al inputManager
@@ -70,14 +74,6 @@ public class ColorLightRayEmitter : Updateable
 
         if (enableUse)
         {
-            if (Input.GetKeyDown(changeNextColorButton))
-            {
-                ChangeNextColor();
-            }
-            if (Input.GetKeyDown(changePrevColorButton))
-            {
-                ChangePrevColor();
-            }
             ThrowRayCheck();
         }
         else if (J_inventoryManager.instance.HasItem(itemRequiered))

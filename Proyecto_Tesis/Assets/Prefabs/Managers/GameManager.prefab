@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -5062335543945226354}
   - component: {fileID: 1656240968}
   - component: {fileID: 5015262093827307429}
+  - component: {fileID: 7249932635614913274}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -47,6 +48,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 250d2b4f7fb987c4d8557a9534ca72e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputManager: {fileID: 7249932635614913274}
+  nameInputPause: Pause Game
+  CamvasPause_GO: {fileID: 0}
+  mouseManager: {fileID: 1656240968}
 --- !u!114 &468475402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,6 +66,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UpdatesInGame: []
   FixedUpdatesInGame: []
+  SpecialUpdatesInGame: []
+  SpecialFixedUpdateInGame: []
 --- !u!114 &-5062335543945226354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,3 +106,53 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objetives: []
+--- !u!114 &7249932635614913274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8626920078925406483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fac2b172a3621564bb27c12bbc058e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Inputs:
+  - name: Movement Horizontal
+    typeInput: 0
+    typeInputPress: 0
+  - name: Movement Vertical
+    typeInput: 0
+    typeInputPress: 0
+  - name: Open And Close Inventory
+    typeInput: 1
+    typeInputPress: 2
+  - name: Open And Close Map
+    typeInput: 1
+    typeInputPress: 2
+  - name: On And Off Flashlight
+    typeInput: 1
+    typeInputPress: 2
+  - name: Interaction
+    typeInput: 1
+    typeInputPress: 2
+  - name: Mouse X
+    typeInput: 0
+    typeInputPress: 0
+  - name: Mouse Y
+    typeInput: 0
+    typeInputPress: 0
+  - name: NextColorFlashlight
+    typeInput: 1
+    typeInputPress: 2
+  - name: None
+    typeInput: 0
+    typeInputPress: 0
+  - name: Send Stune
+    typeInput: 1
+    typeInputPress: 2
+  specialInputs:
+  - name: Pause Game
+    typeInput: 1
+    typeInputPress: 2

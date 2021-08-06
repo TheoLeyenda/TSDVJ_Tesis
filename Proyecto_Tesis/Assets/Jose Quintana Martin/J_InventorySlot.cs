@@ -3,14 +3,17 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
-
+using System;
 public class J_InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public Image icon;
     public Button button;
+    public EventSystem eventSystem;
 
     J_Item item;
     J_ItemDisplay display;
+
+    public static event Action<J_InventorySlot> OnClearSlot;
 
     void OnDisable()
     {
@@ -52,9 +55,16 @@ public class J_InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
         icon.sprite = null;
         icon.enabled = false;
+        DestroyUI();
+        Debug.Log("1");
+        if (OnClearSlot != null)
+        {
+            Debug.Log("2");
+            OnClearSlot(this);
+        }
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
+    public void DisplayInfoItem()
     {
         if (item != null)
         {
@@ -64,7 +74,14 @@ public class J_InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExit
                 display.UpdateImage(item.iconsCompound);
             else
                 display.UpdateImage(item.icon);
+
+            eventSystem.firstSelectedGameObject = button.gameObject;
         }
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        DisplayInfoItem();
     }
 
     public void OnPointerExit(PointerEventData eventData)
@@ -73,14 +90,19 @@ public class J_InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExit
     }
     public void DestroyUI()
     {
-        Sprite s = display.defaultSprite;
-        display.UpdateDescription(null);
-        display.UpdateName(null);
-        display.UpdateImage(s);
-        if (item != null)
+        if (display != null)
         {
-            if (item.useIconCompound)
-                display.DestroyImagesIcons();
+            Sprite s = display.defaultSprite;
+            display.UpdateDescription(null);
+            display.UpdateName(null);
+            display.UpdateImage(s);
+            if (item != null)
+            {
+                if (item.useIconCompound)
+                    display.DestroyImagesIcons();
+            }
         }
     }
+
+    public J_Item GetMyItem() { return item; }
 }

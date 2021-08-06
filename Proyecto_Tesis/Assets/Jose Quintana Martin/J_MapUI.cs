@@ -39,10 +39,4 @@ public class J_MapUI : MonoBehaviour
             }
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

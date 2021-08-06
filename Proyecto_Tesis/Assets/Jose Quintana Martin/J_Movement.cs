@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class J_Movement : Updateable
 {
+    [SerializeField] private InputManager inputManager;
+    [SerializeField] private string nameInputAxisHorizontal = "Horizontal";
+    [SerializeField] private string nameInputAxisVertical = "Vertical";
+
     private bool enableMovement = true;
 
     public float speed;
@@ -49,8 +53,8 @@ public class J_Movement : Updateable
         {
             Vector3 move = transform.right * xMov + transform.forward * zMov;
 
-            xMov = Input.GetAxis("Horizontal");
-            zMov = Input.GetAxis("Vertical");
+            inputManager.GetInputFunction(nameInputAxisHorizontal).GetAxisValue(ref xMov);
+            inputManager.GetInputFunction(nameInputAxisVertical).GetAxisValue(ref zMov);
 
             if (xMov != 0 || zMov != 0)
             {
@@ -75,7 +79,7 @@ public class J_Movement : Updateable
 
     private void CheckInStuneMovmement(Transform _transform, float delayStune)
     {
-        if(myUserTransform == _transform)
+        if (myUserTransform == _transform)
         {
             stuneable.SetInStune(true);
             stuneable.SetDelayStune(delayStune);

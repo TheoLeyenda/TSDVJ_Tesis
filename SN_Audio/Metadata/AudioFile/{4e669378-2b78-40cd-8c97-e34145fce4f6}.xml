@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{4e669378-2b78-40cd-8c97-e34145fce4f6}">
+		<property name="assetPath">
+			<value>destornillador.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>44.860952380952384</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{99311439-d228-47a8-9d81-1c4b14548a94}</destination>
+		</relationship>
+	</object>
+</objects>

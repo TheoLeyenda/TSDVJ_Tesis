@@ -6,7 +6,12 @@ public class UpdateManager : MonoBehaviour
 {
     [HideInInspector] public List<UnityEvent> UpdatesInGame;
     [HideInInspector] public List<UnityEvent> FixedUpdatesInGame;
+    [HideInInspector] public List<UnityEvent> SpecialUpdatesInGame;
+    [HideInInspector] public List<UnityEvent> SpecialFixedUpdateInGame;
+
     public static UpdateManager instanceUpdateManager;
+
+    private GameManager gm;
 
     void Awake()
     {
@@ -19,34 +24,49 @@ public class UpdateManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
+    void Start()
+    {
+        gm = GameManager.instanceGameManager;
+    }
     // Update is called once per frame
     void Update()
     {
-        CheckUpdatesUnityEventsInGame();
+        CheckUpdates(SpecialUpdatesInGame);
+
+        //Debug.Log(Cursor.visible);
+
+        if (gm.GetIsPauseGame())
+            return;
+
+        CheckUpdates(UpdatesInGame);
     }
     void FixedUpdate()
     {
-        CheckFixedUpdatesUnityEventsInGame();
+        CheckFixedUpdates(SpecialFixedUpdateInGame);
+
+        if (gm.GetIsPauseGame())
+            return;
+
+        CheckFixedUpdates(FixedUpdatesInGame);
     }
-    private void CheckFixedUpdatesUnityEventsInGame()
+    private void CheckFixedUpdates(List<UnityEvent> fixedUpdate)
     {
-        for (int i = 0; i < FixedUpdatesInGame.Count; i++)
+        for (int i = 0; i < fixedUpdate.Count; i++)
         {
-            if (FixedUpdatesInGame[i] != null)
-                FixedUpdatesInGame[i].Invoke();
+            if (fixedUpdate[i] != null)
+                fixedUpdate[i].Invoke();
             else
-                FixedUpdatesInGame.Remove(FixedUpdatesInGame[i]);
+                fixedUpdate.Remove(fixedUpdate[i]);
         }
     }
-    private void CheckUpdatesUnityEventsInGame()
+    private void CheckUpdates(List<UnityEvent> Update)
     {
-        for (int i = 0; i < UpdatesInGame.Count; i++)
+        for (int i = 0; i < Update.Count; i++)
         {
-            if (UpdatesInGame[i] != null)
-                UpdatesInGame[i]?.Invoke();
+            if (Update[i] != null)
+                Update[i]?.Invoke();
             else
-                UpdatesInGame.Remove(UpdatesInGame[i]);
+                Update.Remove(Update[i]);
         }
     }
 }

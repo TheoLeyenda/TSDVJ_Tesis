@@ -77,7 +77,7 @@ public class J_PlayerInteraction : Updateable
     public void Interact()
     {
         if (interactable != null && interactable.enabled)
-            interactable.DoAction();
+            interactable.Interact();
     }
 
     public GameObject GetcurrIntObject()

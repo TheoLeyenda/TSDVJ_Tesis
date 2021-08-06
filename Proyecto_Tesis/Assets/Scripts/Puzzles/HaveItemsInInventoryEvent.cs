@@ -5,69 +5,34 @@ using UnityEngine.Events;
 
 public class HaveItemsInInventoryEvent : MonoBehaviour
 {
-    void Start() {}
+    void Start() { }
 
-    [System.Serializable]
-    public class ItemChecker
-    {
-        public J_Item item;
-        public bool itemCheck;
-
-        public void ResetItemCheck()
-        {
-            itemCheck = false;
-        }
-    }
-
-    [SerializeField] private List<ItemChecker> itemsRequest;
-    [SerializeField] private bool removeItemsRequestToInventory = true;
-    [SerializeField] private J_Inventory inventory;
+    [SerializeField] private List<J_Item> requestedItems;
+    [SerializeField] private bool removeRequestedItems = true;
     [SerializeField] private UnityEvent eventHaveItemsInInventory;
     [SerializeField] private UnityEvent eventNotHaveItemsInInventory;
 
     public void CheckHaveItemInInventoryEvent()
     {
-        bool allItemCheck = true;
-        for (int i = 0; i < itemsRequest.Count; i++)
+        bool hasItems = true;
+        for (int i = 0; i < requestedItems.Count; i++)
         {
-            for (int j = 0; j < inventory.GetInventory().Count; j++)
+            hasItems = J_inventoryManager.instance.HasItem(requestedItems[i]);
+
+            if (!hasItems)
             {
-                if (itemsRequest[i].item == inventory.GetInventory()[j])
-                {
-                    itemsRequest[i].itemCheck = true;
-                }
+                eventNotHaveItemsInInventory.Invoke();
+                return;
             }
         }
 
-        for (int i = 0; i < itemsRequest.Count; i++)
+        eventHaveItemsInInventory.Invoke();
+        if (removeRequestedItems)
         {
-            if (!itemsRequest[i].itemCheck)
+            for (int i = 0; i < requestedItems.Count; i++)
             {
-                allItemCheck = false;
-                break;
+                J_inventoryManager.instance.RemoveItem(requestedItems[i]);
             }
-        }
-
-        for (int i = 0; i < itemsRequest.Count; i++)
-        {
-            itemsRequest[i].ResetItemCheck();
-        }
-
-        if (allItemCheck)
-        {
-            eventHaveItemsInInventory?.Invoke();
-
-            if (removeItemsRequestToInventory)
-            {
-                for (int i = 0; i < itemsRequest.Count; i++)
-                {
-                    inventory.RemoveItem(itemsRequest[i].item);
-                }
-            }
-        }
-        else
-        {
-            eventNotHaveItemsInInventory?.Invoke();
         }
     }
 }

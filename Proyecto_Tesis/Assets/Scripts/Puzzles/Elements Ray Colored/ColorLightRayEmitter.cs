@@ -9,6 +9,8 @@ public class ColorLightRayEmitter : Updateable
     private int currentColorEmitterIndex = -1;
     private Color currentColor;
     [SerializeField] private bool enableUse = false;
+    [SerializeField] private J_Item itemRequiered;
+
 
     [SerializeField] private Light myLightModifireColor;
 
@@ -62,9 +64,21 @@ public class ColorLightRayEmitter : Updateable
     //Esto hay que pasarlo al inputManager
     void UpdateColorLightRayEmitter()
     {
+        if (!enableUse)
+        {
+            if (J_inventoryManager.instance.HasItem(itemRequiered))
+            {
+                enableUse = true;
+            }
+        }
+
         if (enableUse)
         {
             ThrowRayCheck();
+        }
+        else if (J_inventoryManager.instance.HasItem(itemRequiered))
+        {
+            enableUse = true;
         }
     }
 

@@ -94,9 +94,9 @@ public class J_Inventory : MonoBehaviour
         return inventory.Count >= inventorySize;
     }
 
-    public List<J_Item> GetInventory()
+    public int GetInventoryCurrentCount()
     {
-        return inventory;
+        return inventory.Count;
     }
     public J_InventorySlot[] GetSlotsInventory()
     {

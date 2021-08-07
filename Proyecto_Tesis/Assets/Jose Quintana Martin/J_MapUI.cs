@@ -2,16 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class J_MapUI : MonoBehaviour
 {
-
     public Sprite lockedDoorIcon;
     public Sprite unlockedDoorIcon;
     public Sprite permalockedDoorIcon;
     public GameObject mapMarkersParent;
 
+    public UnityEvent OnOpenMap;
+
+    public UnityEvent OnCloseMap;
+
     public J_MapMarker[] markers;
+
+    void OnEnable()
+    {
+        OnOpenMap?.Invoke();
+    }
+
+    void OnDisable()
+    {
+        OnCloseMap?.Invoke();
+    }
 
     public void UpdateMap()
     {

@@ -1,15 +1,20 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private InputManager inputManager;
     [SerializeField] private string nameInputPause;
     [SerializeField] private GameObject CamvasPause_GO;
-    [SerializeField] private MouseManager mouseManager;
+    public MouseManager mouseManager;
 
     public static GameManager instanceGameManager;
 
     private bool isPauseGame;
+
+    public static event Action<GameManager> OnPause;
+
+    public static event Action<GameManager> OnDispause;
 
     void Awake()
     {
@@ -50,13 +55,29 @@ public class GameManager : MonoBehaviour
 
     public void Pause()
     {
-        if(CamvasPause_GO != null)
+        if (CamvasPause_GO != null)
             CamvasPause_GO.SetActive(!CamvasPause_GO.activeSelf);
 
         SetIsPauseGame(!isPauseGame);
 
-        if(mouseManager != null)
-            mouseManager.SetCursorLockState(!mouseManager.GetLockCursor());
+        if (mouseManager != null)
+        {
+            if (isPauseGame)
+                mouseManager.SetCursorLockState(false);
+            else
+                mouseManager.SetCursorLockState(true);
+        }
+
+        if (isPauseGame)
+        {
+            if (OnPause != null)
+                OnPause(this);
+        }
+        else
+        {
+            if (OnDispause != null)
+                OnDispause(this);
+        }
     }
 
     public void Pause(bool activateCamvasPause)
@@ -67,7 +88,23 @@ public class GameManager : MonoBehaviour
         SetIsPauseGame(!isPauseGame);
 
         if (mouseManager != null)
-            mouseManager.SetCursorLockState(!mouseManager.GetLockCursor());
+        {
+            if (isPauseGame)
+                mouseManager.SetCursorLockState(false);
+            else
+                mouseManager.SetCursorLockState(true);
+        }
+
+        if (isPauseGame)
+        {
+            if (OnPause != null)
+                OnPause(this);
+        }
+        else
+        {
+            if (OnDispause != null)
+                OnDispause(this);
+        }
     }
 
     public void SetIsPauseGame(bool value) => isPauseGame = value;

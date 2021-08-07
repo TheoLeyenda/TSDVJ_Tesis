@@ -19,6 +19,16 @@ public class J_Inventory : MonoBehaviour
     [SerializeField] private UnityEvent EventInventoryOn;
     [SerializeField] private UnityEvent EventInventoryOff;
 
+    void OnEnable()
+    {
+        GameManager.OnDispause += DispauseEventInInventory;
+    }
+
+    void OnDisable()
+    {
+        GameManager.OnDispause -= DispauseEventInInventory;
+    }
+
     protected void Start()
     {
         gameManagerRef = FindObjectOfType<GameManager>();
@@ -29,8 +39,19 @@ public class J_Inventory : MonoBehaviour
         slots = slotParent.GetComponentsInChildren<J_InventorySlot>();
     }
 
+    public void DispauseEventInInventory(GameManager gm)
+    {
+        if (gm != GameManager.instanceGameManager || !inventoryUI.activeSelf)
+            return;
+
+        gm.mouseManager.SetCursorLockState(false);
+    }
+
     public void OpenAndCloseInventory()
     {
+        if (!enabled)
+            return;
+
         inventoryUI.gameObject.SetActive(!inventoryUI.activeSelf);
         if (inventoryUI.activeSelf)
             EventInventoryOn?.Invoke();

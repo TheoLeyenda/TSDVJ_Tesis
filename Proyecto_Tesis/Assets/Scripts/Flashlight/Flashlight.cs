@@ -10,9 +10,11 @@ public class Flashlight : Updateable
     [SerializeField] private InputManager inputManager;
     [SerializeField] private string nameInputOnAndOffFlashlight = "On And Off Flashlight";
 
-    private bool enableUseFlashlight = true;
+    [SerializeField] private bool enableUseFlashlight = true;
 
     private bool isFlashligthOn = false;
+
+    private float delayEnableUseFlashlight = 0.05f;
 
     public enum LightState
     {
@@ -23,7 +25,6 @@ public class Flashlight : Updateable
     [SerializeField] private GameObject lightObject = null;
     [SerializeField] private LightState lightState = LightState.Off;
     [SerializeField] private FildOfView fildOfView = null;
-
 
     public void CheckOnViewFlash()
     {
@@ -96,6 +97,19 @@ public class Flashlight : Updateable
 
             isFlashligthOn = !isFlashligthOn;
         }
+    }
+
+    public void EnableUseFlashlightCoroutine()
+    {
+        //CORRUTINA PARA HABILITAR LA LUZ LUEGO DE LA PAUSA
+        StartCoroutine("TimerForEnableUseFlashlight");
+    }
+
+    IEnumerator TimerForEnableUseFlashlight()
+    {
+        yield return new WaitForSeconds(delayEnableUseFlashlight);
+
+        enableUseFlashlight = true;
     }
 
     public void SetEnableUseFlashlight(bool value) => enableUseFlashlight = value;

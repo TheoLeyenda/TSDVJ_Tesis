@@ -14,6 +14,9 @@ public class J_BotonesCajaFuerte : J_Interactable
 
     public override void Interact()
     {
+        if (!enabled)
+            return;
+
         base.Interact();
 
         code.AddCaracterCode(myNumber);

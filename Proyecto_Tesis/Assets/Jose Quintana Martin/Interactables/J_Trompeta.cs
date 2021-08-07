@@ -13,6 +13,9 @@ public class J_Trompeta : J_Interactable
 
     public override void Interact()
     {
+        if (!enabled)
+            return;
+
         if (itemspawner.CheckGiveMyObject())
         {
             base.Interact();

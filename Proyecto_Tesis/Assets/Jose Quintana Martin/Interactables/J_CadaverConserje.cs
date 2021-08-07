@@ -16,6 +16,9 @@ public class J_CadaverConserje : J_Interactable
 
     public override void Interact()
     {
+        if (!enabled)
+            return;
+
         itemadd.AddItems(true);
 
         if (interacted)

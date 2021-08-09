@@ -37,7 +37,6 @@ public class J_ItemDisplay : MonoBehaviour
         Debug.Log(imagesIconCompound.Count);
         for (int i = 0; i < icons.Length; i++)
         {
-            Debug.Log("SABES QUE SI");
             imagesIconCompound[i].sprite = icons[i].iconSprite;
             imagesIconCompound[i].color = icons[i].iconColor;
         }

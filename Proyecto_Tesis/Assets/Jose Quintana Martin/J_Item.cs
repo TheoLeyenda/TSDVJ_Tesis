@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 [CreateAssetMenu(fileName = "New Item", menuName = "Inventory/Item")]
 public class J_Item : ScriptableObject
 {
@@ -15,9 +16,6 @@ public class J_Item : ScriptableObject
     public class IconCompound
     {
         public string name;
-        public Vector3 position;
-        public Vector3 eulerRotation;
-        public Vector3 scale;
         public Color iconColor;
         public Sprite iconSprite;
     }

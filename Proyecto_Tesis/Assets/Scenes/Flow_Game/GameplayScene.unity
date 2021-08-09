@@ -36173,6 +36173,9 @@ MonoBehaviour:
   baseItemName: Papel con dibujo
   nameItemAssignedSprites: Dibujo
   managerListenerColorLightRay: {fileID: 1668489962}
+  OnFinishInitPuzzleColorLightRay:
+    m_PersistentCalls:
+      m_Calls: []
   dataToInit:
   - item: {fileID: 11400000, guid: 0d213253dd48c1a4b8f21a255f13aeea, type: 2}
     changeColorSprite: {fileID: 1621578694}

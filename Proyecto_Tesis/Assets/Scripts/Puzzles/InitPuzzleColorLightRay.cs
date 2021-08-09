@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Events;
 public class InitPuzzleColorLightRay : MonoBehaviour
 {
     [SerializeField] private List<ColorsToAssign> colors;
@@ -14,6 +14,8 @@ public class InitPuzzleColorLightRay : MonoBehaviour
     [SerializeField] private string nameItemAssignedSprites = "Dibujo";
 
     [SerializeField] private ManagerListenerColorLightRay managerListenerColorLightRay;
+
+    [SerializeField] private UnityEvent OnFinishInitPuzzleColorLightRay;
 
     [System.Serializable]
     public class SpritesToAssign
@@ -164,5 +166,7 @@ public class InitPuzzleColorLightRay : MonoBehaviour
                 }
             }
         }
+
+        OnFinishInitPuzzleColorLightRay?.Invoke();
     }
 }

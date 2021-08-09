@@ -10,6 +10,9 @@ public class J_InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExit
     public Button button;
     public EventSystem eventSystem;
 
+    [SerializeField] private GameObject DisplayerIconComponenObject;
+    [SerializeField] private GameObject DisplayIconSimpleObject;
+
     J_Item item;
     J_ItemDisplay display;
 
@@ -56,10 +59,10 @@ public class J_InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExit
         icon.sprite = null;
         icon.enabled = false;
         DestroyUI();
-        Debug.Log("1");
+        //Debug.Log("1");
         if (OnClearSlot != null)
         {
-            Debug.Log("2");
+            //Debug.Log("2");
             OnClearSlot(this);
         }
     }
@@ -71,10 +74,17 @@ public class J_InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExit
             display.UpdateDescription(item.description);
             display.UpdateName(item.itemName);
             if (item.useIconCompound)
+            {
+                DisplayerIconComponenObject.SetActive(true);
+                DisplayIconSimpleObject.SetActive(false);
                 display.UpdateImage(item.iconsCompound);
+            }
             else
+            {
+                DisplayIconSimpleObject.SetActive(true);
+                DisplayerIconComponenObject.SetActive(false);
                 display.UpdateImage(item.icon);
-
+            }
             eventSystem.firstSelectedGameObject = button.gameObject;
         }
     }

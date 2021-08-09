@@ -14,13 +14,7 @@ public class J_ItemDisplay : MonoBehaviour
     [Header("----------------------")]
     public GameObject parent;
     public Image imageGo;
-    private List<GameObject> gameObjects;
-    private List<Image> images;
-    void Start()
-    {
-        gameObjects = new List<GameObject>();
-        images = new List<Image>();
-    }
+    [SerializeField] private List<Image> imagesIconCompound;
 
     public void UpdateName(string newName)
     {
@@ -39,35 +33,22 @@ public class J_ItemDisplay : MonoBehaviour
 
     public void UpdateImage(J_Item.IconCompound[] icons)
     {
-        for (int i = icons.Length-1; i >= 0; i--)
+        Debug.Log(gameObject.name);
+        Debug.Log(imagesIconCompound.Count);
+        for (int i = 0; i < icons.Length; i++)
         {
-            gameObjects.Add(Instantiate(imageGo.gameObject, icons[i].position, Quaternion.identity, parent.transform));
-            gameObjects[gameObjects.Count - 1].transform.eulerAngles = icons[i].eulerRotation;
-            gameObjects[gameObjects.Count - 1].transform.localScale = icons[i].scale;
-            Image image = gameObjects[gameObjects.Count - 1].GetComponent<Image>();
-            images.Add(image);
-            if (image != null)
-            {
-                image.sprite = icons[i].iconSprite;
-                image.color = icons[i].iconColor;
-            }
+            Debug.Log("SABES QUE SI");
+            imagesIconCompound[i].sprite = icons[i].iconSprite;
+            imagesIconCompound[i].color = icons[i].iconColor;
         }
     }
 
     public void DestroyImagesIcons()
     {
-        for (int i = gameObjects.Count - 1; i >= 0 ; i--)
+        for (int i = 0; i < imagesIconCompound.Count; i++)
         {
-            Destroy(gameObjects[i]);
+            imagesIconCompound[i].sprite = defaultSprite;
+            imagesIconCompound[i].color = Color.white;
         }
-        for (int i = images.Count - 1; i >= 0; i--)
-        {
-            images[i].sprite = defaultSprite;
-            images[i].color = Color.white;
-            Destroy(images[i]);
-
-        }
-        images.Clear();
-        gameObjects.Clear();
     }
 }

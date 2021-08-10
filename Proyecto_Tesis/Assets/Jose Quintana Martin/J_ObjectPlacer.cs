@@ -17,8 +17,9 @@ public class J_ObjectPlacer : J_Interactable
 
     public override void Interact()
     {
-        base.Interact();
-
-        fopo.AddOrRemoveObject(myIndex);
+        if (fopo.AddOrRemoveObject(myIndex))
+        {
+            base.Interact();
+        }
     }
 }

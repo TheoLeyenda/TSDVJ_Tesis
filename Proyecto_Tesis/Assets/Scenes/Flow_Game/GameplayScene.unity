@@ -561,7 +561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d91a32f646af8143a094509aac926b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionEvent: 
+  interactionEvent: event:/Fxs/Objects/libro poner
   paramRef: 
   fopo: {fileID: 960610806}
   myIndex: 2
@@ -1954,7 +1954,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d91a32f646af8143a094509aac926b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionEvent: 
+  interactionEvent: event:/Fxs/Objects/libro poner
   paramRef: 
   fopo: {fileID: 960610806}
   myIndex: 0
@@ -7139,7 +7139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d91a32f646af8143a094509aac926b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionEvent: 
+  interactionEvent: event:/Fxs/Objects/libro poner
   paramRef: 
   fopo: {fileID: 960610806}
   myIndex: 1
@@ -18518,7 +18518,6 @@ GameObject:
   m_Component:
   - component: {fileID: 896836117}
   - component: {fileID: 896836121}
-  - component: {fileID: 896836118}
   m_Layer: 0
   m_Name: Tablero De Fichas
   m_TagString: Untagged
@@ -18544,29 +18543,6 @@ Transform:
   m_Father: {fileID: 908586301}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &896836118
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 896836116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  Event: event:/Fxs/Objects/Puzzle resolviendose
-  PlayEvent: 0
-  StopEvent: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
 --- !u!114 &896836121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18720,7 +18696,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 896836118}
+      - m_Target: {fileID: 0}
         m_MethodName: Play
         m_Mode: 1
         m_Arguments:
@@ -26366,7 +26342,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1267078054}
   - component: {fileID: 1267078057}
-  - component: {fileID: 1267078056}
   - component: {fileID: 1267078055}
   m_Layer: 0
   m_Name: Ficha_1
@@ -26403,33 +26378,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d91a32f646af8143a094509aac926b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionEvent: 
+  interactionEvent: event:/Fxs/Objects/Poner fichas
   paramRef: 
   fopo: {fileID: 896836121}
   myIndex: 0
---- !u!114 &1267078056
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1267078053}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  Event: event:/Fxs/Objects/Poner fichas
-  PlayEvent: 0
-  StopEvent: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
 --- !u!65 &1267078057
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26901,7 +26853,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1296676048}
-  - component: {fileID: 1296676049}
   m_Layer: 0
   m_Name: Trompeta Modelo
   m_TagString: Untagged
@@ -26924,29 +26875,6 @@ Transform:
   m_Father: {fileID: 1780448913}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!114 &1296676049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1296676047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  Event: event:/Fxs/Objects/Puzzle resolviendose
-  PlayEvent: 0
-  StopEvent: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
 --- !u!1 &1304383414
 GameObject:
   m_ObjectHideFlags: 0
@@ -27181,7 +27109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d91a32f646af8143a094509aac926b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionEvent: 
+  interactionEvent: event:/Fxs/Objects/libro poner
   paramRef: 
   fopo: {fileID: 960610806}
   myIndex: 3
@@ -37593,7 +37521,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1730133176}
   - component: {fileID: 1730133179}
-  - component: {fileID: 1730133178}
   - component: {fileID: 1730133177}
   m_Layer: 0
   m_Name: Ficha_2
@@ -37630,33 +37557,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d91a32f646af8143a094509aac926b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionEvent: 
+  interactionEvent: event:/Fxs/Objects/Poner fichas
   paramRef: 
   fopo: {fileID: 896836121}
   myIndex: 1
---- !u!114 &1730133178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1730133175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  Event: event:/Fxs/Objects/Poner fichas
-  PlayEvent: 0
-  StopEvent: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
 --- !u!65 &1730133179
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38812,7 +38716,7 @@ MonoBehaviour:
   OnGiveObject:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1296676049}
+      - m_Target: {fileID: 0}
         m_MethodName: Play
         m_Mode: 1
         m_Arguments:
@@ -41518,7 +41422,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1853959671}
   - component: {fileID: 1853959674}
-  - component: {fileID: 1853959673}
   - component: {fileID: 1853959672}
   m_Layer: 0
   m_Name: Ficha_3
@@ -41555,33 +41458,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d91a32f646af8143a094509aac926b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionEvent: 
+  interactionEvent: event:/Fxs/Objects/Poner fichas
   paramRef: 
   fopo: {fileID: 896836121}
   myIndex: 2
---- !u!114 &1853959673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1853959670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  Event: event:/Fxs/Objects/Poner fichas
-  PlayEvent: 0
-  StopEvent: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
 --- !u!65 &1853959674
 BoxCollider:
   m_ObjectHideFlags: 0

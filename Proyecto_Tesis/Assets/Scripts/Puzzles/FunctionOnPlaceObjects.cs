@@ -61,10 +61,12 @@ public class FunctionOnPlaceObjects : MonoBehaviour
         }
     }
 
-    public void AddOrRemoveObject(int indexPlaceObject)
+    public bool AddOrRemoveObject(int indexPlaceObject)
     {
+        bool result = false;
+
         if (indexPlaceObject > PlacesForObjects.Length - 1 || indexPlaceObject < 0)
-            return;
+            return false;
 
         GameObject transparentObject = PlacesForObjects[indexPlaceObject].transparentObject;
         int indexObjectSpawn = -1;
@@ -81,7 +83,7 @@ public class FunctionOnPlaceObjects : MonoBehaviour
         if (PlacesForObjects[indexPlaceObject].instanciatedObject.originObject == null)
         {
             if (indexObjectSpawn == -1)
-                return;
+                return false;
 
             GameObject objectSpawn = PlacesForObjects[indexPlaceObject].originObjects[indexObjectSpawn].originObject;
             J_Item item = PlacesForObjects[indexPlaceObject].originObjects[indexObjectSpawn].itemObject;
@@ -99,6 +101,7 @@ public class FunctionOnPlaceObjects : MonoBehaviour
             PlacesForObjects[indexPlaceObject].id = id;
 
             //Debug.Log("ENTRE ACA OP 1");
+            result = true;
         }
         else if (instanciateObjectsInHand.GetCurrentInstanciateObject() == null)
         {
@@ -117,17 +120,18 @@ public class FunctionOnPlaceObjects : MonoBehaviour
             }
 
             //Debug.Log("ENTRE ACA OP 2");
+            result = true;
         }
         else if(PlacesForObjects[indexPlaceObject].instanciatedObject != null && instanciateObjectsInHand.GetCurrentInstanciateObject() != null)
         {
             if (indexPlaceObject < 0 || indexPlaceObject >= PlacesForObjects.Length)
-                return;
+                return false;
 
             if (indexObjectSpawn == -1)
             {
                 //transparentObject.SetActive(true);
                 //PlacesForObjects[indexPlaceObject].placeObject = false;
-                return;
+                return false;
             }
 
             GameObject objectSpawn = PlacesForObjects[indexPlaceObject].originObjects[indexObjectSpawn].originObject;
@@ -155,6 +159,7 @@ public class FunctionOnPlaceObjects : MonoBehaviour
             PlacesForObjects[indexPlaceObject].id = id;
 
             //Debug.Log("ENTRE ACA OP 3");
+            result = true;
         }
 
         if (useCheckInPlaceObject)
@@ -162,6 +167,7 @@ public class FunctionOnPlaceObjects : MonoBehaviour
             CheckEventOnPlaceObject();
         }
 
+        return result;
     }
 
     public void CheckEventOnPlaceObject()

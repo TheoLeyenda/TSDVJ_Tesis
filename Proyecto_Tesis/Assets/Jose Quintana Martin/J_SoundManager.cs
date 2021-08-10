@@ -9,7 +9,7 @@ public class J_SoundManager : MonoBehaviour
         FMOD.Studio.EventInstance instance;
         instance = FMODUnity.RuntimeManager.CreateInstance(eventPath);
 
-        instance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+        instance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(obj));
 
         if (parameterName != "")
         {

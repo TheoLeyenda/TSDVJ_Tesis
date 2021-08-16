@@ -82,10 +82,10 @@ public class GameManager : MonoBehaviour
 
     public void Pause(bool activateCamvasPause)
     {
-        if (CamvasPause_GO != null && activateCamvasPause)
-            CamvasPause_GO.SetActive(!CamvasPause_GO.activeSelf);
+        if (CamvasPause_GO != null)
+            CamvasPause_GO.SetActive(activateCamvasPause);
 
-        SetIsPauseGame(!isPauseGame);
+        SetIsPauseGame(activateCamvasPause);
 
         if (mouseManager != null)
         {

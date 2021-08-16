@@ -18,7 +18,7 @@ public class ButtonsManager : Updateable
             currentButtonSelect = buttons[0];
         base.Start();
         MyUpdate.AddListener(UpdateButtonsManager);
-        UM.UpdatesInGame.Add(MyUpdate);
+        UM.SpecialUpdatesInGame.Add(MyUpdate);
     }
 
     // Update is called once per frame

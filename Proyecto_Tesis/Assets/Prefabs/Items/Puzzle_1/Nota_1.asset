@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35f50c4e7cc1823488e0b2ac4725e45a, type: 3}
   m_Name: Nota_1
   m_EditorClassIdentifier: 
+  ID: 4
   itemName: Nota del conserje 1.
   description: "\u201CHoy unos chicos se quisieron hacer los graciosos y escondieron
     la llave del aula de arte que estaba en mi llavero en uno de los instrumentos

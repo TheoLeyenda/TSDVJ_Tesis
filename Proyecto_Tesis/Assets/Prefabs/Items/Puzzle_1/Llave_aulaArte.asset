@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35f50c4e7cc1823488e0b2ac4725e45a, type: 3}
   m_Name: Llave_aulaArte
   m_EditorClassIdentifier: 
+  ID: 1
   itemName: Llave.
   description: Llave del aula de arte.
   icon: {fileID: 21300000, guid: d083c2a382649ec44ba197e679f02db0, type: 3}

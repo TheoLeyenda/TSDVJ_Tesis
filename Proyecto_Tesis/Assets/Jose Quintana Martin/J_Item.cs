@@ -3,6 +3,7 @@ using UnityEngine.UI;
 [CreateAssetMenu(fileName = "New Item", menuName = "Inventory/Item")]
 public class J_Item : ScriptableObject
 {
+    public int ID = -1;
     public string itemName = "New Item";
     public string description = "Description";
     public Sprite icon = null;

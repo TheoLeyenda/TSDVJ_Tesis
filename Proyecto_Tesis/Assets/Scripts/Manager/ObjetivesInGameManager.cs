@@ -8,7 +8,7 @@ public class ObjetivesInGameManager : MonoBehaviour
     [System.Serializable]
     public class Objetive
     {
-        public string descriptionObjetive;
+        private string descriptionObjetive;
         public bool useCountObjects;
         public int currentCountObjects;
         public int objetiveCountObjects;
@@ -17,11 +17,13 @@ public class ObjetivesInGameManager : MonoBehaviour
 
         public void UpdateDrawObjetive()
         {
+            descriptionObjetive = textObjetive.text;
+
             if (!textObjetive.gameObject.activeSelf)
                 ActiveText();
 
             if (useCountObjects)
-                textObjetive.text = descriptionObjetive + " " + currentCountObjects + "/" + objetiveCountObjects;
+                textObjetive.text = descriptionObjetive + " (" + currentCountObjects + "/" + objetiveCountObjects+").";
             else
                 textObjetive.text = descriptionObjetive;
 
@@ -57,8 +59,6 @@ public class ObjetivesInGameManager : MonoBehaviour
             textObjetive.gameObject.SetActive(false);
         }
     }
-
-
 
     public List<Objetive> objetives;
 

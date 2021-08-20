@@ -213,4 +213,9 @@ public class ChangeAlphaElementsUI : Updateable
         enableChangeAlpha1 = false;
     }
 
+    public void DisableChangeAlpha()
+    {
+        enableChangeAlpha0 = false;
+        enableChangeAlpha1 = false;
+    }
 }

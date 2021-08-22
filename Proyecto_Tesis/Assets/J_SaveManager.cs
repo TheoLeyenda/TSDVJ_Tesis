@@ -6,13 +6,21 @@ public class J_SaveManager : MonoBehaviour
 {
     public GameObject playerGO;
 
+    public int maxPuzzles = 6;
+    bool[] puzzlesStates;
+    int targetId;
+    bool targetPuzzleResult;
+    J_PuzzleOnLoadActions puzzleOnLoadActions;
+
     public void Save()
     {
         J_SaveSystem.SavePlayer(playerGO);
+        J_SaveSystem.SavePuzzles(puzzlesStates);
     }
 
     public void Load()
     {
+        //===============PLAYER=======================
         J_PlayerData data = J_SaveSystem.LoadPlayer();
 
         Vector3 position;
@@ -32,17 +40,60 @@ public class J_SaveManager : MonoBehaviour
         {
             J_inventoryManager.instance.AddItem(data.itemIDS[i]);
         }
+        //===============PLAYER=======================
+
+        //===============PUZZLES=======================
+        J_PuzzleData puzzleData = J_SaveSystem.LoadPuzzles();
+
+        puzzlesStates = puzzleData.arePuzzleFinished;
+
+        for (int i = 0; i < puzzlesStates.Length; i++)
+        {
+            if (puzzlesStates[i] == true)
+            {
+                if (i == 5) //Medio feo esto, pero por ahora safa
+                {
+                    puzzleOnLoadActions.ActionPuzzle6.Invoke();
+                }
+            }
+        }
+        //===============PUZZLES=======================
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        puzzlesStates = new bool[maxPuzzles];
 
+        puzzleOnLoadActions = FindObjectOfType<J_PuzzleOnLoadActions>();
     }
 
     // Update is called once per frame
     void Update()
     {
 
+    }
+
+    public void SetPuzzleState(int puzzleID, bool isResolved) //La Id de los puzzles es el orden en el array bool[] puzzlesStates (0 es el puzzle 1, 1 el 2 y asi)
+    {
+        puzzlesStates[puzzleID] = isResolved;
+    }
+    public void SetPuzzleId(int id)
+    {
+        if (id > maxPuzzles || id < 0)
+        {
+            Debug.Log("Not valid puzzleID");
+            return;
+        }
+
+        targetId = id;
+    }
+    public void SetPuzzleResult(bool result)
+    {
+        targetPuzzleResult = result;
+    }
+    public void SendIdandResult()
+    {
+        SetPuzzleState(targetId, targetPuzzleResult);
     }
 }

@@ -11,13 +11,9 @@ public abstract class J_Interactable : MonoBehaviour
     [FMODUnity.ParamRef]
     public string paramRef;
 
-    public UnityEvent OnInteractFunctions;
-
     public virtual void Interact()
     {
         PlaySound();
-
-        OnInteractFunctions?.Invoke();
     }
 
     public void PlaySound()

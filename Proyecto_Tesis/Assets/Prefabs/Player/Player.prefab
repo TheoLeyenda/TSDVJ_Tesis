@@ -834,7 +834,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1202,7 +1202,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputManager: {fileID: 0}
   nameInputOnAndOffFlashlight: On And Off Flashlight
-  enableUseFlashlight: 1
   useFixedUpdateFlashlight: 1
   lightObject: {fileID: 4113103770895109659}
   lightState: 1
@@ -1636,7 +1635,6 @@ MonoBehaviour:
   nameInputChangeNextColor: NextColorFlashlight
   nameInputChangePrevColor: None
   enableUse: 0
-  itemRequiered: {fileID: 0}
   myLightModifireColor: {fileID: 4113103770895109654}
   colorsEmitter:
   - {r: 0, g: 0, b: 1, a: 1}

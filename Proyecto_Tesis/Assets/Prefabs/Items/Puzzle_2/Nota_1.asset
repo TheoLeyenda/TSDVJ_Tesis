@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35f50c4e7cc1823488e0b2ac4725e45a, type: 3}
   m_Name: Nota_1
   m_EditorClassIdentifier: 
+  ID: 11
   itemName: Nota director 1
   description: "\u201CJames recuerda esto, para que puedas abrir la caja fuerte,
     la clave de seis d\xEDgitos es el paso del tiempo en esta escuela.\u201D"

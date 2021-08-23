@@ -372,23 +372,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2023
---- !u!114 &-8193193624086437113
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/libro/Libro
-  m_EditorClassIdentifier: 
-  Name: Libro
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
 --- !u!114 &-8185246594959749607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -569,53 +552,6 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 4000
---- !u!114 &-7764401693221200496
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Fxs/Objects/libro
-  m_EditorClassIdentifier: 
-  Path: event:/Fxs/Objects/libro
-  guid: c7b8fe3d346af741828b9dfdebbdd45a
-  Banks:
-  - {fileID: 4501119394769879726}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -8193193624086437113}
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 1340
---- !u!114 &-7660929731048427627
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Fxs/Objects/trompeta destornillador
-  m_EditorClassIdentifier: 
-  Path: event:/Fxs/Objects/trompeta destornillador
-  guid: b1714acc3e98da439c57ce294bbf1222
-  Banks:
-  - {fileID: 4501119394769879726}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 5000
 --- !u!114 &-7635037199819243007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -662,23 +598,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 6100
---- !u!114 &-7490730758103412112
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Nota (papel)/Nota-papel
-  m_EditorClassIdentifier: 
-  Name: Nota-papel
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
 --- !u!114 &-7480596629112348092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1377,29 +1296,6 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
---- !u!114 &-5607239752897951776
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Fxs/Objects/Fuego
-  m_EditorClassIdentifier: 
-  Path: event:/Fxs/Objects/Fuego
-  guid: c353d9f97e904441a534cb4eef94a09a
-  Banks:
-  - {fileID: 4501119394769879726}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 9000
 --- !u!114 &-5592203274440353466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1529,23 +1425,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1000
---- !u!114 &-4981044223332912552
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Master track/ganar
-  m_EditorClassIdentifier: 
-  Name: ganar
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
 --- !u!114 &-4952293553071213917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1594,30 +1473,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 8000
---- !u!114 &-4745825196926769629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Fxs/Objects/llave
-  m_EditorClassIdentifier: 
-  Path: event:/Fxs/Objects/llave
-  guid: 737053b4a2370640ba0711e0fb3cbcbb
-  Banks:
-  - {fileID: 4501119394769879726}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -4359751152281909685}
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 1550
 --- !u!114 &-4589169402577631965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1641,23 +1496,6 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1081
---- !u!114 &-4359751152281909685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/llave/Llaves
-  m_EditorClassIdentifier: 
-  Name: Llaves
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
 --- !u!114 &-4325131743585380099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1967,29 +1805,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 7.6
   Length: 7500
---- !u!114 &-3201229165522025078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Fxs/Objects/caja fuerte
-  m_EditorClassIdentifier: 
-  Path: event:/Fxs/Objects/caja fuerte
-  guid: 4dcf758a3951be46a9b4b6047f7140ff
-  Banks:
-  - {fileID: 4501119394769879726}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 4000
 --- !u!114 &-3083982149892741859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2053,30 +1868,6 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2500
---- !u!114 &-2890464144539841958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Fxs/Monster/Rugido
-  m_EditorClassIdentifier: 
-  Path: event:/Fxs/Monster/Rugido
-  guid: e003be7742d6dd4e8c0b8f7039326dde
-  Banks:
-  - {fileID: 4501119394769879726}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 4463735347655441408}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 8000
 --- !u!114 &-2719695025573067045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2221,29 +2012,6 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
---- !u!114 &-2187490719640640493
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Fxs/Objects/Puerta trabada
-  m_EditorClassIdentifier: 
-  Path: event:/Fxs/Objects/Puerta trabada
-  guid: 5c314c9ed579b5409a92e182589ba349
-  Banks:
-  - {fileID: 4501119394769879726}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 1081
 --- !u!114 &-2103825396176218474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2382,29 +2150,6 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2000
---- !u!114 &-1720703891339767537
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Fxs/Objects/Poner fichas
-  m_EditorClassIdentifier: 
-  Path: event:/Fxs/Objects/Poner fichas
-  guid: 8c817f95462508489f410b0245bbe3b8
-  Banks:
-  - {fileID: 4501119394769879726}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 280
 --- !u!114 &-1624650781660938292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2533,29 +2278,6 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
---- !u!114 &-1229304387481687892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Background music/Temas individuales/Endings/Bad ending
-  m_EditorClassIdentifier: 
-  Path: event:/Background music/Temas individuales/Endings/Bad ending
-  guid: 3f2f0f6de200684f8c4aa4f88141c048
-  Banks:
-  - {fileID: 4501119394769879726}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
 --- !u!114 &-1100026585120719616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2673,23 +2395,6 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1340
---- !u!114 &-728305165032712785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/latidos del corazon/Corazon
-  m_EditorClassIdentifier: 
-  Name: Corazon
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
 --- !u!114 &-692420999254303965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2736,29 +2441,6 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 245
---- !u!114 &-498884341790391265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Background music/Temas individuales/Main theme
-  m_EditorClassIdentifier: 
-  Path: event:/Background music/Temas individuales/Main theme
-  guid: ee9a6923075e274da645f4406ed06fc6
-  Banks:
-  - {fileID: 4501119394769879726}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 143000
 --- !u!114 &-474136428606339943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2822,29 +2504,6 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2000
---- !u!114 &-428648198474322551
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Fxs/Objects/Puzzle resolviendose
-  m_EditorClassIdentifier: 
-  Path: event:/Fxs/Objects/Puzzle resolviendose
-  guid: d91f182b89765b42b76a651a8e56ce20
-  Banks:
-  - {fileID: 4501119394769879726}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 235
 --- !u!114 &-367997704946719052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2939,29 +2598,6 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1340
---- !u!114 &-159048435941087558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Background music/Temas individuales/Endings/Good ending
-  m_EditorClassIdentifier: 
-  Path: event:/Background music/Temas individuales/Endings/Good ending
-  guid: 978d9048e40d4c418f55ab2dc8234ad5
-  Banks:
-  - {fileID: 4501119394769879726}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
 --- !u!114 &-108265267103674033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3066,46 +2702,46 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 2568061311102806878}
-  - {fileID: 4501119394769879726}
+  - {fileID: -5955287130445056120}
+  - {fileID: -8319921867889807402}
   EditorEvents:
-  - {fileID: 632202543222049465}
-  - {fileID: 64601238404148942}
-  - {fileID: 6920069345101937596}
-  - {fileID: 8613526434546659317}
-  - {fileID: 1745150160267738101}
-  - {fileID: 5980089497086617415}
-  - {fileID: -1229304387481687892}
-  - {fileID: -3201229165522025078}
-  - {fileID: 7706007704913705989}
-  - {fileID: 7574362139752195812}
-  - {fileID: -2187490719640640493}
-  - {fileID: -4745825196926769629}
-  - {fileID: 2450797342965947443}
-  - {fileID: -1720703891339767537}
-  - {fileID: 6644453498696159781}
-  - {fileID: 8837430623585730926}
-  - {fileID: -159048435941087558}
-  - {fileID: 2137219262268333409}
-  - {fileID: 8753138779346691901}
-  - {fileID: 7718135076553114181}
-  - {fileID: -7660929731048427627}
-  - {fileID: 6294998239587735273}
-  - {fileID: 4669240255138988860}
-  - {fileID: -5607239752897951776}
-  - {fileID: 1185685495819417112}
-  - {fileID: -7764401693221200496}
-  - {fileID: 2478993845683372747}
-  - {fileID: -428648198474322551}
-  - {fileID: 8927201575684702598}
-  - {fileID: 3528469380565298836}
-  - {fileID: -2890464144539841958}
-  - {fileID: -498884341790391265}
+  - {fileID: -8632262347731862985}
+  - {fileID: -8976504939884123794}
+  - {fileID: 7359412617170120522}
+  - {fileID: -5785730060031633805}
+  - {fileID: -3014066418590145307}
+  - {fileID: 6007149110812172550}
+  - {fileID: -309394065850657313}
+  - {fileID: -6605853165329120430}
+  - {fileID: 5522965911523140729}
+  - {fileID: 3612213356982027940}
+  - {fileID: 5180343428003185419}
+  - {fileID: -877861115781957287}
+  - {fileID: -1428085024333213980}
+  - {fileID: -8926357753071270172}
+  - {fileID: 3756304689590121984}
+  - {fileID: -6921241793025895896}
+  - {fileID: 4622943145942290324}
+  - {fileID: 3259383260492815337}
+  - {fileID: -2464434086310737435}
+  - {fileID: 3972373422205858094}
+  - {fileID: 9147351637525703269}
+  - {fileID: 5794070322476060980}
+  - {fileID: -104182099360978068}
+  - {fileID: -6908717427584588597}
+  - {fileID: -437140011042301166}
+  - {fileID: -170565697543185599}
+  - {fileID: 6691278854061216909}
+  - {fileID: -5775134342390403733}
+  - {fileID: -4952293553071213917}
+  - {fileID: -8397598447501221735}
+  - {fileID: 896473215034239349}
+  - {fileID: -4266077778984346137}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 4501119394769879726}
+  - {fileID: -8319921867889807402}
   StringsBanks:
-  - {fileID: 2568061311102806878}
+  - {fileID: -5955287130445056120}
   stringsBankWriteTime: 637591864560000000
   cacheVersion: 3
 --- !u!114 &42231941312379836
@@ -3132,29 +2768,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 4000
---- !u!114 &64601238404148942
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Fxs/Objects/libro agarrar
-  m_EditorClassIdentifier: 
-  Path: event:/Fxs/Objects/libro agarrar
-  guid: 1bfe0961ace4f7408458a6933be54de5
-  Banks:
-  - {fileID: 4501119394769879726}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 1050
 --- !u!114 &64797823490567793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3268,23 +2881,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 8000
---- !u!114 &487709250111687851
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Pisadas/pisada monstruo
-  m_EditorClassIdentifier: 
-  Name: pisada monstruo
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
 --- !u!114 &541776681869117786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3331,30 +2927,6 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1081
---- !u!114 &632202543222049465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Fxs/Player/Menu/seleccionar
-  m_EditorClassIdentifier: 
-  Path: event:/Fxs/Player/Menu/seleccionar
-  guid: 12efa8a0654aae4dab7e7c641a2f13fe
-  Banks:
-  - {fileID: 4501119394769879726}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 4642624804252399235}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1500
 --- !u!114 &642498321743095334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3498,29 +3070,6 @@ MonoBehaviour:
   - Name: Desktop
     Value: 2850
   Exists: 1
---- !u!114 &1185685495819417112
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Fxs/Objects/destornillador
-  m_EditorClassIdentifier: 
-  Path: event:/Fxs/Objects/destornillador
-  guid: c57a0e17212a724cba0a9258a1ab5d25
-  Banks:
-  - {fileID: 4501119394769879726}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 2000
 --- !u!114 &1303527649718159975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3632,52 +3181,6 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2500
---- !u!114 &1745150160267738101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Fxs/Objects/Alcohol
-  m_EditorClassIdentifier: 
-  Path: event:/Fxs/Objects/Alcohol
-  guid: 2d0373e4b6aab14f8d88ef4bc552a3ff
-  Banks:
-  - {fileID: 4501119394769879726}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 2500
---- !u!114 &2137219262268333409
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Fxs/Objects/botones codigo
-  m_EditorClassIdentifier: 
-  Path: event:/Fxs/Objects/botones codigo
-  guid: 9afe2f5b6b46f944a0efd0f9d3c80628
-  Banks:
-  - {fileID: 4501119394769879726}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 500
 --- !u!114 &2163103672745479168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3765,53 +3268,6 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 9000
---- !u!114 &2450797342965947443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Fxs/Player/Character/latidos del corazon
-  m_EditorClassIdentifier: 
-  Path: event:/Fxs/Player/Character/latidos del corazon
-  guid: 8a6ffd54ee4ca8478059e47fc1c16db2
-  Banks:
-  - {fileID: 4501119394769879726}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -728305165032712785}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2023
---- !u!114 &2478993845683372747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Fxs/Player/Character/personaje asustado
-  m_EditorClassIdentifier: 
-  Path: event:/Fxs/Player/Character/personaje asustado
-  guid: cda6b2d9939611498ecd3504701bdb9c
-  Banks:
-  - {fileID: 4501119394769879726}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 6100
 --- !u!114 &2542916551346554378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3835,26 +3291,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 333
---- !u!114 &2568061311102806878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: ../SN_Audio/Build/Desktop/Master.strings.bank
-  SubDir: 
-  lastModified: 637591864560000000
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 2850
-  Exists: 1
 --- !u!114 &2997550980299994585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3965,46 +3401,6 @@ MonoBehaviour:
   guid: 978d9048e40d4c418f55ab2dc8234ad5
   Banks:
   - {fileID: 868646404754685786}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &3505213732336244927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/luces titilando/luces titilando
-  m_EditorClassIdentifier: 
-  Name: luces titilando
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
---- !u!114 &3528469380565298836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Background music/Temas individuales/Opening
-  m_EditorClassIdentifier: 
-  Path: event:/Background music/Temas individuales/Opening
-  guid: de4db12b03a6f248901ae510b9a54b38
-  Banks:
-  - {fileID: 4501119394769879726}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -4180,23 +3576,6 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
---- !u!114 &4076299177257402088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Master track/perder
-  m_EditorClassIdentifier: 
-  Name: perder
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
 --- !u!114 &4160095624313000689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4242,41 +3621,6 @@ MonoBehaviour:
   MaxDistance: 7.6
   Length: 7500
 --- !u!114 &4451910711366829127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: ../SN_Audio/Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637591864560000000
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &4463735347655441408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: 'parameter:/Rugido/monstruo screamer 1 '
-  m_EditorClassIdentifier: 
-  Name: 'monstruo screamer 1 '
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
---- !u!114 &4501119394769879726
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4405,23 +3749,6 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &4642624804252399235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/seleccionar/Boton
-  m_EditorClassIdentifier: 
-  Name: Boton
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
 --- !u!114 &4658919676321168986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4445,30 +3772,6 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 920
---- !u!114 &4669240255138988860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Fxs/Player/Character/pisadas
-  m_EditorClassIdentifier: 
-  Path: event:/Fxs/Player/Character/pisadas
-  guid: b85e9c6c288ad54ba4c1fc3660d3835c
-  Banks:
-  - {fileID: 4501119394769879726}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 6468356744380270997}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1000
 --- !u!114 &4880562995281004323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4711,29 +4014,6 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 220
---- !u!114 &5980089497086617415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Fxs/Objects/libro poner
-  m_EditorClassIdentifier: 
-  Path: event:/Fxs/Objects/libro poner
-  guid: 391ab8c9a0658443942214ccbc4077a8
-  Banks:
-  - {fileID: 4501119394769879726}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 245
 --- !u!114 &6004746353971838276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4797,29 +4077,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 7500
---- !u!114 &6294998239587735273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Fxs/Player/Menu/celular
-  m_EditorClassIdentifier: 
-  Path: event:/Fxs/Player/Menu/celular
-  guid: b1b8e150818a8c419c8ce2e10b8d2a5f
-  Banks:
-  - {fileID: 4501119394769879726}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 220
 --- !u!114 &6352956451562046374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4906,23 +4163,6 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 280
---- !u!114 &6468356744380270997
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/pisadas/Caminar
-  m_EditorClassIdentifier: 
-  Name: Caminar
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
 --- !u!114 &6469559719083687819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5043,30 +4283,6 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
---- !u!114 &6644453498696159781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Fxs/Monster/Pisadas
-  m_EditorClassIdentifier: 
-  Path: event:/Fxs/Monster/Pisadas
-  guid: 8e6131e1d3af644daf5f1a7f514d863b
-  Banks:
-  - {fileID: 4501119394769879726}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 487709250111687851}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 4000
 --- !u!114 &6681075809146505254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5124,31 +4340,6 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
---- !u!114 &6920069345101937596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Background music/Master track
-  m_EditorClassIdentifier: 
-  Path: event:/Background music/Master track
-  guid: 1d6241809019624e964c399737c06204
-  Banks:
-  - {fileID: 4501119394769879726}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 4076299177257402088}
-  - {fileID: -4981044223332912552}
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 81000
 --- !u!114 &6948447915544059320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5301,29 +4492,6 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1050
---- !u!114 &7574362139752195812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Fxs/Objects/locker
-  m_EditorClassIdentifier: 
-  Path: event:/Fxs/Objects/locker
-  guid: 58aed3b98e224e4a902ae73b4ffd6ebf
-  Banks:
-  - {fileID: 4501119394769879726}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 4000
 --- !u!114 &7594931537882087196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5404,53 +4572,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 6100
---- !u!114 &7706007704913705989
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Fxs/Objects/Agarrar ficha
-  m_EditorClassIdentifier: 
-  Path: event:/Fxs/Objects/Agarrar ficha
-  guid: 4f90cd17657f554b8879953c973865db
-  Banks:
-  - {fileID: 4501119394769879726}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 333
---- !u!114 &7718135076553114181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Fxs/Objects/Nota (papel)
-  m_EditorClassIdentifier: 
-  Path: event:/Fxs/Objects/Nota (papel)
-  guid: a740de48e5b97f40aa92b2d6f940a304
-  Banks:
-  - {fileID: 4501119394769879726}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -7490730758103412112}
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 2000
 --- !u!114 &7891880143078645365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5637,29 +4758,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2023
---- !u!114 &8613526434546659317
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Fxs/Objects/Fosforo
-  m_EditorClassIdentifier: 
-  Path: event:/Fxs/Objects/Fosforo
-  guid: 2a4dd069c998f245a7c1474bf7ed65fb
-  Banks:
-  - {fileID: 4501119394769879726}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 2500
 --- !u!114 &8666185914956032574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5676,29 +4774,6 @@ MonoBehaviour:
   guid: a1a37a142d99104f9e1801492b8e3d8d
   Banks:
   - {fileID: -8961812728749379069}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 7500
---- !u!114 &8753138779346691901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Fxs/Player/Character/personaje cansado
-  m_EditorClassIdentifier: 
-  Path: event:/Fxs/Player/Character/personaje cansado
-  guid: a1a37a142d99104f9e1801492b8e3d8d
-  Banks:
-  - {fileID: 4501119394769879726}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
@@ -5723,53 +4798,6 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
---- !u!114 &8837430623585730926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Fxs/Objects/Puerta destrabada
-  m_EditorClassIdentifier: 
-  Path: event:/Fxs/Objects/Puerta destrabada
-  guid: 921425c0839f334fb79c4bdbf00aed60
-  Banks:
-  - {fileID: 4501119394769879726}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 920
---- !u!114 &8927201575684702598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Fxs/Background/luces titilando
-  m_EditorClassIdentifier: 
-  Path: event:/Fxs/Background/luces titilando
-  guid: dd3a1917ffe93844a3a490856886772d
-  Banks:
-  - {fileID: 4501119394769879726}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 3505213732336244927}
-  MinDistance: 1
-  MaxDistance: 7.6
-  Length: 7500
 --- !u!114 &8944381395970665688
 MonoBehaviour:
   m_ObjectHideFlags: 0

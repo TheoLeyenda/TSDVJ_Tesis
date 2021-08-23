@@ -122,7 +122,7 @@ public class FunctionOnPlaceObjects : MonoBehaviour
             //Debug.Log("ENTRE ACA OP 2");
             result = true;
         }
-        else if(PlacesForObjects[indexPlaceObject].instanciatedObject != null && instanciateObjectsInHand.GetCurrentInstanciateObject() != null)
+        else if (PlacesForObjects[indexPlaceObject].instanciatedObject != null && instanciateObjectsInHand.GetCurrentInstanciateObject() != null)
         {
             if (indexPlaceObject < 0 || indexPlaceObject >= PlacesForObjects.Length)
                 return false;
@@ -149,7 +149,7 @@ public class FunctionOnPlaceObjects : MonoBehaviour
 
             PlacesForObjects[indexPlaceObject].instanciatedObject.originObject = null;
 
-            
+
             PlacesForObjects[indexPlaceObject].instanciatedObject.originObject = objectSpawn;
             PlacesForObjects[indexPlaceObject].instanciatedObject.cloneObject = Instantiate(objectSpawn, PlacesForObjects[indexPlaceObject].transformSpawn);
             PlacesForObjects[indexPlaceObject].instanciatedObject.originObject.transform.localScale = new Vector3(1, 1, 1);
@@ -192,6 +192,29 @@ public class FunctionOnPlaceObjects : MonoBehaviour
         if (correctAnswer)
         {
             eventOnCorrectPlaceObjects?.Invoke();
+        }
+    }
+
+    public void PlaceAllObjects()
+    {
+        for (int i = 0; i < PlacesForObjects.Length; i++)
+        {
+            int indexPlaceObject = i;
+            int indexObjectSpawn = i;
+            GameObject transparentObject = PlacesForObjects[indexPlaceObject].transparentObject;
+
+            GameObject objectSpawn = PlacesForObjects[indexPlaceObject].originObjects[indexObjectSpawn].originObject;
+            J_Item item = PlacesForObjects[indexPlaceObject].originObjects[indexObjectSpawn].itemObject;
+            int id = PlacesForObjects[indexPlaceObject].originObjects[indexObjectSpawn].id_object;
+
+            transparentObject.SetActive(false);
+            PlacesForObjects[indexPlaceObject].instanciatedObject.originObject = objectSpawn;
+            PlacesForObjects[indexPlaceObject].instanciatedObject.cloneObject = Instantiate(objectSpawn, PlacesForObjects[indexPlaceObject].transformSpawn);
+            PlacesForObjects[indexPlaceObject].instanciatedObject.originObject.transform.localScale = new Vector3(1, 1, 1);
+            PlacesForObjects[indexPlaceObject].instanciatedObject.originObject.transform.localPosition = Vector3.zero;
+            PlacesForObjects[indexPlaceObject].instanciatedObject.itemObject = item;
+            PlacesForObjects[indexPlaceObject].placeObject = true;
+            PlacesForObjects[indexPlaceObject].id = id;
         }
     }
 }

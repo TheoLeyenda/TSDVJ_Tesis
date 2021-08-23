@@ -6,7 +6,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private InputManager inputManager;
     [SerializeField] private string nameInputPause;
     [SerializeField] private GameObject CamvasPause_GO;
-    [SerializeField] private GameObject[] otherScreensPause;
     public MouseManager mouseManager;
 
     public static GameManager instanceGameManager;
@@ -34,11 +33,6 @@ public class GameManager : MonoBehaviour
         isPauseGame = false;
         if (CamvasPause_GO != null)
             CamvasPause_GO.SetActive(false);
-
-        for (int i = 0; i < otherScreensPause.Length; i++)
-        {
-            otherScreensPause[i].SetActive(false);
-        }
 
         if (inputManager != null)
         {
@@ -83,21 +77,15 @@ public class GameManager : MonoBehaviour
         {
             if (OnDispause != null)
                 OnDispause(this);
-
-            for (int i = 0; i < otherScreensPause.Length; i++)
-            {
-                otherScreensPause[i].SetActive(false);
-            }
         }
-
     }
 
     public void Pause(bool activateCamvasPause)
     {
-        if (CamvasPause_GO != null)
-            CamvasPause_GO.SetActive(activateCamvasPause);
+        if (CamvasPause_GO != null && activateCamvasPause)
+            CamvasPause_GO.SetActive(!CamvasPause_GO.activeSelf);
 
-        SetIsPauseGame(activateCamvasPause);
+        SetIsPauseGame(!isPauseGame);
 
         if (mouseManager != null)
         {
@@ -116,11 +104,6 @@ public class GameManager : MonoBehaviour
         {
             if (OnDispause != null)
                 OnDispause(this);
-
-            for (int i = 0; i < otherScreensPause.Length; i++)
-            {
-                otherScreensPause[i].SetActive(false);
-            }
         }
     }
 

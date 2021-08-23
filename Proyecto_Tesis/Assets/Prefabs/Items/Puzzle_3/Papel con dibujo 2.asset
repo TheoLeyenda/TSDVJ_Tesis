@@ -12,22 +12,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35f50c4e7cc1823488e0b2ac4725e45a, type: 3}
   m_Name: Papel con dibujo 2
   m_EditorClassIdentifier: 
-  ID: 14
-  itemName: Papel con dibujo 2
+  itemName: Papel con dibujo 1
   description: "Un peque\xF1o papel dibujado, se puede percibir un numero y una mancha
     de crayon en el."
   icon: {fileID: 21300000, guid: 292e11a9fc82b034ca3af5f3997cf70a, type: 3}
   useIconCompound: 1
   iconsCompound:
   - name: Dibujo
+    position: {x: 510, y: 715, z: 0}
+    eulerRotation: {x: 0, y: 0, z: 0}
+    scale: {x: 3, y: 3, z: 3}
     iconColor: {r: 0, g: 0, b: 0, a: 1}
-    iconSprite: {fileID: 21300000, guid: 35a1dfd5215cf2d4cb722686ee8dc8c6, type: 3}
+    iconSprite: {fileID: 21300000, guid: d9e16de8784e4df40b934656ae233aa7, type: 3}
   - name: Numero
+    position: {x: 315, y: 540, z: 0}
+    eulerRotation: {x: 0, y: 0, z: 0}
+    scale: {x: 1, y: 1, z: 1}
     iconColor: {r: 0, g: 0, b: 0, a: 1}
-    iconSprite: {fileID: 21300000, guid: 389f1c4689c3d2943aa56d959984997e, type: 3}
+    iconSprite: {fileID: 21300000, guid: cb617eeaea22f82409740363cc89584f, type: 3}
   - name: Color Crayon
-    iconColor: {r: 1, g: 0, b: 0, a: 1}
+    position: {x: 350, y: 900, z: 0}
+    eulerRotation: {x: 0, y: 0, z: 0}
+    scale: {x: 1, y: 1, z: 1}
+    iconColor: {r: 0, g: 0, b: 1, a: 1}
     iconSprite: {fileID: 21300000, guid: 90f2acdab0a7eb64b9e6ecb34a9ef592, type: 3}
   - name: Background
+    position: {x: 507, y: 733, z: 0}
+    eulerRotation: {x: 0, y: 0, z: 0}
+    scale: {x: 5, y: 5, z: 5}
     iconColor: {r: 1, g: 1, b: 1, a: 1}
     iconSprite: {fileID: 21300000, guid: 2399921256bb4fe44aa95324292b6641, type: 3}

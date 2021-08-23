@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35f50c4e7cc1823488e0b2ac4725e45a, type: 3}
   m_Name: Foto 2
   m_EditorClassIdentifier: 
-  ID: 8
   itemName: Foto 2
   description: Foto del director a sus
   icon: {fileID: 21300000, guid: 392a689569ce01841b378d0c1697a48e, type: 3}

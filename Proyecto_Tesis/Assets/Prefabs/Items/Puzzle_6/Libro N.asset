@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35f50c4e7cc1823488e0b2ac4725e45a, type: 3}
   m_Name: Libro N
   m_EditorClassIdentifier: 
-  ID: 27
   itemName: Libro.
   description: Libro de la biblioteca con una N grabada en su dorso.
   icon: {fileID: 21300000, guid: 92dedba2be18311468041ea090fc1621, type: 3}

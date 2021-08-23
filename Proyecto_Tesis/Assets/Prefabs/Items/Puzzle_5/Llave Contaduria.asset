@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35f50c4e7cc1823488e0b2ac4725e45a, type: 3}
   m_Name: Llave Contaduria
   m_EditorClassIdentifier: 
-  ID: 25
   itemName: Llave.
   description: Llave de la sala de contaduria.
   icon: {fileID: 21300000, guid: 30c16fc043999e8468a7a276913a3370, type: 3}

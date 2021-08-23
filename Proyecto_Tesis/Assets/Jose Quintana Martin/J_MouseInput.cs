@@ -44,8 +44,8 @@ public class J_MouseInput : Updateable
                 turn.y = -90;
             }
 
-            transform.localRotation = Quaternion.Euler(-turn.y, playerBody.localRotation.y, playerBody.localRotation.z);
-            playerBody.localRotation = Quaternion.Euler(playerBody.localRotation.x, turn.x, playerBody.localRotation.z); //<---------- YOUUUUUUU!!!!
+            transform.localRotation = Quaternion.Euler(-turn.y, 0, 0);
+            playerBody.localRotation = Quaternion.Euler(0, turn.x, 0); //<---------- YOUUUUUUU!!!!
         }
     }
 

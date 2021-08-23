@@ -1,32 +1,41 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Events;
 public class ObjetivesInGameManager : MonoBehaviour
 {
     [System.Serializable]
     public class Objetive
     {
-        public string descriptionObjetive;
+        private bool descriptionObjectiveSettingDone = false;
+        private string descriptionObjetive;
         public bool useCountObjects;
         public int currentCountObjects;
         public int objetiveCountObjects;
         public bool objetiveComplete;
         public TextMeshProUGUI textObjetive;
-
+        public UnityEvent OnObjetiveDone;
         public void UpdateDrawObjetive()
         {
+            if (!descriptionObjectiveSettingDone)
+            {
+                descriptionObjetive = textObjetive.text;
+                descriptionObjectiveSettingDone = true;
+            }
             if (!textObjetive.gameObject.activeSelf)
                 ActiveText();
 
             if (useCountObjects)
-                textObjetive.text = descriptionObjetive + " " + currentCountObjects + "/" + objetiveCountObjects;
-            else
+            {
                 textObjetive.text = descriptionObjetive;
-
+                textObjetive.text = textObjetive.text + " (" + currentCountObjects + "/" + objetiveCountObjects + ").";
+            }
             if (objetiveComplete)
+            {
                 textObjetive.fontStyle = FontStyles.Strikethrough;
+                OnObjetiveDone?.Invoke();
+            }
             //else
             //textObjetive.fontStyle = FontStyles.Normal;
         }
@@ -57,8 +66,6 @@ public class ObjetivesInGameManager : MonoBehaviour
             textObjetive.gameObject.SetActive(false);
         }
     }
-
-
 
     public List<Objetive> objetives;
 

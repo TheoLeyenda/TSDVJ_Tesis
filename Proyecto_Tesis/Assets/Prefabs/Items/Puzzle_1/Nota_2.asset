@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35f50c4e7cc1823488e0b2ac4725e45a, type: 3}
   m_Name: Nota_2
   m_EditorClassIdentifier: 
-  ID: 5
   itemName: Nota del conserje 2.
   description: "\u201CHoy el director me mand\xF3 a limpiar uno de los inodoros del
     ba\xF1o de los chicos, cuando llegue el lugar estaba en condiciones deplorables,

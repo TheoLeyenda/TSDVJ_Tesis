@@ -6,6 +6,7 @@ public class J_Item : ScriptableObject
     public string itemName = "New Item";
     public string description = "Description";
     public Sprite icon = null;
+    public int ID;
     private FunctionItem functionItem;
 
     public bool useIconCompound = false;

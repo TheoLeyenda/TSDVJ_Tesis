@@ -15,5 +15,6 @@ MonoBehaviour:
   itemName: Ficha Foca.
   description: "Una peque\xF1a ficha con la silueta de una foca en ella."
   icon: {fileID: 21300000, guid: 830c9965b111f6241bc85de9d9d0086d, type: 3}
+  ID: 22
   useIconCompound: 0
   iconsCompound: []

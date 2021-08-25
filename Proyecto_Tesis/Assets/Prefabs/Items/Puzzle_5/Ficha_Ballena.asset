@@ -15,5 +15,6 @@ MonoBehaviour:
   itemName: Ficha Ballena.
   description: "Una peque\xF1a ficha con la silueta de una ballena en ella."
   icon: {fileID: 21300000, guid: e6037f413e3e9bd4f96fede4fda5a11e, type: 3}
+  ID: 21
   useIconCompound: 0
   iconsCompound: []

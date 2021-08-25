@@ -15,5 +15,6 @@ MonoBehaviour:
   itemName: Ficha Pez.
   description: "Una peque\xF1a ficha con la silueta de un pez en ella."
   icon: {fileID: 21300000, guid: 086d20d1f0ffd3f44999e714a20ab7f7, type: 3}
+  ID: 23
   useIconCompound: 0
   iconsCompound: []

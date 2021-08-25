@@ -15,5 +15,6 @@ MonoBehaviour:
   itemName: Llave.
   description: Llave de la sala de contaduria.
   icon: {fileID: 21300000, guid: 30c16fc043999e8468a7a276913a3370, type: 3}
+  ID: 25
   useIconCompound: 0
   iconsCompound: []

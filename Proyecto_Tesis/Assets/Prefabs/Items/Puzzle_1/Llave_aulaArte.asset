@@ -15,5 +15,6 @@ MonoBehaviour:
   itemName: Llave.
   description: Llave del aula de arte.
   icon: {fileID: 21300000, guid: d083c2a382649ec44ba197e679f02db0, type: 3}
+  ID: 2
   useIconCompound: 0
   iconsCompound: []

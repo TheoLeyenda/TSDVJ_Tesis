@@ -15,5 +15,6 @@ MonoBehaviour:
   itemName: Llave.
   description: "Llave del ba\xF1o de chicos."
   icon: {fileID: 21300000, guid: 37c54b665dcc4364db1ae760e82214c7, type: 3}
+  ID: 4
   useIconCompound: 0
   iconsCompound: []

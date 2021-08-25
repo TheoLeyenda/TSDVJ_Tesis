@@ -15,5 +15,6 @@ MonoBehaviour:
   itemName: Libro.
   description: Libro de la biblioteca con una E grabada en su dorso.
   icon: {fileID: 21300000, guid: 747dd52d1a8240b49a09c084e9bf95ec, type: 3}
+  ID: 26
   useIconCompound: 0
   iconsCompound: []

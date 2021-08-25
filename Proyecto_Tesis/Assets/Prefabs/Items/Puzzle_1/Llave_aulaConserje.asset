@@ -15,5 +15,6 @@ MonoBehaviour:
   itemName: Llave.
   description: Llave de la habitacion del conserje.
   icon: {fileID: 21300000, guid: 2f032367eeae63748987f764eb5faf1b, type: 3}
+  ID: 3
   useIconCompound: 0
   iconsCompound: []

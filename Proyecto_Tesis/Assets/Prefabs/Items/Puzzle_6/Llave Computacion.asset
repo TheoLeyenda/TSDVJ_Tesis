@@ -15,5 +15,6 @@ MonoBehaviour:
   itemName: Llave.
   description: Llave del aula de computacion.
   icon: {fileID: 21300000, guid: 2e93bd126f5a56b4fb6d48848f0cd42f, type: 3}
+  ID: 30
   useIconCompound: 0
   iconsCompound: []

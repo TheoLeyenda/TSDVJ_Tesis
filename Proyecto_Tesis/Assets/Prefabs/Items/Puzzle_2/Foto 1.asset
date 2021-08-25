@@ -15,5 +15,6 @@ MonoBehaviour:
   itemName: Foto 1
   description: "Foto del director a sus 35 a\xF1os."
   icon: {fileID: 21300000, guid: d71d45fc50a70ef4290df7d514459f7b, type: 3}
+  ID: 7
   useIconCompound: 0
   iconsCompound: []

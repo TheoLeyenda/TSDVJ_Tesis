@@ -15,5 +15,6 @@ MonoBehaviour:
   itemName: Destornillador.
   description: Destornillador de punta larga algo sucio pero funcional.
   icon: {fileID: 21300000, guid: 2bd338dff4ec01644b1f1891c431b461, type: 3}
+  ID: 1
   useIconCompound: 0
   iconsCompound: []

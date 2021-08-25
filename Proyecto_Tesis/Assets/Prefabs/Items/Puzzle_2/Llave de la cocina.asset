@@ -15,5 +15,6 @@ MonoBehaviour:
   itemName: Llave.
   description: Llave de la cocina.
   icon: {fileID: 21300000, guid: 5b2828c5e6432ea4ba77c3594fa65011, type: 3}
+  ID: 10
   useIconCompound: 0
   iconsCompound: []

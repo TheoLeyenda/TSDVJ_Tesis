@@ -15,5 +15,6 @@ MonoBehaviour:
   itemName: Libro.
   description: Libro de la biblioteca con una O grabada en su dorso.
   icon: {fileID: 21300000, guid: a34113a5aa937c84eb641eb798a05577, type: 3}
+  ID: 28
   useIconCompound: 0
   iconsCompound: []
